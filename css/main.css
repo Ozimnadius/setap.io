@@ -1,0 +1,228 @@
+/*-----------------SECTION-MIXINS--------------------*/
+/*------------------------SECTION-FONTS----------------*/
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url("../fonts/SFProDisplay-Regular.woff2") format("woff2"), url("../fonts/SFProDisplay-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url("../fonts/SFProDisplay-Light.woff2") format("woff2"), url("../fonts/SFProDisplay-Light.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url("../fonts/SFProDisplay-Semibold.woff2") format("woff2"), url("../fonts/SFProDisplay-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url("../fonts/SFProDisplay-Bold.woff2") format("woff2"), url("../fonts/SFProDisplay-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url("../fonts/SFProDisplay-Medium.woff2") format("woff2"), url("../fonts/SFProDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url("../fonts/SFProText-Regular.woff2") format("woff2"), url("../fonts/SFProText-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url("../fonts/SFProText-Bold.woff2") format("woff2"), url("../fonts/SFProText-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url("../fonts/SFProText-Semibold.woff2") format("woff2"), url("../fonts/SFProText-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/*------------------------SECTION-SMART-GRID----------------*/
+/*------------------------SECTION-ADJUSTMENT----------------*/
+input::-ms-clear {
+  display: none;
+}
+
+html.ie9 * {
+  border-radius: 0 !important;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #333333;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.page {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 1199.99px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 960px;
+  }
+}
+
+@media screen and (max-width: 991.99px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 720px;
+  }
+}
+
+@media screen and (max-width: 767.99px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 540px;
+  }
+}
+
+@media screen and (max-width: 575.99px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 100%;
+  }
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.content ul {
+  margin: 1em 0;
+  padding-left: 40px;
+}
+
+.content ul li {
+  list-style: disc;
+}
+
+.content h1 {
+  margin: 0.67em 0;
+}
+
+.content h2 {
+  margin: 0.83em 0;
+}
+
+.content h3 {
+  margin: 1em 0;
+}
+
+.content h4 {
+  margin: 1.33em 0;
+}
+
+.content h5 {
+  margin: 1.67em 0;
+}
+
+.content h5 {
+  margin: 2.33em 0;
+}
+
+.content p {
+  margin: 1em 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*------------------------SECTION-COMMON----------------*/
+/*------------------------SECTION-HEADER----------------*/
+/*------------------------SECTION-FOOTER---------------------*/
+
+/*# sourceMappingURL=main.css.map */
