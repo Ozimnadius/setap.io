@@ -1,0 +1,23 @@
+<svg width="100" height="70" viewBox="0 0 100 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M96.7736 70C98.8587 64.4718 100 58.4774 100 52.2154C100 24.4822 77.6142 2 50 2C22.3858 2 0 24.4822 0 52.2154C0 58.4774 1.14132 64.4718 3.22644 70H96.7736Z" fill="#F0F0F0"/>
+<path d="M72 33H29V69H72V33Z" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M66 40H35V69H66V40Z" fill="#D1BBFF" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M50 62H39V68H50V62Z" fill="white" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M50 56H39V62H50V56Z" fill="white" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M55 50H44V56H55V50Z" fill="white" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M50 50H39V56H50V50Z" fill="white" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M50 44H39V50H50V44Z" fill="white" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M62 56H50V62H62V56Z" fill="white" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M62 62H50V68H62V62Z" fill="white" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M68 21H33L26 28.3333V29H76V28.3333L68 21Z" fill="#D1BBFF" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M68 17H33V21H68V17Z" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M76 29H26V33H76V29Z" fill="#D1BBFF" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M36 33V28.7838L40 21" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M66 33V28.5789L61 21" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M46 33V28.5789L48 21" fill="#D1BBFF"/>
+<path d="M46 33V28.5789L48 21" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M56 33V28.5789L54 21" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M76 69H81" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M24 69H74" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M19 69H22" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+</svg>

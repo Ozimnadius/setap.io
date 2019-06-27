@@ -1,12 +1,28 @@
 //variables
 //fonts
 $font: 'SF Pro Text', Arial, sans-serif;
+$font2: 'SF Pro Display', Arial, sans-serif;
 
 //colors
 $text: #000000;
-$bg: #FFFFFF;
-//$yellow1: #FFC500;
-//$yellow2: #FBB329;
+$bg: #ffffff;
+$yellow1: #ffc500;
+$yellow2: #fbb329;
+$orange: #ff891f;
+$lilac: #9681ba;
+$lilac_2: #4e2869;
+$lilac_3: #3c2658;
+$green: #21b665;
+$green_2: #00632d;
+$blue:#00bce3;
+$blue2:#1686c6;
+$fuchsia:#f93079;
+$fuchsia_2:#7d1137;
+$lilac_001:#56437e;
+$lilac_002: #d1bbff;
+$gray5: #E0E0E0;
+$gray3: #828282;
+
 
 //another
 $font-size: 14px;
@@ -26,6 +42,8 @@ $font-size: 14px;
 //sections
 /*------------------------SECTION-HEADER----------------*/
 @import "sections/header";
+/*-----------------SECTION-INDEX--------------------*/
+@import "sections/index";
 /*------------------------SECTION-FOOTER---------------------*/
 @import "sections/footer";
 

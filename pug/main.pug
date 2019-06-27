@@ -16,9 +16,97 @@ html(lang="ru")
         .wrapper
             //- heeader
             header.header
-                nav.nav
-                    each val in menu
-                        .nav__item= val
+                //- top
+                .header__top
+                    .container
+                        .header__top-row
+                            //- city
+                            .header__city
+                                .city
+                                    .city__title Город:
+                                    .city__select
+                                        select(name='city')
+                                            option(value='Москва') Москва
+                                            option(value='Город1') Санкт-Петербург
+                                            option(value='Город2') Нижний Новгород
+
+                            //- menu
+                            .header__menu
+                                each i in headerMenu
+                                    a(href=i.href).header__item= i.title
+
+
+                //- middle
+                .header__middle
+                    .container
+                        .row.header__middle-row
+                            //- logo
+                            .header__logo
+                                .logo
+                                    img(src='images/content/logo.png').logo__img
+
+                            //- search
+                            .header__search
+                                form.hsearch
+                                    input(type='text' name='search' placeholder='онлайн касса АЗУР-01Ф').hsearch__input
+                                    button(type='submit').hsearch__button
+                                        +icon('loop', 'hsearch__svg')
+
+                            //- buttons
+                            .header__buttons
+                                //- tel
+                                .header__tel
+                                    a(href='tel:+7(499)110-38-35').header__tel +7 (499) 110-38-35
+
+                                //- call
+                                .header__call
+                                    button(type='button').button Заказать звонок
+
+                //- bottom
+                .header__bottom
+                    .container
+                        .row.header__bottom-row
+                            //- left
+                            .header__left
+                                nav.nav
+                                    each i in nav
+                                        div(class=i.dopClass).nav__item
+                                            a(href=i.href).nav__item-link= i.title
+                                            if i.subnav
+                                                .nav__item-subnav
+                                                    .subnav
+                                                        .container
+                                                            .row
+                                                                //- left
+                                                                .subnav__left
+                                                                    a(href='/').subnav__link= i.subnav.title
+                                                                    .subnav__ul
+                                                                        a(href='/').subnav__ul-link= i.subnav.list.title
+                                                                        .subnav__ul-row
+                                                                            each j in i.subnav.list.items
+                                                                                a(href='/').subnav__item= j
+                                                                //- right
+                                                                .subnav__right
+                                                                    .row
+                                                                        each j in i.subnav.rows
+                                                                            .subnav__col
+                                                                                each k in j
+                                                                                    .subnav__list
+                                                                                        a(href='/').subnav__list-link= k.title
+                                                                                        .subnav__list-items
+                                                                                            if k.items
+                                                                                                each l in k.items
+                                                                                                    a(href='').subnav__item= l
+
+
+
+                            //- right
+                            .header__right
+                                a(href='/').basket.basket_i
+                                    .basket__img
+                                        img(src='images/icons/cart.svg').basket__img-img
+                                    .basket__price 125 000 руб.
+
 
             //- pages
             .page

@@ -1,3 +1,42 @@
 .button {
+  height: 40px;
+  font-family: $font2;
+  color: $bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+  background: $lilac_2;
+  border: 2px solid transparent;
+  border-radius: 20px;
+
+  &:hover {
+    background: $lilac_3;
+  }
+
+  &.disabled {
+    background: $gray5;
+    color: $gray3;
+  }
+
+  &_y {
+    background: $yellow1;
+    color: $text;
+
+    &:hover {
+      background: $yellow2;
+    }
+  }
+
+  &_t{
+    background: transparent;
+    border: 2px solid $lilac_2;
+    color: $lilac_2;
+
+    &:hover{
+      background: $lilac_2;
+      color: $bg;
+    }
+  }
 
 }

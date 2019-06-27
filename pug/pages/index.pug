@@ -4,5 +4,35 @@ block variables
     - var title = 'Главная'
 
 block content
-    h1 Страничка "Главная"
-        +icon('001-twitter', 'svg')
+    main.index
+        //- slider
+        section.index__slider
+            .slider
+                .swiper-container.slider__container
+                    .swiper-wrapper
+                        each i in [1,2,3]
+                            .swiper-slide
+                                div(style='background-image: url(images/content/main/banner/bg.jpg)').slide
+                                    .container
+                                        .row
+                                            .slide__content.content
+                                                img(src='images/content/main/banner/1.png').slide__img1
+                                                div(style='padding-top: 20px;')
+                                                    .slide__title СМАРТ-ТЕРМИНАЛ
+                                                    .slide__name ЭВОТОР 7.2
+                                                    .slide__price 19 900 руб.
+                                                    a(href='/').button.slide__button Подробнее
+                                                img(src='images/content/main/banner/2.png').slide__img2
+
+                .slider__nav
+                    .container
+                        button(type='button').slider__prev.slider__arrow
+                            +icon('left', 'slider__arrow-svg')
+                        button(type='button').slider__next.slider__arrow
+                            +icon('right', 'slider__arrow-svg')
+                .slider__pag
+
+        //- catalog
+        section.index__catalog
+
+

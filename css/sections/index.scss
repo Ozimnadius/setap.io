@@ -1,0 +1,113 @@
+.index{
+
+}
+
+.slider{
+  position: relative;
+
+  &__nav{
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    top: 50%;
+    margin-top: -36px;
+    pointer-events: none;
+
+    .container{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__arrow {
+    width: 72px;
+    height: 72px;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    pointer-events: initial;
+
+    &:hover{
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    &-svg {
+      width: 7.4px;
+      height: 12px;
+    }
+  }
+
+  &__pag {
+    text-align: center;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    bottom: 30px;
+    pointer-events: none;
+
+
+    .swiper-pagination-bullet{
+      width: 12px;
+      height: 12px;
+      background: transparent;
+      border: 1px solid #828282;
+      opacity: 1;
+      outline: none;
+      margin: 0 5px;
+      pointer-events: initial;
+    }
+
+    .swiper-pagination-bullet-active{
+      background: #828282;
+    }
+  }
+}
+
+.slide{
+  height: 380px;
+  padding: 26px 0;
+  box-sizing: border-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__content{
+    @include col;
+    @include size(20);
+    @include shift(2);
+
+    display: flex;
+    justify-content: space-between;
+    color: $bg;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  &__name {
+    font-size: 66px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+
+  &__price {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  img {
+    max-height: 100%;
+  }
+
+  &__button {
+    width: 142px;
+  }
+
+}
