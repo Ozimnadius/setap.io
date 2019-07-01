@@ -34,5 +34,132 @@ block content
 
         //- catalog
         section.index__catalog
+            .icats
+                .container
+                    .row
+                        each i,x in icats
+                            a(href='/').icat
+                                .icat__img
+                                    img(src='images/content/main/catalog/' + (x + 1) + '.png').icat__img-img
+                                .icat__title= i
+        //- solutions
+        section.index__ready
+            .iready
+                .container
+                    .iready__title.title Готовые решения
+
+                    .iready__wrap
+                        //- switches
+                        .iready__sws
+                            each i,x in iReadySws
+                                div(class=x == 0 ? 'active' : '' data-id=x + 1).iready__sw
+                                    .iready__sw-img
+                                        +iconPath('/images/content/main/ready', x + 1,'iready__sw-svg')
+                                    .iready__sw-title= i
+
+                        //- tabs
+                        .iready__tabs
+                            div(data-id='1').iready__tab.active
+                                img(src='images/content/main/ready/bg.jpg').iready__img
+                                .iready__sols
+                                    .sols
+                                        .sols__sws
+                                            button(type='button' data-id='1').sols__sw.active Продовольственная
+                                            button(type='button' data-id='2').sols__sw Непродовольственная
+                                        .sols__tabs
+                                            each i,x in [1,2]
+                                                div(data-id=x + 1).sols__tab
+                                                    .sols__list
+                                                        each j,indx in iReadyTabs2
+                                                            .sol
+                                                                .row.sol__row
+                                                                    .sol__left
+                                                                        .sol__img
+                                                                            img(src='images/content/main/ready/img' + (indx + 1) + '.svg').isol__img-img
+                                                                        .sol__title= j.title
+                                                                    .sol__text= j.text
+                                                                    .sol__right
+                                                                        a(href='/').button.button_t.sol__button Подробнее
+
+                            div(data-id='2').iready__tab
+                                img(src='images/content/main/ready/bg.jpg').iready__img
+                                .iready__content.content
+                                    p.
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, cupiditate deleniti laboriosam laudantium nihil omnis qui repudiandae sint suscipit ut! Facere ipsa mollitia possimus reprehenderit sint? Accusamus accusantium architecto blanditiis consequuntur cumque delectus deserunt dicta dolor, doloremque doloribus error esse excepturi facilis fugit hic illo incidunt ipsa ipsum laborum, maxime mollitia neque, non quas quo quos repellat rerum sequi. A ab alias blanditiis culpa deleniti distinctio doloribus esse excepturi facilis, id ipsam iusto minus odio officia, perferendis perspiciatis quae quia quibusdam repudiandae sapiente similique sint tempore temporibus veniam voluptatibus. Ab at eveniet fugiat incidunt natus nostrum pariatur, porro reiciendis sint.
+                            div(data-id='3').iready__tab
+                                img(src='images/content/main/ready/bg.jpg').iready__img
+                                .iready__content.content
+                                    p.
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, cupiditate deleniti laboriosam laudantium nihil omnis qui repudiandae sint suscipit ut! Facere ipsa mollitia possimus reprehenderit sint? Accusamus accusantium architecto blanditiis consequuntur cumque delectus deserunt dicta dolor, doloremque doloribus error esse excepturi facilis fugit hic illo incidunt ipsa ipsum laborum, maxime mollitia neque, non quas quo quos repellat rerum sequi. A ab alias blanditiis culpa deleniti distinctio doloribus esse excepturi facilis, id ipsam iusto minus odio officia, perferendis perspiciatis quae quia quibusdam repudiandae sapiente similique sint tempore temporibus veniam voluptatibus. Ab at eveniet fugiat incidunt natus nostrum pariatur, porro reiciendis sint.
+                            div(data-id='4').iready__tab
+                                img(src='images/content/main/ready/bg.jpg').iready__img
+                                .iready__content.content
+                                    p.
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ea, explicabo harum ipsa officia placeat quos. Aliquam dicta eum explicabo illo ipsum iste laboriosam necessitatibus nesciunt nobis non quidem quisquam quo repellat, similique tempore vel veritatis voluptate? Ad consectetur exercitationem fuga impedit, minus mollitia, officia perferendis suscipit ut vitae voluptas.
+        //- quiz
+        section.index__quiz
+            div(style='background-image:url(images/content/main/quiz/bg.jpg)').quiz
+                .container
+                    form.quiz__form
+                        .swiper-container.quiz__container
+                            .swiper-wrapper
+                                .swiper-slide.quiz__slide
+                                        .row
+                                            //- left
+                                            .quiz__left
+                                                img(src='images/content/main/quiz/1.png').quiz__img
+
+                                            //- center
+                                            .quiz__center
+                                                .quiz__title.title Нужно индивидуальное решение?
+                                                .quiz__text Подберите торговое оборудование для своего предприятия
+                                                .quiz__scrollbar
+                                                .quiz__sub Выполняется ли хотя бы одно из условий:
+                                                ol.quiz__list
+                                                    li.quiz__li Продажа подъакцизных товаров
+                                                    li.quiz__li Сезонный характер работы
+
+
+                                            //- right
+                                            .quiz__right
+                                                img(src='images/content/main/quiz/2.png').quiz__img
+
+
+                                        .quiz__buttons
+                                            label.quiz__btn
+                                                input(type='radio' name='quiz' value=1 checked=true).quiz__btn-input
+                                                .quiz__btn-wrap
+                                                    .quiz__btn-top
+                                                        .quiz__btn-val Да
+                                                        .quiz__btn-fake
+                                                        .quiz__btn-text
+                                                            | Двусторонний монохромный дисплей покупателя
+                                                            span(alt='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quaerat?').quiz__btn-text_q (?)
+                                            label.quiz__btn
+                                                input(type='radio' name='quiz' value=2).quiz__btn-input
+                                                .quiz__btn-wrap
+                                                    .quiz__btn-top
+                                                        .quiz__btn-val Да
+                                                        .quiz__btn-fake
+                                                        .quiz__btn-text
+                                                            | Цветной монитор покупателя
+                                                            span(alt='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quaerat?').quiz__btn-text_q (?)
+                                            label.quiz__btn
+                                                input(type='radio' name='quiz' value=3).quiz__btn-input
+                                                .quiz__btn-wrap
+                                                    .quiz__btn-top
+                                                        .quiz__btn-val Нет
+                                                        .quiz__btn-fake
+                                                        .quiz__btn-text
+                                                            | Цветной монитор покупателя не требуется
+                                .swiper-slide.quiz__slide
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at deserunt molestias nihil, pariatur provident quaerat quas quis. A assumenda cupiditate ea fugit labore, laboriosam nostrum nulla numquam porro ratione sint soluta ut vel. Aut itaque iure maiores perspiciatis quas quidem recusandae vel voluptates? Accusamus adipisci ex mollitia nesciunt officiis quae sapiente, velit voluptatem. Adipisci aperiam architecto aspernatur, aut consequuntur cupiditate eligendi enim in iste laboriosam minima modi mollitia nisi officia optio porro qui quo reprehenderit similique tenetur vel velit vitae voluptatem? Aut corporis dicta distinctio ea, eligendi eveniet mollitia natus nulla numquam omnis optio quae quo vel voluptas voluptatibus! Ad aut autem error, ex excepturi, maxime minima, obcaecati officia quae repudiandae sit sunt tempora unde ut velit veniam voluptas. Alias autem eaque impedit minima perspiciatis provident rem, totam. Alias aliquid assumenda, cumque debitis dolorum eos eum in ipsa iusto minima nemo neque, non odit officia quia temporibus ut! Aliquid architecto aspernatur at aut autem beatae deserunt dignissimos et ex exercitationem expedita explicabo impedit laboriosam laudantium maiores mollitia optio porro qui quibusdam, quisquam quos reiciendis repellat vel veniam voluptatum? Cumque dolorem esse impedit, iusto nesciunt nostrum quae recusandae reiciendis totam velit. Alias doloribus ea incidunt laboriosam minus modi quaerat, similique!
+
+
+
+
+
+
+
 
 

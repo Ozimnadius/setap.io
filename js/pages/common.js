@@ -1,7 +1,3 @@
-//@prepros-append pages/common.js
-//@prepros-append pages/header.js
-//@prepros-append pages/sliders.js
-//@prepros-append pages/index.js
 // common.js
 function Switches(prop) {
     this.sws = document.querySelector(prop.sws);
@@ -60,67 +56,3 @@ function Switches(prop) {
         });
     }
 }
-
-// slider.js
-$(function () {
-    let slider = new Swiper ('.slider__container', {
-        loop: true,
-        navigation: {
-            nextEl: '.slider__next',
-            prevEl: '.slider__prev',
-        },
-        pagination: {
-            el: '.slider__pag',
-            clickable: true
-        }
-    });
-
-    let quiz = new Swiper ('.quiz__container', {
-        effect: 'cube',
-        speed: 1500,
-        grabCursor: true,
-        cubeEffect: {
-            shadow: false,
-        },
-
-        scrollbar: {
-            el: '.quiz__scrollbar',
-            draggable: true,
-        },
-    });
-
-});
-//index.js
-$(function () {
-
-    let maxH = 0,
-        icatsTitle = $('.icat__title');
-
-    icatsTitle.each(function (x, i) {
-        let height = $(i).outerHeight();
-
-        if (maxH<height){
-            maxH = height;
-        }
-    });
-
-    icatsTitle.css('height', maxH);
-
-    let subSwitches = new Switches({
-        sws: '.sols__sws',
-        sw: '.sols__sw',
-        tab: '.sols__tab',
-        tabsContainer: '.sols__tabs'
-    }).init();
-
-    let switches = new Switches({
-        sws: '.iready__sws',
-        sw: '.iready__sw',
-        tab: '.iready__tab',
-        tabsContainer: '.iready__tabs'
-    }).init();
-
-
-});
-
-//# sourceMappingURL=main.min.js.map

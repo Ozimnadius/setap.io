@@ -1,20 +1,30 @@
 <svg width="100" height="70" viewBox="0 0 100 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M96.7736 70C98.8587 64.4718 100 58.4774 100 52.2154C100 24.4822 77.6142 2 50 2C22.3858 2 0 24.4822 0 52.2154C0 58.4774 1.14132 64.4718 3.22644 70H96.7736Z" fill="#F0F0F0"/>
-<path d="M67 69H51L47 32H71L67 69Z" fill="#D1BBFF" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
-<circle cx="59" cy="45" r="8" fill="white" stroke="#56437E" stroke-width="2"/>
-<path d="M76 69H81" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M24 69H74" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M19 69H22" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M56 69H32C30.9 69 30 68.1 30 67V63H58V67C58 68.1 57.1 69 56 69Z" fill="white" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M58 63H30C28.9 63 28 62.1 28 61C28 59.9 28.9 59 30 59H58C59.1 59 60 59.9 60 61C60 62.1 59.1 63 58 63Z" fill="white" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M58 59H30C28.9 59 28 58.1 28 57C28 55.9 28.9 55 30 55H58C59.1 55 60 55.9 60 57C60 58.1 59.1 59 58 59Z" fill="white" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M58 51H30C30 45.5 34.5 41 40 41H48C53.5 41 58 45.5 58 51Z" fill="white" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M33.5 55C35.4 55 37 53.2667 37 51H30C30 53.2667 31.6 55 33.5 55Z" fill="white" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M40.5 55C42.4 55 44 53.2667 44 51H37C37 53.2667 38.6 55 40.5 55Z" fill="white" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M47.5 55C49.4 55 51 53.2667 51 51H44C44 53.2667 45.6 55 47.5 55Z" fill="white" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M54.5 55C56.4 55 58 53.2667 58 51H51C51 53.2667 52.6 55 54.5 55Z" fill="white" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M32 55L39 62L45 55H32Z" fill="#D1BBFF" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M43 55L49 60L55 55H43Z" fill="#D1BBFF" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M60 29L62 20L68 17" stroke="#56437E" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
-<rect x="45" y="29" width="28" height="3" stroke="#56437E" stroke-width="2"/>
+    <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M96.7736 70C98.8587 64.4718 100 58.4774 100 52.2154C100 24.4822 77.6142 2 50 2C22.3858 2 0 24.4822 0 52.2154C0 58.4774 1.14132 64.4718 3.22644 70H96.7736Z"
+          />
+    <path d="M67 69H51L47 32H71L67 69Z" fill="#D1BBFF" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+    <circle cx="59" cy="45" r="8" fill="white" stroke="#56437E" stroke-width="2"/>
+    <path d="M76 69H81" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M24 69H74" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M19 69H22" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M56 69H32C30.9 69 30 68.1 30 67V63H58V67C58 68.1 57.1 69 56 69Z" fill="white" stroke="#56437E"
+          stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M58 63H30C28.9 63 28 62.1 28 61C28 59.9 28.9 59 30 59H58C59.1 59 60 59.9 60 61C60 62.1 59.1 63 58 63Z"
+          fill="white" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M58 59H30C28.9 59 28 58.1 28 57C28 55.9 28.9 55 30 55H58C59.1 55 60 55.9 60 57C60 58.1 59.1 59 58 59Z"
+          fill="white" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M58 51H30C30 45.5 34.5 41 40 41H48C53.5 41 58 45.5 58 51Z" fill="white" stroke="#56437E" stroke-width="2"
+          stroke-miterlimit="10"/>
+    <path d="M33.5 55C35.4 55 37 53.2667 37 51H30C30 53.2667 31.6 55 33.5 55Z" fill="white" stroke="#56437E"
+          stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M40.5 55C42.4 55 44 53.2667 44 51H37C37 53.2667 38.6 55 40.5 55Z" fill="white" stroke="#56437E"
+          stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M47.5 55C49.4 55 51 53.2667 51 51H44C44 53.2667 45.6 55 47.5 55Z" fill="white" stroke="#56437E"
+          stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M54.5 55C56.4 55 58 53.2667 58 51H51C51 53.2667 52.6 55 54.5 55Z" fill="white" stroke="#56437E"
+          stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M32 55L39 62L45 55H32Z" fill="#D1BBFF" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M43 55L49 60L55 55H43Z" fill="#D1BBFF" stroke="#56437E" stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M60 29L62 20L68 17" stroke="#56437E" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+    <rect x="45" y="29" width="28" height="3" stroke="#56437E" stroke-width="2"/>
 </svg>
