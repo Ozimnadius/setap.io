@@ -1,0 +1,128 @@
+.uslugi{
+  position: relative;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    background: $bg;
+    position: relative;
+    margin-bottom: 50px;
+
+    &:before,&:after {
+      content: url("/images/content/services/img.png");
+      position: absolute;
+      z-index: 10;
+    }
+    &:before {
+      top: 135px;
+      left: -385px;
+    }
+    &:after {
+      top: 80px;
+      right: -350px;
+    }
+  }
+
+  &__row {
+    position: relative;
+    z-index: 20;
+  }
+
+  &__item {
+    @include col;
+    @include size(8);
+    padding: 20px;
+    padding-bottom: 35px;
+    background: $bg;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: .3s;
+
+    &:hover {
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    &-img {
+      position: relative;
+      margin-bottom: 15px;
+    }
+    &-imgwrap {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    &-pic {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    &-title {
+      font-size: 17px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    &-text {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    &-list {
+      margin-bottom: 20px;
+
+      li{
+        position: relative;
+        margin-bottom: 10px;
+        padding-left: 14px;
+        font-size: 13px;
+
+        &:before{
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0.5rem;
+          margin-top: -1px;
+          background: #9681BA;;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    &-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+    }
+
+    &-price {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    &-button {
+      width: 160px;
+    }
+
+
+  }
+
+  &__content {
+    margin-bottom: 60px;
+  }
+
+  &__feed {
+    margin-bottom: 80px;
+  }
+}

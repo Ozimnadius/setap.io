@@ -104,56 +104,122 @@ block content
                         .swiper-container.quiz__container
                             .swiper-wrapper
                                 .swiper-slide.quiz__slide
-                                        .row
-                                            //- left
-                                            .quiz__left
-                                                img(src='images/content/main/quiz/1.png').quiz__img
+                                    .row.quiz__row
+                                        //- left
+                                        .quiz__left
+                                            img(src='images/content/main/quiz/1.png').quiz__img
 
-                                            //- center
-                                            .quiz__center
-                                                .quiz__title.title Нужно индивидуальное решение?
-                                                .quiz__text Подберите торговое оборудование для своего предприятия
-                                                .quiz__scrollbar
-                                                .quiz__sub Выполняется ли хотя бы одно из условий:
-                                                ol.quiz__list
-                                                    li.quiz__li Продажа подъакцизных товаров
-                                                    li.quiz__li Сезонный характер работы
-
-
-                                            //- right
-                                            .quiz__right
-                                                img(src='images/content/main/quiz/2.png').quiz__img
+                                        //- center
+                                        .quiz__center
+                                            .quiz__title.title Нужно индивидуальное решение?
+                                            .quiz__text Подберите торговое оборудование для своего предприятия
+                                            .quiz__scrollbar
+                                                .quiz__scrollbar-line
+                                            .quiz__sub Выполняется ли хотя бы одно из условий:
+                                            ol.quiz__list
+                                                li.quiz__li 1. Продажа подъакцизных товаров
+                                                li.quiz__li 2. Сезонный характер работы
 
 
-                                        .quiz__buttons
+                                        //- right
+                                        .quiz__right
+                                            img(src='images/content/main/quiz/2.png').quiz__img
+
+                                    //- buttons
+                                    .quiz__buttons
+                                        .row.quiz__buttons-row
                                             label.quiz__btn
-                                                input(type='radio' name='quiz' value=1 checked=true).quiz__btn-input
+                                                input(type='radio' name='quiz' value=1).quiz__btn-input
                                                 .quiz__btn-wrap
                                                     .quiz__btn-top
                                                         .quiz__btn-val Да
                                                         .quiz__btn-fake
-                                                        .quiz__btn-text
-                                                            | Двусторонний монохромный дисплей покупателя
-                                                            span(alt='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quaerat?').quiz__btn-text_q (?)
+                                                            +icon('check','quiz__btn-svg')
+                                                    .quiz__btn-text
+                                                        | Двусторонний монохромный дисплей покупателя&nbsp;
+                                                        span(title='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quaerat?').quiz__btn-text_q (?)
                                             label.quiz__btn
                                                 input(type='radio' name='quiz' value=2).quiz__btn-input
                                                 .quiz__btn-wrap
                                                     .quiz__btn-top
                                                         .quiz__btn-val Да
                                                         .quiz__btn-fake
-                                                        .quiz__btn-text
-                                                            | Цветной монитор покупателя
-                                                            span(alt='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quaerat?').quiz__btn-text_q (?)
+                                                            +icon('check','quiz__btn-svg')
+                                                    .quiz__btn-text
+                                                        | Цветной монитор покупателя&nbsp;
+                                                        span(title='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quaerat?').quiz__btn-text_q (?)
                                             label.quiz__btn
                                                 input(type='radio' name='quiz' value=3).quiz__btn-input
                                                 .quiz__btn-wrap
                                                     .quiz__btn-top
                                                         .quiz__btn-val Нет
                                                         .quiz__btn-fake
-                                                        .quiz__btn-text
-                                                            | Цветной монитор покупателя не требуется
+                                                            +icon('check','quiz__btn-svg')
+                                                    .quiz__btn-text
+                                                        | Цветной монитор покупателя не требуется
                                 .swiper-slide.quiz__slide
-                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at deserunt molestias nihil, pariatur provident quaerat quas quis. A assumenda cupiditate ea fugit labore, laboriosam nostrum nulla numquam porro ratione sint soluta ut vel. Aut itaque iure maiores perspiciatis quas quidem recusandae vel voluptates? Accusamus adipisci ex mollitia nesciunt officiis quae sapiente, velit voluptatem. Adipisci aperiam architecto aspernatur, aut consequuntur cupiditate eligendi enim in iste laboriosam minima modi mollitia nisi officia optio porro qui quo reprehenderit similique tenetur vel velit vitae voluptatem? Aut corporis dicta distinctio ea, eligendi eveniet mollitia natus nulla numquam omnis optio quae quo vel voluptas voluptatibus! Ad aut autem error, ex excepturi, maxime minima, obcaecati officia quae repudiandae sit sunt tempora unde ut velit veniam voluptas. Alias autem eaque impedit minima perspiciatis provident rem, totam. Alias aliquid assumenda, cumque debitis dolorum eos eum in ipsa iusto minima nemo neque, non odit officia quia temporibus ut! Aliquid architecto aspernatur at aut autem beatae deserunt dignissimos et ex exercitationem expedita explicabo impedit laboriosam laudantium maiores mollitia optio porro qui quibusdam, quisquam quos reiciendis repellat vel veniam voluptatum? Cumque dolorem esse impedit, iusto nesciunt nostrum quae recusandae reiciendis totam velit. Alias doloribus ea incidunt laboriosam minus modi quaerat, similique!
+                                    .row
+                                        .quiz__slide-form
+                                            .quiz__text Спасибо. Наши специалисты бесплатно подберут необходимое торговое оборудование (несколько вариантов, под разный бюджет) и вышлют на Ваш адрес электронной почты в виде коммерческого предложения
+                                            .quiz__scrollbar
+                                                .quiz__scrollbar-line
+                                        .quiz__slide-wrap
+                                            .quiz__field
+                                                input(type='text' name='quizName' placeholder='Ваше Имя').quiz__input
+                                            .quiz__field
+                                                input(type='email' name='quizEmail' placeholder='Электронная почта').quiz__input
+                                            .quiz__bottom
+                                                .quiz__fz
+                                                    |Заполняя данную форму Вы соглашаетесь  с
+                                                    br
+                                                    a(href='/').quiz__fz-link Политикой обработки персональных данных
+                                                button(type='submit').button.quiz__submit Подобрать оборудование
+                                .swiper-slide.quiz__slide
+                                    .quiz__success Спасибо. Ваша заявка принята в работу
+        //- chart
+        section.index__chart
+            .ichart
+                .container
+                    .ichart__title.title График перехода на онлайн кассы (54-ФЗ)
+                    .ichart__list
+                        img(src='images/content/main/chart/bg.png').ichart__list-bg
+                        .ichart__list-rows
+                            each row in iChart
+                                .ichart__row
+                                    .ichart__row-wrap
+                                    each i in row
+                                        .ichart__item
+                                            .ichart__item-date= i.date
+                                            .ichart__line
+                                                .ichart__line-before
+                                                .ichart__check
+                                                    .ichart__check-wrap
+                                                        +icon('check','ichart__check-svg')
+                                                .ichart__line-after
+                                            .ichart__item-text= i.text
+                                            if i.last
+                                                .ichart__item-after
+                                                .ichart__item-arr
+                                            .ichart__item-before
+        //- feed
+        section.index__feed
+            +feed('','images/icons/call.png')
+        //- about
+        section.index__about
+            .iabout
+                .container.iabout__container
+                    .iabout__slogan Автоматизация - это индивидуальный комплекс мероприятий, включающий внедрение специализированного оборудования и программных продуктов для значительного повышения эффективности деятельности торгового предприятия.
+                    .iabout__text Наша компания занимается автоматизацией магазинов розничной торговли, предприятий общественного питания и складов, разработкой и внедрением индивидуальных решений на основе технических задач, стоящих перед предприятием. Правильно подобранное оборудование позволяет избежать дополнительных расходов и ситуаций, когда предприниматель либо переплачивает за технические характеристики, которые не соответствуют текущим потребностям его предприятия и в которых нет необходимости, либо, наоборот, экономит и приобретает то, что не справляется с имеющимися объемами и задачами, тем самым замедляя весь рабочий процесс. В наши обязанности входит подбор всего необходимого торгового оборудования, регистрация и постановка на учет контрольно-кассовой техники, доставка и монтаж, подключение и настройка, проведение пуско-наладочных работ, обучение кассиров-операционистов и товароведов, гарантийное, сервисное и техническое обслуживание.
+                    button(type='button').iabout__button.button Начать сотрудничество
+
+
+
+
+
+
+
+
+
 
 
 

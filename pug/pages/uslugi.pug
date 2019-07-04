@@ -1,0 +1,59 @@
+extends ../main
+
+block variables
+    - var title = 'Услуги'
+
+block content
+    main.uslugi
+        section.bread
+            .container
+                .bread__list
+                    a(href='/').bread__item Главная
+                    .bread__sep /
+                    a.bread__item.bread__item_active Услуги
+
+        .container
+            section.uslugi__catalog
+                .uslugi__title.title.title_tal Услуги
+                .uslugi__list
+                    .uslugi__row.row
+                        each i,x in uslugi
+                            a(href='usluga.html').uslugi__item
+                                .uslugi__item-img
+                                    .proportion.proportion_340x255
+                                    .uslugi__item-imgwrap
+                                        img(src='images/content/services/img' + (x + 1) + '.jpg').uslugi__item-pic
+
+                                .uslugi__item-title= i.title
+                                .uslugi__item-text= i.text
+                                ul.uslugi__item-list
+                                    each li in [1,2,3]
+                                        li.uslugi__item-li Основное преимущество
+                                .uslugi__item-bottom
+                                    .uslugi__item-price= i.price
+                                    button(type='button').uslugi__item-button.button.button_t Заказать
+                .uslugi__content
+                    .content
+                        p Автоматизация предприятия и работа с торговым оборудованием подразумевает взаимодействие с различного рода программами, системами, сервисами и структурами (в том числе государственными), что влечет за собой необходимость оказания вспомогательных услуг для решения тех или иных задач. Регистрация и постановка на учет контрольно-кассовой техники в ИФНС, подключение к оператору фискальных данных (ОФД), работа с ЕГАИС, работа с ФГИС Меркурий, изготовление квалифицированной электронной подписи и получение сертификата в удостоверяющем центре, регулярное обновление и настройка программного обеспечения, замены фискальных накопителей, ремонт и подключение нового оборудования, обучение персонала - все это лишь малая часть того, что Вам предстоит пройти. Доверьте поддержание эффективности работы своего предприятия команде профессионалов и мы с удовольствием пройдем этот путь вместе с Вами
+        section.uslugi__feed
+            +feed('feed_grey','images/icons/call2.png')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

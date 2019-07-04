@@ -12,18 +12,6 @@ $(function () {
         }
     });
 
-    let quiz = new Swiper ('.quiz__container', {
-        effect: 'cube',
-        speed: 1500,
-        grabCursor: true,
-        cubeEffect: {
-            shadow: false,
-        },
 
-        scrollbar: {
-            el: '.quiz__scrollbar',
-            draggable: true,
-        },
-    });
 
 });

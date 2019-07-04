@@ -8,3 +8,33 @@ mixin iconPath(iconPath,iconName, iconClass)
 
 mixin image(imagePath, imageAlt, imageClass)
   img(src=`/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
+
+mixin feed(dopClass,img)
+  div(class=dopClass).feed
+    .container
+      form.feed__form
+        .row
+          //- left
+          .feed__left
+            .feed__title.title.title_w.title_tal Оставить заявку на консультацию
+            .feed__sub Оставьте заявку или позвоните по указанному номеру телефона и наши менеджеры проконсультируют Вас и помогут с выбором
+            .feed__cols
+              .row
+                .feed__col
+                  input(type='text' name='name' placeholder='Введите имя').input.feed__input
+                .feed__col
+                  input(type='tel' name='tel' placeholder='+7 (495) 123 45 67').input.feed__input
+                .feed__col
+                  button(type='submit').button.button_y.feed__submit Получить консультацию
+            .feed__fz
+              | Заполняя данную форму Вы соглашаетесь с&nbsp;
+              a(href='/').feed__fz_link Политикой обработки персональных данных
+
+
+          //- right
+          .feed__right
+            .feed__img
+              img(src=img).feed__img-img
+            .feed__phone
+              a(href='tel:+7(499)110-38-35').feed__phone-link +7 (499) 110-38-35
+              .feed__phone-comment Консультация бесплатна

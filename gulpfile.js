@@ -31,6 +31,7 @@ const vendorJs = [
     'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
     'node_modules/swiper/dist/js/swiper.js',
     'node_modules/selectize/dist/js/standalone/selectize.js',
+    'node_modules/jquery-validation/dist/jquery.validate.js',
 ];
 
 

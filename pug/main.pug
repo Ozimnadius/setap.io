@@ -42,7 +42,7 @@ html(lang="ru")
                         .row.header__middle-row
                             //- logo
                             .header__logo
-                                .logo
+                                a(href='/').logo
                                     img(src='images/content/logo.png').logo__img
 
                             //- search
@@ -114,6 +114,50 @@ html(lang="ru")
 
             //- footer
             footer.footer
+                .footer__subscribe
+                    include common/blocks/subscribe
+                .container
+                    //- top
+                    .footer__top
+                        .row
+                            //- left
+                            .footer__left
+                                .row
+                                    each col in footer
+                                        .footer__col
+                                            a(href=col.href).footer__title.footer__title_link= col.title
+                                            .footer__list
+                                                each i in col.list
+                                                    a(href=col.href).footer__item= i
+
+                            //- right
+                            .footer__right
+                                .footer__title Контакты
+                                .footer__phones
+                                    a(href='tel:+7(499)110-28-25').phone.footer__phone +7 (499) 110-28-25
+                                    a(href='tel:+7(499)123-33-44').phone.phone_grey.footer__phone +7 (499) 123-33-44
+                                    .footer__phones-comment
+                                        | Телефон технической поддержки
+                                        br
+                                        | Время работы с 9:00 - 20:00
+                                .footer__socials.socials
+                                    a(href='/' target='_blank').social.social_vk
+                                        +icon('vk', 'social__svg')
+                                    a(href='/' target='_blank').social.social_fb
+                                        +icon('fb', 'social__svg')
+                                .footer__buttons
+                                    button(type='button').button.footer__button Заказать звонок
+                                    button(type='button').button.button_t.footer__button Оставить отзыв
+
+                    //- bottom
+                    .footer__bottom
+                        .footer__logo
+                            a(href='/').logo
+                                img(src='images/content/logo.png').logo__img
+                        .footer__desc Автоматизация магазинов розничной торговли, предприятий общественного питания (HoReCa), складов. Индивидуальное проектирование и комплексное оснащение, подбор торгового оборудования, доставка и монтаж, подключение и настройка, проведение пуско-наладочных работ, обучение персонала работе с системой, техническое обслуживание. (с) 2019 Все права защищены.
+
+
+
 
     .debug
         div

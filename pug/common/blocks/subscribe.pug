@@ -1,0 +1,19 @@
+include ../_mixins
+include ../_settings
+
+.subscribe
+    .container
+        .row.subscribe__row
+            //- left
+            .subscribe__left
+                .subscribe__title Подпишитесь на наши новости и специальные предложения
+
+            //- right
+            .subscribe__right
+                form.subscribe__form
+                    .subscribe__field
+                        input(type='email' name='email' placeholder='Введите свой e-mail').subscribe__input
+                        input(type='submit' value='Подписаться').subscribe__submit
+                    .subscribe__fz
+                        |Подтверждая данную форму Вы соглашаетесь с&nbsp;
+                        a(href='/').subscribe__fz_link Политикой обработки персональных данных

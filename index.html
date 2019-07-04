@@ -34,9 +34,7 @@
         <div class="header__middle">
           <div class="container">
             <div class="row header__middle-row">
-              <div class="header__logo">
-                <div class="logo"><img class="logo__img" src="images/content/logo.png"></div>
-              </div>
+              <div class="header__logo"><a class="logo" href="/"><img class="logo__img" src="images/content/logo.png"></a></div>
               <div class="header__search">
                 <form class="hsearch">
                   <input class="hsearch__input" type="text" name="search" placeholder="онлайн касса АЗУР-01Ф">
@@ -137,7 +135,7 @@
                   </div>
                   <div class="nav__item"><a class="nav__item-link" href="/">Автоматизация</a>
                   </div>
-                  <div class="nav__item_subnav nav__item"><a class="nav__item-link" href="/">Услуги</a>
+                  <div class="nav__item_subnav nav__item"><a class="nav__item-link" href="uslugi.html">Услуги</a>
                     <div class="nav__item-subnav">
                       <div class="subnav">
                         <div class="container">
@@ -501,63 +499,332 @@
                   <div class="swiper-container quiz__container">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide quiz__slide">
-                        <div class="row">
+                        <div class="row quiz__row">
                           <div class="quiz__left"><img class="quiz__img" src="images/content/main/quiz/1.png"></div>
                           <div class="quiz__center">
                             <div class="quiz__title title">Нужно индивидуальное решение?</div>
                             <div class="quiz__text">Подберите торговое оборудование для своего предприятия</div>
-                            <div class="quiz__scrollbar"></div>
+                            <div class="quiz__scrollbar">
+                              <div class="quiz__scrollbar-line"></div>
+                            </div>
                             <div class="quiz__sub">Выполняется ли хотя бы одно из условий:</div>
                             <ol class="quiz__list">
-                              <li class="quiz__li">Продажа подъакцизных товаров</li>
-                              <li class="quiz__li">Сезонный характер работы</li>
+                              <li class="quiz__li">1. Продажа подъакцизных товаров</li>
+                              <li class="quiz__li">2. Сезонный характер работы</li>
                             </ol>
                           </div>
                           <div class="quiz__right"><img class="quiz__img" src="images/content/main/quiz/2.png"></div>
                         </div>
                         <div class="quiz__buttons">
-                          <label class="quiz__btn">
-                            <input class="quiz__btn-input" type="radio" name="quiz" value="1" checked>
-                            <div class="quiz__btn-wrap">
-                              <div class="quiz__btn-top">
-                                <div class="quiz__btn-val">Да</div>
-                                <div class="quiz__btn-fake"></div>
-                                <div class="quiz__btn-text">Двусторонний монохромный дисплей покупателя<span class="quiz__btn-text_q" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quaerat?">(?)</span></div>
+                          <div class="row quiz__buttons-row">
+                            <label class="quiz__btn">
+                              <input class="quiz__btn-input" type="radio" name="quiz" value="1">
+                              <div class="quiz__btn-wrap">
+                                <div class="quiz__btn-top">
+                                  <div class="quiz__btn-val">Да</div>
+                                  <div class="quiz__btn-fake">
+                                    <svg class="quiz__btn-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#check"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="quiz__btn-text">Двусторонний монохромный дисплей покупателя&nbsp;<span class="quiz__btn-text_q" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quaerat?">(?)</span></div>
                               </div>
-                            </div>
-                          </label>
-                          <label class="quiz__btn">
-                            <input class="quiz__btn-input" type="radio" name="quiz" value="2">
-                            <div class="quiz__btn-wrap">
-                              <div class="quiz__btn-top">
-                                <div class="quiz__btn-val">Да</div>
-                                <div class="quiz__btn-fake"></div>
-                                <div class="quiz__btn-text">Цветной монитор покупателя<span class="quiz__btn-text_q" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quaerat?">(?)</span></div>
+                            </label>
+                            <label class="quiz__btn">
+                              <input class="quiz__btn-input" type="radio" name="quiz" value="2">
+                              <div class="quiz__btn-wrap">
+                                <div class="quiz__btn-top">
+                                  <div class="quiz__btn-val">Да</div>
+                                  <div class="quiz__btn-fake">
+                                    <svg class="quiz__btn-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#check"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="quiz__btn-text">Цветной монитор покупателя&nbsp;<span class="quiz__btn-text_q" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quaerat?">(?)</span></div>
                               </div>
-                            </div>
-                          </label>
-                          <label class="quiz__btn">
-                            <input class="quiz__btn-input" type="radio" name="quiz" value="3">
-                            <div class="quiz__btn-wrap">
-                              <div class="quiz__btn-top">
-                                <div class="quiz__btn-val">Нет</div>
-                                <div class="quiz__btn-fake"></div>
+                            </label>
+                            <label class="quiz__btn">
+                              <input class="quiz__btn-input" type="radio" name="quiz" value="3">
+                              <div class="quiz__btn-wrap">
+                                <div class="quiz__btn-top">
+                                  <div class="quiz__btn-val">Нет</div>
+                                  <div class="quiz__btn-fake">
+                                    <svg class="quiz__btn-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#check"></use>
+                                    </svg>
+                                  </div>
+                                </div>
                                 <div class="quiz__btn-text">Цветной монитор покупателя не требуется</div>
                               </div>
-                            </div>
-                          </label>
+                            </label>
+                          </div>
                         </div>
                       </div>
-                      <div class="swiper-slide quiz__slide">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at deserunt molestias nihil, pariatur provident quaerat quas quis. A assumenda cupiditate ea fugit labore, laboriosam nostrum nulla numquam porro ratione sint soluta ut vel. Aut itaque iure maiores perspiciatis quas quidem recusandae vel voluptates? Accusamus adipisci ex mollitia nesciunt officiis quae sapiente, velit voluptatem. Adipisci aperiam architecto aspernatur, aut consequuntur cupiditate eligendi enim in iste laboriosam minima modi mollitia nisi officia optio porro qui quo reprehenderit similique tenetur vel velit vitae voluptatem? Aut corporis dicta distinctio ea, eligendi eveniet mollitia natus nulla numquam omnis optio quae quo vel voluptas voluptatibus! Ad aut autem error, ex excepturi, maxime minima, obcaecati officia quae repudiandae sit sunt tempora unde ut velit veniam voluptas. Alias autem eaque impedit minima perspiciatis provident rem, totam. Alias aliquid assumenda, cumque debitis dolorum eos eum in ipsa iusto minima nemo neque, non odit officia quia temporibus ut! Aliquid architecto aspernatur at aut autem beatae deserunt dignissimos et ex exercitationem expedita explicabo impedit laboriosam laudantium maiores mollitia optio porro qui quibusdam, quisquam quos reiciendis repellat vel veniam voluptatum? Cumque dolorem esse impedit, iusto nesciunt nostrum quae recusandae reiciendis totam velit. Alias doloribus ea incidunt laboriosam minus modi quaerat, similique!</div>
+                      <div class="swiper-slide quiz__slide">
+                        <div class="row">
+                          <div class="quiz__slide-form">
+                            <div class="quiz__text">Спасибо. Наши специалисты бесплатно подберут необходимое торговое оборудование (несколько вариантов, под разный бюджет) и вышлют на Ваш адрес электронной почты в виде коммерческого предложения</div>
+                            <div class="quiz__scrollbar">
+                              <div class="quiz__scrollbar-line"></div>
+                            </div>
+                          </div>
+                          <div class="quiz__slide-wrap">
+                            <div class="quiz__field">
+                              <input class="quiz__input" type="text" name="quizName" placeholder="Ваше Имя">
+                            </div>
+                            <div class="quiz__field">
+                              <input class="quiz__input" type="email" name="quizEmail" placeholder="Электронная почта">
+                            </div>
+                            <div class="quiz__bottom">
+                              <div class="quiz__fz">Заполняя данную форму Вы соглашаетесь  с<br><a class="quiz__fz-link" href="/">Политикой обработки персональных данных</a></div>
+                              <button class="button quiz__submit" type="submit">Подобрать оборудование</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide quiz__slide">
+                        <div class="quiz__success">Спасибо. Ваша заявка принята в работу</div>
+                      </div>
                     </div>
                   </div>
                 </form>
               </div>
             </div>
           </section>
+          <section class="index__chart">
+            <div class="ichart">
+              <div class="container">
+                <div class="ichart__title title">График перехода на онлайн кассы (54-ФЗ)</div>
+                <div class="ichart__list"><img class="ichart__list-bg" src="images/content/main/chart/bg.png">
+                  <div class="ichart__list-rows">
+                    <div class="ichart__row">
+                      <div class="ichart__row-wrap"></div>
+                      <div class="ichart__item">
+                        <div class="ichart__item-date">1 феварля 2017</div>
+                        <div class="ichart__line">
+                          <div class="ichart__line-before"></div>
+                          <div class="ichart__check">
+                            <div class="ichart__check-wrap">
+                              <svg class="ichart__check-svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="ichart__line-after"></div>
+                        </div>
+                        <div class="ichart__item-text">Больше нельзя регистрировать старые кассы с ЭКЛЗ.</div>
+                        <div class="ichart__item-before"></div>
+                      </div>
+                      <div class="ichart__item">
+                        <div class="ichart__item-date">31 марта 2017</div>
+                        <div class="ichart__line">
+                          <div class="ichart__line-before"></div>
+                          <div class="ichart__check">
+                            <div class="ichart__check-wrap">
+                              <svg class="ichart__check-svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="ichart__line-after"></div>
+                        </div>
+                        <div class="ichart__item-text">Продавцы крепкого алкоголя, у которых еще небыло ККТ. Продавать слабоалкогольные напитки покачто можно без кассы нового образца</div>
+                        <div class="ichart__item-before"></div>
+                      </div>
+                      <div class="ichart__item">
+                        <div class="ichart__item-date">1 июня 2017</div>
+                        <div class="ichart__line">
+                          <div class="ichart__line-before"></div>
+                          <div class="ichart__check">
+                            <div class="ichart__check-wrap">
+                              <svg class="ichart__check-svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="ichart__line-after"></div>
+                        </div>
+                        <div class="ichart__item-text">ОСН и УСН, кроме услуг. Интернет-магазины, которые принимают карты и наличные деньги. Продавцы акцизных товаров.</div>
+                        <div class="ichart__item-after"></div>
+                        <div class="ichart__item-arr"></div>
+                        <div class="ichart__item-before"></div>
+                      </div>
+                    </div>
+                    <div class="ichart__row">
+                      <div class="ichart__row-wrap"></div>
+                      <div class="ichart__item">
+                        <div class="ichart__item-date">1 июля 2018</div>
+                        <div class="ichart__line">
+                          <div class="ichart__line-before"></div>
+                          <div class="ichart__check">
+                            <div class="ichart__check-wrap">
+                              <svg class="ichart__check-svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="ichart__line-after"></div>
+                        </div>
+                        <div class="ichart__item-text">Интернет-магазины, которым клиент платит электронными деньгами, по квитанции в банке или на почте наложенным платежом. ЕНВД и ПСН с наемными сотрудниками в сфере общепита или розничной торговли. Вендинг с наемными сотрудниками.</div>
+                        <div class="ichart__item-before"></div>
+                      </div>
+                      <div class="ichart__item">
+                        <div class="ichart__item-date">1 июля 2019</div>
+                        <div class="ichart__line">
+                          <div class="ichart__line-before"></div>
+                          <div class="ichart__check">
+                            <div class="ichart__check-wrap">
+                              <svg class="ichart__check-svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="ichart__line-after"></div>
+                        </div>
+                        <div class="ichart__item-text">ЕНВД (подпункты 1–5, 10–14 пункта 2 сттьи 346,26 НК). Патент (подпункты 1–15, 18–28, 30–44, 49–58, 60–63 пункта 2 статьи 346,43 НК). Вендинг без сотрудиков. Услуги населению, кроме общепита с наемными сотрудниками.</div>
+                        <div class="ichart__item-after"></div>
+                        <div class="ichart__item-arr"></div>
+                        <div class="ichart__item-before"></div>
+                      </div>
+                    </div>
+                    <div class="ichart__row">
+                      <div class="ichart__row-wrap"></div>
+                      <div class="ichart__item">
+                        <div class="ichart__item-date">1 февраля 2021</div>
+                        <div class="ichart__line">
+                          <div class="ichart__line-before"></div>
+                          <div class="ichart__check">
+                            <div class="ichart__check-wrap">
+                              <svg class="ichart__check-svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="ichart__line-after"></div>
+                        </div>
+                        <div class="ichart__item-text">ИП на патенте, ЕНВД и УСН обязаны указывать в чеке наименование товара или услуг и их количество.</div>
+                        <div class="ichart__item-after"></div>
+                        <div class="ichart__item-arr"></div>
+                        <div class="ichart__item-before"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="index__feed">
+            <div class="feed">
+              <div class="container">
+                <form class="feed__form">
+                  <div class="row">
+                    <div class="feed__left">
+                      <div class="feed__title title title_w title_tal">Оставить заявку на консультацию</div>
+                      <div class="feed__sub">Оставьте заявку или позвоните по указанному номеру телефона и наши менеджеры проконсультируют Вас и помогут с выбором</div>
+                      <div class="feed__cols">
+                        <div class="row">
+                          <div class="feed__col">
+                            <input class="input feed__input" type="text" name="name" placeholder="Введите имя"/>
+                          </div>
+                          <div class="feed__col">
+                            <input class="input feed__input" type="tel" name="tel" placeholder="+7 (495) 123 45 67"/>
+                          </div>
+                          <div class="feed__col">
+                            <button class="button button_y feed__submit" type="submit">Получить консультацию</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="feed__fz">Заполняя данную форму Вы соглашаетесь с&nbsp;<a class="feed__fz_link" href="/">Политикой обработки персональных данных</a></div>
+                    </div>
+                    <div class="feed__right">
+                      <div class="feed__img"><img class="feed__img-img" src="images/icons/call.png"/></div>
+                      <div class="feed__phone"><a class="feed__phone-link" href="tel:+7(499)110-38-35">+7 (499) 110-38-35</a>
+                        <div class="feed__phone-comment">Консультация бесплатна</div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+          <section class="index__about">
+            <div class="iabout">
+              <div class="container iabout__container">
+                <div class="iabout__slogan">Автоматизация - это индивидуальный комплекс мероприятий, включающий внедрение специализированного оборудования и программных продуктов для значительного повышения эффективности деятельности торгового предприятия.</div>
+                <div class="iabout__text">Наша компания занимается автоматизацией магазинов розничной торговли, предприятий общественного питания и складов, разработкой и внедрением индивидуальных решений на основе технических задач, стоящих перед предприятием. Правильно подобранное оборудование позволяет избежать дополнительных расходов и ситуаций, когда предприниматель либо переплачивает за технические характеристики, которые не соответствуют текущим потребностям его предприятия и в которых нет необходимости, либо, наоборот, экономит и приобретает то, что не справляется с имеющимися объемами и задачами, тем самым замедляя весь рабочий процесс. В наши обязанности входит подбор всего необходимого торгового оборудования, регистрация и постановка на учет контрольно-кассовой техники, доставка и монтаж, подключение и настройка, проведение пуско-наладочных работ, обучение кассиров-операционистов и товароведов, гарантийное, сервисное и техническое обслуживание.</div>
+                <button class="iabout__button button" type="button">Начать сотрудничество</button>
+              </div>
+            </div>
+          </section>
         </main>
       </div>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="footer__subscribe">
+          <div class="subscribe">
+            <div class="container">
+              <div class="row subscribe__row">
+                <div class="subscribe__left">
+                  <div class="subscribe__title">Подпишитесь на наши новости и специальные предложения</div>
+                </div>
+                <div class="subscribe__right">
+                  <form class="subscribe__form">
+                    <div class="subscribe__field">
+                      <input class="subscribe__input" type="email" name="email" placeholder="Введите свой e-mail">
+                      <input class="subscribe__submit" type="submit" value="Подписаться">
+                    </div>
+                    <div class="subscribe__fz">Подтверждая данную форму Вы соглашаетесь с&nbsp;<a class="subscribe__fz_link" href="/">Политикой обработки персональных данных</a></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="footer__top">
+            <div class="row">
+              <div class="footer__left">
+                <div class="row">
+                  <div class="footer__col"><a class="footer__title footer__title_link" href="/">Торговое оборудование </a>
+                    <div class="footer__list"><a class="footer__item" href="/">Автономные онлайн-кассы (54-ФЗ)</a><a class="footer__item" href="/">Фискальные регистраторы (54-ФЗ)</a><a class="footer__item" href="/">POS-системы</a><a class="footer__item" href="/">POS-компьютеры</a><a class="footer__item" href="/">POS-мониторы</a><a class="footer__item" href="/">Дисплеи покупателя</a><a class="footer__item" href="/">Программируемые клавиатуры</a><a class="footer__item" href="/">Сканеры штрих-кода </a><a class="footer__item" href="/">Принтеры этикеток</a><a class="footer__item" href="/">Терминалы сбора данных (ТСД)</a><a class="footer__item" href="/">Электронные весы</a><a class="footer__item" href="/">Денежные ящики</a><a class="footer__item" href="/">Детекторы валют</a><a class="footer__item" href="/">Банковские терминалы (эквайринг)</a><a class="footer__item" href="/">Чековые принтеры </a><a class="footer__item" href="/">Фискальные накопители</a><a class="footer__item" href="/">Расходные материалы</a>
+                    </div>
+                  </div>
+                  <div class="footer__col"><a class="footer__title footer__title_link" href="/">Автоматизация</a>
+                    <div class="footer__list"><a class="footer__item" href="/">Продуктовый магазин </a><a class="footer__item" href="/">Алкогольный магазин</a><a class="footer__item" href="/">Пивной магазин</a><a class="footer__item" href="/">Магазин одежды и обуви </a><a class="footer__item" href="/">Аптека</a><a class="footer__item" href="/">Хозяйственный магазин </a><a class="footer__item" href="/">Ювелирный магазин</a><a class="footer__item" href="/">Цветочный магазин</a><a class="footer__item" href="/">Магазин стройматериалов </a><a class="footer__item" href="/">Книжный магазин</a><a class="footer__item" href="/">Косметический магазин</a><a class="footer__item" href="/">Магазин автозапчастей </a><a class="footer__item" href="/">Зоомагазин</a><a class="footer__item" href="/">Ресторан</a><a class="footer__item" href="/">Фудкорт </a><a class="footer__item" href="/">Кафе, кофейня, бар</a><a class="footer__item" href="/">Столовая на предприятии</a>
+                    </div>
+                  </div>
+                  <div class="footer__col"><a class="footer__title footer__title_link" href="uslugi.html">Услуги</a>
+                    <div class="footer__list"><a class="footer__item" href="uslugi.html">Автоматизация</a><a class="footer__item" href="uslugi.html">Техническое обслуживание</a><a class="footer__item" href="uslugi.html">Подключение к ФГИС Меркурий</a><a class="footer__item" href="uslugi.html">Изготовление КЭП</a><a class="footer__item" href="uslugi.html">Регистрация ККТ в ИФНС </a><a class="footer__item" href="uslugi.html">Подключение к ОФД</a><a class="footer__item" href="uslugi.html">Подключение ФР</a><a class="footer__item" href="uslugi.html">Подключение электронных весов</a><a class="footer__item" href="uslugi.html">Подключение сканера штрих-кода</a><a class="footer__item" href="uslugi.html">Подключение дисплея покупателя</a><a class="footer__item" href="uslugi.html">Подключение весов с печатью этикеток</a><a class="footer__item" href="uslugi.html">Подключение принтера этикеток</a><a class="footer__item" href="uslugi.html">Подключение программируемой клавиатуры </a><a class="footer__item" href="uslugi.html">Подключение ТСД</a><a class="footer__item" href="uslugi.html">Подключение ЕГАИС</a><a class="footer__item" href="uslugi.html">Обучение кассира</a><a class="footer__item" href="uslugi.html">Обучение товароведа</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__right">
+                <div class="footer__title">Контакты</div>
+                <div class="footer__phones"><a class="phone footer__phone" href="tel:+7(499)110-28-25">+7 (499) 110-28-25</a><a class="phone phone_grey footer__phone" href="tel:+7(499)123-33-44">+7 (499) 123-33-44</a>
+                  <div class="footer__phones-comment">Телефон технической поддержки<br>Время работы с 9:00 - 20:00</div>
+                </div>
+                <div class="footer__socials socials"><a class="social social_vk" href="/" target="_blank">
+                              <svg class="social__svg">
+                                <use xlink:href="/images/icons/sprite.svg#vk"></use>
+                              </svg></a><a class="social social_fb" href="/" target="_blank">
+                              <svg class="social__svg">
+                                <use xlink:href="/images/icons/sprite.svg#fb"></use>
+                              </svg></a></div>
+                <div class="footer__buttons">
+                  <button class="button footer__button" type="button">Заказать звонок</button>
+                  <button class="button button_t footer__button" type="button">Оставить отзыв</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__logo"><a class="logo" href="/"><img class="logo__img" src="images/content/logo.png"></a></div>
+            <div class="footer__desc">Автоматизация магазинов розничной торговли, предприятий общественного питания (HoReCa), складов. Индивидуальное проектирование и комплексное оснащение, подбор торгового оборудования, доставка и монтаж, подключение и настройка, проведение пуско-наладочных работ, обучение персонала работе с системой, техническое обслуживание. (с) 2019 Все права защищены.</div>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
   <div class="debug">
