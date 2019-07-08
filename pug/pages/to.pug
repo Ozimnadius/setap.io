@@ -1,0 +1,123 @@
+extends ../main
+
+block variables
+    - var title = 'Техническое обслуживание'
+
+block content
+    main.to
+        //- bread
+        section.bread
+            .container
+                .bread__list
+                    a(href='/').bread__item Главная
+                    .bread__sep /
+                    a.bread__item.bread__item_active Техническое обслуживание
+
+        //- banner
+        section(style='background-image:url(/images/content/tech/bg.jpg)').to__banner
+            .container
+                div.to__banner-wrapper
+                    .row.to__banner-row
+                        .to__banner-content
+                            .to__banner-title Центр технического обслуживания для Вашего предприятия
+                            button(type='button').button.to__banner-button Получить консультацию
+
+        //- advs
+        section.to__advs
+            .container
+                .row
+                    each i,x in toAdvs
+                        .to__adv
+                            .to__adv-img
+                                img(src='images/icons/icon_tech_0' + (x + 1) + '.svg').to__adv-pic
+                            .to__adv-title= i.title
+                            .to__adv-text= i.text
+
+
+
+        //- what
+        section.to__what
+            .container
+                //- title
+                .to__what-title.title Что мы обслуживаем
+                //- sws
+                .to__sws
+                    each i,x in toSws
+                        div(class=x == 0 ? 'active' : '' data-id=x + 1).to__sw= i
+                //- tabs
+                .to__tabs
+                    each i,x in [1,2,3]
+                        div(class=x == 0 ? 'active' : '' data-id=x + 1).to__tab
+                            .row.to__tab-row
+                                //- left
+                                .to__tab-left
+                                    img(src='images/content/tech/1.png').to__tab-img
+
+                                //- right
+                                .to__tab-right
+                                    .to__tab-content Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+                                    button(type='button').to__tab-button.button Начать сотрудничество
+
+
+
+
+        //- tarifs
+        section.to__tarifs
+            .container
+                .tatifs
+                    .title.tarifs__title Тарифы
+                    table.tarifs__table
+                        thead
+                            tr.tarifs__tr
+                                th.tarifs__w-1.tarif__title Услуги
+                                th.tarifs__w-2
+                                th.tarifs__w-3
+                                th.tarifs__w-4
+                        tbody
+                            each i in tarifsServices
+                                tr.tarifs__tr
+                                    td.tarifs__w-1
+                                        .tarif__text= i.text
+                                    each col,x in i.cols
+                                        td(class='tarifs__w-' + (x + 2))
+                                            div(class=col ? 'checked' : '').tarif__check
+                            each i in tarifsPrice
+                                tr.tarifs__tr
+                                    td(colspan='4').tarif__title= i.title
+                                each row in i.rows
+                                    tr.tarifs__tr
+                                        td.tarifs__w-1
+                                            .tarif__text= row.text
+                                        each price,x in row.price
+                                            td(class='tarifs__w-' + (x + 2))
+                                                .tarif__price= price
+
+
+
+
+                        tfoot
+
+        //- feed
+        section.to__feed
+            +feed('feed_grey','images/icons/call2.png')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,162 @@
+.to{
+
+  &__banner{
+    height: 384px;
+    //background-size: cover;
+    background-position: right center;
+    margin-bottom: 210px;
+    &-wrapper {
+
+    }
+
+    &-row {
+      height: 100%;
+      align-items: center;
+    }
+
+    &-content {
+      @include col;
+      @include size(10);
+    }
+
+    &-title {
+      font-family: $font2;
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+
+    &-button {
+      width: 200px;
+    }
+  }
+
+  &__advs {
+    margin-top: -180px;
+    margin-bottom: -160px;
+  }
+
+  &__adv {
+    @include col;
+    @include size(6);
+    background: #4E2869;
+    border: 1px solid #E0E0E0;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 20px 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $bg;
+
+    &-img {
+      width: 100px;
+      height: 100px;
+      background: $bg;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-title {
+      text-align: center;
+      font-size: 17px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    &-text {
+      font-size: 15px;
+      text-align: center;
+    }
+  }
+
+  &__what {
+    background: #EAEAEA;
+    padding-top: 220px;
+    padding-bottom: 220px;
+    &-title {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__sws{
+    display: flex;
+  }
+
+  &__sw {
+    font-weight: bold;
+    color: rgba($text,.6);
+    transition: .3s;
+    padding: 20px 30px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px 12px 0px 0px;
+    margin-right: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    
+    &:last-child{
+      margin-right: 0;
+    }
+
+    &.active {
+      color: rgba($text,1);
+      background: rgba(255, 255, 255, 1);
+    }
+  }
+
+  &__tabs {
+    position: relative;
+  }
+
+  &__tab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    background: #FFFFFF;
+    padding: 50px 0;
+    border-radius: 0px 0 12px 12px;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &-row {
+      align-items: center;
+    }
+
+    &-left,&-right {
+      @include col;
+      @include size(12);
+    }
+
+    &-right {
+      padding-right: 50px;
+    }
+
+    &-img {
+      width: 100%;
+    }
+
+    &-content {
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    &-button {
+      width: 220px;
+    }
+  }
+
+  &__feed {
+    margin-bottom: 60px;
+  }
+}
