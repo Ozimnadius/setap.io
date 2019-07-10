@@ -64,38 +64,63 @@ block content
         //- tarifs
         section.to__tarifs
             .container
-                .tatifs
+                .tarifs
                     .title.tarifs__title Тарифы
-                    table.tarifs__table
-                        thead
-                            tr.tarifs__tr
-                                th.tarifs__w-1.tarif__title Услуги
-                                th.tarifs__w-2
-                                th.tarifs__w-3
-                                th.tarifs__w-4
-                        tbody
+                    .tarifs__table
+                        .tarifs__thead
+                            .tarifs__tr.tarifs__top
+                                .tarifs__td.tarifs__w-1.tarif__title.tarif__grey Услуги
+                                .tarifs__td.tarifs__w-2.tarif__1
+                                    .tarif__name Базовый
+                                    .tarif__cena 1 500 ₽
+                                    .tarif__sub в квартал
+                                .tarifs__td.tarifs__w-3.tarif__2
+                                    .tarif__name Стандартный
+                                    .tarif__cena 3 000 ₽
+                                    .tarif__sub в квартал
+                                .tarifs__td.tarifs__w-4.tarif__3
+                                    .tarif__name Полный
+                                    .tarif__cena 5 000 ₽
+                                    .tarif__sub в квартал
+                        .tarifs__tbody
                             each i in tarifsServices
-                                tr.tarifs__tr
-                                    td.tarifs__w-1
+                                .tarifs__tr
+                                    .tarifs__td.tarifs__w-1
                                         .tarif__text= i.text
                                     each col,x in i.cols
-                                        td(class='tarifs__w-' + (x + 2))
+                                        .tarifs__td(class='tarifs__w-' + (x + 2))
                                             div(class=col ? 'checked' : '').tarif__check
                             each i in tarifsPrice
-                                tr.tarifs__tr
-                                    td(colspan='4').tarif__title= i.title
+                                .tarifs__tr
+                                    .tarifs__td.tarifs__w-100.tarif__title.tarif__grey= i.title
                                 each row in i.rows
-                                    tr.tarifs__tr
-                                        td.tarifs__w-1
+                                    .tarifs__tr
+                                        .tarifs__td.tarifs__w-1
                                             .tarif__text= row.text
                                         each price,x in row.price
-                                            td(class='tarifs__w-' + (x + 2))
+                                            .tarifs__td(class='tarifs__w-' + (x + 2))
                                                 .tarif__price= price
 
 
 
 
-                        tfoot
+                        .tarifs__tfoot
+                            .tarifs__tr.tarifs__bottom
+                                .tarifs__td.tarifs__w-1.tarifs__bottom-title.tarif__grey
+                                    .tarif__title Тарифы на техническое обслуживание торгового оборудования (за квартал)
+                                    a(href='/' download=true).tarif__download Скачать прайс-лист
+                                .tarifs__td.tarifs__w-2
+                                    .tarif__name.tarif__name_b Базовый
+                                    .tarif__cena.tarif__cena_b 1 500 ₽
+                                    button(type='button').tarif__button.button Купить
+                                .tarifs__td.tarifs__w-3
+                                    .tarif__name.tarif__name_b Стандартный
+                                    .tarif__cena.tarif__cena_b 3 000 ₽
+                                    button(type='button').tarif__button.button Купить
+                                .tarifs__td.tarifs__w-4
+                                    .tarif__name.tarif__name_b Полный
+                                    .tarif__cena.tarif__cena_b 5 000 ₽
+                                    button(type='button').tarif__button.button Купить
 
         //- feed
         section.to__feed

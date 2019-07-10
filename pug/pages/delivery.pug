@@ -1,0 +1,179 @@
+extends ../main
+
+block variables
+    - var title = 'Доставкаи оплата'
+
+block content
+    main.delivery
+        //- bread
+        section.bread
+            .container
+                .bread__list
+                    a(href='/').bread__item Главная
+                    .bread__sep /
+                    a.bread__item.bread__item_active Доставкаи оплата
+        //- top
+        section.delivery__top
+            .container
+                .delivery__title.title.title_tal Доставка
+
+                //- block
+                .delivery__block
+                    .row
+                        //- left
+                        .delivery__left
+                            img(src='images/content/delivery/img1.png').delivery__img
+
+                        //- right
+                        .delivery__right
+                            .delivery__sub Доставка осуществляется  по всей территории России
+                            .delivery__quote
+                                .delivery__quote-title Варианты доставки:
+                            .delivery__ul
+                                li.delivery__li
+                                    img(src='images/content/contacts/delivery.svg').delivery__li-img
+                                    .delivery__li-text По указанному адресу в Вашем городе
+                                li.delivery__li
+                                    img(src='images/content/contacts/post.svg').delivery__li-img
+                                    .delivery__li-text До пункта смовывоза в вашем городе
+
+
+
+
+                .delivery__block
+                    .row
+                        //- left
+                        .delivery__left
+                            img(src='images/content/delivery/map.png').delivery__map
+                            .delivery__types
+                                .row
+                                    .delivery__type
+                                        .delivery__type-title Доставка по Москве
+                                        .delivery__type-text Бесплатная доставка при сумме заказа  от 10 000 руб.
+
+
+
+                                    .delivery__type
+                                        .delivery__type-title Самовывоз
+                                        .delivery__type-text Для Москвы и МО: 143409, Московская область,  г. Красногорск, ул. Ленина, д. 38-б, офис 88
+                            .delivery__quote
+                                .delivery__quote-subtitle Вы можете самостоятельно забрать оплаченный заказ со склада в удобное для Вас время
+
+
+                        //- right
+                        .delivery__right
+                            .delivery__quote
+                                .delivery__quote-title Есть вопросы?
+                                .delivery__quote-text Свяжитесь с нами любым удобным Вам способом
+                            .delivery__ul
+                                li.delivery__li
+                                    img(src='images/content/contacts/tel.svg').delivery__li-img
+                                    .delivery__li-content
+                                        a(href='tel:+7(499)110-38-35').delivery__li-contact +7 (499) 110-38-35
+                                        .delivery__li-text Консультация бесплатна
+                                li.delivery__li
+                                    img(src='images/content/contacts/email.svg').delivery__li-img
+                                    a(href='mailto:info@inthestore.ru').delivery__li-contact info@inthestore.ru
+                                li.delivery__li
+                                    img(src='images/content/contacts/pin.svg').delivery__li-img
+                                    .delivery__li-text 143409, Московская область,  г. Красногорск, ул. Ленина, д. 38-б, офис 88
+
+
+
+
+                                li.delivery__li
+                                    img(src='images/content/contacts/clock.svg').delivery__li-img
+                                    .delivery__li-content
+                                        .delivery__time
+                                            |Пн-Пт&nbsp;
+                                            span.delivery__time_time 9:00 - 19:00
+                                        .delivery__time
+                                            |Сб&nbsp;
+                                            span.delivery__time_time 10:00 - 17:00
+
+
+
+
+
+                            .delivery__button
+                                a(href='/' download=true).delivery__download
+                                    img(src='images/icons/download2.svg').delivery__download-img
+                                    .delivery__download-title Скачать тарифы доставки
+        //- options
+        section.delivery__options
+            .doptions
+                .container
+                    .doptions__title.title Способы оплаты
+                    .doptions__list
+                        .row
+                            each i in doptions
+                                .doption
+                                    .doption__title= i.title
+                                    .doption__list
+                                        each j in i.list
+                                            .doption__item
+                                                img(src=j.src).doption__item-img
+                                                .doption__item-text= j.text
+        //warranty
+        section.delivery__warranty
+            .warranty
+                .container
+                    .warranty__title.title Гарантия и возврат
+                    .row
+                        //- left
+                        .warranty__left
+                            //- ul
+                            .warranty__ul
+                                each i in warrantyList
+                                    .warranty__li
+                                        .warranty__li-img
+                                            +icon('+', 'warranty__li-svg')
+                                        .warranty__li-text= i
+
+
+                            //- quote
+                            .warranty__quote Поставщик гарантирует возврат / обмен Товара за счет и силами Поставщика в следующих случаях:
+
+                            //- list
+                            .warranty__list
+                                each i in warrantyList2
+                                    .warranty__item
+                                        .warranty__item-img
+                                            +icon('check', 'warranty__item-svg')
+                                        .warranty__item-text= i
+
+
+                        //- right
+                        .warranty__right
+                            img(src='images/content/delivery/img2.png').warranty__img
+
+                    //- attention
+                    .warranty__attention
+                        .warranty__attention-title В исключительных случаях Стороны могут согласовать замену Товара на другие позиции Товара равной стоимости, либо с доплатой Покупателя.
+                        .warranty__attention-bottom
+                            img(src='images/icons/info.svg').warranty__attention-img
+                            .warranty__attention-text Покупатель в связи с наступлением гарантийного случая не имеет права требовать от поставщика иных возмещений, кроме возврата /  обмена / проведения гарантийного ремонта, в том числе требовать уплаты неустойки и / или возмещения убытков, и / или расходов, и / или возмещения упущенной выгоды.
+        //- feed
+        section.delivery__feed
+            +feed('feed_grey','images/icons/call2.png')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

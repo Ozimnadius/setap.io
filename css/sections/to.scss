@@ -1,10 +1,11 @@
-.to{
+.to {
 
-  &__banner{
+  &__banner {
     height: 384px;
     //background-size: cover;
     background-position: right center;
     margin-bottom: 210px;
+
     &-wrapper {
 
     }
@@ -76,19 +77,21 @@
   &__what {
     background: #EAEAEA;
     padding-top: 220px;
-    padding-bottom: 220px;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+
     &-title {
       margin-bottom: 50px;
     }
   }
 
-  &__sws{
+  &__sws {
     display: flex;
   }
 
   &__sw {
     font-weight: bold;
-    color: rgba($text,.6);
+    color: rgba($text, .6);
     transition: .3s;
     padding: 20px 30px;
     background: rgba(255, 255, 255, 0.5);
@@ -98,13 +101,13 @@
     display: flex;
     align-items: center;
 
-    
-    &:last-child{
+
+    &:last-child {
       margin-right: 0;
     }
 
     &.active {
-      color: rgba($text,1);
+      color: rgba($text, 1);
       background: rgba(255, 255, 255, 1);
     }
   }
@@ -133,7 +136,7 @@
       align-items: center;
     }
 
-    &-left,&-right {
+    &-left, &-right {
       @include col;
       @include size(12);
     }
@@ -156,7 +159,197 @@
     }
   }
 
+  &__tarifs {
+    margin-bottom: 60px;
+  }
+
   &__feed {
     margin-bottom: 60px;
+  }
+
+}
+
+.tarifs {
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__table {
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  &__tr {
+    display: flex;
+    border-bottom: 1px solid #E0E0E0;
+  }
+
+  &__td {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__w {
+    &-1 {
+      width: width(591);
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    &-2 {
+      width: width(200);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-3 {
+      width: width(199);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-4 {
+      width: width(191);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-100{
+      width: 100%;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  &__bottom {
+    border: none;
+    background: #F2F2F2;
+
+    &-title {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .tarifs__td {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+
+  &__td {
+    border-right: 1px solid #E0E0E0;
+    &:last-child {
+      border: none;
+    }
+  }
+
+}
+
+.tarif {
+
+  &__1{
+    background: #8F80B7;
+    border: none;
+  }
+
+  &__2{
+    background: #6F458D;
+    border: none;
+  }
+
+  &__3{
+    background: #4E2869;
+    border: none;
+  }
+
+  &__grey {
+    background: #F2F2F2;
+  }
+
+  &__title {
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  &__text {
+    font-size: 13px;
+  }
+
+  &__check {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    border: 1px solid #DADADA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.checked {
+      background: $green;
+      border: 1px solid $green;
+    }
+
+    &:after {
+      content: '';
+      width: 14px;
+      height: 10px;
+      background: url("/images/icons/check.svg") 0 0 no-repeat;
+    }
+  }
+
+  &__price {
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  &__name {
+    font-size: 17px;
+    color: $bg;
+    font-weight: 600;
+
+    &_b {
+      color: #4E2869;
+    }
+  }
+
+  &__cena{
+    font-size: 24px;
+    font-weight: bold;
+    color: $bg;
+
+    &_b {
+      color: #4E2869;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__sub {
+    font-size: 13px;
+    color: $bg;
+  }
+
+  &__button {
+    width: 100%;
+    max-width: 160px;
+  }
+
+  &__download {
+    color: #1686C6;
+    text-decoration: underline;
+    font-size: 13px;
+    margin-bottom: 10px;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }

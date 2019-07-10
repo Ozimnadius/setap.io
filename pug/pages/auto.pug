@@ -1,0 +1,61 @@
+extends ../main
+
+block variables
+    - var title = 'Автоматизация'
+
+block content
+    main.auto
+        //- banner
+        section.auto__banner
+            div(style='images/content/automatization/bg.jpg').abanner
+                .container
+                    .row
+                        .abanner__block
+                            .abanner__title Автоматизация
+                            .abanner__text Индивидуальный комплекс мероприятий, включающий внедрение специализированного оборудования и программных продуктов для значительного повышения эффективности деятельности торгового предприятия
+        //- about
+        section.auto__about
+            .aabout
+                .container
+                    .aabout__title.title
+                    .aabout__desc
+                    .aabout__img
+                        img(src='images/content/automatization/img.png').aabout__pic
+
+        //- advantages
+        section.auto__advs
+            .aadvs
+                .container
+                    .aadvs__title.title.title_w Преимущества автоматизации
+                    .aadvs__list
+                        each i in aadvs
+                            .aadv
+                                .aadv__left
+                                    img(src=i.src)
+                                .aadv__right
+                                    .aadv__title= i.title
+                                    .aadv__text= i.text
+                    button(type='button').button.button_y.aadvs__button Заказать автоматизацию
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
