@@ -48,7 +48,7 @@ $(function () {
                     scrollbarLine = scrollbar.find('.quiz__scrollbar-line'),
                     width = '';
 
-                width = ((100/counter)*i)+'%'
+                width = ((100 / counter) * i) + '%'
                 scrollbarLine.css('width', width);
 
             }
@@ -72,11 +72,11 @@ $(function () {
         }
     );
 
-    $('.quiz__btn-input').on('click', function (e) {
+    $('.jsQuizNext').on('click', function (e) {
         quiz.slideNext();
     });
-    
-    $('.ichart__item-after').each(function (x,i) {
+
+    $('.ichart__item-after').each(function (x, i) {
 
         let item = $(i),
             parent = item.closest('.ichart__item'),
@@ -85,25 +85,25 @@ $(function () {
             line = parent.find('.ichart__line'),
             bottomLine = parent.find('.ichart__item-before');
 
-        if (x == 0){
+        if (x == 0) {
             $('.ichart__list').css({
                 // paddingRight: (height/2)+'px'
             });
         }
 
         item.css({
-            height: height+'px',
-            width:  height+'px',
+            height: height + 'px',
+            width: height + 'px',
             // left: 'calc(100% - '+(height/2)+'px)'
         });
         line.css({
-            marginRight: (height/2)+'px'
+            marginRight: (height / 2) + 'px'
         });
         arr.css({
-            right: (height/2)+'px'
+            right: (height / 2) + 'px'
         });
         bottomLine.css({
-            right: (height/2)+'px'
+            right: (height / 2) + 'px'
         });
 
     });
@@ -126,5 +126,27 @@ $(function () {
             }
         }
     );
+
+    $('.count__up').on('click', function (e) {
+
+        let $this = $(this),
+            count = $this.closest('.count'),
+            inputObj = count.find('.count__input'),
+            val = inputObj.val();
+        val++;
+        inputObj.val(val);
+    });
+    $('.count__down').on('click', function (e) {
+        let $this = $(this),
+            count = $this.closest('.count'),
+            inputObj = count.find('.count__input'),
+            val = inputObj.val();
+
+        val--;
+        if (val>=0){
+            inputObj.val(val);
+        }
+    });
+
 
 });

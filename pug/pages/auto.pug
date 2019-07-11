@@ -7,7 +7,7 @@ block content
     main.auto
         //- banner
         section.auto__banner
-            div(style='images/content/automatization/bg.jpg').abanner
+            div(style='background-image:url(images/content/automatization/bg.jpg)').abanner
                 .container
                     .row
                         .abanner__block
@@ -17,8 +17,8 @@ block content
         section.auto__about
             .aabout
                 .container
-                    .aabout__title.title
-                    .aabout__desc
+                    .aabout__title.title Автоматизация это
+                    .aabout__desc Автоматизация предприятия и работа с торговым оборудованием подразумевает взаимодействие с различного рода программами, системами, сервисами и структурами (в том числе государственными), что влечет за собой необходимость оказания вспомогательных услуг для решения тех или иных задач. Регистрация и постановка на учет контрольно-кассовой техники в ИФНС, подключение к оператору фискальных данных (ОФД), работа с ЕГАИС, работа с ФГИС Меркурий, изготовление квалифицированной электронной подписи и получение сертификата в удостоверяющем центре, регулярное обновление и настройка программного обеспечения, замены фискальных накопителей, ремонт и подключение нового оборудования, обучение персонала - все это лишь малая часть того, что Вам предстоит пройти. Доверьте поддержание эффективности работы своего предприятия команде профессионалов и мы с удовольствием пройдем этот путь вместе с Вами
                     .aabout__img
                         img(src='images/content/automatization/img.png').aabout__pic
 
@@ -28,14 +28,221 @@ block content
                 .container
                     .aadvs__title.title.title_w Преимущества автоматизации
                     .aadvs__list
-                        each i in aadvs
-                            .aadv
-                                .aadv__left
-                                    img(src=i.src)
-                                .aadv__right
-                                    .aadv__title= i.title
-                                    .aadv__text= i.text
+                        .row
+                            each i in aadvs
+                                .aadv
+                                    .aadv__left
+                                        img(src=i.src)
+                                    .aadv__right
+                                        .aadv__title= i.title
+                                        .aadv__text= i.text
                     button(type='button').button.button_y.aadvs__button Заказать автоматизацию
+        //- solutions
+        section.auto__solutions
+            .asols
+                .iready
+                    .container
+                        .iready__title.title Решения для Вашего бизнеса
+
+                        .iready__wrap
+                            //- switches
+                            .iready__sws
+                                each i,x in iReadySws
+                                    div(class=x == 0 ? 'active' : '' data-id=x + 1).iready__sw
+                                        .iready__sw-img
+                                            +iconPath('/images/content/main/ready', x + 1,'iready__sw-svg')
+                                        .iready__sw-title= i
+
+                            //- tabs
+                            .iready__tabs
+                                div(data-id='1').iready__tab.active
+                                    img(src='images/content/automatization/img2.jpg').iready__img
+                                    .iready__list
+                                        .row.iready__list-row
+                                            each col in ireadyLinks
+                                                .iready__col
+                                                    each i in col
+                                                        a(href='/').iready__item
+                                                            .iready__link= i
+                                                            .iready__border
+
+                                div(data-id='2').iready__tab
+                                    img(src='images/content/automatization/img2.jpg').iready__img
+                                    .iready__list
+                                        .row.iready__list-row
+                                            each col in ireadyLinks
+                                                .iready__col
+                                                    each i in col
+                                                        a(href='/').iready__item
+                                                            .iready__link= i
+                                                            .iready__border
+                                div(data-id='3').iready__tab
+                                    img(src='images/content/automatization/img2.jpg').iready__img
+                                    .iready__list
+                                        .row.iready__list-row
+                                            each col in ireadyLinks
+                                                .iready__col
+                                                    each i in col
+                                                        a(href='/').iready__item
+                                                            .iready__link= i
+                                                            .iready__border
+                                div(data-id='4').iready__tab
+                                    img(src='images/content/automatization/img2.jpg').iready__img
+                                    .iready__list
+                                        .row.iready__list-row
+                                            each col in ireadyLinks
+                                                .iready__col
+                                                    each i in col
+                                                        a(href='/').iready__item
+                                                            .iready__link= i
+                                                            .iready__border
+        //- quiz
+        section.auto__quiz
+            div(style='background-image:url(images/content/main/quiz/bg.jpg)').quiz
+                .container
+                    form.quiz__form
+                        .swiper-container.quiz__container
+                            .swiper-wrapper
+                                .swiper-slide.quiz__slide
+                                    .row.quiz__row
+                                        //- left
+                                        .quiz__left.quiz__col-3
+
+
+                                        //- center
+                                        .quiz__center.quiz__col-6
+                                            .quiz__title.title Расчет стоимости автоматизации
+                                            .quiz__text Подберите торговое оборудование для своего предприятия
+                                            .quiz__scrollbar
+                                                .quiz__scrollbar-line
+                                            .quiz__sub Укажите количество рабочих мест
+                                            .quiz__jobs
+                                                .quiz__job
+                                                    .quiz__job-title Рабочее место кассира
+                                                    .quiz__job-field.count
+                                                        button(type='button').quiz__job-button.quiz__job-minus.count__down
+                                                            +icon('minus','quiz__job-svg')
+                                                        input(type='number' name='jobСashier' value=1).quiz__job-input.count__input
+                                                        button(type='button').quiz__job-button.quiz__job-plus.count__up
+                                                            +icon('plus','quiz__job-svg')
+
+                                                .quiz__job
+                                                    .quiz__job-title Рабочее место кассира
+                                                    .quiz__job-field.count
+                                                        button(type='button').quiz__job-button.quiz__job-minus.count__down
+                                                            +icon('minus','quiz__job-svg')
+                                                        input(type='number' name='jobCommodity' value=0).quiz__job-input.count__input
+                                                        button(type='button').quiz__job-button.quiz__job-plus.count__up
+                                                            +icon('plus','quiz__job-svg')
+
+
+
+
+                                            button(type='button').button.quiz__next.jsQuizNext Далее
+
+                                        //- right
+                                        .quiz__right.quiz__col-3
+                                .swiper-slide.quiz__slide
+                                    .row
+                                        .quiz__slide-form
+                                            .quiz__text Спасибо. Наши специалисты бесплатно подберут необходимое торговое оборудование (несколько вариантов, под разный бюджет) и вышлют на Ваш адрес электронной почты в виде коммерческого предложения
+                                            .quiz__scrollbar
+                                                .quiz__scrollbar-line
+                                        .quiz__slide-wrap
+                                            .quiz__field
+                                                input(type='text' name='quizName' placeholder='Ваше Имя').quiz__input
+                                            .quiz__field
+                                                input(type='email' name='quizEmail' placeholder='Электронная почта').quiz__input
+                                            .quiz__bottom
+                                                .quiz__fz
+                                                    | Заполняя данную форму Вы соглашаетесь  с
+                                                    br
+                                                    a(href='/').quiz__fz-link Политикой обработки персональных данных
+                                                button(type='submit').button.quiz__submit Подобрать оборудование
+                                .swiper-slide.quiz__slide
+                                    .quiz__success Спасибо. Ваша заявка принята в работу
+        //- work
+        section.auto__how
+            .ahow
+                .container
+                    .ahow__title.title Как мы работаем
+                    .ahow__rows
+                        each row in ahow
+                            .ahow__row.row
+                                .ahow__left
+                                    .ahow__item
+                                        - var item = row.left
+                                        .ahow__item-img
+                                            img(src=item.src).ahow__item-pic
+                                        .ahow__item-text!= item.text
+
+                                .ahow__right
+                                    .ahow__item
+                                        - var item = row.right
+                                        .ahow__item-img
+                                            img(src=item.src).ahow__item-pic
+                                        .ahow__item-text!= item.text
+        //- feed
+        section.auto__feed
+            .feed
+                .container
+                    form.feed__form
+                        .row
+                            //- left
+                            .feed__left
+                                .feed__title.title.title_w.title_tal Остались вопросы по автоматизации?
+                                .feed__sub Оставьте заявку или позвоните по указанному номеру телефона и наши менеджеры проконсультируют Вас и помогут с выбором
+                                .feed__cols
+                                    .row
+                                        .feed__col
+                                            .feed__field
+                                                input(type='text' name='name' placeholder='Введите имя').input.feed__input
+                                            .feed__field
+                                                input(type='tel' name='tel' placeholder='+7 (495) 123 45 67').input.feed__input
+                                        .feed__col.feed__col_2
+                                            textarea(name='comment' placeholder='Опишите Ваш проект, что вы хотите открыть, на какую сумму рассчитываете').input.input_area.feed__area
+                                .feed__bottom
+                                    .row
+                                        .feed__col
+                                            button(type='submit').button.button_y.feed__submit Получить консультацию
+                                        .feed__col.feed__col_2
+                                            .feed__fz
+                                                | Заполняя данную форму Вы соглашаетесь с&nbsp;
+                                                a(href='/').feed__fz_link Политикой обработки персональных данных
+
+
+                            //- right
+                            .feed__right
+                                .feed__img
+                                    img(src='images/icons/call.png').feed__img-img
+                                .feed__phone
+                                    a(href='tel:+7(499)110-38-35').feed__phone-link +7 (499) 110-38-35
+                                    .feed__phone-comment Консультация бесплатна
+        //- uslugi
+        section.auto__uslugi
+            .auslugi
+                .container
+                    .auslugi__title.title Услуги
+                    .auslugi__list
+                        .row
+                            each i,x in auslugi
+                                a(href='usluga.html').ausluga
+                                    .ausluga__hidden
+                                        .ausluga__wrap
+                                            .ausluga__img
+                                                img(src='images/content/automatization/' + (x + 1) + '.jpg').ausluga__pic
+                                            .ausluga__title= i.title
+                                            .ausluga__price= i.price
+                                    .ausluga__absolute
+                                        .ausluga__wrap
+                                            .ausluga__img
+                                                img(src='images/content/automatization/'+(x+1)+'.jpg').ausluga__pic
+                                            .ausluga__title= i.title
+                                            .ausluga__price= i.price
+                                        .ausluga__bottom
+                                            button(type='button').ausluga__button.button Заказать
+
+
 
 
 

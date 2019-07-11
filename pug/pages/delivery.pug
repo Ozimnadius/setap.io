@@ -12,6 +12,8 @@ block content
                     a(href='/').bread__item Главная
                     .bread__sep /
                     a.bread__item.bread__item_active Доставкаи оплата
+
+
         //- top
         section.delivery__top
             .container
@@ -44,7 +46,10 @@ block content
                     .row
                         //- left
                         .delivery__left
-                            img(src='images/content/delivery/map.png').delivery__map
+
+                            .delivery__map
+                                #map.map
+
                             .delivery__types
                                 .row
                                     .delivery__type
