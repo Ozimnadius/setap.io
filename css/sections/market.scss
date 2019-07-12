@@ -1,0 +1,74 @@
+.market{
+
+  &__banner {
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    p{
+      font-size: 15px;
+      line-height: lh(15,25);
+      margin-bottom: 20px;
+    }
+
+    ul {
+      margin-bottom: 25px;
+      li {
+        padding-left: 60px;
+        margin-bottom: 20px;
+        position: relative;
+        &:last-child{
+          margin-bottom: 0;
+        }
+
+        &:before{
+          content: '';
+          display: block;
+          width: 40px;
+          height: 40px;
+          background: url("/images/icons/minus2.svg") 0 0 no-repeat;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+  }
+
+  &__feed {
+    margin-bottom: 40px;
+  }
+}
+
+.mbanner{
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  overflow: hidden;
+  color: $bg;
+
+  &__wrapper {
+    @include col;
+    @include size(14);
+    height: 320px;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 200px;
+    background: rgba(#4E2869,.8);
+    border-radius: 0 0 320px 0;
+  }
+
+  &__title {
+
+    font-size: 36px;
+    line-height: lh(36,45);
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    font-size: 17px;
+    line-height: lh(17,20);
+  }
+}
