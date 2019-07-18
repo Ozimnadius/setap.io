@@ -1,0 +1,254 @@
+extends ../main
+
+block variables
+    - var title = 'Онлайн-касса'
+
+block content
+    main.cat
+        //- bread
+        section.bread
+            .container
+                .bread__list
+                    a(href='/').bread__item Главная
+                    .bread__sep /
+                    a(href='catalog.html').bread__item Каталог товаров
+                    .bread__sep /
+                    a(href='catalog.html').bread__item POS-переферия
+                    .bread__sep /
+                    a.bread__item.bread__item_active Онлайн-касса (54 ФЗ)
+        //- main
+        section.cat__main
+            .container
+                form.cat__form
+                    .row
+                        //- left
+                        .cat__left
+                            //- menu
+                            .cat__menu
+                                .cmenu
+                                    each i in cmenu
+                                        //- title
+                                        .cmenu__title= i.title
+                                        //- list
+                                        .cmenu__list
+                                            each k in i.list
+                                                div(class=k.dopClass).cmenu__item
+                                                    a(href='catalog.html').cmenu__item-link= k.title
+                                                    if k.sublist
+                                                        div(class=k.open ? 'open' : '').cmenu__sublist
+                                                            each j in k.sublist
+                                                                a(href='catalog.html').cmenu__subitem= j
+
+
+
+                            //- filters
+                            .cat__filters
+                                .filters
+                                    .filters__title Фильтры
+                                    .filters__list
+                                        .filter
+                                            .filter__title Бренд
+                                            .filter__checks
+                                                label.filter__check
+                                                    input(type='checkbox' name='brand' value='Атол').check.filter__check-input
+                                                    .check__fake
+                                                        +icon('check', 'check__fake-svg')
+                                                    .check__title Атол
+                                                label.filter__check
+                                                    input(type='checkbox' name='brand' value='Меркурий').check.filter__check-input
+                                                    .check__fake
+                                                        +icon('check', 'check__fake-svg')
+                                                    .check__title Меркурий
+                                                label.filter__check
+                                                    input(type='checkbox' name='brand' value='aQsi').check.filter__check-input
+                                                    .check__fake
+                                                        +icon('check', 'check__fake-svg')
+                                                    .check__title aQsi
+                                                label.filter__check
+                                                    input(type='checkbox' name='brand' value='Агат').check.filter__check-input
+                                                    .check__fake
+                                                        +icon('check', 'check__fake-svg')
+                                                    .check__title Агат
+                                                label.filter__check
+                                                    input(type='checkbox' name='brand' value='МТС').check.filter__check-input
+                                                    .check__fake
+                                                        +icon('check', 'check__fake-svg')
+                                                    .check__title МТС
+                                                label.filter__check
+                                                    input(type='checkbox' name='brand' value='Эвотор' checked=true).check.filter__check-input
+                                                    .check__fake
+                                                        +icon('check', 'check__fake-svg')
+                                                    .check__title Эвотор
+                                                label.filter__check
+                                                    input(type='checkbox' name='brand' value='Штрих-М').check.filter__check-input
+                                                    .check__fake
+                                                        +icon('check', 'check__fake-svg')
+                                                    .check__title Штрих-М
+                                                label.filter__check
+                                                    input(type='checkbox' name='brand' value='Вики Принт (Дримкас)').check.filter__check-input
+                                                    .check__fake
+                                                        +icon('check', 'check__fake-svg')
+                                                    .check__title Вики Принт (Дримкас)
+
+                                        div(data-from=0 data-to=27000).filter
+                                            .filter__title Цена (руб.)
+                                            .filter__range
+                                                .range
+                                                    .range__inputs
+                                                        input(type='number' name='priceFrom' value=0).range__input.range__input_from
+                                                        .range__seporator
+                                                        input(type='number' name='priceTo' value=27000).range__input.range__input_to
+                                                    .range__line
+                                                        .range__range
+                                                        .range__nums
+                                                            .range__from.range__num 0
+                                                            .range__to.range__num 27000
+                                .cat__buttons
+                                    button(type='submit').button.cat__submit Применить
+                                    button(type='reset').button.button_g.cat__reset Сбросить
+
+
+                        //- right
+                        .cat__right
+                            //- top
+                            .cat__right-top
+                                //- title
+                                .cat__title.title.title_tal Онлайн-касса (54ФЗ)
+                                //- sort
+                                .cat__sort
+                                    .cat__sort-title Сортировать:
+                                    select.cat__sort-select.select
+                                        option(value='по популярности') по популярности
+                                        option(value='по имени') по имени
+                                        option(value='по цене') по цене
+
+                            //- bottom
+                            .cat__right-bottom
+                                //- list
+                                .cat__list
+                                    .row
+                                        each i,x in catalog
+                                            .cat__item.item
+                                                //- hidden
+                                                .item__hidden
+                                                    .item__wrap
+                                                        //- top
+                                                        .item__top
+                                                            .item__sticks
+                                                                if i.sticks.enable
+                                                                    .item__stick.item__stick_enable В наличии
+                                                                if i.sticks.new
+                                                                    .item__stick.item__stick_new Новинка
+                                                                if i.sticks.discount
+                                                                    .item__stick.item__stick_discount Скидка
+
+                                                            .proportion.proportion_240x180
+                                                            .item__img
+                                                                img(src='images/content/catalog/'+(x+1)+'.png').item__pic
+
+                                                        //- center
+                                                        .item__center
+                                                            //- title
+                                                            a(href='product.html').item__title= i.title
+                                                            //- price-block
+                                                            .item__block
+                                                                //- price
+                                                                .item__price
+                                                                    +price(i.price)
+                                                                //- count
+                                                                .item__count
+                                                                    .count
+                                                                        button(type='button').count__down.count__button
+                                                                            +icon('minus','count__svg')
+                                                                        input(type='number' name='item'+(x+1) value=1).count__input.item__input
+                                                                        button(type='button').count__up.count__button
+                                                                            +icon('plus','count__svg')
+
+                                                        //- bottom
+                                                        .item__bottom
+                                                            //button(type='button').button.item__buy В корзину
+                                                            //button(type='button').button.button_op.item__one Купить в 1 клик
+                                                //- absolute
+                                                .item__position
+                                                    .item__wrap
+                                                        //- top
+                                                        .item__top
+                                                            .item__sticks
+                                                                if i.sticks.enable
+                                                                    .item__stick.item__stick_enable В наличии
+                                                                if i.sticks.new
+                                                                    .item__stick.item__stick_new Новинка
+                                                                if i.sticks.discount
+                                                                    .item__stick.item__stick_discount Скидка
+
+                                                            .proportion.proportion_240x180
+                                                            .item__img
+                                                                img(src='images/content/catalog/' + (x + 1) + '.png').item__pic
+
+                                                        //- center
+                                                        .item__center
+                                                            //- title
+                                                            a(href='product.html').item__title= i.title
+                                                            //- price-block
+                                                            .item__block
+                                                                //- price
+                                                                .item__price
+                                                                    +price(i.price)
+                                                                //- count
+                                                                .item__count
+                                                                    .count
+                                                                        button(type='button').count__down.count__button
+                                                                            +icon('minus','count__svg')
+                                                                        input(type='number' name='item' + (x + 1) value=1).count__input.item__input
+                                                                        button(type='button').count__up.count__button
+                                                                            +icon('plus','count__svg')
+
+                                                        //- bottom
+                                                        .item__bottom
+                                                            //button(type='button').button.item__buy В корзину
+                                                            //button(type='button').button.button_op.item__one Купить в 1 клик
+                                                    .item__dop
+                                                        button(type='button').button.item__buy В корзину
+                                                        button(type='button').button.button_op.item__one Купить в 1 клик
+                                //- pag
+                                .cat__pag
+                                    .pag
+                                        a(href='catalog.html').pag__arrow
+                                            +icon('prev', 'pag__arrow-svg')
+                                        .pag__items
+                                            a(href='catalog.html').pag__item.active 1
+                                            a(href='catalog.html').pag__item 2
+                                            a(href='catalog.html').pag__item 3
+                                        a(href='catalog.html').pag__arrow
+                                            +icon('next', 'pag__arrow-svg')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

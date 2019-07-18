@@ -32,6 +32,7 @@ const vendorJs = [
     'node_modules/swiper/dist/js/swiper.js',
     'node_modules/selectize/dist/js/standalone/selectize.js',
     'node_modules/jquery-validation/dist/jquery.validate.js',
+    'js/jquery-ui/jquery-ui.js',
 ];
 
 
@@ -40,6 +41,9 @@ const vendorCss = [
     'node_modules/normalize.css/normalize.css',
     'node_modules/swiper/dist/css/swiper.css',
     'node_modules/selectize/dist/css/selectize.default.css',
+    'js/jquery-ui/jquery-ui.css',
+    'js/jquery-ui/jquery-ui.structure.css',
+    'js/jquery-ui/jquery-ui.theme.css',
 ];
 
 

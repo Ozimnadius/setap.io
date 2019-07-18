@@ -46,12 +46,141 @@ block content
                         li Отсутствие у руководителя (владельца бизнеса) прозрачной управленческой отчётности по всем магазинам в одном месте, а также некачественная статистика оборотов и прибыльности в реальном режиме времени значительно ухудшают качество руководства магазином.
                 //- quote
                 .market__quote
-                    img(src='images/content/services/supermarket/img.png').market__quote-img
+                    .market__quote-img
+                        img(src='images/content/services/supermarket/img.png').market__quote-pic
                     .market__quote-text Современные программы и средства позволяют автоматизировать все этапы работы продуктового магазина — от учёта товаров, кадров и бухгалтерского до руководства торговой организацией.
 
 
+                //- zones
+                .market__zones
+                    .row.market__zones-row
+                        //- left
+                        .market__zones-left
+                            img(src='images/content/services/supermarket/plan.jpg').market__zones-img
+                        //- right
+                        .market__zones-right
+                            .zones
+                                //- switches
+                                .zones__sws
+                                    each i,x in zonesSws
+                                        div(class=i.dopClass data-id=x + 1).zones__sw= i.title
+
+                                //- tabs
+                                .zones__tabs
+                                    each i,x in [1,2,3]
+                                        div(class=x == 0 ? 'active' : '' data-id=i).zones__tab
+                                            .zone
+                                                .zone__list
+                                                    each col in zoneList
+                                                        .row.zone__row
+                                                            - var item = col.left
+                                                            .zone__item
+                                                                .zone__count= item.count
+                                                                .zone__title= item.title + (x + 1)
+                                                            if col.right
+                                                                - var item = col.right
+                                                                .zone__item
+                                                                    .zone__count= item.count
+                                                                    .zone__title= item.title + (x + 1)
+                //- content
+                .market__content
+                    p
+                        b На кассе
+                        br
+                        | Рекомендуем использовать специализированную POS-систему с кассовой программой. POS-системы защищены от попадания пыли и влаги, могут работать 24/7 и оснащены всеми необходимыми портами для подключения фискального регистратора, дисплея покупателя, программируемой клавиатуры, весов и другого оборудования. Для выдачи чека покупателю необходимо использовать фискальный регистратор, подключенный к интернету с передачей данных в налоговую. Если вы продаете алкоголь, то касса должна отправлять данные о проданных бутылках в ЕГАИС. Для этого необходимо приобрести 2D сканер и настроить обмен кассовой программы с УТМ.
+                    p
+                        b В торговом зале
+                        br
+                        | Электронные весы с печатью этикеток в зале ускорят пробитие весового товара на кассе. Взвешивать товар на таких весах может как продавец, так и сам покупатель благодаря специальным дисплеям самообслуживания. Если зал большой, а консультантов немного, то советуем установить прайс-чекеры, чтобы покупатель сам мог уточнить цену товара. В зале могут использоваться терминалы сбора данных для проведения инвентаризации или актуализации ценников и проверки сроков годности.
+                    p
+                        b На складе
+                        br
+                        | Для быстрой приемки товара используются терминалы сбора данных со встроенным сканером штрих-кода. Также с их помощью проводится инвентаризация. Если часть товара не промаркирована, то на складе необходимо установить принтер этикеток или весы с печатью
+
         //- tabs
         section.market__kits
+            .container
+                //- sws
+                .market__sws
+                    each i,x in marketSws
+                        button(type='button' class=i.dopClass data-id=x + 1).market__sw
+                            .market__sw-title= i.title
+                            .market__sw-price= i.price
+
+                //- tabs
+                .market__tabs
+                    each i,x in marketSws
+                        div(class=i.dopClass data-id=x + 1).market__tab
+                            .mtab
+                                .mplaces
+                                    //- list
+                                    .mplaces__list
+                                        each j in mTab
+                                            .mplace
+                                                //- title
+                                                .mplace__title= j.title
+                                                //- place
+                                                if j.place
+                                                    .mplace__place
+                                                        .mplace__place-item
+                                                            .mplace__place-title= j.place.title
+                                                            .mplace__place-count
+                                                                .count
+                                                                    button(type='button').count__down.count__button
+                                                                        +icon('minus','count__svg')
+                                                                    input(type='number' name='count' value=1 data-price=j.place.price).count__input.mplace__place-input
+                                                                    button(type='button').count__up.count__button
+                                                                        +icon('plus','count__svg')
+                                                            .mplace__place-price.price
+                                                                span.price__val= j.place.price
+                                                                span.price__cur &nbsp;руб.
+                                                        .mplace__place-sub
+                                                            each k in j.place.list
+                                                                .mplace__place-subitem
+                                                                    .mplace__place-subimg
+                                                                        img(src=k.src).mplace__place-subpic
+                                                                    .mplace__place-subtitle= k.title
+                                                                    .mplace__place-subprice.price.price_g
+                                                                        span.price__val= k.price
+                                                                        span.price__cur &nbsp;руб.
+                                                //- items
+                                                .mplace__list
+                                                    each k in j.items
+                                                        .mplace__item
+                                                            .mplace__item-img
+                                                                img(src=k.src)
+                                                            .mplace__item-title= k.title
+                                                            if k.price
+                                                                .mplace__item-price.price
+                                                                    span.price__val= k.price
+                                                                    span.price__cur &nbsp;руб.
+                                    //- bottom
+                                    .mplaces__bottom
+                                        //- left
+                                        .mplaces__bottom-left
+                                            .mplaces__title
+                                                .mplaces__title-top Готовое решение “Супермаркет”
+                                                .mplaces__title-bottom Комплект “Стандартный”
+
+                                        //- right
+                                        .mplaces__bottom-right
+                                            //- down
+                                            a(href='/' download=true).mplaces__down
+                                                +icon('pdf','mplaces__down-svg')
+                                                .mplaces__down-title
+                                                    .mplaces__down-name Скачать заказ
+                                                    .mplaces__down-type pdf-файл
+                                            //- price
+                                            .mplaces__price
+                                                .mplaces__price-title Общая стоимость
+                                                .mplaces__price-val.price.price_w
+                                                    span.price__val 125 500
+                                                    span.price__cur &nbsp;руб.
+                                            //- button
+                                            button(type='button').mplaces__button.button.button_y Заказать решение
+
+
+
 
         //- feed
         section.market__feed

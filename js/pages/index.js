@@ -135,6 +135,7 @@ $(function () {
             val = inputObj.val();
         val++;
         inputObj.val(val);
+        inputObj.trigger('change');
     });
     $('.count__down').on('click', function (e) {
         let $this = $(this),
@@ -145,6 +146,7 @@ $(function () {
         val--;
         if (val>=0){
             inputObj.val(val);
+            inputObj.trigger('change');
         }
     });
 

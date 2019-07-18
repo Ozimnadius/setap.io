@@ -725,3 +725,401 @@
             price: '4 500 руб.'
         }
     ];
+-
+    var zonesSws = [
+        {
+            title: 'Кассовая зона',
+            dopClass: 'active'
+        },
+        {
+            title: 'Торговый зал',
+        },
+        {
+            title: 'Склад',
+        },
+
+    ];
+-
+    var zoneList = [
+        {
+            left: {
+                title: 'POS-система',
+                count: 1
+            },
+            right: {
+                title: 'Кассовая программа\n',
+                count: 6
+            }
+        },
+        {
+            left: {
+                title: 'Сканер штрих-кода',
+                count: 2
+            },
+            right: {
+                title: 'Фискальный регистратор',
+                count: 7
+            }
+        },
+        {
+            left: {
+                title: 'Весы фасовочные с печатью этикеток',
+                count: 3
+            },
+            right: {
+                title: 'Денежный ящик',
+                count: 8
+            }
+        },
+        {
+            left: {
+                title: 'Дисплей покупателя',
+                count: 4
+            },
+            right: {
+                title: 'Эквайринг',
+                count: 9
+            }
+        },
+        {
+            left: {
+                title: 'детектор валют',
+                count: 5
+            }
+        }
+    ];
+-
+    var marketSws = [
+        {
+            title: 'Базовый комплект',
+            price: '125 500 ₽',
+        },
+        {
+            title: 'Стандартный комплект',
+            price: '210 000 ₽',
+            dopClass: 'active'
+        },
+         {
+            title: 'Премиум комплект',
+            price: '320 000 ₽',
+        }
+    ];
+-
+    var mTab = [
+        {
+            title: 'Кассовая зона',
+            place: {
+                title: 'Рабочее место кассира',
+                price: '62 730',
+                list: [
+                    {
+                        src: 'images/content/services/supermarket/till/1.png',
+                        title: 'POS-система "ШТРИХ-LightPOS WinCE 6.0" R2',
+                        price: '42 400'
+                    },
+                    {
+                        src: 'images/content/services/supermarket/till/2.png',
+                        title: 'Фиксальный накопитель ККТ "РР - 03Ф"',
+                        price: '7 200'
+                    },
+                    {
+                        src: 'images/content/services/supermarket/till/3.png',
+                        title: 'Чековый принтер "Sewoo LK-T12"',
+                        price: '13 130'
+                    },
+
+                ]
+            },
+            items: [
+                {
+                    src: 'images/content/services/supermarket/till/4.png',
+                    title: 'Программное обеспечение'
+                }
+            ]
+        },
+        {
+            title: 'Торговый зал',
+            items: [
+                {
+                    src: 'images/content/services/supermarket/hall/1.png',
+                    title: '"Электронная отчетность" со встроенной лицензией КриптоПро CSP (комплект)',
+                    price: '42 400'
+                },
+                 {
+                    src: 'images/content/services/supermarket/hall/2.png',
+                    title: 'Информационный киоск "ШТРИХ-INFO" v3.0',
+                    price: '42 400'
+                }
+            ]
+        },
+        {
+            title: 'Склад',
+            place: {
+            title: 'Рабочее место товароведа',
+            price: '62 730',
+            list: [
+                {
+                    src: 'images/content/services/supermarket/warehouse/1.png',
+                    title: 'POS-система "ШТРИХ-LightPOS WinCE 6.0" R2',
+                    price: '42 400'
+                },
+                {
+                    src: 'images/content/services/supermarket/warehouse/2.png',
+                    title: 'Фиксальный накопитель ККТ "РР - 03Ф"',
+                    price: '7 200'
+                },
+                {
+                    src: 'images/content/services/supermarket/warehouse/3.png',
+                    title: 'Чековый принтер "Sewoo LK-T12"',
+                    price: '13 130'
+                },
+             ]
+        },
+            items: [
+                {
+                    src: 'images/content/services/supermarket/warehouse/4.png',
+                    title: 'Ручной image сканер штрих-кода Honeywell/Metrologic 1900 Xenon USB, без подставки',
+                    price: '15 800'
+                },
+                {
+                    src: 'images/content/services/supermarket/warehouse/5.png',
+                    title: 'Системный блок DEPO Neos 260 Бухгалтер 2015/02'
+                }
+            ]
+        },
+        {
+            title: 'Услуги',
+            items: [
+                {
+                    src: 'images/content/services/supermarket/services/1.jpg',
+                    title: 'Ручной image сканер штрих-кода Honeywell/Metrologic 1900 Xenon USB, без подставки',
+                    price: '15 800'
+                },
+                {
+                    src: 'images/content/services/supermarket/services/2.jpg',
+                    title: 'Системный блок DEPO Neos 260 Бухгалтер 2015/02',
+                    price: '1 400'
+                }
+            ]
+        },
+
+    ];
+-
+    var catalog = [
+        {
+            title: 'POS-система VIOTEH "Колибри" 9" IPS 1280х800, 1.83ГГц / 4ядра, DDR3L 2Гб, 32Гб, Win10...',
+            price: '32 300',
+            sticks: {
+                enable: true,
+                new: true,
+                discount: true
+            }
+        },
+        {
+            title: 'POS-система VIOTEH "Колибри" 9" IPS 1280х800, 1.83ГГц / 4ядра, DDR3L 2Гб, 32Гб, Win10... hskdj hskdfj hks hkjs hkfj hskj hkjh gskj ghskd sdfkhg khg ksdjh gskdjg hdkfj hskfj ghskdfj hskgjh',
+            price: '224 800',
+            sticks: {
+                enable: true,
+                new: false,
+                discount: false
+            }
+        },
+        {
+            title: 'POS-система VIOTEH "Колибри" 9" IPS 1280х800, 1.83ГГц / 4ядра, DDR3L 2Гб, 32Гб, Win10...',
+            price: '12 100',
+            sticks: {
+                enable: true,
+                new: false,
+                discount: false
+            }
+        },
+        {
+            title: 'POS-система VIOTEH "Колибри" 9" IPS 1280х800, 1.83ГГц / 4ядра, DDR3L 2Гб, 32Гб, Win10...',
+            price: '27 300',
+            sticks: {
+                enable: true,
+                new: false,
+                discount: false
+            }
+        },
+        {
+            title: 'POS-система VIOTEH "Колибри" 9" IPS 1280х800, 1.83ГГц / 4ядра, DDR3L 2Гб, 32Гб, Win10...',
+            price: '27 300',
+            sticks: {
+                enable: true,
+                new: false,
+                discount: false
+            }
+        },
+        {
+            title: 'POS-система VIOTEH "Колибри" 9" IPS 1280х800, 1.83ГГц / 4ядра, DDR3L 2Гб, 32Гб, Win10...',
+            price: '32 300',
+            sticks: {
+                enable: true,
+                new: false,
+                discount: false
+            }
+        },
+        {
+            title: 'POS-система VIOTEH "Колибри" 9" IPS 1280х800, 1.83ГГц / 4ядра, DDR3L 2Гб, 32Гб, Win10...',
+            price: '32 300',
+            sticks: {
+                enable: true,
+                new: false,
+                discount: false
+            }
+        },
+        {
+            title: 'POS-система VIOTEH "Колибри" 9" IPS 1280х800, 1.83ГГц / 4ядра, DDR3L 2Гб, 32Гб, Win10...',
+            price: '12 100',
+            sticks: {
+                enable: true,
+                new: false,
+                discount: false
+            }
+        },
+        {
+            title: 'POS-система VIOTEH "Колибри" 9" IPS 1280х800, 1.83ГГц / 4ядра, DDR3L 2Гб, 32Гб, Win10...',
+            price: '27 300',
+            sticks: {
+                enable: true,
+                new: false,
+                discount: false
+            }
+        },
+        {
+            title: 'POS-система VIOTEH "Колибри" 9" IPS 1280х800, 1.83ГГц / 4ядра, DDR3L 2Гб, 32Гб, Win10...',
+            price: '32 300',
+            sticks: {
+                enable: true,
+                new: false,
+                discount: false
+            }
+        },
+        {
+            title: 'POS-система VIOTEH "Колибри" 9" IPS 1280х800, 1.83ГГц / 4ядра, DDR3L 2Гб, 32Гб, Win10...',
+            price: '27 300',
+            sticks: {
+                enable: true,
+                new: false,
+                discount: false
+            }
+        },
+        {
+            title: 'POS-система VIOTEH "Колибри" 9" IPS 1280х800, 1.83ГГц / 4ядра, DDR3L 2Гб, 32Гб, Win10...',
+            price: '12 100',
+            sticks: {
+                enable: true,
+                new: false,
+                discount: false
+            }
+        }
+    ];
+-
+    var cmenu = [
+
+        {
+            title: 'Торговое оборудование',
+            list: [
+                {
+                title: 'Онлайн-кассы (54 ФЗ) ',
+                open: true,
+                dopClass: 'sub open',
+                sublist: [
+                'Автономные кассы',
+                'Фискальные регистраторы'
+                ]
+                },
+                {
+                title: 'POS-системы',
+                },
+                {
+                title: 'POS-переферия',
+                dopClass: 'sub',
+                sublist: [
+                'Раздел1',
+                'Раздел2'
+                ]
+                },
+                {
+                title: 'Штрих-код оборудование',
+                dopClass: 'sub',
+                sublist: [
+                'Раздел1',
+                'Раздел2'
+                ]
+                },
+                {
+                title: 'Весовое оборудование',
+                dopClass: 'sub',
+                sublist: [
+                'Раздел1',
+                'Раздел2'
+                ]
+                },
+                {
+                title: 'Банковское оборудование',
+                dopClass: 'sub',
+                sublist: [
+                'Раздел1',
+                'Раздел2'
+                ]
+                },
+                {
+                title: 'Информационные киоски',
+                dopClass: 'sub',
+                sublist: [
+                'Раздел1',
+                'Раздел2'
+                ]
+                },
+                {
+                title: 'Кассовые боксы ',
+                },
+                {
+                title: 'Упаковочное оборудование ',
+                },
+                {
+                title: 'Расходные материалы',
+                dopClass: 'sub',
+                sublist: [
+                'Раздел1',
+                'Раздел2'
+                ]
+                },
+                {
+                title: 'Фискальные накопители',
+                },
+                {
+                title: 'Системы оповещения ',
+                dopClass: 'sub',
+                sublist: [
+                'Раздел1',
+                'Раздел2'
+                ]
+                },
+                {
+                title: 'Аксессуары',
+                },
+                {
+                title: 'ЗИП',
+                },
+            ]
+        },
+        {
+            title: 'Программное обеспечение',
+            list: [
+                {
+                title: 'Front-office (кассовое) ',
+                },
+                {
+                title: 'Back-office (товароучетное) ',
+                },
+                {
+                title: 'Облачные решения',
+                },
+            ]
+        },
+
+
+    ];
