@@ -22,8 +22,18 @@ $tableW: 1180;
   @return $size/$vh *100*1vh;
 }
 
-@function width($width){
+@function width($width) {
   @return $width/$tableW *100%;
+}
+
+@function width2($widthTotal,$width,$margin) {
+  @return #{calc(#{($width+$margin*2)/($widthTotal+$margin*2) *100%} - #{$margin*2+'px'})};
+}
+
+@mixin cols($widthTotal,$width,$margin) {
+  width: width2($widthTotal, $width, $margin);
+  margin-left: #{$margin+'px'};
+  margin-right: #{$margin+'px'};
 }
 
 @mixin content() {
@@ -36,7 +46,7 @@ $tableW: 1180;
       margin-bottom: 10px;
       padding-left: 35px;
 
-      &:before{
+      &:before {
         font-size: 10px;
         counter-increment: li;
         content: counter(li);
@@ -59,12 +69,12 @@ $tableW: 1180;
   ul {
     margin-bottom: 20px;
 
-    li{
+    li {
       position: relative;
       margin-bottom: 10px;
       padding-left: 20px;
 
-      &:before{
+      &:before {
         content: '';
         display: block;
         position: absolute;
@@ -82,19 +92,19 @@ $tableW: 1180;
 
   h1 {
     font-size: 30px;
-    line-height: lh(30,40);
+    line-height: lh(30, 40);
     font-weight: 600;
     margin-bottom: 40px;
   }
   h2 {
     font-size: 19px;
-    line-height: lh(19,30);
+    line-height: lh(19, 30);
     font-weight: bold;
     margin-bottom: 10px;
   }
   h3 {
     font-size: 17px;
-    line-height: lh(17,30);
+    line-height: lh(17, 30);
     margin-bottom: 10px;
   }
   h4 {
@@ -113,12 +123,40 @@ $tableW: 1180;
     margin-bottom: 20px;
   }
 
-  blockquote{
+  blockquote {
     margin: 30px 0;
     padding: 18px 0;
     padding-left: 30px;
     border-left: 4px solid $lilac_2;
     font-size: 20px;
+  }
+
+  table {
+    font-size: 13px;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+
+    tr {
+      &:nth-child(even) {
+        background: #F2F2F2;
+      }
+    }
+
+    td {
+      border: 1px solid #E0E0E0;
+      padding: 10px 20px;
+
+      &:nth-child(1) {
+        width: 34%;
+        color: #606060;
+      }
+
+      &:nth-child(2) {
+        width: 66%;
+      }
+    }
+
   }
 }
 

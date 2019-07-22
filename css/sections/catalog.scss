@@ -373,8 +373,6 @@
     .item__position{
       display: block;
     }
-
-
   }
 
   &__position {
@@ -390,7 +388,7 @@
     &:hover {
       .item__stick {
         &_enable {
-          width: 104px;
+          width: 110px;
         }
         &_new {
           width: 86px;

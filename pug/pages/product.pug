@@ -1,0 +1,317 @@
+extends ../main
+
+block variables
+    - var title = 'Онлайн-касса'
+
+block content
+    main.product
+        //- bread
+        section.bread
+            .container
+                .bread__list
+                    a(href='/').bread__item Главная
+                    .bread__sep /
+                    a(href='catalog.html').bread__item Каталог товаров
+                    .bread__sep /
+                    a(href='catalog.html').bread__item POS-переферия
+                    .bread__sep /
+                    a.bread__item.bread__item_active Онлайн-касса (54 ФЗ)
+        //- form
+        form.product__form
+            //- main
+            section.product__main
+                .container
+                    //-title
+                    .product__title.title.title_tal ККТ "АЗУР-01Ф"
+                    .row
+                        //- left
+                        .product__left
+                            .row.product__left-row
+                                //- gallery
+                                .product__gallery
+                                    each i in [1,2,3]
+                                        div(data-img='images/content/product/img' + i + '.png' class= i == 1 ? 'active' : '').product__img
+                                            img(src='images/content/product/' + i + '.png').product__img-img
+                                //- image
+                                .product__image
+                                    .proportion.proportion_560x420
+                                    .product__image-wrap
+                                        img(src='images/content/product/img1.png').product__image-img
+
+
+
+                        //- right
+                        .product__right
+
+                            //- sticks
+                            .product__sticks
+                                .sticks
+                                    .stick.stick_g В наличии
+                                    .stick.stick_r Новинка
+                                    .stick.stick_o Скидка
+                                    .stick.stick_y Хит продаж
+
+
+                            //- price-count
+                            .product__pricecount
+                                //- price
+                                .product__price
+                                    +price('17 500')
+
+                                //- count
+                                .product__count
+                                    .count
+                                        button(type='button').count__down.count__button
+                                            +icon('minus','count__svg')
+                                        input(type='number' name='itemFake' + (x + 1) value=1).count__input.product__input
+                                        button(type='button').count__up.count__button
+                                            +icon('plus','count__svg')
+
+
+                                    .product__count-title шт.
+                            //- color
+                            .product__colors
+                                .product__colors-title Выберите цвет:
+                                .product__colors-list
+                                    label.product__color
+                                        input(type='radio' name='color' value='black' checked=true).product__color-input
+                                        .product__color-fake
+                                            div(style='background:#333333;').product__color-fakein
+                                    label.product__color
+                                        input(type='radio' name='color' value='grey').product__color-input
+                                        .product__color-fake
+                                            div(style='background:#F2F2F2;').product__color-fakein
+
+
+                            //- buttons
+                            .product__buttons
+                                button(type='button').button.product__buy.product__button Добавить в корзину
+                                button(type='button').button.button_gt.product__buy.product__button Купить в один клик
+
+                            //- delivery
+                            .product__delivery
+                                .pdelivery
+                                    //- title
+                                    .pdelivery__title Возможные варианты доставки
+                                    //- list
+                                    .pdelivery__list
+                                        .pdelivery__item
+                                            img(src='images/content/contacts/delivery.svg').pdelivery__item-img
+                                            .pdelivery__item-title
+                                                | Доствка по городу:
+                                                select.pdelivery__select
+                                                    option(value='Москва') Москва
+                                                    option(value='Париж') Париж
+                                                    option(value='Лондон') Лондон
+
+                                        .pdelivery__item
+                                            img(src='images/content/contacts/post.svg').pdelivery__item-img
+                                            .pdelivery__item-title Доствка до пункта самовывоза
+
+
+            //- desc
+            section.product__desc
+                .container
+                    .content
+                        h2 Описание
+                        p Инновационный продукт «АЗУР-01Ф» представляет собой решение «3 в 1» и способен автоматизировать бизнес «под ключ», выполняя задачи - мобильной онлайн-кассы с кассовым и облачным товароучетным программным обеспечением, банковского POS-терминала и сканер.
+                        p Это устройство на базе операционной системы Android 5.1 имеет сенсорный дисплей 5,5 Multi-touch, аккумулятор, обеспечивающий длительную работу без подзарядки. Пользоваться он-лайн кассой «АЗУР-01Ф» не сложнее, чем обычным смартфоном. Банковский терминал принимает любые виды безналичных оплат: карты с магнитными полосами, смарт-карты, а так же бесконтактные NFC платежи.
+                        p Встроенный image-сканер штрих-кода может считывать как одномерные 1D, так и двухмерный 2D код.
+                        p Аккумулятор повышенной емкости, малые габариты и возможность передачи данных через GPRS или Wi-Fi делают «АЗУР-01Ф» незаменимым для выездной торговли. В комплектацию входит терминал, аккумулятор, блок питания, инструкция по подключению и настройке. ККТ включена в Реестр Приказом ФНС России № ЕД-7-20/85@ от 12.02.2018.
+                        h2 Характеристики
+                        table
+                            each tr in pTable
+                                tr
+                                    each td in tr
+                                        td= td
+
+
+
+            //- kits
+            section.product__kits
+                .container
+                    .pkits
+                        //- title
+                        .pkits__title Комплектации
+                        //- list
+                        .pkits__list
+                            each i in pKits
+                                .pkit
+                                    .pkit__title= i.title
+                                    .pkit__list
+                                        each r in i.list
+                                            label.pkit__item.radio
+                                                input(type='radio' name=i.name value=r.val checked=r.checked ? true : false).radio__input.pkit__radio
+                                                .pkit__fake.radio__fake
+                                                .pkit__val.radio__title= r.val
+
+            //- dops
+            section.product__dops
+                .container
+                    .pdops
+                        //- title
+                        .pdops__title Дополнительные услуги
+                        //- list
+                        .pdops__list
+                            each i in pDops
+                                .pdop
+                                    label.pcheck.pdop__ckeck
+                                        input(type='checkbox' name='dops' value=i.val checked=i.checked ? true : false).pcheck__input.pdop__input
+                                        .pcheck__wrapper.pdop__wrapper
+                                            .pdop__left
+                                                .pcheck__fake
+                                                    +icon('check', 'pcheck__fake-svg')
+                                                .pcheck__bottom
+                                                    div(class=i.dopClass).pcheck__title.pdop__check-title= i.val
+                                                    if i.list
+                                                        .pdop__tarifs
+                                                            .pdop__tarif
+                                                                |Выбран тариф&nbsp;“
+                                                                span.pdop__tarif-tarif Базовый
+                                                                |”
+                                                            .pdop__radios
+                                                                each r in i.list
+                                                                    label.pdop__radio.radio
+                                                                        input(type='radio' data-price=r.price name='tarif' value=r.val checked=r.checked ? true : false).radio__input.pkit__radio-input
+                                                                        .radio__fake
+                                                                        .radio__title= r.val
+                                            .pdop__right
+                                                .pdop__price
+                                                    span.pdop__price-val= i.price
+                                                    span.pdop__price-cur &nbsp;руб.
+            //- total
+            section.product__total
+                .container
+                    .ptotal
+                        .ptotal__price
+                            span.ptotal__price-title Общая стоимость комплекта:&nbsp;
+                            span.ptotal__price-val 25 000&nbsp;
+                            span.ptotal__price-cur руб.
+                        button(type='button').button.button_y.ptotal__button Добавить в корзину
+
+        //- same
+        section.product__same
+            .container
+                .psame
+                    .psame__title.title С этим товаром покупают
+                    .psame__slider
+                        .swiper-container.psame__container
+                            .swiper-wrapper
+                                each i,x in catalog
+                                    .swiper-slide.psame__item.item
+                                        //- hidden
+                                        .item__hidden
+                                            .item__wrap
+                                                //- top
+                                                .item__top
+                                                    .item__sticks
+                                                        if i.sticks.enable
+                                                            .item__stick.item__stick_enable В наличии
+                                                        if i.sticks.new
+                                                            .item__stick.item__stick_new Новинка
+                                                        if i.sticks.discount
+                                                            .item__stick.item__stick_discount Скидка
+
+                                                    .proportion.proportion_240x180
+                                                    .item__img
+                                                        img(src='images/content/catalog/' + (x + 1) + '.png').item__pic
+
+                                                //- center
+                                                .item__center
+                                                    //- title
+                                                    a(href='product.html').item__title= i.title
+                                                    //- price-block
+                                                    .item__block
+                                                        //- price
+                                                        .item__price
+                                                            +price(i.price)
+                                                        //- count
+                                                        .item__count
+                                                            .count
+                                                                button(type='button').count__down.count__button
+                                                                    +icon('minus','count__svg')
+                                                                input(type='number' name='itemFake' + (x + 1) value=1).count__input.item__input
+                                                                button(type='button').count__up.count__button
+                                                                    +icon('plus','count__svg')
+
+                                                //- bottom
+                                                .item__bottom
+                                                    //button(type='button').button.item__buy В корзину
+                                                    //button(type='button').button.button_op.item__one Купить в 1 клик
+                                        //- absolute
+                                        .item__position
+                                            .item__wrap
+                                                //- top
+                                                .item__top
+                                                    .item__sticks
+                                                        if i.sticks.enable
+                                                            .item__stick.item__stick_enable В наличии
+                                                        if i.sticks.new
+                                                            .item__stick.item__stick_new Новинка
+                                                        if i.sticks.discount
+                                                            .item__stick.item__stick_discount Скидка
+
+                                                    .proportion.proportion_240x180
+                                                    .item__img
+                                                        img(src='images/content/catalog/' + (x + 1) + '.png').item__pic
+
+                                                //- center
+                                                .item__center
+                                                    //- title
+                                                    a(href='product.html').item__title= i.title
+                                                    //- price-block
+                                                    .item__block
+                                                        //- price
+                                                        .item__price
+                                                            +price(i.price)
+                                                        //- count
+                                                        .item__count
+                                                            .count
+                                                                button(type='button').count__down.count__button
+                                                                    +icon('minus','count__svg')
+                                                                input(type='number' name='item' + (x + 1) value=1).count__input.item__input
+                                                                button(type='button').count__up.count__button
+                                                                    +icon('plus','count__svg')
+
+                                                //- bottom
+                                                .item__bottom
+                                                    //button(type='button').button.item__buy В корзину
+                                                    //button(type='button').button.button_op.item__one Купить в 1 клик
+                                            .item__dop
+                                                button(type='button').button.item__buy В корзину
+                                                button(type='button').button.button_op.item__one Купить в 1 клик
+                        .psame__pag
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

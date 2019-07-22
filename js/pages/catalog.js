@@ -72,4 +72,13 @@ $(function () {
 
     });
 
+    $('.item__count .count__input').on('change', function (e) {
+        let $this = $(this),
+            val = $this.val(),
+            item = $this.closest('.item'),
+            input = item.find('.item__hidden .count__input');
+
+        input.val(val);
+    });
+
 });

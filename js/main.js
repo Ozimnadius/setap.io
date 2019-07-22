@@ -7,3 +7,4 @@
 //@prepros-append pages/to.js
 //@prepros-append pages/market.js
 //@prepros-append pages/catalog.js
+//@prepros-append pages/product.js
