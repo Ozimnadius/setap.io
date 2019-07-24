@@ -30,11 +30,20 @@ $tableW: 1180;
   @return #{calc(#{($width+$margin*2)/($widthTotal+$margin*2) *100%} - #{$margin*2+'px'})};
 }
 
+@function width3($widthTotal,$width) {
+  @return #{calc(#{$width/$widthTotal *100%})};
+}
+
 @mixin cols($widthTotal,$width,$margin) {
   width: width2($widthTotal, $width, $margin);
   margin-left: #{$margin+'px'};
   margin-right: #{$margin+'px'};
 }
+
+@mixin width($widthTotal,$width) {
+  width: width3($widthTotal, $width);
+}
+
 
 @mixin content() {
   ol {

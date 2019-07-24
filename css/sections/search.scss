@@ -1,0 +1,137 @@
+.search{
+  margin-bottom: 60px;
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+}
+
+.sitem {
+  border: 1px solid #E0E0E0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: .3s;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
+    .item__stick {
+      &_enable {
+        width: 110px;
+      }
+      &_new {
+        width: 86px;
+      }
+      &_discount {
+        width: 86px;
+      }
+    }
+  }
+
+  &__row {
+    align-items: flex-end;
+  }
+
+  &__left {
+    @include col;
+    @include size(17);
+    display: flex;
+    align-items: center;
+    &-left {
+      position: relative;
+      width: 160px;
+      min-width: 160px;
+      margin-right: 20px;
+    }
+  }
+
+  &__sticks {
+    left: -20px;
+    top: -10px;
+  }
+
+  &__img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
+
+  &__title {
+    font-size: 12px;
+    margin-bottom: 20px;
+    display: block;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__count {
+    display: flex;
+    align-items: center;
+  }
+
+  &__right {
+    @include col;
+    @include size(7);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__price {
+    margin-bottom: 30px;
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__one {
+    width: 160px;
+  }
+
+  &__buy{
+    width: 160px;
+  }
+}
+
+.sservice{
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    .sservice__title,.sservice__text {
+      text-decoration: underline;
+    }
+  }
+
+
+
+  &__image {
+    position: relative;
+    width: 160px;
+    min-width: 160px;
+    margin-right: 20px;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+}

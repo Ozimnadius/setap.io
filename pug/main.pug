@@ -95,12 +95,12 @@ html(lang="ru")
                                                             .row
                                                                 //- left
                                                                 .subnav__left
-                                                                    a(href='/').subnav__link= i.subnav.title
+                                                                    a(href='catalog.html').subnav__link= i.subnav.title
                                                                     .subnav__ul
-                                                                        a(href='/').subnav__ul-link= i.subnav.list.title
+                                                                        a(href='catalog.html').subnav__ul-link= i.subnav.list.title
                                                                         .subnav__ul-row
                                                                             each j in i.subnav.list.items
-                                                                                a(href='/').subnav__item= j
+                                                                                a(href='catalog.html').subnav__item= j
                                                                 //- right
                                                                 .subnav__right
                                                                     .row
@@ -108,11 +108,11 @@ html(lang="ru")
                                                                             .subnav__col
                                                                                 each k in j
                                                                                     .subnav__list
-                                                                                        a(href='/').subnav__list-link= k.title
+                                                                                        a(href='catalog.html').subnav__list-link= k.title
                                                                                         .subnav__list-items
                                                                                             if k.items
                                                                                                 each l in k.items
-                                                                                                    a(href='').subnav__item= l
+                                                                                                    a(href='catalog.html').subnav__item= l
 
 
 

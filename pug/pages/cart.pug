@@ -1,0 +1,196 @@
+extends ../main
+
+block variables
+    - var title = 'Корзина'
+
+block content
+    main.cart
+        //- bread
+        section.bread
+            .container
+                .bread__list
+                    a(href='/').bread__item Главная
+                    .bread__sep /
+                    a.bread__item.bread__item_active Корзина
+        //- main
+        section.cart__main
+            .container
+                form.cart__form
+                    //- title
+                    .cart__title.title.title_tal Корзина
+
+                    //- row
+                    .row
+                        //- left
+                        .cart__left
+                            .cart__list
+                                each row in cartList
+                                    .cart__row
+                                        .cart__row-head
+                                            .cart__row-title.cart__th.cart__w-1= row.title
+                                            .cart__th.cart__w-2 Количество
+                                            .cart__th.cart__w-3 Цена
+                                            .cart__th.cart__w-4
+                                        .cart__items
+                                            each i in row.list
+                                                div(data-type=row.type).cart__item
+                                                    .cart__w-1.cart__item-left
+                                                        .cart__img
+                                                            img(src=i.src).cart__img-img
+                                                        a(href='product.html').cart__link= i.title
+                                                    .cart__w-2
+                                                        .cart__count
+                                                            .count
+                                                                button(type='button').count__button.cart__down
+                                                                    +icon('minus','count__svg')
+                                                                input(type='number' name='itemFake' + (x + 1) value=1).count__input.cart__input
+                                                                button(type='button').count__up.count__button.cart__up
+                                                                    +icon('plus','count__svg')
+                                                    .cart__w-3
+                                                        .cart__price
+                                                            +price(i.price)
+                                                    .cart__w-4
+                                                        button(type='button').cart__del
+                                                            +icon('close', 'cart__del-svg')
+
+
+
+
+
+                        //- right
+                        .cart__right
+                            .ctotal
+                                .ctotal__title Общая стоимость
+                                .ctotal__bottom
+                                    .ctotal__price
+                                        span.ctotal__price-val 17 500
+                                        span.ctotal__price-cur &nbsp;руб.
+                                    .ctotal__count Товаров: 2&nbsp;&nbsp;&nbsp;Услуг: 2
+                                    button(type='button').ctotal__button.button.ctotal__buy Оформить заказ
+                                    button(type='button').ctotal__button.button.button_op.ctotal__one Купить в один клик
+
+        //- same
+        section.cart__same
+            .container
+                .psame
+                    .psame__title.title Рекомедованные товары
+                    .psame__slider
+                        .swiper-container.psame__container
+                            .swiper-wrapper
+                                each i,x in catalog
+                                    .swiper-slide.psame__item.item
+                                        //- hidden
+                                        .item__hidden
+                                            .item__wrap
+                                                //- top
+                                                .item__top
+                                                    .item__sticks
+                                                        if i.sticks.enable
+                                                            .item__stick.item__stick_enable В наличии
+                                                        if i.sticks.new
+                                                            .item__stick.item__stick_new Новинка
+                                                        if i.sticks.discount
+                                                            .item__stick.item__stick_discount Скидка
+
+                                                    .proportion.proportion_240x180
+                                                    .item__img
+                                                        img(src='images/content/catalog/' + (x + 1) + '.png').item__pic
+
+                                                //- center
+                                                .item__center
+                                                    //- title
+                                                    a(href='product.html').item__title= i.title
+                                                    //- price-block
+                                                    .item__block
+                                                        //- price
+                                                        .item__price
+                                                            +price(i.price)
+                                                        //- count
+                                                        .item__count
+                                                            .count
+                                                                button(type='button').count__down.count__button
+                                                                    +icon('minus','count__svg')
+                                                                input(type='number' name='itemFake' + (x + 1) value=1).count__input.item__input
+                                                                button(type='button').count__up.count__button
+                                                                    +icon('plus','count__svg')
+
+                                                //- bottom
+                                                .item__bottom
+                                                    //button(type='button').button.item__buy В корзину
+                                                    //button(type='button').button.button_op.item__one Купить в 1 клик
+                                        //- absolute
+                                        .item__position
+                                            .item__wrap
+                                                //- top
+                                                .item__top
+                                                    .item__sticks
+                                                        if i.sticks.enable
+                                                            .item__stick.item__stick_enable В наличии
+                                                        if i.sticks.new
+                                                            .item__stick.item__stick_new Новинка
+                                                        if i.sticks.discount
+                                                            .item__stick.item__stick_discount Скидка
+
+                                                    .proportion.proportion_240x180
+                                                    .item__img
+                                                        img(src='images/content/catalog/' + (x + 1) + '.png').item__pic
+
+                                                //- center
+                                                .item__center
+                                                    //- title
+                                                    a(href='product.html').item__title= i.title
+                                                    //- price-block
+                                                    .item__block
+                                                        //- price
+                                                        .item__price
+                                                            +price(i.price)
+                                                        //- count
+                                                        .item__count
+                                                            .count
+                                                                button(type='button').count__down.count__button
+                                                                    +icon('minus','count__svg')
+                                                                input(type='number' name='item' + (x + 1) value=1).count__input.item__input
+                                                                button(type='button').count__up.count__button
+                                                                    +icon('plus','count__svg')
+
+                                                //- bottom
+                                                .item__bottom
+                                                    //button(type='button').button.item__buy В корзину
+                                                    //button(type='button').button.button_op.item__one Купить в 1 клик
+                                            .item__dop
+                                                button(type='button').button.item__buy В корзину
+                                                button(type='button').button.button_op.item__one Купить в 1 клик
+                        .psame__pag
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

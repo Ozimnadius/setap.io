@@ -1,0 +1,108 @@
+extends ../main
+
+block variables
+    - var title = 'Поиск'
+
+block content
+    main.search
+        //- bread
+        section.bread
+            .container
+                .bread__list
+                    a(href='/').bread__item Главная
+                    .bread__sep /
+                    a.bread__item.bread__item_active Поиск
+        //- main
+        section.search__main
+            .container
+                //- title
+                .search__title.title.title_tal Поиск
+                //- text
+                .search__text
+                    | Результаты поиска по запросу
+                    b “онлайн касса”
+
+                //- list
+                .search__list
+                    each i,x in search.products
+                        .sitem
+                            .row.sitem__row
+                                //- left
+                                .sitem__left
+                                    .sitem__left-left
+                                        .item__sticks.sitem__sticks
+                                            if i.sticks.enable
+                                                .item__stick.item__stick_enable В наличии
+                                            if i.sticks.new
+                                                .item__stick.item__stick_new Новинка
+                                            if i.sticks.discount
+                                                .item__stick.item__stick_discount Скидка
+                                        .proportion.proportion_240x180
+                                        .sitem__img
+                                            img(src='images/content/catalog/' + (x + 1) + '.png').sitem__pic
+                                    .sitem__left-right
+                                        //- title
+                                        a(href='product.html').sitem__title= i.title
+                                        //- count
+                                        .sitem__count
+                                            .count
+                                                button(type='button').count__down.count__button
+                                                    +icon('minus','count__svg')
+                                                input(type='number' name='itemFake' + (x + 1) value=1).count__input.product__input
+                                                button(type='button').count__up.count__button
+                                                    +icon('plus','count__svg')
+                                            .product__count-title шт.
+
+
+                                //- right
+                                .sitem__right
+                                    .sitem__price
+                                        +price(i.price)
+                                    //- bottom
+                                    .sitem__buttons
+                                        button(type='button').button.button_op.sitem__one Купить в 1 клик
+                                        button(type='button').button.sitem__buy В корзину
+                    each i,x in search.services
+                        a(href='usluga.html').sitem.sservice
+                            .sservice__image
+                                .proportion.proportion_240x180
+                                .sitem__img
+                                    img(src=i.src).sitem__pic
+                            .sservice__left
+                                .sservice__title= i.title
+                                .sservice__text= i.text
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
