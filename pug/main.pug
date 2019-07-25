@@ -118,10 +118,65 @@ html(lang="ru")
 
                             //- right
                             .header__right
-                                a(href='/').basket.basket_i
+                                a(href='cart.html').basket.basket_i
                                     .basket__img
-                                        img(src='images/icons/cart.svg').basket__img-img
+                                        +icon('supermarket','basket__img-img')
+                                        //img(src='images/icons/cart.svg').basket__img-img
                                     .basket__price 125 000 руб.
+
+
+
+                //- fixed
+                .header-fixed
+                    //- bottom
+                    .header__bottom
+                        .container
+                            .row.header__bottom-row
+                                //- left
+                                .header__left
+                                    nav.nav
+                                        each i in nav
+                                            div(class=i.dopClass).nav__item
+                                                a(href=i.href).nav__item-link= i.title
+                                                if i.subnav
+                                                    .nav__item-subnav
+                                                        .subnav
+                                                            .container
+                                                                .row
+                                                                    //- left
+                                                                    .subnav__left
+                                                                        a(href='catalog.html').subnav__link= i.subnav.title
+                                                                        .subnav__ul
+                                                                            a(href='catalog.html').subnav__ul-link= i.subnav.list.title
+                                                                            .subnav__ul-row
+                                                                                each j in i.subnav.list.items
+                                                                                    a(href='catalog.html').subnav__item= j
+                                                                    //- right
+                                                                    .subnav__right
+                                                                        .row
+                                                                            each j in i.subnav.rows
+                                                                                .subnav__col
+                                                                                    each k in j
+                                                                                        .subnav__list
+                                                                                            a(href='catalog.html').subnav__list-link= k.title
+                                                                                            .subnav__list-items
+                                                                                                if k.items
+                                                                                                    each l in k.items
+                                                                                                        a(href='catalog.html').subnav__item= l
+
+
+
+                                //- right
+                                .header__right
+                                    a(href='cart.html').basket.basket_i
+                                        .basket__img
+                                            +icon('supermarket','basket__img-img')
+                                            //img(src='images/icons/cart.svg').basket__img-img
+                                        .basket__price 125 000 руб.
+
+
+
+
 
 
             //- pages

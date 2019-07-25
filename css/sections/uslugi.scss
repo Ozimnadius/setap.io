@@ -5,10 +5,14 @@
     margin-bottom: 30px;
   }
 
+  &__catalog {
+    margin-bottom: 60px;
+  }
+
   &__list {
     background: $bg;
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
 
     &:before,&:after {
       content: url("/images/content/services/img.png");
@@ -118,11 +122,16 @@
 
   }
 
-  &__content {
-    margin-bottom: 60px;
-  }
-
   &__feed {
     margin-bottom: 80px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button{
+    width: 195px;
   }
 }

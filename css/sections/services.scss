@@ -1,0 +1,69 @@
+.services{
+  background-color: #f2f2f2;
+  padding-top: 15px;
+
+  .bread {
+    margin-top: 0;
+  }
+
+  &__main {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    @include col;
+    @include size(8);
+    padding: 20px;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    transition: .3s;
+
+    &:hover {
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    &-top {
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    &-title {
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+
+
+    &-img {
+      width: 100%;
+      max-height: 100%;
+      display: block;
+    }
+  }
+
+  &__content {
+    background: $bg;
+    padding: 40px 0;
+  }
+
+  &__feed {
+    background: $bg;
+    padding-bottom: 70px;
+  }
+
+}

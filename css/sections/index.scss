@@ -249,7 +249,7 @@
   }
 
   &__sols, &__content {
-    padding: 20px 40px 40px 40px;
+    padding: 20px 40px 30px 40px;
   }
 
   &__list {
@@ -323,7 +323,7 @@
 .sols {
   &__sws {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   &__sw {
@@ -376,10 +376,11 @@
 .sol {
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  padding: 20px 0;
+  border-bottom: 1px solid #ECECEC;
 
   &:last-child {
-    margin-bottom: 0;
+    border-bottom-color: transparent;
   }
 
   &__row {
