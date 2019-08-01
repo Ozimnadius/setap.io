@@ -16,13 +16,15 @@ block content
                                     .container
                                         .row
                                             .slide__content.content
-                                                img(src='images/content/main/banner/1.png').slide__img1
+                                                .slide__img1
+                                                    img(src='images/content/main/banner/1.png').slide__img1-img
                                                 div(style='padding-top: 20px;')
                                                     .slide__title СМАРТ-ТЕРМИНАЛ
                                                     .slide__name ЭВОТОР 7.2
                                                     .slide__price 19 900 руб.
                                                     a(href='/').button.slide__button Подробнее
-                                                img(src='images/content/main/banner/2.png').slide__img2
+                                                .slide__img2
+                                                    img(src='images/content/main/banner/2.png').slide__img2-img
 
                 .slider__nav
                     .container
@@ -42,21 +44,59 @@ block content
                                 .icat__img
                                     img(src='images/content/main/catalog/' + (x + 1) + '.png').icat__img-img
                                 .icat__title= i
+                    //- hidden
+                    .icats__hidden
+                        .icats__hidden-row
+
+                    button(type='button').icats__more Показать еще
         //- solutions
         section.index__ready
             .iready
                 .container
                     .iready__title.title Готовые решения
 
+                    .iready__mwrap
+                        .swiper-container.iready__container
+                            .swiper-wrapper
+                                each i,x in iReadySlides
+                                    .swiper-slide.iready__slide
+                                        .iready__slide-top
+                                            .proportion.proportion_280x160
+                                            .iready__slide-img
+                                                img(src='images/content/main/ready/slider/'+x+'.jpg').iready__slide-pic
+                                            .iready__slide-block
+                                                .iready__slide-title= i.title
+                                                if i.sws
+                                                    .iready__msws
+                                                        each sw,swx in i.sws
+                                                            div(data-id=swx+1).iready__msw= sw
+                                        .iready__slide-bottom
+                                            if i.sws
+                                                .iready__mtabs
+                                                    each tab,tabx in i.sws
+                                                        div(data-id=tabx+1).iready__mtab
+                                                            each item in i.list
+                                                                a(href=item.link).iready__mitem
+                                                                    .iready__mitem-title= item.title
+                                                                    .iready__mitem-text= item.text
+                                            else
+                                                .iready__mcontent
+                                                    each item in i.list
+                                                        a(href=item.link).iready__mitem
+                                                            .iready__mitem-title= item.title
+                                                            .iready__mitem-text= item.text
+
+
                     .iready__wrap
                         //- switches
                         .iready__sws
-                            each i,x in iReadySws
-                                div(class=x == 0 ? 'active' : '' data-id=x + 1).iready__sw
-                                    .iready__sw-img
-                                        +iconPath('/images/content/main/ready', x + 1,'iready__sw-svg')
-                                    .iready__sw-title= i
-
+                            .swiper-container.iready__sws-container
+                                .swiper-wrapper
+                                    each i,x in iReadySws
+                                        div(class=x == 0 ? 'active' : '' data-id=x + 1).iready__sw.swiper-slide
+                                            .iready__sw-img
+                                                +iconPath('/images/content/main/ready', x + 1,'iready__sw-svg')
+                                            .iready__sw-title= i
                         //- tabs
                         .iready__tabs
                             div(data-id='1').iready__tab.active
@@ -116,7 +156,8 @@ block content
         section.index__quiz
             div(style='background-image:url(images/content/main/quiz/bg.jpg)').quiz
                 .container
-                    form.quiz__form
+                    .quiz__mtitle.title Нужно индивидуальное решение?
+                    form(action='#' method='post').quiz__form
                         .swiper-container.quiz__container
                             .swiper-wrapper
                                 .swiper-slide.quiz__slide
@@ -128,9 +169,10 @@ block content
                                         //- center
                                         .quiz__center
                                             .quiz__title.title Нужно индивидуальное решение?
-                                            .quiz__text Подберите торговое оборудование для своего предприятия
-                                            .quiz__scrollbar
-                                                .quiz__scrollbar-line
+                                            .quiz__center-top
+                                                .quiz__text Подберите торговое оборудование для своего предприятия
+                                                .quiz__scrollbar
+                                                    .quiz__scrollbar-line
                                             .quiz__sub Выполняется ли хотя бы одно из условий:
                                             ol.quiz__list
                                                 li.quiz__li 1. Продажа подъакцизных товаров
@@ -144,8 +186,8 @@ block content
                                     //- buttons
                                     .quiz__buttons
                                         .row.quiz__buttons-row
-                                            label.quiz__btn
-                                                input(type='radio' name='quiz' value=1).quiz__btn-input.jsQuizNext
+                                            label.quiz__btn.jsQuizNext
+                                                input(type='radio' name='quiz' value=1).quiz__btn-input
                                                 .quiz__btn-wrap
                                                     .quiz__btn-top
                                                         .quiz__btn-val Да
@@ -154,8 +196,8 @@ block content
                                                     .quiz__btn-text
                                                         | Двусторонний монохромный дисплей покупателя&nbsp;
                                                         span(title='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quaerat?').quiz__btn-text_q (?)
-                                            label.quiz__btn
-                                                input(type='radio' name='quiz' value=2).quiz__btn-input.jsQuizNext
+                                            label.quiz__btn.jsQuizNext
+                                                input(type='radio' name='quiz' value=2).quiz__btn-input
                                                 .quiz__btn-wrap
                                                     .quiz__btn-top
                                                         .quiz__btn-val Да
@@ -164,8 +206,8 @@ block content
                                                     .quiz__btn-text
                                                         | Цветной монитор покупателя&nbsp;
                                                         span(title='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quaerat?').quiz__btn-text_q (?)
-                                            label.quiz__btn
-                                                input(type='radio' name='quiz' value=3).quiz__btn-input.jsQuizNext
+                                            label.quiz__btn.jsQuizNext
+                                                input(type='radio' name='quiz' value=3).quiz__btn-input
                                                 .quiz__btn-wrap
                                                     .quiz__btn-top
                                                         .quiz__btn-val Нет
@@ -177,10 +219,14 @@ block content
                                 .swiper-slide.quiz__slide
                                     .row
                                         .quiz__slide-form
-                                            .quiz__text Спасибо. Наши специалисты бесплатно подберут необходимое торговое оборудование (несколько вариантов, под разный бюджет) и вышлют на Ваш адрес электронной почты в виде коммерческого предложения
-                                            .quiz__scrollbar
-                                                .quiz__scrollbar-line
+                                            .quiz__center-top
+                                                .quiz__text.quiz__text_m Подберите торговое оборудование для своего предприятия
+                                                .quiz__text.quiz__text_h  Спасибо. Наши специалисты бесплатно подберут необходимое торговое оборудование (несколько вариантов, под разный бюджет) и вышлют на Ваш адрес электронной почты в виде коммерческого предложения
+                                                .quiz__scrollbar
+                                                    .quiz__scrollbar-line
                                         .quiz__slide-wrap
+                                            .quiz__msub Оставьте ваши контакты
+                                            .quiz__mtext Мы подберём необходимое торговое оборудование и свяжемся с Вами
                                             .quiz__field
                                                 input(type='text' name='quizName' placeholder='Ваше Имя').quiz__input
                                             .quiz__field
@@ -218,6 +264,40 @@ block content
                                                 .ichart__item-after
                                                 .ichart__item-arr
                                             .ichart__item-before
+                    .ichart__list-t
+                        img(src='images/content/main/chart/bg.png').ichart__list-bg
+                        .ichart__list-rows
+                            each row in iChartT
+                                .ichart__row
+                                    .ichart__row-wrap
+                                    each i in row
+                                        .ichart__item
+                                            .ichart__item-date= i.date
+                                            .ichart__line
+                                                .ichart__line-before
+                                                .ichart__check
+                                                    .ichart__check-wrap
+                                                        +icon('check','ichart__check-svg')
+                                                .ichart__line-after
+                                            .ichart__item-text= i.text
+                                            if i.last
+                                                .ichart__item-after
+                                                .ichart__item-arr
+                                            .ichart__item-before
+
+                    .ichart__mlist
+                        .ichart__mlist-row
+                            each i in iChartM
+                                .ichart__mitem
+                                    .ichart__item-date= i.date
+                                    .ichart__item-text= i.text
+                                    .ichart__mline
+                                        .ichart__mcheck
+                                            .ichart__mcheck-wrap
+                                                +icon('check','ichart__mcheck-svg')
+                        img(src='images/content/main/chart/bg.png').ichart__list-bg
+
+
         //- feed
         section.index__feed
             +feed('','images/icons/call.png')

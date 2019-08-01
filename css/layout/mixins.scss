@@ -104,6 +104,9 @@ $tableW: 1180;
     line-height: lh(30, 40);
     font-weight: 600;
     margin-bottom: 40px;
+    @include sm-block{
+      font-size: 20px;
+    };
   }
   h2 {
     font-size: 19px;

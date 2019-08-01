@@ -70,13 +70,37 @@ html(lang="ru")
 
                             //- buttons
                             .header__buttons
+                                //- mmenu-button
+                                button(type='button').mmenu-button
+                                    .mmenu-button__line
+                                    .mmenu-button__line
+                                    .mmenu-button__line
+
                                 //- tel
                                 .header__tel
-                                    a(href='tel:+7(499)110-38-35').header__tel +7 (499) 110-38-35
+                                    a(href='tel:+7(499)110-38-35').header__phone +7 (499) 110-38-35
 
                                 //- call
                                 .header__call
                                     button(type='button').button Заказать звонок
+
+                                //- mlogo
+                                .header__mlogo
+                                    a(href='/').logo
+                                        img(src='images/content/logo.png').logo__img
+                                //- mbasket
+                                .header__mbasket
+                                    a(href='cart.html').basket.basket_i
+                                        .basket__img
+                                            +icon('supermarket','basket__img-img')
+                                            //img(src='images/icons/cart.svg').basket__img-img
+                                        .basket__price 125 000 руб.
+
+
+
+
+
+
 
                 //- bottom
                 .header__bottom
@@ -191,6 +215,20 @@ html(lang="ru")
                     //- top
                     .footer__top
                         .row
+                            //- mleft
+                            .footer__mleft
+                                .footer__mleft-top
+                                    .footer__mleft-row
+                                        each i in ['Каталог','Автоматизация ','Обслуживание', 'Услуги']
+                                            a(href='/').footer__mitem= i
+                                    .footer__mleft-row
+                                        each i in ['ЕГАИС','ФГИС ','Маркировка ', 'ЭЦП']
+                                            a(href='/').footer__mitem= i
+                                .footer__mleft-bottom
+                                    .footer__logo
+                                        a(href='/').logo
+                                            img(src='images/content/logo.png').logo__img
+                                    .footer__desc Автоматизация магазинов розничной торговли, предприятий общественного питания (HoReCa), складов. Индивидуальное проектирование и комплексное оснащение, подбор торгового оборудования, доставка и монтаж, подключение и настройка, проведение пуско-наладочных работ, обучение персонала работе с системой, техническое обслуживание. (с) 2019 Все права защищены.
                             //- left
                             .footer__left
                                 .row
@@ -205,12 +243,18 @@ html(lang="ru")
                             .footer__right
                                 .footer__title Контакты
                                 .footer__phones
-                                    a(href='tel:+7(499)110-28-25').phone.footer__phone +7 (499) 110-28-25
-                                    a(href='tel:+7(499)123-33-44').phone.phone_grey.footer__phone +7 (499) 123-33-44
+                                    a(href='tel:+7(499)110-28-25').phone.footer__phone.footer__phone_m +7 (499) 110-28-25
+                                    //a(href='tel:+7(499)123-33-44').phone.phone_grey.footer__phone +7 (499) 123-33-44
+                                    a(href='mailto:info@inthestore.ru').footer__mail info@inthestore.ru
                                     .footer__phones-comment
-                                        | Телефон технической поддержки
-                                        br
                                         | Время работы с 9:00 - 20:00
+                                    a(href='/').footer__addr
+                                        |143409, Московская область,
+                                        br
+                                        |г. Красногорск, ул. Ленина,
+                                        br
+                                        |д. 38-б, офис 88
+
                                 .footer__socials.socials
                                     a(href='/' target='_blank').social.social_vk
                                         +icon('vk', 'social__svg')
@@ -230,6 +274,9 @@ html(lang="ru")
 
 
 
+                .footer__mobile
+                            a(href='tel:+7(499)110-38-35').footer__mobile-phone +7 (499) 110-38-35
+                            button(type='button').button.button_y.footer__mobile-button Позвонить
     .debug
         div
             div
@@ -255,6 +302,97 @@ html(lang="ru")
                 div
 
 
+
+
+    //- mmenu
+    .mmenu
+        .mmenu__main
+            .mmenu__top
+                //- button
+                button(type='button').mmenu__button.mmenu__close
+                    +icon('left-arrow','mmenu__button-svg')
+                    .mmenu__button-title Меню
+                //- search
+                a(href='search.html').mmenu__search-button
+                    +icon('search', 'mmenu__search-open')
+                    +icon('close', 'mmenu__search-close')
+            .mmenu__list
+                .mmenu__item
+                    a(href='#').mmenu__item-link
+                        .mmenu__item-title Ваш город
+                        .mmenu__item-city Москва
+                        .mmenu__item-arrow
+                    .mmenu__wrapper
+                        //- top
+                        .mmenu__top
+                            //- button
+                            button(type='button').mmenu__button.mmenu__prev
+                                +icon('left-arrow','mmenu__button-svg')
+                                .mmenu__button-title Назад
+                            //- search
+                            a(href='search.html').mmenu__search-button
+                                +icon('search', 'mmenu__search-open')
+                                +icon('close', 'mmenu__search-close')
+                        //- list
+                        .mmenu__list
+                            each c in mmenu.citys
+                                .mmenu__item
+                                    //- link
+                                    a(href='#').mmenu__item-link.subitem2.mmenu__city
+                                        .mmenu__item-title= c
+                each i in mmenu.list
+                    .mmenu__item
+                        //- link
+                        a(href=i.link class=i.dopClass).mmenu__item-link
+                            .mmenu__item-title= i.title
+                            if i.list
+                                .mmenu__item-arrow
+                        if i.list
+                            //- wrapper
+                            .mmenu__wrapper
+                                //- top
+                                .mmenu__top
+                                    //- button
+                                    button(type='button').mmenu__button.mmenu__prev
+                                        +icon('left-arrow','mmenu__button-svg')
+                                        .mmenu__button-title Назад
+                                    //- search
+                                    a(href='search.html').mmenu__search-button
+                                        +icon('search', 'mmenu__search-open')
+                                        +icon('close', 'mmenu__search-close')
+                                //- link
+                                a(href=i.link).mmenu__link= i.title
+                                //-list
+                                .mmenu__list
+                                    each j in i.list
+                                        .mmenu__item
+                                            //- link
+                                            a(href=j.link class=j.dopClass).mmenu__item-link.subitem
+                                                .mmenu__item-title= j.title
+                                                if j.list
+                                                    .mmenu__item-arrow
+                                            if j.list
+                                                //- wrapper
+                                                .mmenu__wrapper
+                                                    //- top
+                                                    .mmenu__top
+                                                        //- button
+                                                        button(type='button').mmenu__button.mmenu__prev
+                                                            +icon('left-arrow','mmenu__button-svg')
+                                                            .mmenu__button-title Назад
+                                                        //- search
+                                                        a(href='search.html').mmenu__search-button
+                                                            +icon('search', 'mmenu__search-open')
+                                                            +icon('close', 'mmenu__search-close')
+                                                    //- link
+                                                    a(href=j.link).mmenu__link= j.title
+                                                    //- list
+                                                    .mmenu__list
+                                                        each k in j.list
+                                                            .mmenu__item
+                                                                //- link
+                                                                a(href=k.link class=j.dopClass).mmenu__item-link.subitem2
+                                                                    .mmenu__item-title= k.title
 
 
     script(src='js/vendor.min.js')

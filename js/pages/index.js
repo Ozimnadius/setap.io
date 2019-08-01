@@ -1,18 +1,23 @@
 //index.js
 $(function () {
 
-    let maxH = 0,
-        icatsTitle = $('.icat__title');
 
-    icatsTitle.each(function (x, i) {
-        let height = $(i).outerHeight();
+    const wWidth = $(window).width();
 
-        if (maxH < height) {
-            maxH = height;
-        }
-    });
+    if (wWidth > 767.9) {
+        let maxH = 0,
+            icatsTitle = $('.icat__title');
 
-    icatsTitle.css('height', maxH);
+        icatsTitle.each(function (x, i) {
+            let height = $(i).outerHeight();
+
+            if (maxH < height) {
+                maxH = height;
+            }
+        });
+
+        icatsTitle.css('height', maxH);
+    }
 
     if (document.querySelector('.sols__sws')) {
         let subSwitches = new Switches({
@@ -30,6 +35,29 @@ $(function () {
             tabsContainer: '.iready__tabs'
         }).init();
     }
+    if (document.querySelector('.iready__msws')) {
+        let switches = new Switches({
+            sws: '.iready__msws',
+            sw: '.iready__msw',
+            tab: '.iready__mtab',
+            tabsContainer: '.iready__mtabs'
+        }).init();
+    }
+
+
+    let ireadySws = new Swiper('.iready__sws-container', {
+        slidesPerView: 'auto',
+        grabCursor: true
+    });
+
+    let ireadySlider = new Swiper('.iready__container', {
+        slidesPerView: 'auto',
+        grabCursor: true,
+        spaceBetween: 10
+    });
+
+
+
 
     let quiz = new Swiper('.quiz__container', {
         effect: 'cube',
@@ -55,6 +83,10 @@ $(function () {
         }
     });
 
+    $('.quiz__submit').on('click', function (e) {
+        $(this).closest('.quiz__form').submit();
+    });
+
     $('.quiz__form').validate(
         {
             rules: {
@@ -69,10 +101,14 @@ $(function () {
                 //ToDo здесь должен быть ajax, при успешной отправке данных перелистывается на следующий слайд
                 quiz.slideNext();
             },
+            errorPlacement: function (error, element) {
+                element[0].placeholder = error[0].innerText;
+            }
         }
     );
 
     $('.jsQuizNext').on('click', function (e) {
+        e.preventDefault();
         quiz.slideNext();
     });
 
@@ -144,10 +180,26 @@ $(function () {
             val = inputObj.val();
 
         val--;
-        if (val>=0){
+        if (val >= 0) {
             inputObj.val(val);
             inputObj.trigger('change');
         }
+    });
+
+
+    let icats = $('.icats'),
+        row = icats.find('.icats__hidden-row');
+
+    if (wWidth < 768) {
+        let icatItems = icats.find('.icat').slice(6);
+        row.append(icatItems);
+    } else if (wWidth < 1200) {
+        let icatItems = icats.find('.icat').slice(16);
+        row.append(icatItems);
+    }
+
+    $('.icats__more').on('click', function (e) {
+        $('.icats__hidden').slideDown();
     });
 
 

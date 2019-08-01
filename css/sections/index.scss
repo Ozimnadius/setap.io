@@ -8,15 +8,24 @@
   &__feed {
     margin-top: -150px;
     margin-bottom: 60px;
+    @include sm-block{
+      margin-bottom: 30px;
+    };
   }
 
   &__about {
     margin-bottom: 70px;
+    @include sm-block{
+      margin-bottom: 30px;
+    };
   }
 }
 
 .slider {
   position: relative;
+  @include lg-block{
+    padding-top: 66px;
+  };
 
   &__nav {
     position: absolute;
@@ -25,6 +34,9 @@
     top: 50%;
     margin-top: -36px;
     pointer-events: none;
+    @include lg-block{
+      display: none;
+    };
 
     .container {
       display: flex;
@@ -60,6 +72,9 @@
     width: 100%;
     bottom: 30px;
     pointer-events: none;
+    @include sm-block{
+      bottom: 10px;
+    };
 
 
     .swiper-pagination-bullet {
@@ -86,11 +101,22 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  @include lg-block{
+    background-position: -260px center;
+  };
+  @include sm-block{
+    height: 221px;
+    padding: 13px 0;
+  };
 
   &__content {
     @include col;
     @include size(20);
     @include shift(2);
+    @include size-lg(22);
+    @include shift-lg(1);
+    @include size-sm(24);
+    @include shift-sm(0);
 
     display: flex;
     justify-content: space-between;
@@ -100,6 +126,9 @@
   &__title {
     font-size: 28px;
     font-weight: bold;
+    @include sm-block{
+      font-size: 16px;
+    };
   }
 
   &__name {
@@ -107,12 +136,23 @@
     font-weight: bold;
     line-height: 1;
     margin-bottom: 15px;
+    @include sm-block{
+      font-size: 24px;
+      margin-bottom: 5px;
+    };
   }
 
   &__price {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 10px;
+    @include lg-block{
+      margin-bottom: 30px;
+    };
+    @include sm-block{
+      font-size: 20px;
+      margin-bottom: 15px;
+    };
   }
 
   img {
@@ -123,21 +163,68 @@
     width: 142px;
   }
 
+  &__img1{
+    @include sm-block{
+      width: 90px;
+      min-width: 90px;
+      margin-right: 20px;
+    };
+  }
+
+  &__img2 {
+    @include lg-block{
+      display: none;
+    };
+  }
+
 }
 
 .icats {
   padding-top: 60px;
   padding-bottom: 40px;
+  @include sm-block{
+    padding: 30px 0;
+  };
+
+  &__more{
+    display: none;
+    font-size: 13px;
+    text-decoration-line: underline;
+    color: #1686C6;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+
+    @include lg-block{
+      display: block;
+    };
+  }
+
+  &__hidden {
+    display: none;
+
+    &-row  {
+      @include row-flex;
+    }
+  }
 }
 
 .icat {
   @include col;
   @include size(4);
+  @include size-lg(6);
+  @include size-sm(24);
   padding: 20px 0;
   background: #EAEAEA;
   border-radius: 12px;
   margin-bottom: 20px;
   transition: .4s;
+  @include sm-block{
+    display: flex;
+    padding: 10px;
+    margin-bottom: 10px;
+    padding-right: 20px;
+  };
 
   &:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
@@ -150,6 +237,13 @@
     justify-content: center;
     padding: 0 40px;
     margin-bottom: 10px;
+    @include sm-block{
+      padding: 0;
+      margin: 0;
+      width: 35px;
+      height: 35px;
+      margin-right: 8px;
+    };
 
     &-img {
       max-height: 100%;
@@ -164,12 +258,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    @include sm-block{
+      padding: 0;
+      font-size: 12px;
+      flex-grow: 1;
+      text-align: left;
+      justify-content: flex-start;
+    };
+
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 0 5px 5px;
+      border-color: transparent transparent transparent rgba($text,.54);
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -5px;
+    }
   }
 }
 
 .iready {
   background: #EAEAEA;
   padding: 60px 0;
+  @include lg-block{
+    padding-top: 40px;
+  };
 
   &__title {
     margin-bottom: 40px;
@@ -180,20 +299,37 @@
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     overflow: hidden;
+    @include sm-block{
+      display: none;
+    };
+  }
+
+  &__mwrap {
+    display: none;
+    @include sm-block{
+      display: block;
+    };
   }
 
   &__sws {
     display: flex;
+
+    .swiper-container{
+      width: 100%;
+    }
   }
 
   &__sw {
-    width: 25%;
+    width: calc(100%/7);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
     cursor: pointer;
     transition: .3s;
+    @include lg-block{
+      width: 165px;
+    };
 
     &.active {
       background: #F2F2F2;
@@ -243,6 +379,65 @@
     }
   }
 
+  &__msws {
+    display: flex;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__msw {
+    transition: .3s;
+    color: $bg;
+    font-weight: bold;
+    font-size: 9px;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+
+    &.active {
+      background: #F2F2F2;
+      color: $text;
+    }
+
+    &-img {
+
+    }
+
+    &-svg {
+      fill: #F0F0F0;
+      width: 100px;
+      height: 100px;
+      transition: .3s;
+    }
+
+    &-title {
+      text-align: center;
+      font-weight: bold;
+      margin-top: -10px;
+    }
+
+
+  }
+
+  &__mtabs {
+    position: relative;
+  }
+
+  &__mtab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
   &__img {
     width: 100%;
     display: block;
@@ -250,6 +445,9 @@
 
   &__sols, &__content {
     padding: 20px 40px 30px 40px;
+    @include lg-block{
+      padding: 20px;
+    };
   }
 
   &__list {
@@ -318,6 +516,115 @@
     }
   }
 
+  &__container {
+    padding-bottom: 20px;
+  }
+
+  &__slide{
+    border-radius: 12px ;
+    overflow: hidden;
+    background: $bg;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    height: auto;
+
+    &-top {
+      position: relative;
+    }
+
+    &-img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(0deg, #442768 0%, rgba(115, 43, 109, 0) 100%);
+      }
+    }
+
+    &-pic {
+      width: 100%;
+      display: block;
+    }
+
+    &-block {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 10px 15px;
+    }
+
+    &-title {
+      color: #FFFFFF;
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-bottom {
+      padding: 10px 15px 20px 15px;
+    }
+  }
+
+  &__mitem {
+    border-bottom: 1px solid #ECECEC;
+    display: block;
+    padding: 10px 0;
+    padding-right: 20px;
+    position: relative;
+
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      margin-top: -5px;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 0 5px 5px;
+      border-color: transparent transparent transparent rgba($text,.54);
+    }
+
+    &:last-child{
+      border: none;
+    }
+
+    &-title {
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    &-text {
+      font-size: 10px;
+    }
+  }
+
+  .container{
+    @include sm-block{
+      max-width: 100%;
+      padding-right: 0;
+    };
+  }
 }
 
 .sols {
@@ -384,13 +691,14 @@
   }
 
   &__row {
-    width: 100%;
+    width: calc(100% + 20px);
     align-items: center;
   }
 
   &__left {
     @include col;
     @include size(4);
+    @include size-lg(6);
     display: flex;
     align-items: center;
   }
@@ -398,17 +706,20 @@
   &__text {
     @include col;
     @include size(16);
+    @include size-lg(12);
     font-size: 13px;
   }
 
   &__right {
     @include col;
     @include size(4);
+    @include size-lg(6);
     display: flex;
     justify-content: flex-end;
   }
 
   &__img {
+    min-width: 40px;
     width: 40px;
     height: 40px;
     margin-right: 10px;
@@ -430,6 +741,26 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  @include lg-block{
+    padding-top: 40px;
+    padding-bottom: 60px;
+  };
+  @include sm-block{
+    padding: 30px 0;
+  };
+
+  &__mtitle {
+    font-size: 20px;
+    color: $bg;
+    margin-bottom: 40px;
+    display: none;
+    @include lg-block{
+      display: block;
+    };
+    @include sm-block{
+      margin-bottom: 20px;
+    };
+  }
 
   &__slide {
     padding: 60px;
@@ -439,24 +770,41 @@
     border-radius: 12px;
     overflow: hidden;
     height: auto !important;
+    @include lg-block{
+      padding: 0;
+      border: none;
+    };
 
     &-form {
       @include col;
       @include size(14);
       @include shift(5);
+      @include size-lg(24);
+      @include shift-lg(0);
       margin-bottom: 20px;
+      @include lg-block{
+        margin-bottom: 0;
+      };
     }
 
     &-wrap {
       @include col;
       @include size(12);
       @include shift(6);
+      @include size-lg(17);
+      @include shift-lg(3.5);
+      @include size-sm(24);
+      @include shift-sm(0);
+      padding: 0 20px;
     }
   }
 
   &__row {
     margin-left: -25px;
     margin-right: -25px;
+    @include lg-block{
+      @include row-flex;
+    };
   }
 
   &__left, &__right {
@@ -466,21 +814,89 @@
     margin-right: 25px;
     width: calc(100% / 24 * 5 - 50px);
     padding-top: 50px;
+    @include lg-block{
+      position: absolute;
+      z-index: 10;
+      top: 105px;
+      @include col;
+    };
+    @include size-lg(5.5);
+    @include sm-block{
+      display: none;
+    };
+  }
+
+  &__left {
+    @include lg-block{
+      left: 55px;
+    };
+  }
+
+  &__right {
+    @include lg-block{
+      right: 55px;
+    };
   }
 
   &__center {
     @include col;
     @include size(14);
+    @include size-lg(24);
+    @include lg-block{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    };
+    &-top {
+      @include lg-block{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(90deg, #442768 31.2%, #732B6D 84.06%);
+        padding-top: 25px;
+        margin-bottom: 30px;
+      };
+      @include sm-block{
+        margin-bottom: 20px;
+      };
+    }
   }
 
   &__title {
     margin-bottom: 10px;
+    @include lg-block{
+      display: none;
+    };
   }
 
   &__text {
     font-size: 15px;
     text-align: center;
     margin-bottom: 28px;
+    @include lg-block{
+      font-weight: bold;
+      color: #FFFFFF;
+      width: 100%;
+      margin-bottom: 25px;
+    };
+    @include sm-block{
+      font-size: 14px;
+      margin-bottom: 15px;
+    };
+
+    &_m {
+      display: none;
+      @include lg-block{
+        display: block;
+      };
+    }
+
+    &_h {
+      @include lg-block{
+        display: none;
+      };
+    }
   }
 
   &__scrollbar {
@@ -489,6 +905,11 @@
     border-radius: 6px;
     margin-bottom: 28px;
     position: relative;
+    overflow: hidden;
+    @include lg-block{
+      width: 260px;
+      margin-bottom: 15px;
+    };
 
     &-line {
       position: absolute;
@@ -507,17 +928,32 @@
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
+    @include lg-block{
+      width: 250px;
+      margin-bottom: 40px;
+    };
+    @include sm-block{
+      margin-bottom: 10px;
+      font-size: 13px;
+    };
   }
 
   &__list {
     //display: flex;
     //flex-direction: column;
     //align-items: center;
+    @include lg-block{
+      width: 250px;
+    };
+
   }
 
   &__li {
     text-align: center;
     margin-bottom: 5px;
+    @include sm-block{
+      font-size: 13px;
+    };
 
     &:last-child {
       margin-bottom: 0;
@@ -526,11 +962,22 @@
 
   &__buttons {
     margin-top: 40px;
+    @include lg-block{
+      margin-top: 0;
+      padding: 80px 30px 20px 30px;
+    };
+    @include sm-block{
+      padding: 20px;
+    };
   }
 
   &__btn {
     @include col;
     @include size(8);
+    @include size-sm(24);
+    @include sm-block{
+      margin-bottom: 10px;
+    };
 
     &-wrap {
       border: 2px solid #E0E0E0;
@@ -628,12 +1075,20 @@
   &__bottom {
     display: flex;
     align-items: center;
+    @include lg-block{
+      flex-direction: column;
+      align-items: center;
+    };
   }
 
   &__fz {
     margin-right: 15px;
     font-size: 11px;
-    line-height: lh(11, 20);
+    line-height: lh(11,20);
+    @include lg-block{
+      margin-right: 0;
+      margin-bottom: 15px;
+    };
 
     &-link {
       text-decoration: underline;
@@ -642,6 +1097,9 @@
 
   &__submit {
     flex-grow: 1;
+    @include lg-block{
+      width: 210px;
+    };
   }
 
   &__success {
@@ -735,6 +1193,29 @@
     width: 160px;
     margin: 0 auto;
   }
+
+  &__msub{
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: none;
+    @include lg-block{
+      display: block;
+    };
+  }
+
+  &__mtext {
+    display: none;
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 20px;
+    @include lg-block{
+      display: block;
+    };
+  }
+
+
 }
 
 .ichart {
@@ -748,12 +1229,119 @@
 
   &__list {
     position: relative;
+    @include lg-block{
+      display: none;
+    };
+
+    &-t{
+      display: none;
+      position: relative;
+      @include lg-block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      };
+      @include sm-block{
+        display: none;
+      };
+    }
 
     &-bg {
       position: absolute;
       z-index: 20;
       right: 0;
       bottom: 0;
+      @include lg-block{
+        position: static;
+        order: 1;
+        margin-top: -100px;
+        width: 435px;
+      };
+      @include sm-block{
+        margin-top: 0;
+      };
+    }
+  }
+
+  &__mlist {
+    display: none;
+    @include sm-block{
+      display: block;
+    };
+  }
+
+  &__mitem {
+    position: relative;
+    padding-bottom: 12px;
+
+    &:last-child {
+      .ichart__mline {
+        &:before,&:after {
+          display: none;
+        }
+      }
+      .ichart__mcheck {
+        &-wrap {
+          background: $bg;
+          border: 2px solid #E0E0E0;
+        }
+      }
+    }
+  }
+
+  &__mline {
+    position: absolute;
+    top: -5px;
+    bottom: 0;
+    left: 0;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 30px;
+      bottom: 0;
+      left: 15px;
+      width: 2px;
+      background: #FFC500;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 12px;
+      bottom: 2px;
+      background: url("/images/icons/arrow.svg") 0 0 no-repeat;
+      width: 8px;
+      height: 16px;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__mcheck {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #FFC500;
+    border-radius: 50%;
+    padding: 2px;
+    background: $bg;
+
+    &-wrap {
+      background: #9681BA;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border: 2px solid transparent;
+    }
+
+    &-svg {
+      max-width: 14px;
+      max-height: 10px;
+      fill: $bg;
     }
   }
 
@@ -761,6 +1349,9 @@
     width: calc(100% / 3);
     padding-bottom: 40px;
     position: relative;
+    @include lg-block{
+      width: calc(100% / 2);
+    };
 
     &-before {
       content: '';
@@ -829,12 +1420,20 @@
       font-size: 19px;
       font-weight: bold;
       margin-left: 100px;
+      @include sm-block{
+        margin-left: 40px;
+        font-size: 15px;
+      };
     }
 
     &-text {
       padding-right: 40px;
       font-size: 13px;
       margin-left: 100px;
+      @include sm-block{
+        padding-right: 0;
+        margin-left: 40px;
+      };
     }
   }
 
@@ -1014,18 +1613,26 @@
 
   &__slogan {
     width: 100%;
-    font: $font2;
+    font-family: $font2;
     font-size: 17px;
     font-weight: 600;
     margin-bottom: 40px;
+    @include sm-block{
+      font-size: 13px;
+      margin-bottom: 20px;
+    };
   }
 
   &__text {
     width: 100%;
     font-size: 15px;
-    font: $font2;
+    font-family: $font2;
     line-height: lh(15,24);
     margin-bottom: 40px;
+    @include sm-block{
+      font-size: 13px;
+      margin-bottom: 25px;
+    };
   }
 
   &__button {
@@ -1036,6 +1643,9 @@
 .subscribe{
   background: #3C2658;
   padding: 20px 0 30px 0;
+  @include lg-block{
+    padding-bottom: 70px;
+  };
 
   &__row {
     align-items: center;
@@ -1044,17 +1654,29 @@
   &__left {
     @include col;
     @include size(13);
+    @include size-lg(24);
+    @include lg-block{
+      text-align: center;
+      margin-bottom: 15px;
+    };
   }
 
   &__right {
     @include col;
     @include size(11);
+    @include size-lg(20);
+    @include shift-lg(2);
+    @include size-sm(24);
+    @include shift-sm(0);
   }
 
   &__title {
     font-size: 19px;
     color: $bg;
     font-weight: bold;
+    @include sm-block{
+      font-size: 20px;
+    };
   }
 
   &__form {
@@ -1071,6 +1693,11 @@
     border-radius: 20px;
     padding: 10px 185px 10px 65px;
     background: #FFFFFF url(/images/icons/email.svg) 22px center no-repeat;
+    @include sm-block{
+      background-image: none;
+    };
+    padding-left: 20px;
+    padding-right: 135px;
   }
 
   &__submit {
@@ -1083,6 +1710,9 @@
     height: 40px;
     cursor: pointer;
     transition: .3s;
+    @include sm-block{
+      width: 130px;
+    };
 
     &:hover {
       background: $yellow2;
@@ -1095,9 +1725,15 @@
     position: absolute;
     right: 0;
     top: calc(100% + 7px);
+    @include lg-block{
+      top: calc(100% + 20px);
+    };
     &_link {
       text-decoration: underline;
     }
+    @include sm-block{
+      text-align: center;
+    };
   }
 
 

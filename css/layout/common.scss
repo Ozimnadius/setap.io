@@ -74,6 +74,9 @@
   font-size: 30px;
   font-weight: 600;
   text-align: center;
+  @include sm-block{
+    font-size: 20px;
+  };
 
   &_w {
     color: $bg;
@@ -134,11 +137,22 @@
     padding: 40px 60px;
     background: linear-gradient(90deg, #442768 31.2%, #732B6D 84.06%);
     border-radius: 12px;
+    @include sm-block{
+      padding: 20px;
+      padding-bottom: 30px;
+    };
   }
 
   &__left {
     @include col;
     @include size(16);
+    @include size-lg(24);
+    @include lg-block{
+      text-align: center;
+    };
+    @include sm-block{
+      text-align: left;
+    };
   }
 
   &__right {
@@ -147,17 +161,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include lg-block{
+      display: none;
+    };
   }
 
   &__title {
     margin-bottom: 10px;
     color: inherit;
+    @include lg-block{
+      text-align: center;
+    };
   }
 
   &__sub {
     font-size: 13px;
     color: inherit;
     margin-bottom: 20px;
+
   }
 
   &__cols {
@@ -167,6 +188,13 @@
   &__col {
     @include col;
     @include size(8);
+    @include size-sm(24);
+    @include sm-block{
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    };
 
     &_2{
       @include size(16);
@@ -196,6 +224,9 @@
   &__fz {
     font-size: 10px;
     color: $bg;
+    @include sm-block{
+      text-align: center;
+    };
 
     &_link {
       text-decoration: underline;
@@ -234,6 +265,9 @@
   font-weight: bold;
   line-height: 1;
   transition: .3s;
+  @include sm-block{
+    font-size: 20px;
+  };
 
   &:hover {
     text-decoration: underline;
@@ -311,7 +345,9 @@
   &_560x420 {
     padding-top: calc((420 / 560) * 100%);
   }
-
+  &_280x160 {
+    padding-top: calc((160 / 280) * 100%);
+  }
 }
 
 .bread {

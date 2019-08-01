@@ -53,10 +53,24 @@
                 </form>
               </div>
               <div class="header__buttons">
-                <div class="header__tel"><a class="header__tel" href="tel:+7(499)110-38-35">+7 (499) 110-38-35</a></div>
+                <button class="mmenu-button" type="button">
+                  <div class="mmenu-button__line"></div>
+                  <div class="mmenu-button__line"></div>
+                  <div class="mmenu-button__line"></div>
+                </button>
+                <div class="header__tel"><a class="header__phone" href="tel:+7(499)110-38-35">+7 (499) 110-38-35</a></div>
                 <div class="header__call">
                   <button class="button" type="button">Заказать звонок</button>
                 </div>
+                <div class="header__mlogo"><a class="logo" href="/"><img class="logo__img" src="images/content/logo.png"></a></div>
+                <div class="header__mbasket"><a class="basket basket_i" href="cart.html">
+                    <div class="basket__img">
+                      <svg class="basket__img-img">
+                        <use xlink:href="/images/icons/sprite.svg#supermarket"></use>
+                      </svg>
+                      <!--img(src='images/icons/cart.svg').basket__img-img-->
+                    </div>
+                    <div class="basket__price">125 000 руб.</div></a></div>
               </div>
             </div>
           </div>
@@ -1063,6 +1077,18 @@
         <div class="container">
           <div class="footer__top">
             <div class="row">
+              <div class="footer__mleft">
+                <div class="footer__mleft-top">
+                  <div class="footer__mleft-row"><a class="footer__mitem" href="/">Каталог</a><a class="footer__mitem" href="/">Автоматизация </a><a class="footer__mitem" href="/">Обслуживание</a><a class="footer__mitem" href="/">Услуги</a>
+                  </div>
+                  <div class="footer__mleft-row"><a class="footer__mitem" href="/">ЕГАИС</a><a class="footer__mitem" href="/">ФГИС </a><a class="footer__mitem" href="/">Маркировка </a><a class="footer__mitem" href="/">ЭЦП</a>
+                  </div>
+                </div>
+                <div class="footer__mleft-bottom">
+                  <div class="footer__logo"><a class="logo" href="/"><img class="logo__img" src="images/content/logo.png"></a></div>
+                  <div class="footer__desc">Автоматизация магазинов розничной торговли, предприятий общественного питания (HoReCa), складов. Индивидуальное проектирование и комплексное оснащение, подбор торгового оборудования, доставка и монтаж, подключение и настройка, проведение пуско-наладочных работ, обучение персонала работе с системой, техническое обслуживание. (с) 2019 Все права защищены.</div>
+                </div>
+              </div>
               <div class="footer__left">
                 <div class="row">
                   <div class="footer__col"><a class="footer__title footer__title_link" href="catalog.html">Торговое оборудование </a>
@@ -1081,8 +1107,9 @@
               </div>
               <div class="footer__right">
                 <div class="footer__title">Контакты</div>
-                <div class="footer__phones"><a class="phone footer__phone" href="tel:+7(499)110-28-25">+7 (499) 110-28-25</a><a class="phone phone_grey footer__phone" href="tel:+7(499)123-33-44">+7 (499) 123-33-44</a>
-                  <div class="footer__phones-comment">Телефон технической поддержки<br>Время работы с 9:00 - 20:00</div>
+                <div class="footer__phones"><a class="phone footer__phone footer__phone_m" href="tel:+7(499)110-28-25">+7 (499) 110-28-25</a>
+                  <!--a(href='tel:+7(499)123-33-44').phone.phone_grey.footer__phone +7 (499) 123-33-44--><a class="footer__mail" href="mailto:info@inthestore.ru">info@inthestore.ru</a>
+                  <div class="footer__phones-comment">Время работы с 9:00 - 20:00</div><a class="footer__addr" href="/">143409, Московская область,<br>г. Красногорск, ул. Ленина,<br>д. 38-б, офис 88</a>
                 </div>
                 <div class="footer__socials socials"><a class="social social_vk" href="/" target="_blank">
                               <svg class="social__svg">
@@ -1102,6 +1129,9 @@
             <div class="footer__logo"><a class="logo" href="/"><img class="logo__img" src="images/content/logo.png"></a></div>
             <div class="footer__desc">Автоматизация магазинов розничной торговли, предприятий общественного питания (HoReCa), складов. Индивидуальное проектирование и комплексное оснащение, подбор торгового оборудования, доставка и монтаж, подключение и настройка, проведение пуско-наладочных работ, обучение персонала работе с системой, техническое обслуживание. (с) 2019 Все права защищены.</div>
           </div>
+        </div>
+        <div class="footer__mobile"><a class="footer__mobile-phone" href="tel:+7(499)110-38-35">+7 (499) 110-38-35</a>
+          <button class="button button_y footer__mobile-button" type="button">Позвонить</button>
         </div>
       </footer>
     </div>
@@ -1129,6 +1159,247 @@
         <div></div>
         <div></div>
         <div></div>
+      </div>
+    </div>
+  </div>
+  <div class="mmenu">
+    <div class="mmenu__main">
+      <div class="mmenu__top">
+        <button class="mmenu__button mmenu__close" type="button">
+                    <svg class="mmenu__button-svg">
+                      <use xlink:href="/images/icons/sprite.svg#left-arrow"></use>
+                    </svg>
+          <div class="mmenu__button-title">Меню</div>
+        </button><a class="mmenu__search-button" href="search.html">
+                    <svg class="mmenu__search-open">
+                      <use xlink:href="/images/icons/sprite.svg#search"></use>
+                    </svg>
+                    <svg class="mmenu__search-close">
+                      <use xlink:href="/images/icons/sprite.svg#close"></use>
+                    </svg></a>
+      </div>
+      <div class="mmenu__list">
+        <div class="mmenu__item"><a class="mmenu__item-link" href="#">
+            <div class="mmenu__item-title">Ваш город</div>
+            <div class="mmenu__item-city">Москва</div>
+            <div class="mmenu__item-arrow"></div></a>
+          <div class="mmenu__wrapper">
+            <div class="mmenu__top">
+              <button class="mmenu__button mmenu__prev" type="button">
+                          <svg class="mmenu__button-svg">
+                            <use xlink:href="/images/icons/sprite.svg#left-arrow"></use>
+                          </svg>
+                <div class="mmenu__button-title">Назад</div>
+              </button><a class="mmenu__search-button" href="search.html">
+                          <svg class="mmenu__search-open">
+                            <use xlink:href="/images/icons/sprite.svg#search"></use>
+                          </svg>
+                          <svg class="mmenu__search-close">
+                            <use xlink:href="/images/icons/sprite.svg#close"></use>
+                          </svg></a>
+            </div>
+            <div class="mmenu__list">
+              <div class="mmenu__item"><a class="mmenu__item-link subitem2 mmenu__city" href="#">
+                  <div class="mmenu__item-title">Москва</div></a></div>
+              <div class="mmenu__item"><a class="mmenu__item-link subitem2 mmenu__city" href="#">
+                  <div class="mmenu__item-title">Санкт-Петербург</div></a></div>
+              <div class="mmenu__item"><a class="mmenu__item-link subitem2 mmenu__city" href="#">
+                  <div class="mmenu__item-title">Нижний Новгород</div></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="mmenu__item"><a class="mmenu__item-link" href="catalog.html">
+            <div class="mmenu__item-title">Каталог</div>
+            <div class="mmenu__item-arrow"></div></a>
+          <div class="mmenu__wrapper">
+            <div class="mmenu__top">
+              <button class="mmenu__button mmenu__prev" type="button">
+                          <svg class="mmenu__button-svg">
+                            <use xlink:href="/images/icons/sprite.svg#left-arrow"></use>
+                          </svg>
+                <div class="mmenu__button-title">Назад</div>
+              </button><a class="mmenu__search-button" href="search.html">
+                          <svg class="mmenu__search-open">
+                            <use xlink:href="/images/icons/sprite.svg#search"></use>
+                          </svg>
+                          <svg class="mmenu__search-close">
+                            <use xlink:href="/images/icons/sprite.svg#close"></use>
+                          </svg></a>
+            </div><a class="mmenu__link" href="catalog.html">Каталог</a>
+            <div class="mmenu__list">
+              <div class="mmenu__item"><a class="mmenu__item-link subitem" href="catalog.html">
+                  <div class="mmenu__item-title">Торговое оборудование</div>
+                  <div class="mmenu__item-arrow"></div></a>
+                <div class="mmenu__wrapper">
+                  <div class="mmenu__top">
+                    <button class="mmenu__button mmenu__prev" type="button">
+                                <svg class="mmenu__button-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#left-arrow"></use>
+                                </svg>
+                      <div class="mmenu__button-title">Назад</div>
+                    </button><a class="mmenu__search-button" href="search.html">
+                                <svg class="mmenu__search-open">
+                                  <use xlink:href="/images/icons/sprite.svg#search"></use>
+                                </svg>
+                                <svg class="mmenu__search-close">
+                                  <use xlink:href="/images/icons/sprite.svg#close"></use>
+                                </svg></a>
+                  </div><a class="mmenu__link" href="catalog.html">Торговое оборудование</a>
+                  <div class="mmenu__list">
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Front-office (кассовое)</div></a></div>
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Back-office (товароучетное)</div></a></div>
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Облачные решения</div></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="mmenu__item"><a class="mmenu__item-link subitem" href="catalog.html">
+                  <div class="mmenu__item-title">Программное обеспечение</div>
+                  <div class="mmenu__item-arrow"></div></a>
+                <div class="mmenu__wrapper">
+                  <div class="mmenu__top">
+                    <button class="mmenu__button mmenu__prev" type="button">
+                                <svg class="mmenu__button-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#left-arrow"></use>
+                                </svg>
+                      <div class="mmenu__button-title">Назад</div>
+                    </button><a class="mmenu__search-button" href="search.html">
+                                <svg class="mmenu__search-open">
+                                  <use xlink:href="/images/icons/sprite.svg#search"></use>
+                                </svg>
+                                <svg class="mmenu__search-close">
+                                  <use xlink:href="/images/icons/sprite.svg#close"></use>
+                                </svg></a>
+                  </div><a class="mmenu__link" href="catalog.html">Программное обеспечение</a>
+                  <div class="mmenu__list">
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Front-office (кассовое)</div></a></div>
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Back-office (товароучетное)</div></a></div>
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Облачные решения</div></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mmenu__item"><a class="mmenu__item-link" href="auto.html">
+            <div class="mmenu__item-title">Автоматизация</div></a>
+        </div>
+        <div class="mmenu__item"><a class="mmenu__item-link" href="uslugi.html">
+            <div class="mmenu__item-title">Услуги</div>
+            <div class="mmenu__item-arrow"></div></a>
+          <div class="mmenu__wrapper">
+            <div class="mmenu__top">
+              <button class="mmenu__button mmenu__prev" type="button">
+                          <svg class="mmenu__button-svg">
+                            <use xlink:href="/images/icons/sprite.svg#left-arrow"></use>
+                          </svg>
+                <div class="mmenu__button-title">Назад</div>
+              </button><a class="mmenu__search-button" href="search.html">
+                          <svg class="mmenu__search-open">
+                            <use xlink:href="/images/icons/sprite.svg#search"></use>
+                          </svg>
+                          <svg class="mmenu__search-close">
+                            <use xlink:href="/images/icons/sprite.svg#close"></use>
+                          </svg></a>
+            </div><a class="mmenu__link" href="uslugi.html">Услуги</a>
+            <div class="mmenu__list">
+              <div class="mmenu__item"><a class="mmenu__item-link subitem" href="catalog.html">
+                  <div class="mmenu__item-title">Торговое оборудование</div>
+                  <div class="mmenu__item-arrow"></div></a>
+                <div class="mmenu__wrapper">
+                  <div class="mmenu__top">
+                    <button class="mmenu__button mmenu__prev" type="button">
+                                <svg class="mmenu__button-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#left-arrow"></use>
+                                </svg>
+                      <div class="mmenu__button-title">Назад</div>
+                    </button><a class="mmenu__search-button" href="search.html">
+                                <svg class="mmenu__search-open">
+                                  <use xlink:href="/images/icons/sprite.svg#search"></use>
+                                </svg>
+                                <svg class="mmenu__search-close">
+                                  <use xlink:href="/images/icons/sprite.svg#close"></use>
+                                </svg></a>
+                  </div><a class="mmenu__link" href="catalog.html">Торговое оборудование</a>
+                  <div class="mmenu__list">
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Front-office (кассовое)</div></a></div>
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Back-office (товароучетное)</div></a></div>
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Облачные решения</div></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="mmenu__item"><a class="mmenu__item-link subitem" href="catalog.html">
+                  <div class="mmenu__item-title">Программное обеспечение</div>
+                  <div class="mmenu__item-arrow"></div></a>
+                <div class="mmenu__wrapper">
+                  <div class="mmenu__top">
+                    <button class="mmenu__button mmenu__prev" type="button">
+                                <svg class="mmenu__button-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#left-arrow"></use>
+                                </svg>
+                      <div class="mmenu__button-title">Назад</div>
+                    </button><a class="mmenu__search-button" href="search.html">
+                                <svg class="mmenu__search-open">
+                                  <use xlink:href="/images/icons/sprite.svg#search"></use>
+                                </svg>
+                                <svg class="mmenu__search-close">
+                                  <use xlink:href="/images/icons/sprite.svg#close"></use>
+                                </svg></a>
+                  </div><a class="mmenu__link" href="catalog.html">Программное обеспечение</a>
+                  <div class="mmenu__list">
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Front-office (кассовое)</div></a></div>
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Back-office (товароучетное)</div></a></div>
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Облачные решения</div></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mmenu__item"><a class="mmenu__item-link" href="/">
+            <div class="mmenu__item-title">обслуживание</div></a>
+        </div>
+        <div class="mmenu__item"><a class="mmenu__item-link" href="/">
+            <div class="mmenu__item-title">ЕГАИС</div></a>
+        </div>
+        <div class="mmenu__item"><a class="mmenu__item-link" href="/">
+            <div class="mmenu__item-title">ФГИС Меркурий</div></a>
+        </div>
+        <div class="mmenu__item"><a class="mmenu__item-link" href="/">
+            <div class="mmenu__item-title">Маркировка</div></a>
+        </div>
+        <div class="mmenu__item"><a class="mmenu__item-link" href="/">
+            <div class="mmenu__item-title">ЭЦП</div></a>
+        </div>
+        <div class="mmenu__item"><a class="light mmenu__item-link" href="/">
+            <div class="mmenu__item-title">блог</div></a>
+        </div>
+        <div class="mmenu__item"><a class="light mmenu__item-link" href="/">
+            <div class="mmenu__item-title">Партнеры</div></a>
+        </div>
+        <div class="mmenu__item"><a class="light mmenu__item-link" href="delivery.html">
+            <div class="mmenu__item-title">Доставка и оплата</div></a>
+        </div>
+        <div class="mmenu__item"><a class="light mmenu__item-link" href="delivery.html">
+            <div class="mmenu__item-title">Гарантия и возврат</div></a>
+        </div>
+        <div class="mmenu__item"><a class="light mmenu__item-link" href="/">
+            <div class="mmenu__item-title">54-ФЗ</div></a>
+        </div>
+        <div class="mmenu__item"><a class="light mmenu__item-link" href="/">
+            <div class="mmenu__item-title">Оставить отзыв</div></a>
+        </div>
       </div>
     </div>
   </div>

@@ -53,10 +53,24 @@
                 </form>
               </div>
               <div class="header__buttons">
-                <div class="header__tel"><a class="header__tel" href="tel:+7(499)110-38-35">+7 (499) 110-38-35</a></div>
+                <button class="mmenu-button" type="button">
+                  <div class="mmenu-button__line"></div>
+                  <div class="mmenu-button__line"></div>
+                  <div class="mmenu-button__line"></div>
+                </button>
+                <div class="header__tel"><a class="header__phone" href="tel:+7(499)110-38-35">+7 (499) 110-38-35</a></div>
                 <div class="header__call">
                   <button class="button" type="button">Заказать звонок</button>
                 </div>
+                <div class="header__mlogo"><a class="logo" href="/"><img class="logo__img" src="images/content/logo.png"></a></div>
+                <div class="header__mbasket"><a class="basket basket_i" href="cart.html">
+                    <div class="basket__img">
+                      <svg class="basket__img-img">
+                        <use xlink:href="/images/icons/sprite.svg#supermarket"></use>
+                      </svg>
+                      <!--img(src='images/icons/cart.svg').basket__img-img-->
+                    </div>
+                    <div class="basket__price">125 000 руб.</div></a></div>
               </div>
             </div>
           </div>
@@ -426,12 +440,14 @@
                     <div class="slide" style="background-image: url(images/content/main/banner/bg.jpg)">
                       <div class="container">
                         <div class="row">
-                          <div class="slide__content content"><img class="slide__img1" src="images/content/main/banner/1.png">
+                          <div class="slide__content content">
+                            <div class="slide__img1"><img class="slide__img1-img" src="images/content/main/banner/1.png"></div>
                             <div style="padding-top: 20px;">
                               <div class="slide__title">СМАРТ-ТЕРМИНАЛ</div>
                               <div class="slide__name">ЭВОТОР 7.2</div>
                               <div class="slide__price">19 900 руб.</div><a class="button slide__button" href="/">Подробнее</a>
-                            </div><img class="slide__img2" src="images/content/main/banner/2.png">
+                            </div>
+                            <div class="slide__img2"><img class="slide__img2-img" src="images/content/main/banner/2.png"></div>
                           </div>
                         </div>
                       </div>
@@ -441,12 +457,14 @@
                     <div class="slide" style="background-image: url(images/content/main/banner/bg.jpg)">
                       <div class="container">
                         <div class="row">
-                          <div class="slide__content content"><img class="slide__img1" src="images/content/main/banner/1.png">
+                          <div class="slide__content content">
+                            <div class="slide__img1"><img class="slide__img1-img" src="images/content/main/banner/1.png"></div>
                             <div style="padding-top: 20px;">
                               <div class="slide__title">СМАРТ-ТЕРМИНАЛ</div>
                               <div class="slide__name">ЭВОТОР 7.2</div>
                               <div class="slide__price">19 900 руб.</div><a class="button slide__button" href="/">Подробнее</a>
-                            </div><img class="slide__img2" src="images/content/main/banner/2.png">
+                            </div>
+                            <div class="slide__img2"><img class="slide__img2-img" src="images/content/main/banner/2.png"></div>
                           </div>
                         </div>
                       </div>
@@ -456,12 +474,14 @@
                     <div class="slide" style="background-image: url(images/content/main/banner/bg.jpg)">
                       <div class="container">
                         <div class="row">
-                          <div class="slide__content content"><img class="slide__img1" src="images/content/main/banner/1.png">
+                          <div class="slide__content content">
+                            <div class="slide__img1"><img class="slide__img1-img" src="images/content/main/banner/1.png"></div>
                             <div style="padding-top: 20px;">
                               <div class="slide__title">СМАРТ-ТЕРМИНАЛ</div>
                               <div class="slide__name">ЭВОТОР 7.2</div>
                               <div class="slide__price">19 900 руб.</div><a class="button slide__button" href="/">Подробнее</a>
-                            </div><img class="slide__img2" src="images/content/main/banner/2.png">
+                            </div>
+                            <div class="slide__img2"><img class="slide__img2-img" src="images/content/main/banner/2.png"></div>
                           </div>
                         </div>
                       </div>
@@ -491,9 +511,9 @@
               <div class="container">
                 <div class="row"><a class="icat" href="catalog.html">
                     <div class="icat__img"><img class="icat__img-img" src="images/content/main/catalog/1.png"></div>
-                    <div class="icat__title">Автономные онлайн-кассы (54-ФЗ)</div></a><a class="icat" href="catalog.html">
+                    <div class="icat__title">Автономные онлайн-кассы</div></a><a class="icat" href="catalog.html">
                     <div class="icat__img"><img class="icat__img-img" src="images/content/main/catalog/2.png"></div>
-                    <div class="icat__title">Фискальные регистраторы (54-ФЗ)</div></a><a class="icat" href="catalog.html">
+                    <div class="icat__title">Фискальные регистраторы</div></a><a class="icat" href="catalog.html">
                     <div class="icat__img"><img class="icat__img-img" src="images/content/main/catalog/3.png"></div>
                     <div class="icat__title">POS-системы</div></a><a class="icat" href="catalog.html">
                     <div class="icat__img"><img class="icat__img-img" src="images/content/main/catalog/4.png"></div>
@@ -539,6 +559,10 @@
                     <div class="icat__img"><img class="icat__img-img" src="images/content/main/catalog/24.png"></div>
                     <div class="icat__title">Программное обеспечение</div></a>
                 </div>
+                <div class="icats__hidden">
+                  <div class="icats__hidden-row"></div>
+                </div>
+                <button class="icats__more" type="button">Показать еще</button>
               </div>
             </div>
           </section>
@@ -546,63 +570,208 @@
             <div class="iready">
               <div class="container">
                 <div class="iready__title title">Готовые решения</div>
+                <div class="iready__mwrap">
+                  <div class="swiper-container iready__container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide iready__slide">
+                        <div class="iready__slide-top">
+                          <div class="proportion proportion_280x160"></div>
+                          <div class="iready__slide-img"><img class="iready__slide-pic" src="images/content/main/ready/slider/0.jpg"></div>
+                          <div class="iready__slide-block">
+                            <div class="iready__slide-title">Розничная торговля</div>
+                            <div class="iready__msws">
+                              <div class="iready__msw" data-id="1">Продовольственная</div>
+                              <div class="iready__msw" data-id="2">Непродовольственная</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="iready__slide-bottom">
+                          <div class="iready__mtabs">
+                            <div class="iready__mtab" data-id="1"><a class="iready__mitem">
+                                <div class="iready__mitem-title">Супермаркет</div>
+                                <div class="iready__mitem-text">Решение для крупных, универсальных, сетевых магазинов при наличии двух и более кассовых зон</div></a><a class="iready__mitem">
+                                <div class="iready__mitem-title">Магазин</div>
+                                <div class="iready__mitem-text">Решение для классических магазинов с самообслуживанием</div></a><a class="iready__mitem">
+                                <div class="iready__mitem-title">Павильон</div>
+                                <div class="iready__mitem-text">Решение для небольших торговых точек прилавочного типа</div></a>
+                            </div>
+                            <div class="iready__mtab" data-id="2"><a class="iready__mitem">
+                                <div class="iready__mitem-title">Супермаркет</div>
+                                <div class="iready__mitem-text">Решение для крупных, универсальных, сетевых магазинов при наличии двух и более кассовых зон</div></a><a class="iready__mitem">
+                                <div class="iready__mitem-title">Магазин</div>
+                                <div class="iready__mitem-text">Решение для классических магазинов с самообслуживанием</div></a><a class="iready__mitem">
+                                <div class="iready__mitem-title">Павильон</div>
+                                <div class="iready__mitem-text">Решение для небольших торговых точек прилавочного типа</div></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide iready__slide">
+                        <div class="iready__slide-top">
+                          <div class="proportion proportion_280x160"></div>
+                          <div class="iready__slide-img"><img class="iready__slide-pic" src="images/content/main/ready/slider/1.jpg"></div>
+                          <div class="iready__slide-block">
+                            <div class="iready__slide-title">Общепит</div>
+                          </div>
+                        </div>
+                        <div class="iready__slide-bottom">
+                          <div class="iready__mcontent"><a class="iready__mitem" href="market.html">
+                              <div class="iready__mitem-title">Ресторан</div>
+                              <div class="iready__mitem-text">Lorem Ipsum - это текст-&quot;рыба&quot;, часто используемый в печати и вэб-дизайне. </div></a><a class="iready__mitem" href="market.html">
+                              <div class="iready__mitem-title">Фудкорт</div>
+                              <div class="iready__mitem-text">Lorem Ipsum - это текст-&quot;рыба&quot;, часто используемый в печати и вэб-дизайне. </div></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide iready__slide">
+                        <div class="iready__slide-top">
+                          <div class="proportion proportion_280x160"></div>
+                          <div class="iready__slide-img"><img class="iready__slide-pic" src="images/content/main/ready/slider/2.jpg"></div>
+                          <div class="iready__slide-block">
+                            <div class="iready__slide-title">Выездная торговля</div>
+                          </div>
+                        </div>
+                        <div class="iready__slide-bottom">
+                          <div class="iready__mcontent"><a class="iready__mitem" href="market.html">
+                              <div class="iready__mitem-title">Пивная родукция без акцизной марки</div>
+                              <div class="iready__mitem-text">Lorem Ipsum не только успешно пережил без заметных изменений пять веков</div></a><a class="iready__mitem" href="market.html">
+                              <div class="iready__mitem-title">Крепкий алкоголь с акцизной маркой</div>
+                              <div class="iready__mitem-text">Lorem Ipsum - это текст-&quot;рыба&quot;, часто используемый в печати и вэб-дизайне. </div></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide iready__slide">
+                        <div class="iready__slide-top">
+                          <div class="proportion proportion_280x160"></div>
+                          <div class="iready__slide-img"><img class="iready__slide-pic" src="images/content/main/ready/slider/3.jpg"></div>
+                          <div class="iready__slide-block">
+                            <div class="iready__slide-title">ЕГАИС</div>
+                          </div>
+                        </div>
+                        <div class="iready__slide-bottom">
+                          <div class="iready__mcontent"><a class="iready__mitem" href="market.html">
+                              <div class="iready__mitem-title">Пивная родукция без акцизной марки</div>
+                              <div class="iready__mitem-text">Lorem Ipsum не только успешно пережил без заметных изменений пять веков</div></a><a class="iready__mitem" href="market.html">
+                              <div class="iready__mitem-title">Крепкий алкоголь с акцизной маркой</div>
+                              <div class="iready__mitem-text">Lorem Ipsum - это текст-&quot;рыба&quot;, часто используемый в печати и вэб-дизайне. </div></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide iready__slide">
+                        <div class="iready__slide-top">
+                          <div class="proportion proportion_280x160"></div>
+                          <div class="iready__slide-img"><img class="iready__slide-pic" src="images/content/main/ready/slider/4.jpg"></div>
+                          <div class="iready__slide-block">
+                            <div class="iready__slide-title">Маркировка</div>
+                          </div>
+                        </div>
+                        <div class="iready__slide-bottom">
+                          <div class="iready__mcontent"><a class="iready__mitem" href="market.html">
+                              <div class="iready__mitem-title">Пивная родукция без акцизной марки</div>
+                              <div class="iready__mitem-text">Lorem Ipsum не только успешно пережил без заметных изменений пять веков</div></a><a class="iready__mitem" href="market.html">
+                              <div class="iready__mitem-title">Крепкий алкоголь с акцизной маркой</div>
+                              <div class="iready__mitem-text">Lorem Ipsum - это текст-&quot;рыба&quot;, часто используемый в печати и вэб-дизайне. </div></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide iready__slide">
+                        <div class="iready__slide-top">
+                          <div class="proportion proportion_280x160"></div>
+                          <div class="iready__slide-img"><img class="iready__slide-pic" src="images/content/main/ready/slider/5.jpg"></div>
+                          <div class="iready__slide-block">
+                            <div class="iready__slide-title">Интернет магазин</div>
+                          </div>
+                        </div>
+                        <div class="iready__slide-bottom">
+                          <div class="iready__mcontent"><a class="iready__mitem" href="market.html">
+                              <div class="iready__mitem-title">Пивная родукция без акцизной марки</div>
+                              <div class="iready__mitem-text">Lorem Ipsum не только успешно пережил без заметных изменений пять веков</div></a><a class="iready__mitem" href="market.html">
+                              <div class="iready__mitem-title">Крепкий алкоголь с акцизной маркой</div>
+                              <div class="iready__mitem-text">Lorem Ipsum - это текст-&quot;рыба&quot;, часто используемый в печати и вэб-дизайне. </div></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide iready__slide">
+                        <div class="iready__slide-top">
+                          <div class="proportion proportion_280x160"></div>
+                          <div class="iready__slide-img"><img class="iready__slide-pic" src="images/content/main/ready/slider/6.jpg"></div>
+                          <div class="iready__slide-block">
+                            <div class="iready__slide-title">Вендинг</div>
+                          </div>
+                        </div>
+                        <div class="iready__slide-bottom">
+                          <div class="iready__mcontent"><a class="iready__mitem" href="market.html">
+                              <div class="iready__mitem-title">Пивная родукция без акцизной марки</div>
+                              <div class="iready__mitem-text">Lorem Ipsum не только успешно пережил без заметных изменений пять веков</div></a><a class="iready__mitem" href="market.html">
+                              <div class="iready__mitem-title">Крепкий алкоголь с акцизной маркой</div>
+                              <div class="iready__mitem-text">Lorem Ipsum - это текст-&quot;рыба&quot;, часто используемый в печати и вэб-дизайне. </div></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="iready__wrap">
                   <div class="iready__sws">
-                    <div class="active iready__sw" data-id="1">
-                      <div class="iready__sw-img">
-                        <svg class="iready__sw-svg">
-                          <use xlink:href="/images/content/main/ready/sprite.svg#1"></use>
-                        </svg>
+                    <div class="swiper-container iready__sws-container">
+                      <div class="swiper-wrapper">
+                        <div class="active iready__sw swiper-slide" data-id="1">
+                          <div class="iready__sw-img">
+                            <svg class="iready__sw-svg">
+                              <use xlink:href="/images/content/main/ready/sprite.svg#1"></use>
+                            </svg>
+                          </div>
+                          <div class="iready__sw-title">Розничная торговля</div>
+                        </div>
+                        <div class="iready__sw swiper-slide" data-id="2">
+                          <div class="iready__sw-img">
+                            <svg class="iready__sw-svg">
+                              <use xlink:href="/images/content/main/ready/sprite.svg#2"></use>
+                            </svg>
+                          </div>
+                          <div class="iready__sw-title">Общественное питание</div>
+                        </div>
+                        <div class="iready__sw swiper-slide" data-id="3">
+                          <div class="iready__sw-img">
+                            <svg class="iready__sw-svg">
+                              <use xlink:href="/images/content/main/ready/sprite.svg#3"></use>
+                            </svg>
+                          </div>
+                          <div class="iready__sw-title">Выездная торговля</div>
+                        </div>
+                        <div class="iready__sw swiper-slide" data-id="4">
+                          <div class="iready__sw-img">
+                            <svg class="iready__sw-svg">
+                              <use xlink:href="/images/content/main/ready/sprite.svg#4"></use>
+                            </svg>
+                          </div>
+                          <div class="iready__sw-title">ЕГАИС</div>
+                        </div>
+                        <div class="iready__sw swiper-slide" data-id="5">
+                          <div class="iready__sw-img">
+                            <svg class="iready__sw-svg">
+                              <use xlink:href="/images/content/main/ready/sprite.svg#5"></use>
+                            </svg>
+                          </div>
+                          <div class="iready__sw-title">Маркировка</div>
+                        </div>
+                        <div class="iready__sw swiper-slide" data-id="6">
+                          <div class="iready__sw-img">
+                            <svg class="iready__sw-svg">
+                              <use xlink:href="/images/content/main/ready/sprite.svg#6"></use>
+                            </svg>
+                          </div>
+                          <div class="iready__sw-title">Интернет магазин</div>
+                        </div>
+                        <div class="iready__sw swiper-slide" data-id="7">
+                          <div class="iready__sw-img">
+                            <svg class="iready__sw-svg">
+                              <use xlink:href="/images/content/main/ready/sprite.svg#7"></use>
+                            </svg>
+                          </div>
+                          <div class="iready__sw-title">Вендинг</div>
+                        </div>
                       </div>
-                      <div class="iready__sw-title">Розничная торговля</div>
-                    </div>
-                    <div class="iready__sw" data-id="2">
-                      <div class="iready__sw-img">
-                        <svg class="iready__sw-svg">
-                          <use xlink:href="/images/content/main/ready/sprite.svg#2"></use>
-                        </svg>
-                      </div>
-                      <div class="iready__sw-title">Общественное питание</div>
-                    </div>
-                    <div class="iready__sw" data-id="3">
-                      <div class="iready__sw-img">
-                        <svg class="iready__sw-svg">
-                          <use xlink:href="/images/content/main/ready/sprite.svg#3"></use>
-                        </svg>
-                      </div>
-                      <div class="iready__sw-title">Выездная торговля</div>
-                    </div>
-                    <div class="iready__sw" data-id="4">
-                      <div class="iready__sw-img">
-                        <svg class="iready__sw-svg">
-                          <use xlink:href="/images/content/main/ready/sprite.svg#4"></use>
-                        </svg>
-                      </div>
-                      <div class="iready__sw-title">ЕГАИС</div>
-                    </div>
-                    <div class="iready__sw" data-id="5">
-                      <div class="iready__sw-img">
-                        <svg class="iready__sw-svg">
-                          <use xlink:href="/images/content/main/ready/sprite.svg#5"></use>
-                        </svg>
-                      </div>
-                      <div class="iready__sw-title">Маркировка</div>
-                    </div>
-                    <div class="iready__sw" data-id="6">
-                      <div class="iready__sw-img">
-                        <svg class="iready__sw-svg">
-                          <use xlink:href="/images/content/main/ready/sprite.svg#6"></use>
-                        </svg>
-                      </div>
-                      <div class="iready__sw-title">Интернет магазин</div>
-                    </div>
-                    <div class="iready__sw" data-id="7">
-                      <div class="iready__sw-img">
-                        <svg class="iready__sw-svg">
-                          <use xlink:href="/images/content/main/ready/sprite.svg#7"></use>
-                        </svg>
-                      </div>
-                      <div class="iready__sw-title">Вендинг</div>
                     </div>
                   </div>
                   <div class="iready__tabs">
@@ -727,7 +896,8 @@
           <section class="index__quiz">
             <div class="quiz" style="background-image:url(images/content/main/quiz/bg.jpg)">
               <div class="container">
-                <form class="quiz__form">
+                <div class="quiz__mtitle title">Нужно индивидуальное решение?</div>
+                <form class="quiz__form" action="#" method="post">
                   <div class="swiper-container quiz__container">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide quiz__slide">
@@ -735,9 +905,11 @@
                           <div class="quiz__left"><img class="quiz__img" src="images/content/main/quiz/1.png"></div>
                           <div class="quiz__center">
                             <div class="quiz__title title">Нужно индивидуальное решение?</div>
-                            <div class="quiz__text">Подберите торговое оборудование для своего предприятия</div>
-                            <div class="quiz__scrollbar">
-                              <div class="quiz__scrollbar-line"></div>
+                            <div class="quiz__center-top">
+                              <div class="quiz__text">Подберите торговое оборудование для своего предприятия</div>
+                              <div class="quiz__scrollbar">
+                                <div class="quiz__scrollbar-line"></div>
+                              </div>
                             </div>
                             <div class="quiz__sub">Выполняется ли хотя бы одно из условий:</div>
                             <ol class="quiz__list">
@@ -749,8 +921,8 @@
                         </div>
                         <div class="quiz__buttons">
                           <div class="row quiz__buttons-row">
-                            <label class="quiz__btn">
-                              <input class="quiz__btn-input jsQuizNext" type="radio" name="quiz" value="1">
+                            <label class="quiz__btn jsQuizNext">
+                              <input class="quiz__btn-input" type="radio" name="quiz" value="1">
                               <div class="quiz__btn-wrap">
                                 <div class="quiz__btn-top">
                                   <div class="quiz__btn-val">Да</div>
@@ -763,8 +935,8 @@
                                 <div class="quiz__btn-text">Двусторонний монохромный дисплей покупателя&nbsp;<span class="quiz__btn-text_q" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quaerat?">(?)</span></div>
                               </div>
                             </label>
-                            <label class="quiz__btn">
-                              <input class="quiz__btn-input jsQuizNext" type="radio" name="quiz" value="2">
+                            <label class="quiz__btn jsQuizNext">
+                              <input class="quiz__btn-input" type="radio" name="quiz" value="2">
                               <div class="quiz__btn-wrap">
                                 <div class="quiz__btn-top">
                                   <div class="quiz__btn-val">Да</div>
@@ -777,8 +949,8 @@
                                 <div class="quiz__btn-text">Цветной монитор покупателя&nbsp;<span class="quiz__btn-text_q" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quaerat?">(?)</span></div>
                               </div>
                             </label>
-                            <label class="quiz__btn">
-                              <input class="quiz__btn-input jsQuizNext" type="radio" name="quiz" value="3">
+                            <label class="quiz__btn jsQuizNext">
+                              <input class="quiz__btn-input" type="radio" name="quiz" value="3">
                               <div class="quiz__btn-wrap">
                                 <div class="quiz__btn-top">
                                   <div class="quiz__btn-val">Нет</div>
@@ -797,12 +969,17 @@
                       <div class="swiper-slide quiz__slide">
                         <div class="row">
                           <div class="quiz__slide-form">
-                            <div class="quiz__text">Спасибо. Наши специалисты бесплатно подберут необходимое торговое оборудование (несколько вариантов, под разный бюджет) и вышлют на Ваш адрес электронной почты в виде коммерческого предложения</div>
-                            <div class="quiz__scrollbar">
-                              <div class="quiz__scrollbar-line"></div>
+                            <div class="quiz__center-top">
+                              <div class="quiz__text quiz__text_m">Подберите торговое оборудование для своего предприятия</div>
+                              <div class="quiz__text quiz__text_h"> Спасибо. Наши специалисты бесплатно подберут необходимое торговое оборудование (несколько вариантов, под разный бюджет) и вышлют на Ваш адрес электронной почты в виде коммерческого предложения</div>
+                              <div class="quiz__scrollbar">
+                                <div class="quiz__scrollbar-line"></div>
+                              </div>
                             </div>
                           </div>
                           <div class="quiz__slide-wrap">
+                            <div class="quiz__msub">Оставьте ваши контакты</div>
+                            <div class="quiz__mtext">Мы подберём необходимое торговое оборудование и свяжемся с Вами</div>
                             <div class="quiz__field">
                               <input class="quiz__input" type="text" name="quizName" placeholder="Ваше Имя">
                             </div>
@@ -944,6 +1121,203 @@
                     </div>
                   </div>
                 </div>
+                <div class="ichart__list-t"><img class="ichart__list-bg" src="images/content/main/chart/bg.png">
+                  <div class="ichart__list-rows">
+                    <div class="ichart__row">
+                      <div class="ichart__row-wrap"></div>
+                      <div class="ichart__item">
+                        <div class="ichart__item-date">1 феварля 2017</div>
+                        <div class="ichart__line">
+                          <div class="ichart__line-before"></div>
+                          <div class="ichart__check">
+                            <div class="ichart__check-wrap">
+                              <svg class="ichart__check-svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="ichart__line-after"></div>
+                        </div>
+                        <div class="ichart__item-text">Больше нельзя регистрировать старые кассы с ЭКЛЗ.</div>
+                        <div class="ichart__item-before"></div>
+                      </div>
+                      <div class="ichart__item">
+                        <div class="ichart__item-date">31 марта 2017</div>
+                        <div class="ichart__line">
+                          <div class="ichart__line-before"></div>
+                          <div class="ichart__check">
+                            <div class="ichart__check-wrap">
+                              <svg class="ichart__check-svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="ichart__line-after"></div>
+                        </div>
+                        <div class="ichart__item-text">Продавцы крепкого алкоголя, у которых еще небыло ККТ. Продавать слабоалкогольные напитки покачто можно без кассы нового образца</div>
+                        <div class="ichart__item-after"></div>
+                        <div class="ichart__item-arr"></div>
+                        <div class="ichart__item-before"></div>
+                      </div>
+                    </div>
+                    <div class="ichart__row">
+                      <div class="ichart__row-wrap"></div>
+                      <div class="ichart__item">
+                        <div class="ichart__item-date">1 июня 2017</div>
+                        <div class="ichart__line">
+                          <div class="ichart__line-before"></div>
+                          <div class="ichart__check">
+                            <div class="ichart__check-wrap">
+                              <svg class="ichart__check-svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="ichart__line-after"></div>
+                        </div>
+                        <div class="ichart__item-text">ОСН и УСН, кроме услуг. Интернет-магазины, которые принимают карты и наличные деньги. Продавцы акцизных товаров.</div>
+                        <div class="ichart__item-before"></div>
+                      </div>
+                      <div class="ichart__item">
+                        <div class="ichart__item-date">1 июля 2018</div>
+                        <div class="ichart__line">
+                          <div class="ichart__line-before"></div>
+                          <div class="ichart__check">
+                            <div class="ichart__check-wrap">
+                              <svg class="ichart__check-svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="ichart__line-after"></div>
+                        </div>
+                        <div class="ichart__item-text">Интернет-магазины, которым клиент платит электронными деньгами, по квитанции в банке или на почте наложенным платежом. ЕНВД и ПСН с наемными сотрудниками в сфере общепита или розничной торговли. Вендинг с наемными сотрудниками.</div>
+                        <div class="ichart__item-after"></div>
+                        <div class="ichart__item-arr"></div>
+                        <div class="ichart__item-before"></div>
+                      </div>
+                    </div>
+                    <div class="ichart__row">
+                      <div class="ichart__row-wrap"></div>
+                      <div class="ichart__item">
+                        <div class="ichart__item-date">1 июля 2019</div>
+                        <div class="ichart__line">
+                          <div class="ichart__line-before"></div>
+                          <div class="ichart__check">
+                            <div class="ichart__check-wrap">
+                              <svg class="ichart__check-svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="ichart__line-after"></div>
+                        </div>
+                        <div class="ichart__item-text">ЕНВД (подпункты 1–5, 10–14 пункта 2 сттьи 346,26 НК). Патент (подпункты 1–15, 18–28, 30–44, 49–58, 60–63 пункта 2 статьи 346,43 НК). Вендинг без сотрудиков. Услуги населению, кроме общепита с наемными сотрудниками.</div>
+                        <div class="ichart__item-before"></div>
+                      </div>
+                      <div class="ichart__item">
+                        <div class="ichart__item-date">1 февраля 2021</div>
+                        <div class="ichart__line">
+                          <div class="ichart__line-before"></div>
+                          <div class="ichart__check">
+                            <div class="ichart__check-wrap">
+                              <svg class="ichart__check-svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="ichart__line-after"></div>
+                        </div>
+                        <div class="ichart__item-text">ИП на патенте, ЕНВД и УСН обязаны указывать в чеке наименование товара или услуг и их количество.</div>
+                        <div class="ichart__item-after"></div>
+                        <div class="ichart__item-arr"></div>
+                        <div class="ichart__item-before"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ichart__mlist">
+                  <div class="ichart__mlist-row">
+                    <div class="ichart__mitem">
+                      <div class="ichart__item-date">1 феварля 2017</div>
+                      <div class="ichart__item-text">Больше нельзя регистрировать старые кассы с ЭКЛЗ.</div>
+                      <div class="ichart__mline">
+                        <div class="ichart__mcheck">
+                          <div class="ichart__mcheck-wrap">
+                            <svg class="ichart__mcheck-svg">
+                              <use xlink:href="/images/icons/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ichart__mitem">
+                      <div class="ichart__item-date">31 марта 2017</div>
+                      <div class="ichart__item-text">Продавцы крепкого алкоголя, у которых еще небыло ККТ. Продавать слабоалкогольные напитки покачто можно без кассы нового образца</div>
+                      <div class="ichart__mline">
+                        <div class="ichart__mcheck">
+                          <div class="ichart__mcheck-wrap">
+                            <svg class="ichart__mcheck-svg">
+                              <use xlink:href="/images/icons/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ichart__mitem">
+                      <div class="ichart__item-date">1 июня 2017</div>
+                      <div class="ichart__item-text">ОСН и УСН, кроме услуг. Интернет-магазины, которые принимают карты и наличные деньги. Продавцы акцизных товаров.</div>
+                      <div class="ichart__mline">
+                        <div class="ichart__mcheck">
+                          <div class="ichart__mcheck-wrap">
+                            <svg class="ichart__mcheck-svg">
+                              <use xlink:href="/images/icons/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ichart__mitem">
+                      <div class="ichart__item-date">1 июля 2018</div>
+                      <div class="ichart__item-text">Интернет-магазины, которым клиент платит электронными деньгами, по квитанции в банке или на почте наложенным платежом. ЕНВД и ПСН с наемными сотрудниками в сфере общепита или розничной торговли. Вендинг с наемными сотрудниками.</div>
+                      <div class="ichart__mline">
+                        <div class="ichart__mcheck">
+                          <div class="ichart__mcheck-wrap">
+                            <svg class="ichart__mcheck-svg">
+                              <use xlink:href="/images/icons/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ichart__mitem">
+                      <div class="ichart__item-date">1 июля 2019</div>
+                      <div class="ichart__item-text">ЕНВД (подпункты 1–5, 10–14 пункта 2 сттьи 346,26 НК). Патент (подпункты 1–15, 18–28, 30–44, 49–58, 60–63 пункта 2 статьи 346,43 НК). Вендинг без сотрудиков. Услуги населению, кроме общепита с наемными сотрудниками.</div>
+                      <div class="ichart__mline">
+                        <div class="ichart__mcheck">
+                          <div class="ichart__mcheck-wrap">
+                            <svg class="ichart__mcheck-svg">
+                              <use xlink:href="/images/icons/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ichart__mitem">
+                      <div class="ichart__item-date">1 февраля 2021</div>
+                      <div class="ichart__item-text">ИП на патенте, ЕНВД и УСН обязаны указывать в чеке наименование товара или услуг и их количество.</div>
+                      <div class="ichart__mline">
+                        <div class="ichart__mcheck">
+                          <div class="ichart__mcheck-wrap">
+                            <svg class="ichart__mcheck-svg">
+                              <use xlink:href="/images/icons/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><img class="ichart__list-bg" src="images/content/main/chart/bg.png">
+                </div>
               </div>
             </div>
           </section>
@@ -1016,6 +1390,18 @@
         <div class="container">
           <div class="footer__top">
             <div class="row">
+              <div class="footer__mleft">
+                <div class="footer__mleft-top">
+                  <div class="footer__mleft-row"><a class="footer__mitem" href="/">Каталог</a><a class="footer__mitem" href="/">Автоматизация </a><a class="footer__mitem" href="/">Обслуживание</a><a class="footer__mitem" href="/">Услуги</a>
+                  </div>
+                  <div class="footer__mleft-row"><a class="footer__mitem" href="/">ЕГАИС</a><a class="footer__mitem" href="/">ФГИС </a><a class="footer__mitem" href="/">Маркировка </a><a class="footer__mitem" href="/">ЭЦП</a>
+                  </div>
+                </div>
+                <div class="footer__mleft-bottom">
+                  <div class="footer__logo"><a class="logo" href="/"><img class="logo__img" src="images/content/logo.png"></a></div>
+                  <div class="footer__desc">Автоматизация магазинов розничной торговли, предприятий общественного питания (HoReCa), складов. Индивидуальное проектирование и комплексное оснащение, подбор торгового оборудования, доставка и монтаж, подключение и настройка, проведение пуско-наладочных работ, обучение персонала работе с системой, техническое обслуживание. (с) 2019 Все права защищены.</div>
+                </div>
+              </div>
               <div class="footer__left">
                 <div class="row">
                   <div class="footer__col"><a class="footer__title footer__title_link" href="catalog.html">Торговое оборудование </a>
@@ -1034,8 +1420,9 @@
               </div>
               <div class="footer__right">
                 <div class="footer__title">Контакты</div>
-                <div class="footer__phones"><a class="phone footer__phone" href="tel:+7(499)110-28-25">+7 (499) 110-28-25</a><a class="phone phone_grey footer__phone" href="tel:+7(499)123-33-44">+7 (499) 123-33-44</a>
-                  <div class="footer__phones-comment">Телефон технической поддержки<br>Время работы с 9:00 - 20:00</div>
+                <div class="footer__phones"><a class="phone footer__phone footer__phone_m" href="tel:+7(499)110-28-25">+7 (499) 110-28-25</a>
+                  <!--a(href='tel:+7(499)123-33-44').phone.phone_grey.footer__phone +7 (499) 123-33-44--><a class="footer__mail" href="mailto:info@inthestore.ru">info@inthestore.ru</a>
+                  <div class="footer__phones-comment">Время работы с 9:00 - 20:00</div><a class="footer__addr" href="/">143409, Московская область,<br>г. Красногорск, ул. Ленина,<br>д. 38-б, офис 88</a>
                 </div>
                 <div class="footer__socials socials"><a class="social social_vk" href="/" target="_blank">
                               <svg class="social__svg">
@@ -1055,6 +1442,9 @@
             <div class="footer__logo"><a class="logo" href="/"><img class="logo__img" src="images/content/logo.png"></a></div>
             <div class="footer__desc">Автоматизация магазинов розничной торговли, предприятий общественного питания (HoReCa), складов. Индивидуальное проектирование и комплексное оснащение, подбор торгового оборудования, доставка и монтаж, подключение и настройка, проведение пуско-наладочных работ, обучение персонала работе с системой, техническое обслуживание. (с) 2019 Все права защищены.</div>
           </div>
+        </div>
+        <div class="footer__mobile"><a class="footer__mobile-phone" href="tel:+7(499)110-38-35">+7 (499) 110-38-35</a>
+          <button class="button button_y footer__mobile-button" type="button">Позвонить</button>
         </div>
       </footer>
     </div>
@@ -1082,6 +1472,247 @@
         <div></div>
         <div></div>
         <div></div>
+      </div>
+    </div>
+  </div>
+  <div class="mmenu">
+    <div class="mmenu__main">
+      <div class="mmenu__top">
+        <button class="mmenu__button mmenu__close" type="button">
+                    <svg class="mmenu__button-svg">
+                      <use xlink:href="/images/icons/sprite.svg#left-arrow"></use>
+                    </svg>
+          <div class="mmenu__button-title">Меню</div>
+        </button><a class="mmenu__search-button" href="search.html">
+                    <svg class="mmenu__search-open">
+                      <use xlink:href="/images/icons/sprite.svg#search"></use>
+                    </svg>
+                    <svg class="mmenu__search-close">
+                      <use xlink:href="/images/icons/sprite.svg#close"></use>
+                    </svg></a>
+      </div>
+      <div class="mmenu__list">
+        <div class="mmenu__item"><a class="mmenu__item-link" href="#">
+            <div class="mmenu__item-title">Ваш город</div>
+            <div class="mmenu__item-city">Москва</div>
+            <div class="mmenu__item-arrow"></div></a>
+          <div class="mmenu__wrapper">
+            <div class="mmenu__top">
+              <button class="mmenu__button mmenu__prev" type="button">
+                          <svg class="mmenu__button-svg">
+                            <use xlink:href="/images/icons/sprite.svg#left-arrow"></use>
+                          </svg>
+                <div class="mmenu__button-title">Назад</div>
+              </button><a class="mmenu__search-button" href="search.html">
+                          <svg class="mmenu__search-open">
+                            <use xlink:href="/images/icons/sprite.svg#search"></use>
+                          </svg>
+                          <svg class="mmenu__search-close">
+                            <use xlink:href="/images/icons/sprite.svg#close"></use>
+                          </svg></a>
+            </div>
+            <div class="mmenu__list">
+              <div class="mmenu__item"><a class="mmenu__item-link subitem2 mmenu__city" href="#">
+                  <div class="mmenu__item-title">Москва</div></a></div>
+              <div class="mmenu__item"><a class="mmenu__item-link subitem2 mmenu__city" href="#">
+                  <div class="mmenu__item-title">Санкт-Петербург</div></a></div>
+              <div class="mmenu__item"><a class="mmenu__item-link subitem2 mmenu__city" href="#">
+                  <div class="mmenu__item-title">Нижний Новгород</div></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="mmenu__item"><a class="mmenu__item-link" href="catalog.html">
+            <div class="mmenu__item-title">Каталог</div>
+            <div class="mmenu__item-arrow"></div></a>
+          <div class="mmenu__wrapper">
+            <div class="mmenu__top">
+              <button class="mmenu__button mmenu__prev" type="button">
+                          <svg class="mmenu__button-svg">
+                            <use xlink:href="/images/icons/sprite.svg#left-arrow"></use>
+                          </svg>
+                <div class="mmenu__button-title">Назад</div>
+              </button><a class="mmenu__search-button" href="search.html">
+                          <svg class="mmenu__search-open">
+                            <use xlink:href="/images/icons/sprite.svg#search"></use>
+                          </svg>
+                          <svg class="mmenu__search-close">
+                            <use xlink:href="/images/icons/sprite.svg#close"></use>
+                          </svg></a>
+            </div><a class="mmenu__link" href="catalog.html">Каталог</a>
+            <div class="mmenu__list">
+              <div class="mmenu__item"><a class="mmenu__item-link subitem" href="catalog.html">
+                  <div class="mmenu__item-title">Торговое оборудование</div>
+                  <div class="mmenu__item-arrow"></div></a>
+                <div class="mmenu__wrapper">
+                  <div class="mmenu__top">
+                    <button class="mmenu__button mmenu__prev" type="button">
+                                <svg class="mmenu__button-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#left-arrow"></use>
+                                </svg>
+                      <div class="mmenu__button-title">Назад</div>
+                    </button><a class="mmenu__search-button" href="search.html">
+                                <svg class="mmenu__search-open">
+                                  <use xlink:href="/images/icons/sprite.svg#search"></use>
+                                </svg>
+                                <svg class="mmenu__search-close">
+                                  <use xlink:href="/images/icons/sprite.svg#close"></use>
+                                </svg></a>
+                  </div><a class="mmenu__link" href="catalog.html">Торговое оборудование</a>
+                  <div class="mmenu__list">
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Front-office (кассовое)</div></a></div>
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Back-office (товароучетное)</div></a></div>
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Облачные решения</div></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="mmenu__item"><a class="mmenu__item-link subitem" href="catalog.html">
+                  <div class="mmenu__item-title">Программное обеспечение</div>
+                  <div class="mmenu__item-arrow"></div></a>
+                <div class="mmenu__wrapper">
+                  <div class="mmenu__top">
+                    <button class="mmenu__button mmenu__prev" type="button">
+                                <svg class="mmenu__button-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#left-arrow"></use>
+                                </svg>
+                      <div class="mmenu__button-title">Назад</div>
+                    </button><a class="mmenu__search-button" href="search.html">
+                                <svg class="mmenu__search-open">
+                                  <use xlink:href="/images/icons/sprite.svg#search"></use>
+                                </svg>
+                                <svg class="mmenu__search-close">
+                                  <use xlink:href="/images/icons/sprite.svg#close"></use>
+                                </svg></a>
+                  </div><a class="mmenu__link" href="catalog.html">Программное обеспечение</a>
+                  <div class="mmenu__list">
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Front-office (кассовое)</div></a></div>
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Back-office (товароучетное)</div></a></div>
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Облачные решения</div></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mmenu__item"><a class="mmenu__item-link" href="auto.html">
+            <div class="mmenu__item-title">Автоматизация</div></a>
+        </div>
+        <div class="mmenu__item"><a class="mmenu__item-link" href="uslugi.html">
+            <div class="mmenu__item-title">Услуги</div>
+            <div class="mmenu__item-arrow"></div></a>
+          <div class="mmenu__wrapper">
+            <div class="mmenu__top">
+              <button class="mmenu__button mmenu__prev" type="button">
+                          <svg class="mmenu__button-svg">
+                            <use xlink:href="/images/icons/sprite.svg#left-arrow"></use>
+                          </svg>
+                <div class="mmenu__button-title">Назад</div>
+              </button><a class="mmenu__search-button" href="search.html">
+                          <svg class="mmenu__search-open">
+                            <use xlink:href="/images/icons/sprite.svg#search"></use>
+                          </svg>
+                          <svg class="mmenu__search-close">
+                            <use xlink:href="/images/icons/sprite.svg#close"></use>
+                          </svg></a>
+            </div><a class="mmenu__link" href="uslugi.html">Услуги</a>
+            <div class="mmenu__list">
+              <div class="mmenu__item"><a class="mmenu__item-link subitem" href="catalog.html">
+                  <div class="mmenu__item-title">Торговое оборудование</div>
+                  <div class="mmenu__item-arrow"></div></a>
+                <div class="mmenu__wrapper">
+                  <div class="mmenu__top">
+                    <button class="mmenu__button mmenu__prev" type="button">
+                                <svg class="mmenu__button-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#left-arrow"></use>
+                                </svg>
+                      <div class="mmenu__button-title">Назад</div>
+                    </button><a class="mmenu__search-button" href="search.html">
+                                <svg class="mmenu__search-open">
+                                  <use xlink:href="/images/icons/sprite.svg#search"></use>
+                                </svg>
+                                <svg class="mmenu__search-close">
+                                  <use xlink:href="/images/icons/sprite.svg#close"></use>
+                                </svg></a>
+                  </div><a class="mmenu__link" href="catalog.html">Торговое оборудование</a>
+                  <div class="mmenu__list">
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Front-office (кассовое)</div></a></div>
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Back-office (товароучетное)</div></a></div>
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Облачные решения</div></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="mmenu__item"><a class="mmenu__item-link subitem" href="catalog.html">
+                  <div class="mmenu__item-title">Программное обеспечение</div>
+                  <div class="mmenu__item-arrow"></div></a>
+                <div class="mmenu__wrapper">
+                  <div class="mmenu__top">
+                    <button class="mmenu__button mmenu__prev" type="button">
+                                <svg class="mmenu__button-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#left-arrow"></use>
+                                </svg>
+                      <div class="mmenu__button-title">Назад</div>
+                    </button><a class="mmenu__search-button" href="search.html">
+                                <svg class="mmenu__search-open">
+                                  <use xlink:href="/images/icons/sprite.svg#search"></use>
+                                </svg>
+                                <svg class="mmenu__search-close">
+                                  <use xlink:href="/images/icons/sprite.svg#close"></use>
+                                </svg></a>
+                  </div><a class="mmenu__link" href="catalog.html">Программное обеспечение</a>
+                  <div class="mmenu__list">
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Front-office (кассовое)</div></a></div>
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Back-office (товароучетное)</div></a></div>
+                    <div class="mmenu__item"><a class="mmenu__item-link subitem2" href="catalog.html">
+                        <div class="mmenu__item-title">Облачные решения</div></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mmenu__item"><a class="mmenu__item-link" href="/">
+            <div class="mmenu__item-title">обслуживание</div></a>
+        </div>
+        <div class="mmenu__item"><a class="mmenu__item-link" href="/">
+            <div class="mmenu__item-title">ЕГАИС</div></a>
+        </div>
+        <div class="mmenu__item"><a class="mmenu__item-link" href="/">
+            <div class="mmenu__item-title">ФГИС Меркурий</div></a>
+        </div>
+        <div class="mmenu__item"><a class="mmenu__item-link" href="/">
+            <div class="mmenu__item-title">Маркировка</div></a>
+        </div>
+        <div class="mmenu__item"><a class="mmenu__item-link" href="/">
+            <div class="mmenu__item-title">ЭЦП</div></a>
+        </div>
+        <div class="mmenu__item"><a class="light mmenu__item-link" href="/">
+            <div class="mmenu__item-title">блог</div></a>
+        </div>
+        <div class="mmenu__item"><a class="light mmenu__item-link" href="/">
+            <div class="mmenu__item-title">Партнеры</div></a>
+        </div>
+        <div class="mmenu__item"><a class="light mmenu__item-link" href="delivery.html">
+            <div class="mmenu__item-title">Доставка и оплата</div></a>
+        </div>
+        <div class="mmenu__item"><a class="light mmenu__item-link" href="delivery.html">
+            <div class="mmenu__item-title">Гарантия и возврат</div></a>
+        </div>
+        <div class="mmenu__item"><a class="light mmenu__item-link" href="/">
+            <div class="mmenu__item-title">54-ФЗ</div></a>
+        </div>
+        <div class="mmenu__item"><a class="light mmenu__item-link" href="/">
+            <div class="mmenu__item-title">Оставить отзыв</div></a>
+        </div>
       </div>
     </div>
   </div>

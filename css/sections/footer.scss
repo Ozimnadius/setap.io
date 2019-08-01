@@ -4,16 +4,86 @@
   &__top {
     padding: 50px 0;
     border-bottom: 1px solid #BDBDBD;
+    @include lg-block{
+      border-bottom: none;
+    };
+    @include sm-block{
+      padding-top: 30px;
+      padding-bottom: 30px;
+    };
   }
 
   &__left {
     @include col;
     @include size(18);
+    @include lg-block{
+      display: none;
+    };
+  }
+
+  &__mleft {
+    display: none;
+    @include col;
+    @include size-lg(12);
+    @include lg-block{
+      display: flex;
+      flex-direction: column;
+    };
+    @include size-sm(24);
+
+
+    &-top {
+      display: flex;
+      margin-left: -20px;
+      margin-right: -20px;
+      margin-bottom: 45px;
+      @include sm-block{
+        margin-bottom: 35px;
+        margin-left: -10px;
+        margin-right: -10px;
+      };
+    }
+
+    &-bottom {
+      margin-top: auto;
+      @include sm-block{
+        display: none;
+      };
+    }
+
+    &-row {
+      width: calc(50% - 40px);
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+
+  &__mitem {
+    display: block;
+    font-size: 15px;
+    text-decoration-line: underline;
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__right {
     @include col;
     @include size(6);
+    @include size-lg(12);
+    @include lg-block{
+      padding-left: 50px;
+      border-left: 1px solid #BDBDBD;;
+    };
+    @include size-sm(24);
+    @include sm-block{
+      padding-left: 0;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    };
   }
 
   &__col {
@@ -26,6 +96,31 @@
     font-weight: bold;
     margin-bottom: 25px;
     display: block;
+    @include sm-block{
+      display: flex;
+      align-items: center;
+      width: 100%;
+    };
+
+    &:after,&:before{
+      @include sm-block{
+        content: '';
+        height: 1px;
+        flex-grow: 1;
+        background: #BDBDBD;
+      };
+    }
+
+    &:before {
+      @include sm-block{
+        margin-right: 15px;
+      };
+    }
+    &:after {
+      @include sm-block{
+        margin-left: 15px;
+      };
+    }
 
     &_link {
       &:hover{
@@ -55,10 +150,19 @@
 
   &__phones{
     margin-bottom: 10px;
+    @include lg-block{
+      margin-bottom: 15px;
+    };
+    @include sm-block{
+      text-align: center;
+    };
 
     &-comment {
       font-size: 13px;
       color: #797979;
+      @include lg-block{
+        margin-bottom: 15px;
+      };
     }
   }
 
@@ -69,6 +173,15 @@
 
   &__socials {
     margin-bottom: 18px;
+    @include lg-block{
+      margin-bottom: 30px;
+    };
+  }
+
+  &__buttons {
+    @include sm-block{
+      width: 100%;
+    };
   }
 
   &__button {
@@ -83,16 +196,77 @@
     padding: 20px 0;
     display: flex;
     align-items: center;
+    @include lg-block{
+      display: none;
+    };
+    @include sm-block{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    };
   }
 
   &__logo {
     min-width: 195px;
     width: 195px;
     margin-right: 45px;
+    @include lg-block{
+      margin-right: 0;
+      margin-bottom: 20px;
+    };
+    .logo {
+      @include lg-block{
+        width: 195px;
+      };
+      @include sm-block{
+        width: 162px;
+      };
+    }
   }
 
   &__desc {
     font-size: 12px;
     color: #4F4F4F;
+    @include sm-block{
+      margin-bottom: 40px;
+    };
+  }
+
+  &__addr {
+    font-size: 13px;
+    color: #797979;
+    display: none;
+    @include lg-block{
+      display: block;
+    };
+  }
+
+  &__mail {
+    font-size: 13px;
+    color: #797979;
+  }
+
+  &__mobile {
+    display: none;
+    background: linear-gradient(90deg, #442768 31.2%, #732B6D 84.06%);
+    padding: 10px;
+
+    @include sm-block{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    };
+
+    &-phone {
+      font-family: $font2;
+      font-size: 15px;
+      color: #FFFFFF;
+      margin-right: 10px;
+    }
+
+    &-button {
+      width: 140px;
+    }
   }
 }
