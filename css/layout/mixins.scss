@@ -141,6 +141,11 @@ $tableW: 1180;
     padding-left: 30px;
     border-left: 4px solid $lilac_2;
     font-size: 20px;
+    @include sm-block{
+      padding: 0;
+      padding-left: 16px;
+      font-size: 16px;
+    };
   }
 
 

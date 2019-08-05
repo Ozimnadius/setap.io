@@ -2,7 +2,7 @@
 $(function () {
 
 
-    const wWidth = $(window).width();
+
 
     if (wWidth > 767.9) {
         let maxH = 0,

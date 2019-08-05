@@ -5,30 +5,60 @@
   }
   &__left {
     @include size(6);
+    @include size-lg(24);
+    @include lg-block{
+      margin-bottom: 25px;
+      position: relative;
+    };
   }
 
   &__right {
     @include size(18);
     padding-left: 20px;
+    @include size-lg(24);
+    @include lg-block{
+      padding-left: 0;
+    };
   }
 
   &__title {
     margin-bottom: 35px;
+    @include lg-block{
+      display: none;
+      margin-bottom: 20px;
+    };
+
+    &_m{
+      display: none;
+      @include lg-block{
+        display: block;
+      };
+    }
   }
 
   &__desc {
     background: #F2F2F2;
     padding: 20px;
     margin-bottom: 30px;
+    @include sm-block{
+      padding: 10px;
+      margin-bottom: 25px;
+      padding-bottom: 25px;
+    };
 
     &-left{
       @include col;
       @include size(4/9*24);
+      @include size-sm(24);
+      @include sm-block{
+        margin-bottom: 25px;
+      };
     }
 
     &-right{
       @include col;
       @include size(5/9*24);
+      @include size-sm(24);
     }
 
   }
@@ -76,6 +106,9 @@
     font-size: 20px;
     font-weight: bold;
     margin-right: 50px;
+    @include sm-block{
+      margin-right: auto;
+    };
   }
 
   &__button {
@@ -103,10 +136,56 @@
     padding: 11px 20px;
     font-weight: bold;
     color: $bg;
+    @include lg-block{
+      position: relative;
+      padding-left: 38px;
+      cursor: pointer;
+
+      &.active {
+        &:after {
+          transform: rotate(-180deg);
+        }
+      }
+    };
+
+    &:after{
+      @include lg-block{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 17px;
+        top: 50%;
+        margin-top: -2.5px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 5px 0 5px;
+        border-color: rgba($bg,.3) transparent transparent transparent;
+        transition: .3s;
+      };
+    }
   }
 
   &__list {
     padding: 20px;
+    @include lg-block{
+      display: none;
+      margin-bottom: 0;
+      position: absolute;
+      z-index: 10;
+      top: 100%;
+      left: 0;
+      width: 280px;
+      background: $bg;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+      &.active{
+        display: block;
+      }
+    };
+    @include sm-block{
+      width: 100%;
+    };
   }
 
   &__item {

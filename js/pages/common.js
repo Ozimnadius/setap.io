@@ -85,3 +85,5 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 $('input[type=tel]').mask('+7 (999) 999-99-99');
+
+const wWidth = $(window).width();

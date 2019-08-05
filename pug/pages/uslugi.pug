@@ -16,11 +16,11 @@ block content
 
         .container
             section.uslugi__catalog
-                .uslugi__title.title.title_tal Услуги
+                .uslugi__title.title.title_tal Регистрация и ремонт ККТ
                 .uslugi__list
                     .uslugi__row.row
                         each i,x in uslugi
-                            a(href='usluga.html').uslugi__item
+                            .uslugi__item
                                 .uslugi__item-img
                                     .proportion.proportion_340x255
                                     .uslugi__item-imgwrap
@@ -33,7 +33,7 @@ block content
                                         li.uslugi__item-li Основное преимущество
                                 .uslugi__item-bottom
                                     .uslugi__item-price= i.price
-                                    button(type='button').uslugi__item-button.button.button_t Заказать
+                                    a(href='usluga.html').uslugi__item-button.button.button_t Подробнее
                 .uslugi__bottom
                    a(href='services.html').uslugi__button.button Вернуться к разделам
         section.uslugi__feed
