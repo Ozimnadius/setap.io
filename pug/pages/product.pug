@@ -118,23 +118,28 @@ block content
                         p Это устройство на базе операционной системы Android 5.1 имеет сенсорный дисплей 5,5 Multi-touch, аккумулятор, обеспечивающий длительную работу без подзарядки. Пользоваться он-лайн кассой «АЗУР-01Ф» не сложнее, чем обычным смартфоном. Банковский терминал принимает любые виды безналичных оплат: карты с магнитными полосами, смарт-карты, а так же бесконтактные NFC платежи.
                         p Встроенный image-сканер штрих-кода может считывать как одномерные 1D, так и двухмерный 2D код.
                         p Аккумулятор повышенной емкости, малые габариты и возможность передачи данных через GPRS или Wi-Fi делают «АЗУР-01Ф» незаменимым для выездной торговли. В комплектацию входит терминал, аккумулятор, блок питания, инструкция по подключению и настройке. ККТ включена в Реестр Приказом ФНС России № ЕД-7-20/85@ от 12.02.2018.
-                        h2 Характеристики
-                        table
-                            each tr in pTable
-                                tr
-                                    each td in tr
-                                        td= td
+            //- chars
+            section.product__chars
+                .container
+                    .pchars.product__drop
+                        .pchars__title.product__drop-button Характеристики
+                        .pchars__list.product__drop-block
+                            table
+                                each tr in pTable
+                                    tr
+                                        each td in tr
+                                            td= td
 
 
 
             //- kits
             section.product__kits
                 .container
-                    .pkits
+                    .pkits.product__drop
                         //- title
-                        .pkits__title Комплектации
+                        .pkits__title.product__drop-button Комплектации
                         //- list
-                        .pkits__list
+                        .pkits__list.product__drop-block
                             each i in pKits
                                 .pkit
                                     .pkit__title= i.title
@@ -148,33 +153,33 @@ block content
             //- dops
             section.product__dops
                 .container
-                    .pdops
+                    .pdops.product__drop
                         //- title
-                        .pdops__title Дополнительные услуги
+                        .pdops__title.product__drop-button Дополнительные услуги
                         //- list
-                        .pdops__list
+                        .pdops__list.product__drop-block
                             each i in pDops
                                 .pdop
                                     label.pcheck.pdop__ckeck
                                         input(type='checkbox' name='dops' value=i.val checked=i.checked ? true : false).pcheck__input.pdop__input
                                         .pcheck__wrapper.pdop__wrapper
                                             .pdop__left
-                                                .pcheck__fake
-                                                    +icon('check', 'pcheck__fake-svg')
                                                 .pcheck__bottom
+                                                    .pcheck__fake
+                                                        +icon('check', 'pcheck__fake-svg')
                                                     div(class=i.dopClass).pcheck__title.pdop__check-title= i.val
-                                                    if i.list
-                                                        .pdop__tarifs
-                                                            .pdop__tarif
-                                                                |Выбран тариф&nbsp;“
-                                                                span.pdop__tarif-tarif Базовый
-                                                                |”
-                                                            .pdop__radios
-                                                                each r in i.list
-                                                                    label.pdop__radio.radio
-                                                                        input(type='radio' data-price=r.price name='tarif' value=r.val checked=r.checked ? true : false).radio__input.pkit__radio-input
-                                                                        .radio__fake
-                                                                        .radio__title= r.val
+                                                if i.list
+                                                    .pdop__tarifs
+                                                        .pdop__tarif
+                                                            |Выбран тариф&nbsp;“
+                                                            span.pdop__tarif-tarif Базовый
+                                                            |”
+                                                        .pdop__radios
+                                                            each r in i.list
+                                                                label.pdop__radio.radio
+                                                                    input(type='radio' data-price=r.price name='tarif' value=r.val checked=r.checked ? true : false).radio__input.pkit__radio-input
+                                                                    .radio__fake
+                                                                    .radio__title= r.val
                                             .pdop__right
                                                 .pdop__price
                                                     span.pdop__price-val= i.price
@@ -185,8 +190,9 @@ block content
                     .ptotal
                         .ptotal__price
                             span.ptotal__price-title Общая стоимость комплекта:&nbsp;
-                            span.ptotal__price-val 25 000&nbsp;
-                            span.ptotal__price-cur руб.
+                            span.ptotal__price-block
+                                span.ptotal__price-val 25 000&nbsp;
+                                span.ptotal__price-cur руб.
                         button(type='button').button.button_y.ptotal__button Добавить в корзину
 
         //- same

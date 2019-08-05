@@ -20,6 +20,18 @@ $(function () {
         pagination: {
             el: '.psame__pag',
             clickable: true
+        },
+        breakpoints: {
+            // when window width is <= 767.99px
+            767.99: {
+                slidesPerView: 'auto',
+                slidesPerGroup: 1,
+            },
+            // when window width is <= 1199.99px
+            1199.99: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+            }
         }
     });
 

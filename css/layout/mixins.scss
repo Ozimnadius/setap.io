@@ -143,33 +143,7 @@ $tableW: 1180;
     font-size: 20px;
   }
 
-  table {
-    font-size: 13px;
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 20px;
 
-    tr {
-      &:nth-child(even) {
-        background: #F2F2F2;
-      }
-    }
-
-    td {
-      border: 1px solid #E0E0E0;
-      padding: 10px 20px;
-
-      &:nth-child(1) {
-        width: 34%;
-        color: #606060;
-      }
-
-      &:nth-child(2) {
-        width: 66%;
-      }
-    }
-
-  }
 }
 
 @mixin headers() {

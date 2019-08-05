@@ -48,5 +48,14 @@ $(function () {
         totalObj.text(number_format(total,'','',' '));
     }
 
+    $('.product__drop-button').on('click', function (e) {
+        let $this = $(this),
+            drop = $this.closest('.product__drop'),
+            block = drop.find('.product__drop-block');
+
+        $this.toggleClass('active');
+        block.slideToggle();
+
+    });
 
 });
