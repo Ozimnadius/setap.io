@@ -23,9 +23,6 @@
 
 .slider {
   position: relative;
-  @include lg-block{
-    padding-top: 66px;
-  };
 
   &__nav {
     position: absolute;
@@ -268,8 +265,12 @@
     };
 
     &:after {
+      display: none;
       content: '';
-      display: block;
+      @include sm-block{
+        display: block;
+      };
+
       width: 0;
       height: 0;
       border-style: solid;
@@ -1695,9 +1696,10 @@
     background: #FFFFFF url(/images/icons/email.svg) 22px center no-repeat;
     @include sm-block{
       background-image: none;
+      padding-left: 20px;
+      padding-right: 135px;
     };
-    padding-left: 20px;
-    padding-right: 135px;
+
   }
 
   &__submit {

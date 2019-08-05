@@ -41,6 +41,9 @@ body {
 
 .page {
   flex-grow: 1;
+  @include lg-block{
+    padding-top: 66px;
+  };
 }
 
 .container {
