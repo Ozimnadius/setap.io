@@ -32,6 +32,9 @@
     background: transparent;
     border: 2px solid $lilac_2;
     color: $lilac_2;
+    @include sm-block{
+      border: 1px solid $lilac_2;
+    };
 
     &:hover {
       background: $lilac_2;

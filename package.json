@@ -32,6 +32,7 @@
     "jquery-validation": "^1.19.1",
     "jquery.maskedinput": "^1.4.1",
     "normalize.css": "^7.0.0",
+    "readmore-js": "^2.2.1",
     "selectize": "^0.12.6",
     "smart-grid": "^2.1.2",
     "swiper": "^4.4.1"

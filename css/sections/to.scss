@@ -6,6 +6,15 @@
     background-position: right center;
     margin-bottom: 210px;
 
+    @include lg-block{
+      background: none!important;
+      height: auto;
+      margin-bottom: 230px;
+    };
+    @include sm-block{
+      margin-bottom: 200px;
+    };
+
     &-wrapper {
 
     }
@@ -18,6 +27,7 @@
     &-content {
       @include col;
       @include size(10);
+      @include size-lg(24);
     }
 
     &-title {
@@ -25,16 +35,61 @@
       font-size: 36px;
       font-weight: 500;
       margin-bottom: 30px;
+      @include lg-block{
+        text-align: center;
+      };
+      @include sm-block{
+        font-size: 20px;
+        margin-bottom: 10px;
+      };
+    }
+
+    &-img {
+      display: none;
+      @include lg-block{
+        display: block;
+        margin-bottom: 40px;
+      };
+      @include sm-block{
+        margin-bottom: 15px;
+      };
     }
 
     &-button {
       width: 200px;
+      @include lg-block{
+        margin: 0 auto;
+      };
     }
   }
 
   &__advs {
     margin-top: -180px;
     margin-bottom: -160px;
+
+    .container{
+      @include lg-block{
+        max-width: initial;
+        padding-left: 35px;
+        padding-right: 0;
+      };
+      @include sm-block{
+        padding-left: 10px;
+      };
+    }
+
+    &-row {
+      @include lg-block{
+        display: none;
+      };
+    }
+
+    &-mobile {
+      display: none;
+      @include lg-block{
+        display: block;
+      };
+    }
   }
 
   &__adv {
@@ -49,6 +104,10 @@
     flex-direction: column;
     align-items: center;
     color: $bg;
+    @include lg-block{
+      margin: 0;
+      width: 280px;
+    };
 
     &-img {
       width: 100px;
@@ -79,14 +138,37 @@
     padding-top: 220px;
     padding-bottom: 60px;
     margin-bottom: 60px;
+    @include lg-block{
+      padding-top: 200px;
+      margin-bottom: 45px;
+      padding-bottom: 45px;
+    };
+    @include sm-block{
+      padding-bottom: 470px;
+      margin-bottom: 20px;
+    };
+
+    .container{
+      @include sm-block{
+        max-width: initial;
+        padding-right: 0;
+        padding-left: 10px;
+      };
+    }
 
     &-title {
       margin-bottom: 50px;
+      @include sm-block{
+        margin-bottom: 30px;
+      };
     }
   }
 
   &__sws {
     display: flex;
+    @include sm-block{
+      display: none;
+    };
   }
 
   &__sw {
@@ -114,6 +196,9 @@
 
   &__tabs {
     position: relative;
+    @include sm-block{
+      display: none;
+    };
   }
 
   &__tab {
@@ -126,6 +211,17 @@
     background: #FFFFFF;
     padding: 50px 0;
     border-radius: 0px 0 12px 12px;
+    @include sm-block{
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      border-radius:12px;
+      width: 280px;
+      padding: 0;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      box-sizing: border-box;
+    };
 
     &.active {
       visibility: visible;
@@ -134,6 +230,21 @@
 
     &-row {
       align-items: center;
+      @include lg-block{
+        display: block;
+      };
+    }
+
+    &-title {
+      @include col;
+      @include size-sm(24);
+
+      font-size: 14px;
+      color: #000000;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 15px;
+
     }
 
     &-left, &-right {
@@ -141,30 +252,142 @@
       @include size(12);
     }
 
+    &-left {
+      @include size-lg(10);
+      @include lg-block{
+        float: left;
+        margin: 0;
+      };
+      @include sm-block{
+        float: none;
+        display: flex;
+        justify-content: center;
+      };
+      @include size-sm(24);
+
+    }
+
     &-right {
       padding-right: 50px;
+      @include lg-block{
+        padding-right: 35px;
+        padding-left: 25px;
+        padding-top: 20px;
+      };
+      @include size-lg(24);
+      @include sm-block{
+        padding: 0;
+      };
     }
 
     &-img {
       width: 100%;
+      @include sm-block{
+        width: 207px;
+      };
     }
 
     &-content {
       font-size: 13px;
       margin-bottom: 20px;
+      @include sm-block{
+        height: 140px;
+        overflow: hidden;
+        padding: 0 20px;
+
+        &.active {
+          height: auto;
+        }
+      };
     }
 
     &-button {
       width: 220px;
+      @include lg-block{
+        margin: 0 auto;
+      };
+    }
+
+    &-more{
+      border-top: 1px solid #E0E0E0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 15px;
+      margin-bottom: 20px;
+
+      &.active{
+        .to__tab-readmore{
+          &:first-child{
+            display: none;
+          }
+          &:last-child {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    &-readmore {
+      display: flex;
+      align-items: center;
+
+      &:after {
+        content: '';
+        display: block;
+        margin-left: 10px;
+      }
+
+      &:first-child{
+        &:after {
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 5px 5px 0 5px;
+          border-color: rgba($text,.3) transparent transparent transparent;
+        }
+      }
+
+      &:last-child {
+        display: none;
+        &:after {
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 5px 5px 5px;
+          border-color: transparent transparent rgba($text, .3) transparent;
+        }
+      }
+
     }
   }
 
   &__tarifs {
     margin-bottom: 60px;
+    @include sm-block{
+      margin-bottom: 40px;
+    };
+
+    .container{
+      @include sm-block{
+        max-width: initial;
+      };
+      padding: 0;
+    }
   }
 
   &__feed {
     margin-bottom: 60px;
+  }
+
+  &__slider {
+    display: none;
+    position: absolute;
+    width: 100%;
+    @include sm-block{
+      display: block;
+
+    };
   }
 
 }
@@ -173,12 +396,18 @@
 
   &__title {
     margin-bottom: 30px;
+    @include sm-block{
+      margin-bottom: 15px;
+    };
   }
 
   &__table {
     border: 1px solid #E0E0E0;
     border-radius: 12px;
     overflow: hidden;
+    @include sm-block{
+      display: none;
+    };
   }
 
   &__tr {
@@ -197,6 +426,10 @@
       width: width(591);
       padding-left: 40px;
       padding-right: 40px;
+      @include lg-block{
+        padding-left: 15px;
+        padding-right: 15px;
+      };
     }
 
     &-2 {
@@ -205,6 +438,9 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      @include lg-block{
+        width: width(275);
+      };
     }
 
     &-3 {
@@ -213,6 +449,9 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      @include lg-block{
+        width: width(275);
+      };
     }
 
     &-4 {
@@ -221,12 +460,19 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      @include lg-block{
+        width: width(275);
+      };
     }
 
     &-100{
       width: 100%;
       padding-left: 40px;
       padding-right: 40px;
+      @include lg-block{
+        padding-left: 20px;
+        padding-right: 20px;
+      };
     }
   }
 
@@ -253,6 +499,105 @@
     }
   }
 
+  &__tabs{
+    display: none;
+    @include sm-block{
+      display: block;
+    };
+  }
+
+  &__sws{
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__sw{
+    width: calc(100%/3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #9788C0;
+    border-radius: 12px 12px 0px 0px;
+    padding: 10px;
+    color: #FFFFFF;
+
+    &:last-child,&:first-child {
+      background: #8F80B7;
+    }
+
+    &.active {
+      background: #4E2869;
+      box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
+      padding: 15px 10px;
+    }
+
+    &-title {
+      font-size: 10px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    &-price {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    &-sub {
+      font-size: 10px;
+    }
+  }
+
+  &__tab{
+    display: none;
+    &.active {
+      display: block;
+    }
+
+    &-title {
+      padding: 10px 15px;
+      font-size: 12px;
+      font-weight: bold;
+      background: #F2F2F2;
+      border: 1px solid #E0E0E0;
+    }
+
+    &-item {
+      border-bottom: 1px solid #E0E0E0;
+      display: flex;
+
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+
+    &-left{
+      @include width(320,220);
+      padding: 15px;
+      padding-right: 8px;
+      border-right: 1px solid #E0E0E0;
+    }
+
+    &-right{
+      @include width(320,100);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-bottom {
+      background: #F2F2F2;
+      border: 1px solid #E0E0E0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+      padding-bottom: 25px;
+      @include sm-block{
+        text-align: center;
+      };
+    }
+
+  }
 }
 
 .tarif {
@@ -272,6 +617,14 @@
     border: none;
   }
 
+  &__1,&__2,&__3 {
+    @include lg-block{
+      padding-top: 18px;
+      padding-bottom: 18px;
+    };
+
+  }
+
   &__grey {
     background: #F2F2F2;
   }
@@ -279,10 +632,20 @@
   &__title {
     font-size: 17px;
     font-weight: bold;
+    @include lg-block{
+      font-size: 14px;
+    };
+
+    &_c{
+      text-align: center;
+    }
   }
 
   &__text {
     font-size: 13px;
+    @include sm-block{
+      font-size: 10px;
+    };
   }
 
   &__check {
@@ -310,12 +673,21 @@
   &__price {
     font-size: 13px;
     font-weight: bold;
+    @include sm-block{
+      font-size: 12px;
+    };
   }
 
   &__name {
     font-size: 17px;
     color: $bg;
     font-weight: 600;
+    @include lg-block{
+      font-size: 14px;
+    };
+    @include sm-block{
+      font-size: 17px;
+    };
 
     &_b {
       color: #4E2869;
@@ -326,6 +698,12 @@
     font-size: 24px;
     font-weight: bold;
     color: $bg;
+    @include lg-block{
+      font-size: 20px;
+    };
+    @include sm-block{
+      font-size: 24px;
+    };
 
     &_b {
       color: #4E2869;
@@ -336,11 +714,17 @@
   &__sub {
     font-size: 13px;
     color: $bg;
+    @include lg-block{
+      font-size: 12px;
+    };
   }
 
   &__button {
     width: 100%;
     max-width: 160px;
+    @include sm-block{
+      width: 160px;
+    };
   }
 
   &__download {
@@ -351,5 +735,12 @@
     &:hover {
       text-decoration: none;
     }
+    @include sm-block{
+      margin: 15px 0;
+    };
+  }
+
+  &__another {
+    margin-top: 15px;
   }
 }

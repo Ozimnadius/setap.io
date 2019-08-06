@@ -556,6 +556,14 @@
   background: $bg;
   transition: .4s;
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25);
+  &::-webkit-scrollbar {
+    width: 4px;
+    background-color: $gray5;
+  }
+  &::-webkit-scrollbar-thumb {
+    width: 4px;
+    background-color: $gray3;
+  }
   @include xs-block{
     width: 100vw;
   };
@@ -578,6 +586,14 @@
     background: $bg;
     transition: .4s;
     overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 4px;
+      background-color: $gray5;
+    }
+    &::-webkit-scrollbar-thumb {
+      width: 4px;
+      background-color: $gray3;
+    }
 
     &.no-scroll{
       overflow-y: hidden;

@@ -33,6 +33,7 @@ const vendorJs = [
     'node_modules/selectize/dist/js/standalone/selectize.js',
     'node_modules/jquery-validation/dist/jquery.validate.js',
     'js/jquery-ui/jquery-ui.js',
+    'node_modules/readmore-js/readmore.js',
 ];
 
 

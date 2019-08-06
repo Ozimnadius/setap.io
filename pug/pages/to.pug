@@ -20,19 +20,28 @@ block content
                     .row.to__banner-row
                         .to__banner-content
                             .to__banner-title Центр технического обслуживания для Вашего предприятия
+                            img(src='images/content/tech/img-t.jpg').to__banner-img
                             button(type='button').button.to__banner-button Получить консультацию
 
         //- advs
         section.to__advs
             .container
-                .row
+                .row.to__advs-row
                     each i,x in toAdvs
                         .to__adv
                             .to__adv-img
                                 img(src='images/icons/icon_tech_0' + (x + 1) + '.svg').to__adv-pic
                             .to__adv-title= i.title
                             .to__adv-text= i.text
-
+                .to__advs-mobile
+                    .swiper-container.to__advs-container
+                        .swiper-wrapper
+                            each i,x in toAdvs
+                                .swiper-slide.to__adv
+                                    .to__adv-img
+                                        img(src='images/icons/icon_tech_0' + (x + 1) + '.svg').to__adv-pic
+                                    .to__adv-title= i.title
+                                    .to__adv-text= i.text
 
 
         //- what
@@ -61,11 +70,34 @@ block content
 
 
 
+                //- slider
+                .to__slider
+                    .swiper-container.to__slider-container
+                        .swiper-wrapper
+                            each i,x in [1,2,3]
+                                div(class=x == 0 ? 'active' : '' data-id=x + 1).to__tab.swiper-slide
+                                    .row.to__tab-row
+                                        //- title
+                                        .to__tab-title Торговое оборудование
+
+                                        //- left
+                                        .to__tab-left
+                                            img(src='images/content/tech/1.png').to__tab-img
+
+                                        //- right
+                                        .to__tab-right
+                                            .to__tab-content Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+                                            .to__tab-more
+                                                .to__tab-readmore Развернуть
+                                                .to__tab-readmore Свернуть
+                                            button(type='button').to__tab-button.button Начать сотрудничество
         //- tarifs
-        section.to__tarifs
+        section(id='tarifs').to__tarifs
             .container
                 .tarifs
+                    //- title
                     .title.tarifs__title Тарифы
+                    //- table
                     .tarifs__table
                         .tarifs__thead
                             .tarifs__tr.tarifs__top
@@ -112,15 +144,112 @@ block content
                                 .tarifs__td.tarifs__w-2
                                     .tarif__name.tarif__name_b Базовый
                                     .tarif__cena.tarif__cena_b 1 500 ₽
-                                    button(type='button').tarif__button.button Купить
+                                    button(type='button').tarif__button.button Заказать
                                 .tarifs__td.tarifs__w-3
                                     .tarif__name.tarif__name_b Стандартный
                                     .tarif__cena.tarif__cena_b 3 000 ₽
-                                    button(type='button').tarif__button.button Купить
+                                    button(type='button').tarif__button.button Заказать
                                 .tarifs__td.tarifs__w-4
                                     .tarif__name.tarif__name_b Полный
                                     .tarif__cena.tarif__cena_b 5 000 ₽
-                                    button(type='button').tarif__button.button Купить
+                                    button(type='button').tarif__button.button Заказать
+
+                    //- sws
+                    .tarifs__sws
+                        div(data-id='1').tarifs__sw.active
+                            .tarifs__sw-title Базовый
+                            .tarifs__sw-price 1 500 ₽
+                            .tarifs__sw-sub в квартал
+                        div(data-id='2').tarifs__sw
+                            .tarifs__sw-title Стандартный
+                            .tarifs__sw-price 3 000 ₽
+                            .tarifs__sw-sub в квартал
+                        div(data-id='3').tarifs__sw
+                            .tarifs__sw-title Расширенный
+                            .tarifs__sw-price 5 000 ₽
+                            .tarifs__sw-sub в квартал
+
+                    //- tabs
+                    .tarifs__tabs
+                        div(data-id='1').tarifs__tab.active
+                            .tarifs__tab-title Услуги
+                            .tarifs__tab-list
+                                each i in tarifsServicesM1
+                                    .tarifs__tab-item
+                                        .tarifs__tab-left
+                                            .tarif__text= i.text
+                                        .tarifs__tab-right
+                                            div(class=i.cols ? 'checked' : '').tarif__check
+                            each tarif in tarifsPriceM1
+                                .tarifs__tab-title= tarif.title
+                                .tarifs__tab-list
+                                    each i in tarif.rows
+                                        .tarifs__tab-item
+                                            .tarifs__tab-left
+                                                .tarif__text= i.text
+                                            .tarifs__tab-right
+                                                .tarif__price= i.price
+                            .tarifs__tab-bottom
+                                .tarif__title.tarif__title_c Тарифы на техническое обслуживание торгового оборудования (за квартал)
+                                a(href='/' download=true).tarif__download Скачать прайс-лист
+                                .tarifs__tab-block
+                                    .tarif__name.tarif__name_b Базовый
+                                    .tarif__cena.tarif__cena_b 1 500 ₽
+                                    button(type='button').tarif__button.button Заказать
+                                    a(href='#tarifs').tarif__button.button.button_t.tarif__another Посмотреть другой
+                        div(data-id='2').tarifs__tab
+                            .tarifs__tab-title Услуги
+                            .tarifs__tab-list
+                                each i in tarifsServicesM2
+                                    .tarifs__tab-item
+                                        .tarifs__tab-left
+                                            .tarif__text= i.text
+                                        .tarifs__tab-right
+                                            div(class=i.cols ? 'checked' : '').tarif__check
+                            each tarif in tarifsPriceM2
+                                .tarifs__tab-title= tarif.title
+                                .tarifs__tab-list
+                                    each i in tarif.rows
+                                        .tarifs__tab-item
+                                            .tarifs__tab-left
+                                                .tarif__text= i.text
+                                            .tarifs__tab-right
+                                                .tarif__price= i.price
+                            .tarifs__tab-bottom
+                                .tarif__title.tarif__title_c Тарифы на техническое обслуживание торгового оборудования (за квартал)
+                                a(href='/' download=true).tarif__download Скачать прайс-лист
+                                .tarifs__tab-block
+                                    .tarif__name.tarif__name_b Стандартный
+                                    .tarif__cena.tarif__cena_b 3 000 ₽
+                                    button(type='button').tarif__button.button Заказать
+                                    a(href='#tarifs').tarif__button.button.button_t.tarif__another Посмотреть другой
+                        div(data-id='3').tarifs__tab
+                            .tarifs__tab-title Услуги
+                            .tarifs__tab-list
+                                each i in tarifsServicesM3
+                                    .tarifs__tab-item
+                                        .tarifs__tab-left
+                                            .tarif__text= i.text
+                                        .tarifs__tab-right
+                                            div(class=i.cols ? 'checked' : '').tarif__check
+                            each tarif in tarifsPriceM3
+                                .tarifs__tab-title= tarif.title
+                                .tarifs__tab-list
+                                    each i in tarif.rows
+                                        .tarifs__tab-item
+                                            .tarifs__tab-left
+                                                .tarif__text= i.text
+                                            .tarifs__tab-right
+                                                .tarif__price= i.price
+                            .tarifs__tab-bottom
+                                .tarif__title.tarif__title_c Тарифы на техническое обслуживание торгового оборудования (за квартал)
+                                a(href='/' download=true).tarif__download Скачать прайс-лист
+                                .tarifs__tab-block
+                                    .tarif__name.tarif__name_b Расширенный
+                                    .tarif__cena.tarif__cena_b 5 000 ₽
+                                    button(type='button').tarif__button.button Заказать
+                                    a(href='#tarifs').tarif__button.button.button_t.tarif__another Посмотреть другой
+
 
         //- feed
         section.to__feed
