@@ -930,6 +930,7 @@
   background-color: #f2f2f2;
   padding: 20px 10px 50px 10px;
   font-size: 12px;
+  box-sizing: border-box;
 }
 
 .mslider2 {
@@ -947,6 +948,7 @@
   width: 280px;
   border-radius: 12px;
   border: 1px solid #dcdcdc;
+  box-sizing: border-box;
 
   &__content {
     padding-left: 35px;

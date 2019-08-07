@@ -7934,6 +7934,8 @@ ul, ol {
   background-color: #f2f2f2;
   padding: 20px 10px 50px 10px;
   font-size: 12px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .mslider2 {
@@ -7953,6 +7955,8 @@ ul, ol {
   width: 280px;
   border-radius: 12px;
   border: 1px solid #dcdcdc;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .mslide2__content {
