@@ -282,10 +282,13 @@
   }
 
   &__same {
-    .container{
-      max-width: initial;
-      padding-right: 0;
-    }
+    @include sm-block{
+      .container{
+        max-width: initial;
+        padding-right: 0;
+      }
+    };
+
   }
 
   &__drop {

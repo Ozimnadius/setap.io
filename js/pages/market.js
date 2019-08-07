@@ -58,6 +58,26 @@ $(function () {
 
     }
 
+    let marketSlider1 = new Swiper('.mslider__container', {
+        loop: true,
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        grabCursor: true,
+    });
+    let marketSlider2 = new Swiper('.mslider2__container', {
+        loop: true,
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        grabCursor: true,
+    });
 
+    $('.market__more').on('click', function (e) {
+        let button = $(this),
+            content = $('.market__contentm-position');
+
+        button.toggleClass('active');
+        content.toggleClass('active');
+
+    });
 
 });

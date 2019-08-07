@@ -1,27 +1,65 @@
-.market{
+.market {
 
   &__banner {
     margin-bottom: 20px;
+    @include lg-block {
+      margin-bottom: 40px;
+    }
+
+    .container {
+      @include sm-block {
+        max-width: initial;
+        padding: 0;
+      }
+    ;
+    }
+  }
+
+  &__blockquote {
+    display: none;
+    @include sm-block {
+      display: block;
+    }
+
+    blockquote {
+      font-size: 13px;
+    }
+  }
+
+  &__desc {
+    &-container {
+      @include sm-block {
+        max-width: initial;
+        padding-right: 0;
+        padding-left: 10px;
+      }
+    }
   }
 
   &__content {
-    p{
+    @include sm-block {
+      display: none;
+    }
+
+    p {
       font-size: 15px;
-      line-height: lh(15,25);
+      line-height: lh(15, 25);
       margin-bottom: 20px;
     }
 
     ul {
       margin-bottom: 25px;
+
       li {
         padding-left: 60px;
         margin-bottom: 20px;
         position: relative;
-        &:last-child{
+
+        &:last-child {
           margin-bottom: 0;
         }
 
-        &:before{
+        &:before {
           content: '';
           display: block;
           width: 40px;
@@ -35,11 +73,95 @@
     }
   }
 
+  &__contentm {
+    display: none;
+    height: 240px;
+    @include sm-block {
+      display: block;
+      position: relative;
+    }
+
+    &-block {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: $bg;
+      padding-bottom: 23px;
+    }
+
+    &-position {
+      margin-bottom: 20px;
+      width: 100%;
+      height: 177px;
+      overflow: hidden;
+
+      &.active {
+        height: auto;
+      }
+    }
+
+    p {
+      font-size: 15px;
+      line-height: lh(15, 25);
+      margin-bottom: 20px;
+    }
+  }
+
+  &__more {
+
+    &.active {
+      .market__more-button {
+        &:first-child {
+          display: none;
+        }
+
+        &:last-child {
+          display: flex;
+        }
+      }
+    }
+
+    &-button {
+      display: flex;
+      align-items: center;
+
+      &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        margin-left: 10px;
+      }
+
+
+      &:first-child {
+        &:after {
+          border-width: 5px 5px 0 5px;
+          border-color: rgba($text, .3) transparent transparent transparent;
+        }
+      }
+
+      &:last-child {
+        display: none;
+
+        &:after {
+          border-width: 0 5px 5px 5px;
+          border-color: transparent transparent rgba($text, .3) transparent;
+        }
+      }
+    }
+  }
+
   &__feed {
     margin-bottom: 40px;
   }
 
-  &__quote{
+  &__quote {
     position: relative;
     width: 100%;
     margin-bottom: 80px;
@@ -48,13 +170,20 @@
       position: relative;
       z-index: 20;
       padding-left: 20px;
+      @include sm-block {
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    ;
     }
 
-    &-text{
+    &-text {
       background: #4E2869;
       border-radius: 12px;
       font-size: 17px;
-      line-height: lh(17,25);
+      line-height: lh(17, 25);
       font-weight: bold;
       color: $bg;
       padding: 24px 20px;
@@ -63,24 +192,47 @@
       left: 0;
       bottom: -10px;
       z-index: 10;
+      @include sm-block {
+        position: static;
+        font-size: 14px;
+        text-align: center;
+        padding: 15px 20px;
+        padding-top: 105px;
+        padding-bottom: 20px;
+      }
+    ;
     }
   }
 
-  &__zones{
+  &__zones {
     margin-bottom: 50px;
 
 
     &-row {
       margin-left: -30px;
       margin-right: -30px;
+      @include lg-block {
+        margin-left: -10px;
+        margin-right: -10px;
+      }
+    ;
     }
 
-    &-left{
+    &-left {
       @include col;
       @include size(14);
       margin-left: 30px;
       margin-right: 30px;
       width: calc(58.33333% - 60px);
+      @include lg-block {
+        @include col;
+        @include size-lg(24);
+        padding: 0 10px;
+        margin-bottom: 35px;
+      }
+      @include sm-block {
+        padding: 0;
+      }
 
     }
 
@@ -94,12 +246,25 @@
       margin-left: 30px;
       margin-right: 30px;
       width: calc(41.66667% - 60px);
+      @include lg-block {
+        @include col;
+        @include size-lg(24);
+      }
+    ;
     }
   }
 
   &__kits {
     margin-top: 40px;
     margin-bottom: 50px;
+    @include sm-block{
+      margin-top: 0;
+      margin-bottom: 25px;
+      .container{
+        max-width: initial;
+        padding: 0;
+      }
+    }
   }
 
   &__sws {
@@ -111,15 +276,24 @@
     border-bottom: none;
     position: relative;
     z-index: 20;
+    @include sm-block{
+      border-radius: 0;
+    }
   }
 
   &__sw {
     transition: .3s;
-    width: calc(100%/3);
+    width: calc(100% / 3);
     padding: 30px 20px 40px 20px;
     color: $lilac_2;
     border-bottom: 4px solid transparent;
     position: relative;
+    @include sm-block{
+      padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
     &:after {
       content: '';
@@ -139,11 +313,17 @@
 
     &:first-child {
       border-top-left-radius: 12px;
+      @include sm-block{
+        border-radius: 0;
+      };
     }
 
     &:last-child {
       margin-right: 0;
       border-top-right-radius: 12px;
+      @include sm-block{
+        border-radius: 0;
+      };
     }
 
     &.active {
@@ -151,7 +331,7 @@
       background: #4E2869;
       color: $bg;
 
-      &:after{
+      &:after {
         opacity: 1;
       }
     }
@@ -159,11 +339,20 @@
     &-title {
       font-size: 15px;
       line-height: 1;
+      @include sm-block{
+        font-size: 10px;
+        margin-bottom: 10px;
+      }
     }
+
     &-price {
       font-size: 30px;
       font-weight: bold;
       line-height: 1;
+      @include sm-block{
+        font-size: 14px;
+        margin-top: auto;
+      }
     }
   }
 
@@ -187,13 +376,17 @@
 
 }
 
-.mbanner{
+.mbanner {
   background-size: cover;
   background-position: 0 0;
   background-repeat: no-repeat;
   border-radius: 12px;
   overflow: hidden;
   color: $bg;
+  @include sm-block {
+    border-radius: 0;
+  }
+;
 
   &__wrapper {
     @include col;
@@ -202,30 +395,62 @@
     padding-top: 40px;
     padding-left: 40px;
     padding-right: 200px;
-    background: rgba(#4E2869,.8);
+    background: rgba(#4E2869, .8);
     border-radius: 0 0 320px 0;
+    @include size-lg(20);
+    @include lg-block {
+      padding-right: 110px;
+    }
+    @include size-sm(16);
+    @include sm-block {
+      height: 220px;
+      padding: 0 60px 0 15px;
+      display: flex;
+      align-items: center;
+    }
+  ;;
   }
 
   &__title {
-
     font-size: 36px;
-    line-height: lh(36,45);
+    line-height: lh(36, 45);
     font-weight: 600;
     margin-bottom: 30px;
+    @include sm-block {
+      font-size: 16px;
+    }
+  ;
   }
 
   &__text {
     font-size: 17px;
-    line-height: lh(17,20);
+    line-height: lh(17, 20);
+    @include sm-block {
+      display: none;
+    }
+  ;
   }
 }
 
-.zones{
+.zones {
+  @include lg-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
   &__sws {
     display: flex;
     border-bottom: 1px solid #CACACA;
     margin-bottom: 5px;
+    @include lg-block {
+      padding-right: 70px;
+    }
+    @include sm-block {
+      width: 100%;
+      padding-right: 0;
+      justify-content: space-between;
+    }
   }
 
   &__sw {
@@ -237,6 +462,12 @@
     border-bottom: 4px solid transparent;
     padding-bottom: 8px;
     cursor: pointer;
+    @include sm-block {
+      font-size: 13px;
+      margin-right: 5px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
 
     &:last-child {
       margin-right: 0;
@@ -250,6 +481,10 @@
 
   &__tabs {
     position: relative;
+    @include lg-block {
+      width: 100%;
+    }
+  ;
   }
 
   &__tab {
@@ -269,14 +504,40 @@
 
 .zone {
 
+  &__list {
+    @include lg-block {
+      display: none;
+    }
+
+    &_t {
+      display: none;
+      @include lg-block {
+        display: block;
+      }
+      @include sm-block {
+        display: none;
+      }
+    }
+
+    &_m {
+      display: none;
+      @include sm-block {
+        display: block;
+      }
+    }
+  }
+
   &__row {
     margin-left: -20px;
     margin-right: -20px;
     align-items: initial;
 
-    &:last-child{
+    &:last-child {
       .zone__item {
         border-bottom: none;
+        @include sm-block {
+          border-bottom: 1px solid $gray5;
+        }
       }
     }
   }
@@ -292,6 +553,13 @@
     padding: 12px 0;
     padding-right: 10px;
     border-bottom: 1px solid $gray5;
+    @include lg-block {
+      width: calc(100% / 3 - 40px);
+    }
+    @include sm-block {
+      width: calc(100% / 1 - 40px);
+    }
+
   }
 
   &__count {
@@ -314,14 +582,17 @@
 
 }
 
-.mtab{
+.mtab {
 
 }
 
-.mplaces{
+.mplaces {
   border: 1px solid #E0E0E0;
   border-radius: 0 0 12px 12px;
   overflow: hidden;
+  @include sm-block{
+    border-radius: 0;
+  }
 
   &__bottom {
     background: linear-gradient(90deg, #442768 31.2%, #732B6D 84.06%);
@@ -329,21 +600,55 @@
     align-items: center;
     justify-content: space-between;
     padding: 25px 30px;
+    @include lg-block {
+      flex-wrap: wrap;
+    }
+    @include sm-block{
+      padding: 20px 10px;
+    }
+
+
+    &-left {
+      @include lg-block {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    ;
+    }
 
     &-right {
       display: flex;
       align-items: center;
+      @include lg-block {
+        width: 100%;
+        justify-content: space-between;
+      }
+      @include sm-block{
+          flex-direction: column;
+        align-items: center;
+      }
     }
   }
 
   &__title {
     color: $bg;
+    @include sm-block{
+      text-align: center;
+    }
+
     &-top {
       font-size: 13px;
+      @include sm-block{
+        font-size: 10px;
+      }
     }
+
     &-bottom {
       font-size: 24px;
       font-weight: bold;
+      @include sm-block{
+        font-size: 16px;
+      }
     }
   }
 
@@ -351,12 +656,25 @@
     display: flex;
     align-items: center;
     margin-right: 55px;
+    @include sm-block{
+      margin-right: 0;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
     &-svg {
       width: 47px;
       height: 47px;
       fill: $bg;
       margin-right: 20px;
+      @include sm-block{
+        margin-right: 0;
+        width: 35px;
+        height: 37px;
+        margin-bottom: 10px;
+      }
     }
 
     &-name {
@@ -364,19 +682,31 @@
       font-weight: bold;
       color: $bg;
     }
+
     &-type {
       font-size: 13px;
       font-weight: 200;
-      color: rgba($bg,.6);
+      color: rgba($bg, .6);
     }
   }
 
   &__price {
     margin-right: 30px;
+    @include sm-block{
+      margin-right: 0;
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
     &-title {
       font-size: 13px;
       color: $bg;
+    }
+
+    &-val{
+      @include sm-block{
+        font-size: 24px;
+      }
     }
   }
 
@@ -393,16 +723,24 @@
     font-weight: bold;
     color: $bg;
     padding: 20px 30px;
+    @include sm-block{
+      font-size: 13px;
+    }
   }
 
   &__place {
 
     background: #F2F2F2;
+
     &-item {
       display: flex;
       align-items: center;
       padding: 20px 30px;
       border-bottom: 1px solid #E0E0E0;
+      @include sm-block{
+        padding: 10px 12px 10px 20px;
+      }
+
     }
 
     &-title {
@@ -413,6 +751,12 @@
       padding-top: 20px;
       padding-bottom: 20px;
       padding-right: 27px;
+      @include sm-block{
+        font-size: 10px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
 
 
       &:after {
@@ -437,14 +781,32 @@
       }
     }
 
-    &-count {
+    &-right {
       margin-left: auto;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      @include sm-block{
+           flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+
+    &-count {
       margin-right: 20px;
+      @include sm-block{
+        margin-right: 0;
+        order: 1;
+      };
     }
 
     &-price {
       width: 155px;
       text-align: right;
+      @include sm-block{
+        margin-bottom: 5px;
+        width: 80px;
+      }
     }
 
     &-sub {
@@ -452,9 +814,19 @@
     }
 
     &-subimg {
+      min-width: 80px;
       width: 80px;
       height: 60px;
       margin-right: 30px;
+      display: flex;
+      align-items: center;
+      @include sm-block{
+        min-width: 53px;
+        width: 53px;
+        height: 44px;
+        margin-right: 20px;
+      }
+
       img {
         max-width: 100%;
         max-height: 100%;
@@ -467,31 +839,57 @@
       align-items: center;
       padding: 10px 30px;
       border-bottom: 1px solid #E0E0E0;
+      @include sm-block{
+        padding: 10px 15px 10px 20px;
+      }
     }
 
     &-subtitle {
       font-size: 13px;
-      color: #4F4F4F;;
+      color: #4F4F4F;
+      width: 800px;
+      @include lg-block {
+        width: 340px;
+      }
+      @include sm-block{
+        font-size: 10px;
+        width: 130px;
+      }
     }
 
     &-subprice {
       margin-left: auto;
+      @include sm-block{
+        font-size: 10px;
+      }
     }
   }
 
   &__item {
-    padding: 20px 30px;
+    padding: 18px 30px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid #E0E0E0;
+    @include sm-block{
+      padding: 20px;
+      padding-right: 15px;
+    }
+
     &:last-child {
       border-bottom: none;
     }
 
     &-img {
+      min-width: 80px;
       width: 80px;
       height: 60px;
       margin-right: 30px;
+      @include sm-block{
+        margin-right: 20px;
+        min-width: 53px;
+        width: 53px;
+        height: 44px;
+      }
 
       img {
         max-width: 100%;
@@ -500,8 +898,71 @@
       }
     }
 
+    &-title {
+      width: 800px;
+      @include lg-block {
+        width: 340px;
+      }
+      @include sm-block{
+        font-size: 10px;
+        width: 140px;
+      }
+    }
+
     &-price {
       margin-left: auto;
     }
   }
+}
+
+.mslider {
+  display: none;
+  @include sm-block {
+    display: block;
+    margin-bottom: 30px;
+  }
+;
+}
+
+.mslide {
+  width: 240px;
+  border-radius: 12px;
+  background-color: #f2f2f2;
+  padding: 20px 10px 50px 10px;
+  font-size: 12px;
+}
+
+.mslider2 {
+  display: none;
+  @include sm-block {
+    display: block;
+    margin-bottom: 60px;
+  }
+;
+}
+
+.mslide2 {
+  padding: 15px;
+  position: relative;
+  width: 280px;
+  border-radius: 12px;
+  border: 1px solid #dcdcdc;
+
+  &__content {
+    padding-left: 35px;
+    font-size: 12px;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: url("/images/icons/minus2.svg") 0 0 no-repeat;
+      background-size: cover;
+      position: absolute;
+      left: 15px;
+      top: 15px;
+    }
+  }
+
 }
