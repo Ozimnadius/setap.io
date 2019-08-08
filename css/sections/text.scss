@@ -1,0 +1,39 @@
+.text{
+  padding-bottom: 40px;
+
+  &__img {
+    width: 100%;
+    @include lg-block{
+      margin-bottom: 35px;
+    }
+  }
+
+  &__h1 {
+    @include lg-block{
+      text-align: center;
+      width: 580px;
+      margin: 0 auto;
+    }
+    @include sm-block{
+      width: auto;
+    }
+  }
+}
+
+.col{
+  &-12{
+    @include col;
+    @include size(12);
+    @include size-lg(24);
+  }
+}
+
+.or{
+  &-lg{
+    &-1 {
+      @include lg-block{
+        order: 1;
+      };
+    }
+  }
+}

@@ -211,6 +211,21 @@ body {
   justify-content: center;
 }
 
+.content ol.ol-simple li:before {
+  color: #4e2869;
+  counter-increment: li;
+  content: counter(li) ".";
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.content ol.ol-simple-2 li:before {
+  color: #ffffff;
+  border: none;
+  background-color: #9681ba;
+}
+
 .content ul {
   margin-bottom: 20px;
 }
@@ -232,6 +247,18 @@ body {
   width: 6px;
   height: 6px;
   border-radius: 50%;
+}
+
+.content ul.ul-simple li {
+  padding-left: 25px;
+}
+
+.content ul.ul-simple li:before {
+  width: 20px;
+  height: 20px;
+  background: url("/images/icons/marker.svg") center center no-repeat;
+  background-size: cover;
+  top: 0;
 }
 
 .content h1 {
@@ -12014,6 +12041,12 @@ ul, ol {
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 767.9px) {
+  .notfound__text {
+    font-size: 13px;
+  }
+}
+
 .notfound__button {
   width: 160px;
 }
@@ -12115,6 +12148,58 @@ ul, ol {
 .services__feed {
   background: #ffffff;
   padding-bottom: 70px;
+}
+
+/*-----------------SECTION-TEXT_-------------------*/
+.text {
+  padding-bottom: 40px;
+}
+
+.text__img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1199.9px) {
+  .text__img {
+    margin-bottom: 35px;
+  }
+}
+
+@media screen and (max-width: 1199.9px) {
+  .text__h1 {
+    text-align: center;
+    width: 580px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .text__h1 {
+    width: auto;
+  }
+}
+
+.col-12 {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(50% - 20px);
+}
+
+@media screen and (max-width: 1199.9px) {
+  .col-12 {
+    width: calc(100% - 20px);
+  }
+}
+
+@media screen and (max-width: 1199.9px) {
+  .or-lg-1 {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
 }
 
 /*------------------------SECTION-FOOTER---------------------*/

@@ -18,6 +18,9 @@
     font-size: 19px;
     text-align: center;
     margin-bottom: 20px;
+    @include sm-block{
+      font-size: 13px;
+    }
   }
 
   &__button {
