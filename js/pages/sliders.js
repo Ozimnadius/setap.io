@@ -35,6 +35,24 @@ $(function () {
         }
     });
 
+    let aadvsSlider = new Swiper('.aadvs__container', {
+        loop: true,
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        grabCursor: true,
+        breakpoints: {
+            // when window width is <= 767.99px
+            767.99: {
+                spaceBetween: 10,
+            },
+        }
+    });
 
+    let auslugiSlider = new Swiper('.auslugi__container', {
+        loop: true,
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        grabCursor: true,
+    });
 
 });

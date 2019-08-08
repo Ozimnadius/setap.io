@@ -289,10 +289,21 @@
   padding: 60px 0;
   @include lg-block{
     padding-top: 40px;
+    .container{
+      max-width: initial;
+      padding: 0;
+    }
   };
+  @include sm-block{
+    padding-top: 30px;
+  }
 
   &__title {
     margin-bottom: 40px;
+    @include sm-block{
+      padding: 0 20px;
+      margin-bottom: 30px;
+    }
   }
 
   &__wrap {
@@ -300,6 +311,9 @@
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     overflow: hidden;
+    @include lg-block{
+      border-radius: 0;
+    }
     @include sm-block{
       display: none;
     };
@@ -309,6 +323,7 @@
     display: none;
     @include sm-block{
       display: block;
+      padding-left: 10px;
     };
   }
 
@@ -331,6 +346,13 @@
     @include lg-block{
       width: 165px;
     };
+
+    &_4 {
+      width: calc(100%/4);
+      @include lg-block{
+        width: calc(100%/4);
+      }
+    }
 
     &.active {
       background: #F2F2F2;
@@ -937,6 +959,13 @@
       margin-bottom: 10px;
       font-size: 13px;
     };
+
+    &_2 {
+      @include lg-block{
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
   }
 
   &__list {
@@ -1117,6 +1146,7 @@
     &-6 {
       @include col;
       @include size(12);
+      @include size-lg(24);
     }
     &-3{
       @include col;
@@ -1127,6 +1157,14 @@
   &__jobs {
     padding: 0 80px;
     margin-bottom: 40px;
+    @include lg-block{
+      padding: 0;
+      margin-bottom: 35px;
+      width: 420px;
+    }
+    @include sm-block{
+      width: 237px;
+    }
   }
 
   &__job {
@@ -1137,6 +1175,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
+    @include sm-block{
+        flex-direction: column;
+      align-items: center;
+      padding: 20px 10px;
+    }
 
     &:last-child{
       margin-bottom: 0;
@@ -1144,6 +1187,9 @@
 
     &-title {
       font-size: 15px;
+      @include sm-block{
+        margin-bottom: 10px;
+      }
     }
 
     &-field {
@@ -1193,6 +1239,9 @@
   &__next {
     width: 160px;
     margin: 0 auto;
+    @include lg-block{
+      margin-bottom: 40px;
+    }
   }
 
   &__msub{
@@ -1215,7 +1264,6 @@
       display: block;
     };
   }
-
 
 }
 

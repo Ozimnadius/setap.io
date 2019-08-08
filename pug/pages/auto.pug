@@ -5,6 +5,15 @@ block variables
 
 block content
     main.auto
+        //- bread
+        section.bread.auto__bread
+            .container
+                .bread__list
+                    a(href='/').bread__item Главная
+                    .bread__sep /
+                    a.bread__item.bread__item_active Автоматизация
+
+
         //- banner
         section.auto__banner
             div(style='background-image:url(images/content/automatization/bg.jpg)').abanner
@@ -13,19 +22,34 @@ block content
                         .abanner__block
                             .abanner__title Автоматизация
                             .abanner__text Индивидуальный комплекс мероприятий, включающий внедрение специализированного оборудования и программных продуктов для значительного повышения эффективности деятельности торгового предприятия
+                .abanner__img
+                    img(src='images/content/automatization/bg-t.jpg').abanner__img-img
+                .container
+                    button(type='button').abanner__button.button Получить консультацию
+
         //- about
         section.auto__about
             .aabout
-                .container
+                .m
                     .aabout__title.title Автоматизация это
-                    .aabout__desc Автоматизация предприятия и работа с торговым оборудованием подразумевает взаимодействие с различного рода программами, системами, сервисами и структурами (в том числе государственными), что влечет за собой необходимость оказания вспомогательных услуг для решения тех или иных задач. Регистрация и постановка на учет контрольно-кассовой техники в ИФНС, подключение к оператору фискальных данных (ОФД), работа с ЕГАИС, работа с ФГИС Меркурий, изготовление квалифицированной электронной подписи и получение сертификата в удостоверяющем центре, регулярное обновление и настройка программного обеспечения, замены фискальных накопителей, ремонт и подключение нового оборудования, обучение персонала - все это лишь малая часть того, что Вам предстоит пройти. Доверьте поддержание эффективности работы своего предприятия команде профессионалов и мы с удовольствием пройдем этот путь вместе с Вами
+                    .more.aabout__wrap
+                        .more__pos.aabout__pos
+                            .aabout__desc
+                                .container Автоматизация предприятия и работа с торговым оборудованием подразумевает взаимодействие с различного рода программами, системами, сервисами и структурами (в том числе государственными), что влечет за собой необходимость оказания вспомогательных услуг для решения тех или иных задач. Регистрация и постановка на учет контрольно-кассовой техники в ИФНС, подключение к оператору фискальных данных (ОФД), работа с ЕГАИС, работа с ФГИС Меркурий, изготовление квалифицированной электронной подписи и получение сертификата в удостоверяющем центре, регулярное обновление и настройка программного обеспечения, замены фискальных накопителей, ремонт и подключение нового оборудования, обучение персонала - все это лишь малая часть того, что Вам предстоит пройти. Доверьте поддержание эффективности работы своего предприятия команде профессионалов и мы с удовольствием пройдем этот путь вместе с Вами
+
+                .container
+                    .aabout__tablet
+                        .aabout__title.title Автоматизация это
+                        .aabout__desc Автоматизация предприятия и работа с торговым оборудованием подразумевает взаимодействие с различного рода программами, системами, сервисами и структурами (в том числе государственными), что влечет за собой необходимость оказания вспомогательных услуг для решения тех или иных задач. Регистрация и постановка на учет контрольно-кассовой техники в ИФНС, подключение к оператору фискальных данных (ОФД), работа с ЕГАИС, работа с ФГИС Меркурий, изготовление квалифицированной электронной подписи и получение сертификата в удостоверяющем центре, регулярное обновление и настройка программного обеспечения, замены фискальных накопителей, ремонт и подключение нового оборудования, обучение персонала - все это лишь малая часть того, что Вам предстоит пройти. Доверьте поддержание эффективности работы своего предприятия команде профессионалов и мы с удовольствием пройдем этот путь вместе с Вами
                     .aabout__img
                         img(src='images/content/automatization/img.png').aabout__pic
+                        img(src='images/content/automatization/img-t.png').aabout__pic.aabout__pic_t
+                        img(src='images/content/automatization/img-m.png').aabout__pic.aabout__pic_m
 
         //- advantages
         section.auto__advs
             .aadvs
-                .container
+                .container.d
                     .aadvs__title.title.title_w Преимущества автоматизации
                     .aadvs__list
                         .row
@@ -37,18 +61,61 @@ block content
                                         .aadv__title= i.title
                                         .aadv__text= i.text
                     button(type='button').button.button_y.aadvs__button Заказать автоматизацию
+                .aadvs__slider.t
+                    .aadvs__title.title.title_w Преимущества автоматизации
+                    .swiper-container.aadvs__container
+                        .swiper-wrapper
+                            each i in aadvs
+                                .aadv.swiper-slide
+                                    .aadv__title= i.title
+                                    .aadv__left
+                                        img(src=i.src)
+                                    .aadv__right
+                                        .aadv__text= i.text
+                    button(type='button').button.button_y.aadvs__button Заказать автоматизацию
         //- solutions
         section.auto__solutions
             .asols
                 .iready
                     .container
                         .iready__title.title Решения для Вашего бизнеса
+                        .iready__mwrap
+                            .swiper-container.iready__container
+                                .swiper-wrapper
+                                    each i,x in iReadySlides
+                                        .swiper-slide.iready__slide
+                                            .iready__slide-top
+                                                .proportion.proportion_280x160
+                                                .iready__slide-img
+                                                    img(src='images/content/main/ready/slider/' + x + '.jpg').iready__slide-pic
+                                                .iready__slide-block
+                                                    .iready__slide-title= i.title
+                                                    if i.sws
+                                                        .iready__msws
+                                                            each sw,swx in i.sws
+                                                                div(data-id=swx + 1).iready__msw= sw
+                                            .iready__slide-bottom
+                                                if i.sws
+                                                    .iready__mtabs
+                                                        each tab,tabx in i.sws
+                                                            div(data-id=tabx + 1).iready__mtab
+                                                                each item in i.list
+                                                                    a(href=item.link).iready__mitem
+                                                                        .iready__mitem-title= item.title
+                                                                        .iready__mitem-text= item.text
+                                                else
+                                                    .iready__mcontent
+                                                        each item in i.list
+                                                            a(href=item.link).iready__mitem
+                                                                .iready__mitem-title= item.title
+                                                                .iready__mitem-text= item.text
+
 
                         .iready__wrap
                             //- switches
                             .iready__sws
-                                each i,x in iReadySws
-                                    div(class=x == 0 ? 'active' : '' data-id=x + 1).iready__sw
+                                each i,x in iReadySws2
+                                    div(class=x == 0 ? 'active' : '' data-id=x + 1).iready__sw.iready__sw_4
                                         .iready__sw-img
                                             +iconPath('/images/content/main/ready', x + 1,'iready__sw-svg')
                                         .iready__sw-title= i
@@ -100,6 +167,7 @@ block content
         section.auto__quiz
             div(style='background-image:url(images/content/main/quiz/bg.jpg)').quiz
                 .container
+                    .quiz__mtitle.title Расчет стоимости автоматизации?
                     form.quiz__form
                         .swiper-container.quiz__container
                             .swiper-wrapper
@@ -108,14 +176,18 @@ block content
                                         //- left
                                         .quiz__left.quiz__col-3
 
-
                                         //- center
                                         .quiz__center.quiz__col-6
-                                            .quiz__title.title Расчет стоимости автоматизации
-                                            .quiz__text Подберите торговое оборудование для своего предприятия
-                                            .quiz__scrollbar
-                                                .quiz__scrollbar-line
-                                            .quiz__sub Укажите количество рабочих мест
+                                            .quiz__center-desktop.d
+                                                .quiz__title.title Расчет стоимости автоматизации
+                                                .quiz__text Подберите торговое оборудование для своего предприятия
+                                                .quiz__scrollbar
+                                                    .quiz__scrollbar-line
+                                            .quiz__center-top.t
+                                                .quiz__text Подберите торговое оборудование для своего предприятия
+                                                .quiz__scrollbar
+                                                    .quiz__scrollbar-line
+                                            .quiz__sub.quiz__sub_2 Укажите количество рабочих мест
                                             .quiz__jobs
                                                 .quiz__job
                                                     .quiz__job-title Рабочее место кассира
@@ -145,9 +217,11 @@ block content
                                 .swiper-slide.quiz__slide
                                     .row
                                         .quiz__slide-form
-                                            .quiz__text Спасибо. Наши специалисты бесплатно подберут необходимое торговое оборудование (несколько вариантов, под разный бюджет) и вышлют на Ваш адрес электронной почты в виде коммерческого предложения
-                                            .quiz__scrollbar
-                                                .quiz__scrollbar-line
+                                            .quiz__center-top
+                                                .quiz__text.quiz__text_m Подберите торговое оборудование для своего предприятия
+                                                .quiz__text.quiz__text_h  Спасибо. Наши специалисты бесплатно подберут необходимое торговое оборудование (несколько вариантов, под разный бюджет) и вышлют на Ваш адрес электронной почты в виде коммерческого предложения
+                                                .quiz__scrollbar
+                                                    .quiz__scrollbar-line
                                         .quiz__slide-wrap
                                             .quiz__field
                                                 input(type='text' name='quizName' placeholder='Ваше Имя').quiz__input
@@ -164,8 +238,11 @@ block content
         //- work
         section.auto__how
             .ahow
-                .container
+                .ahow__top
                     .ahow__title.title Как мы работаем
+                    .ahow__img
+                        img(src='images/content/automatization/how/bg.png').ahow__img-img
+                .container
                     .ahow__rows
                         each row in ahow
                             .ahow__row.row
@@ -175,13 +252,25 @@ block content
                                         .ahow__item-img
                                             img(src=item.src).ahow__item-pic
                                         .ahow__item-text!= item.text
-
                                 .ahow__right
                                     .ahow__item
                                         - var item = row.right
                                         .ahow__item-img
                                             img(src=item.src).ahow__item-pic
                                         .ahow__item-text!= item.text
+
+                    .ahow__rows.ahow__rows_m
+                        each row,x in ahowM
+                            .ahow__row.row
+                                each item,ix in row
+                                    .ahow__item
+                                        .ahow__item-img
+                                            .ahow__item-num= ix+1
+                                            img(src=item.src).ahow__item-pic
+                                        .ahow__item-text!= item.text
+                            if x ==0
+                                .ahow__img.ahow__img_m
+                                    img(src='images/content/automatization/how/bg.png').ahow__img-img
         //- feed
         section.auto__feed
             .feed
@@ -192,7 +281,7 @@ block content
                             .feed__left
                                 .feed__title.title.title_w.title_tal Остались вопросы по автоматизации?
                                 .feed__sub Оставьте заявку или позвоните по указанному номеру телефона и наши менеджеры проконсультируют Вас и помогут с выбором
-                                .feed__cols
+                                .feed__cols.d
                                     .row
                                         .feed__col
                                             .feed__field
@@ -201,16 +290,39 @@ block content
                                                 input(type='tel' name='tel' placeholder='+7 (495) 123 45 67').input.feed__input
                                         .feed__col.feed__col_2
                                             textarea(name='comment' placeholder='Опишите Ваш проект, что вы хотите открыть, на какую сумму рассчитываете').input.input_area.feed__area
-                                .feed__bottom
+                                .feed__cols.t
                                     .row
                                         .feed__col
+                                            .feed__field
+                                                input(type='text' name='name' placeholder='Введите имя').input.feed__input
+
+                                        .feed__col
+                                            .feed__field
+                                                input(type='tel' name='tel' placeholder='+7 (495) 123 45 67').input.feed__input
+                                        .feed__col
+                                            button(type='submit').button.button_y.feed__submit.feed__submit_t Получить консультацию
+                                .feed__cols.t
+                                    .row
+                                        .feed__col.feed__col_3.t
+                                            textarea(name='comment' placeholder='Опишите Ваш проект, что вы хотите открыть, на какую сумму рассчитываете').input.input_area.feed__area
+                                .feed__bottom
+                                    .row
+                                        .feed__col.d
                                             button(type='submit').button.button_y.feed__submit Получить консультацию
-                                        .feed__col.feed__col_2
+                                        .feed__col.feed__col_2.d
+                                            .feed__fz
+                                                | Заполняя данную форму Вы соглашаетесь с&nbsp;
+                                                a(href='/').feed__fz_link Политикой обработки персональных данных
+
+                                        .feed__col.feed__col_3.t
                                             .feed__fz
                                                 | Заполняя данную форму Вы соглашаетесь с&nbsp;
                                                 a(href='/').feed__fz_link Политикой обработки персональных данных
 
 
+
+                                        .feed__col.m
+                                            button(type='submit').button.button_y.feed__submit.feed__submit_m Получить консультацию
                             //- right
                             .feed__right
                                 .feed__img
@@ -223,7 +335,7 @@ block content
             .auslugi
                 .container
                     .auslugi__title.title Услуги
-                    .auslugi__list
+                    .auslugi__list.d
                         .row
                             each i,x in auslugi
                                 a(href='usluga.html').ausluga
@@ -236,11 +348,52 @@ block content
                                     .ausluga__absolute
                                         .ausluga__wrap
                                             .ausluga__img
-                                                img(src='images/content/automatization/'+(x+1)+'.jpg').ausluga__pic
+                                                img(src='images/content/automatization/' + (x + 1) + '.jpg').ausluga__pic
                                             .ausluga__title= i.title
                                             .ausluga__price= i.price
                                         .ausluga__bottom
-                                            button(type='button').ausluga__button.button Заказать
+                                            button(type='button').ausluga__button.button Подробнее
+                    .auslugi__list.auslugi__list_t
+                        .row
+                            each i,x in auslugi2
+                                a(href='usluga.html').ausluga
+                                    .ausluga__hidden
+                                        .ausluga__wrap
+                                            .ausluga__img
+                                                img(src='images/content/automatization/' + (x + 1) + '.jpg').ausluga__pic
+                                            .ausluga__title= i.title
+                                            .ausluga__price= i.price
+                                    .ausluga__absolute
+                                        .ausluga__wrap
+                                            .ausluga__img
+                                                img(src='images/content/automatization/' + (x + 1) + '.jpg').ausluga__pic
+                                            .ausluga__title= i.title
+                                            .ausluga__text Регистрация онлайн-кассы в ФНС. Закажите услугу по регистрации кассы в ФНС в нашей компании и будьте уверенны в том, что ваша касса работает по закону!
+                                            .ausluga__price= i.price
+                                        .ausluga__bottom
+                                            button(type='button').ausluga__button.button.button_t Подробнее
+                    .auslugi__slider
+                        .swiper-container.auslugi__container
+                            .swiper-wrapper
+                                each i,x in auslugi2
+                                    a(href='usluga.html').ausluga.swiper-slide
+                                        .ausluga__hidden
+                                            .ausluga__wrap
+                                                .ausluga__img
+                                                    img(src='images/content/automatization/' + (x + 1) + '.jpg').ausluga__pic
+                                                .ausluga__title= i.title
+                                                .ausluga__price= i.price
+                                        .ausluga__absolute
+                                            .ausluga__wrap
+                                                .ausluga__img
+                                                    img(src='images/content/automatization/' + (x + 1) + '.jpg').ausluga__pic
+                                                .ausluga__title= i.title
+                                                .ausluga__text Регистрация онлайн-кассы в ФНС. Закажите услугу по регистрации кассы в ФНС в нашей компании и будьте уверенны в том, что ваша касса работает по закону!
+                                            .ausluga__bottom
+                                                .ausluga__price= i.price
+                                                button(type='button').ausluga__button.button.button_t Подробнее
+                    a(href='services.html').button.auslugi__button Посмотреть все услуги (24)
+
 
 
 

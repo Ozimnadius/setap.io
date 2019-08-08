@@ -9,4 +9,6 @@
 //@prepros-append pages/market.js
 //@prepros-append pages/catalog.js
 //@prepros-append pages/product.js
+//@prepros-append pages/auto.js
 //@prepros-append pages/cart.js
+

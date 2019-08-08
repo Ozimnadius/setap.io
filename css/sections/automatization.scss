@@ -1,11 +1,24 @@
 .auto {
 
+  &__bread {
+    display: none;
+    @include lg-block {
+      display: block;
+    }
+  }
+
   &__banner {
     margin-bottom: 50px;
+    @include sm-block{
+      margin-bottom: 40px;
+    }
   }
 
   &__about {
     margin-bottom: 90px;
+    @include sm-block{
+      margin-bottom: 60px;
+    }
   }
 
   &__advs {
@@ -15,6 +28,12 @@
   &__feed {
     position: relative;
     margin-bottom: 60px;
+    @include lg-block {
+      margin-bottom: 40px;
+    }
+    @include sm-block{
+      margin-bottom: 30px;
+    }
 
     &:before {
       content: '';
@@ -26,73 +45,218 @@
       height: 175px;
       background: #EAEAEA;
       z-index: 10;
+      @include lg-block {
+        display: none;
+      }
+      @include sm-block{
+        display: block;
+        height: 245px;
+      }
     }
 
     .feed {
       position: relative;
       z-index: 20;
 
+      &__form {
+        @include lg-block {
+          padding: 30px;
+        }
+        @include sm-block{
+          padding: 20px;
+          padding-bottom: 30px;
+        }
+      }
+
       &__right {
         padding-top: 30px;
+      }
+
+      &__title {
+        @include sm-block{
+          text-align: left;
+        }
+      }
+
+      textarea {
+        @include sm-block{
+          height: 223px;
+        }
       }
     }
   }
 
   &__uslugi {
     margin-bottom: 140px;
+    @include lg-block {
+      margin-bottom: 50px;
+    }
   }
 
 }
 
-.abanner{
+.abanner {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  @include lg-block {
+    background: none !important;
+  }
 
-  &__block{
+  &__block {
     @include col;
     @include size(8);
     height: 440px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include size-lg(24);
+    @include lg-block {
+      height: auto;
+    }
   }
 
   &__title {
-    font: $font2;
+    font-family: $font2;
     font-size: 36px;
     font-weight: 500;
     margin-bottom: 10px;
+    @include lg-block {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    @include sm-block {
+      font-size: 20px;
+    }
   }
 
   &__text {
     font-size: 15px;
-    line-height: lh(15,25);
+    line-height: lh(15, 25);
+    @include lg-block {
+      text-align: center;
+    }
+    @include sm-block {
+      border-left: 4px solid $lilac_2;
+      padding-left: 16px;
+      font-size: 13px;
+      text-align: left;
+
+    }
+
+  }
+
+  &__img {
+    display: none;
+    height: 384px;
+    background: #f0f0f0;
+    @include lg-block {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      justify-content: center;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+    @include sm-block {
+      height: 180px;
+    }
+
+    &-img {
+      display: block;
+      height: 100%;
+      //width: 100%;
+    }
+  }
+
+  &__button {
+    display: none;
+    @include lg-block {
+      display: block;
+      width: 220px;
+      margin: 0 auto;
+    }
   }
 }
 
 .aabout {
+
+  &__tablet{
+    @include sm-block{
+      display: none;
+    }
+  }
+
   &__title {
     margin-bottom: 40px;
+    @include sm-block{
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+  }
+
+  &__wrap {
+    @include sm-block{
+      height: 163px;
+    }
+  }
+
+  &__pos {
+    background: $bg;
+    padding-bottom: 20px;
   }
 
   &__desc {
-    line-height: lh(14,25);
+    line-height: lh(14, 25);
     margin-bottom: 45px;
+    @include sm-block{
+      font-size: 13px;
+      overflow: hidden;
+      margin-bottom: 0;
+    }
   }
 
   &__pic {
     width: 100%;
     display: block;
+    @include lg-block {
+      display: none;
+    }
+
+    &_t {
+      display: none;
+      @include lg-block {
+        display: block;
+      }
+      @include sm-block{
+        display: none;
+      }
+    }
+
+    &_m{
+      display: none;
+      @include sm-block{
+        display: block;
+      }
+    }
   }
 }
 
 .aadvs {
   background: linear-gradient(90deg, #442768 31.2%, #732B6D 84.06%);
   padding: 60px 0;
+  @include lg-block {
+    padding: 30px 0;
+  }
 
   &__title {
     margin-bottom: 60px;
+    @include lg-block {
+      margin-bottom: 30px;
+    }
+    @include sm-block{
+      padding: 0 20px;
+    }
   }
 
   &__list {
@@ -103,8 +267,18 @@
     width: 220px;
     margin: 0 auto;
   }
+
+  &__container {
+    padding-left: 20px;
+    margin-bottom: 35px;
+    @include sm-block{
+      padding-left: 10px;
+    }
+  }
+
 }
-.aadv{
+
+.aadv {
   @include col;
   @include size(12);
   margin-bottom: 20px;
@@ -116,6 +290,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @include lg-block {
+    margin: 0;
+    width: 280px;
+    box-sizing: border-box;
+    height: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 10px;
+  }
 
 
   &__left {
@@ -126,38 +309,121 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include lg-block {
+      width: 100px;
+      height: 100px;
+      min-width: 100px;
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 100%;
+    }
   }
 
   &__title {
     font-size: 15px;
-    line-height: lh(15,20);
+    line-height: lh(15, 20);
     font-weight: bold;
     margin-bottom: 10px;
   }
 
-  &__text{
+  &__text {
     font-size: 13px;
+    @include lg-block {
+      text-align: center;
+      font-size: 12px;
+    }
   }
 
+}
+
+.asols {
+  .container {
+    //@include lg-block{
+    //  max-width: initial;
+    //  padding: 0;
+    //}
+  }
 }
 
 .ahow {
   background: #EAEAEA;
   padding-top: 60px;
+  @include lg-block {
+    background: none;
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+  @include sm-block{
+    background: #EAEAEA;
+  }
+
+  &__top {
+    @include lg-block {
+      background: #EAEAEA;
+      padding-top: 30px;
+      margin-bottom: 25px;
+    }
+  }
 
   &__title {
     margin-bottom: 40px;
+    @include lg-block {
+      margin-bottom: 30px;
+    }
+    @include sm-block{
+      margin-bottom: 20px;
+    }
+  }
+
+  &__img {
+    display: none;
+    @include lg-block {
+      display: flex;
+      justify-content: center;
+    }
+    @include sm-block{
+      display: none;
+    }
+    &_m{
+      display: none;
+      @include sm-block{
+        display: flex;
+        margin: 20px 0;
+      }
+    }
+
+    &-img {
+      display: block;
+      width: 706px;
+    }
   }
 
   &__rows {
     //padding-top: 15px;
     padding-bottom: 300px;
     background: url("/images/content/automatization/how/bg.png") center bottom no-repeat;
+    @include lg-block {
+      background: none;
+      padding-bottom: 0;
+    }
+    @include sm-block{
+      display: none;
+    }
+    &_m{
+      display: none;
+      @include sm-block{
+        display: block;
+      }
+    }
   }
 
   &__row {
     margin-bottom: 20px;
-    &:last-child{
+
+    &:last-child {
       margin-bottom: 0;
     }
   }
@@ -165,11 +431,17 @@
   &__left {
     @include col;
     @include size(8);
+    @include size-lg(12);
+    @include size-sm(24);
   }
+
   &__right {
     @include col;
     @include size(8);
     @include shift-left(8);
+    @include size-lg(12);
+    @include shift-lg-left(0);
+    @include size-sm(24);
   }
 
   &__item {
@@ -182,26 +454,103 @@
       align-items: center;
       justify-content: center;
       margin-right: 20px;
+      @include sm-block{
+        min-width: 62px;
+        width: 62px;
+        margin-right: 14px;
+        position: relative;
+      }
+    }
+
+    &-num {
+      display: none;
+      @include sm-block{
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid $lilac;
+        background: $bg;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $lilac_2;
+        font-size: 14px;
+        font-weight: 700;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
     }
 
     &-text {
       font-size: 15px;
+      @include sm-block{
+        font-size: 12px;
+      }
     }
   }
 }
 
 .auslugi {
+  &__title {
+    margin-bottom: 40px;
+    @include lg-block {
+      margin-bottom: 30px;
+    }
+  }
 
+  &__button {
+    display: none;
+    @include lg-block {
+      display: flex;
+      width: 240px;
+      margin: 0 auto;
+    }
+  }
+
+  &__list {
+    @include lg-block {
+      margin-bottom: 70px;
+    }
+
+
+    &_t{
+      display: none;
+      @include lg-block{
+        display: block;
+      }
+      @include sm-block{
+        display: none;
+      }
+    }
+  }
+
+  &__slider {
+    display: none;
+    @include sm-block{
+      display: block;
+    }
+    margin-bottom: 60px;
+  }
 }
 
-.ausluga{
+.ausluga {
   @include col;
   @include size(6);
   margin-bottom: 20px;
   position: relative;
+  @include size-lg(8);
+  @include sm-block{
+    margin: 0;
+    width: 260px;
+    height: auto;
+  }
 
   &:hover {
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
+    @include lg-block {
+      box-shadow: none;
+    }
 
     .ausluga__wrap {
       border-bottom-left-radius: 0;
@@ -217,6 +566,9 @@
   &__hidden {
     height: 100%;
     opacity: 0;
+    @include lg-block {
+      display: none;
+    }
   }
 
   &__absolute {
@@ -228,6 +580,16 @@
     height: 100%;
     //display: none;
     display: flex;
+    @include lg-block {
+      position: static;
+      flex-direction: column;
+      border: 1px solid #E0E0E0;
+      border-radius: 12px;
+      overflow: hidden;
+      padding: 12px;
+      padding-bottom: 25px;
+
+    }
   }
 
   &__wrap {
@@ -239,11 +601,17 @@
 
     display: flex;
     flex-direction: column;
+    @include lg-block {
+      flex-grow: 1;
+      border: none;
+      padding: 0;
+    }
   }
 
   &__img {
     margin-bottom: 20px;
   }
+
   &__pic {
     display: block;
   }
@@ -252,6 +620,20 @@
     font-weight: bold;
     font-size: 15px;
     margin-bottom: 20px;
+    @include lg-block {
+      margin-bottom: 10px;
+    }
+    @include sm-block{
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    font-size: 11px;
+    margin-bottom: 10px;
+    @include sm-block{
+      display: none;
+    }
   }
 
   &__price {
@@ -259,6 +641,9 @@
     font-size: 20px;
     margin-top: auto;
     margin-bottom: 20px;
+    @include sm-block{
+      margin-bottom: 0;
+    }
   }
 
   &__bottom {
@@ -270,15 +655,30 @@
     background: $bg;
     z-index: 30;
     border: 1px solid #E0E0E0;
-    border-top:none ;
+    border-top: none;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     display: none;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
+    @include lg-block {
+      position: static;
+      display: flex;
+      box-shadow: none;
+      border: none;
+      padding: 0;
+    }
+    @include sm-block{
+        justify-content: space-between;
+    }
   }
 
   &__button {
     min-height: 40px;
     width: 100%;
+    @include sm-block{
+      width: 107px;
+      height: 27px;
+      min-height: 27px;
+    }
   }
 }

@@ -32,9 +32,10 @@
     background: transparent;
     border: 2px solid $lilac_2;
     color: $lilac_2;
-    @include sm-block{
+    @include sm-block {
       border: 1px solid $lilac_2;
-    };
+    }
+  ;
 
     &:hover {
       background: $lilac_2;
@@ -207,11 +208,14 @@
         margin-bottom: 0;
       }
     }
-  ;
 
     &_2 {
       @include size(16);
     }
+    &_3 {
+      @include size(24);
+    }
+
   }
 
   &__field {
@@ -233,6 +237,17 @@
 
   &__submit {
     width: 100%;
+    &_t{
+      @include sm-block{
+        display: none;
+      }
+    }
+    &_m{
+      display: none;
+      @include sm-block{
+        display: flex;
+      }
+    }
   }
 
   &__fz {
@@ -377,9 +392,10 @@
   margin-top: 15px;
   font-size: 11px;
   margin-bottom: 25px;
-  @include sm-block{
+  @include sm-block {
     margin-bottom: 15px;
-  };
+  }
+;
 
 
   &__list {
@@ -466,9 +482,10 @@
       padding-left: 25px;
       padding-right: 10px;
     }
-    @include sm-block{
+    @include sm-block {
       padding-left: 10px;
-    };
+    }
+  ;
   }
 }
 
@@ -478,9 +495,9 @@
   @include lg-block {
     font-size: 16px;
   }
-  @include sm-block{
+  @include sm-block {
     font-size: 10px;
-}
+  }
 
 
   &_g {
@@ -535,5 +552,72 @@
   &__title {
     color: #606060;
     transition: .3s;
+  }
+}
+
+.d {
+  @include lg-block{
+    display: none;
+  }
+}
+
+.t{
+  display: none;
+  @include lg-block{
+    display: block;
+  }
+}
+
+.m {
+  display: none;
+  @include sm-block{
+    display: block;
+  }
+}
+
+.w100{
+  width: 100%!important;
+}
+
+.more{
+  position: relative;
+  &__pos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: #b3b3b3;
+    font-family: $font2;
+    font-size: 14px;
+
+    &:after{
+      content: '';
+      margin-left: 10px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    &_open {
+      &:after{
+        border-width: 5px 5px 0 5px;
+        border-color: #b3b3b3 transparent transparent transparent;
+      }
+    }
+    &_close {
+      &:after{
+        border-width: 0 5px 5px 5px;
+        border-color: transparent transparent #b3b3b3 transparent;
+
+      }
+    }
   }
 }
