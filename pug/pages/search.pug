@@ -43,6 +43,9 @@ block content
                                     .sitem__left-right
                                         //- title
                                         a(href='product.html').sitem__title= i.title
+                                        //- price
+                                        .sitem__price.sitem__price_m
+                                            +price(i.price)
                                         //- count
                                         .sitem__count
                                             .count
@@ -61,7 +64,7 @@ block content
                                     //- bottom
                                     .sitem__buttons
                                         button(type='button').button.button_op.sitem__one Купить в 1 клик
-                                        button(type='button').button.sitem__buy В корзину
+                                        button(type='button').button.button_t.sitem__buy В корзину
                     each i,x in search.services
                         a(href='usluga.html').sitem.sservice
                             .sservice__image

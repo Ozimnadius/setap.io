@@ -3,11 +3,25 @@
 
   &__title {
     margin-bottom: 15px;
+    @include lg-block{
+      text-align: center;
+    }
+    @include sm-block{
+      margin-bottom: 7px;
+    }
   }
 
   &__text {
     font-size: 15px;
     margin-bottom: 40px;
+    @include lg-block{
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    @include sm-block{
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -18,6 +32,10 @@
   margin-bottom: 20px;
   overflow: hidden;
   transition: .3s;
+  @include sm-block{
+    padding: 15px;
+    margin-bottom: 10px;
+  }
 
   &:last-child{
     margin-bottom: 0;
@@ -47,17 +65,27 @@
     @include size(17);
     display: flex;
     align-items: center;
+    @include size-lg(12);
+    @include size-sm(24);
     &-left {
       position: relative;
       width: 160px;
       min-width: 160px;
       margin-right: 20px;
+      @include sm-block{
+        width: 60px;
+        min-width: 60px;
+        margin-right: 12px;
+      }
     }
   }
 
   &__sticks {
     left: -20px;
     top: -10px;
+    @include sm-block{
+      display: none;
+    }
   }
 
   &__img {
@@ -75,11 +103,22 @@
     &:hover {
       text-decoration: underline;
     }
+    @include lg-block{
+      margin-right: -170px;
+    }
+    @include sm-block{
+      margin-right: 0;
+      margin-bottom: 0;
+      font-size: 10px;
+    }
   }
 
   &__count {
     display: flex;
     align-items: center;
+    @include sm-block{
+      display: none;
+    }
   }
 
   &__right {
@@ -88,10 +127,22 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    @include size-lg(12);
+    @include sm-block{
+      display: none;
+    }
   }
 
   &__price {
     margin-bottom: 30px;
+    &_m{
+      display: none;
+      @include sm-block{
+        display: block;
+        margin-bottom: 0;
+        text-align: right;
+      }
+    }
   }
 
   &__buttons {
@@ -117,8 +168,6 @@
     }
   }
 
-
-
   &__image {
     position: relative;
     width: 160px;
@@ -127,11 +176,33 @@
     img {
       width: 100%;
     }
+
+    @include sm-block{
+      width: 60px;
+      min-width: 60px;
+      margin-right: 12px;
+    }
   }
 
   &__title {
     font-size: 17px;
     font-weight: bold;
     margin-bottom: 10px;
+    @include sm-block{
+      font-size: 10px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__text {
+    @include lg-block{
+      height: 60px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    @include sm-block{
+      font-size: 10px;
+      height: 43px;
+    }
   }
 }
