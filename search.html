@@ -60,7 +60,7 @@
                 </button>
                 <div class="header__tel"><a class="header__phone" href="tel:+7(499)110-38-35">+7 (499) 110-38-35</a></div>
                 <div class="header__call">
-                  <button class="button" type="button">Заказать звонок</button>
+                  <button class="button jsCallback" type="button">Заказать звонок</button>
                 </div>
                 <div class="header__mlogo"><a class="logo" href="/"><img class="logo__img" src="images/content/logo.png"></a></div>
                 <div class="header__mbasket"><a class="basket basket_i" href="cart.html">
@@ -483,7 +483,7 @@
                         <div class="price"><span class="price__val">32 300</span><span class="price__cur">&nbsp;руб.</span></div>
                       </div>
                       <div class="sitem__buttons">
-                        <button class="button button_op sitem__one" type="button">Купить в 1 клик</button>
+                        <button class="button button_op sitem__one jsOneClick" type="button">Купить в 1 клик</button>
                         <button class="button button_t sitem__buy" type="button">В корзину</button>
                       </div>
                     </div>
@@ -526,7 +526,7 @@
                         <div class="price"><span class="price__val">224 800</span><span class="price__cur">&nbsp;руб.</span></div>
                       </div>
                       <div class="sitem__buttons">
-                        <button class="button button_op sitem__one" type="button">Купить в 1 клик</button>
+                        <button class="button button_op sitem__one jsOneClick" type="button">Купить в 1 клик</button>
                         <button class="button button_t sitem__buy" type="button">В корзину</button>
                       </div>
                     </div>
@@ -569,7 +569,7 @@
                         <div class="price"><span class="price__val">12 100</span><span class="price__cur">&nbsp;руб.</span></div>
                       </div>
                       <div class="sitem__buttons">
-                        <button class="button button_op sitem__one" type="button">Купить в 1 клик</button>
+                        <button class="button button_op sitem__one jsOneClick" type="button">Купить в 1 клик</button>
                         <button class="button button_t sitem__buy" type="button">В корзину</button>
                       </div>
                     </div>
@@ -612,7 +612,7 @@
                         <div class="price"><span class="price__val">27 300</span><span class="price__cur">&nbsp;руб.</span></div>
                       </div>
                       <div class="sitem__buttons">
-                        <button class="button button_op sitem__one" type="button">Купить в 1 клик</button>
+                        <button class="button button_op sitem__one jsOneClick" type="button">Купить в 1 клик</button>
                         <button class="button button_t sitem__buy" type="button">В корзину</button>
                       </div>
                     </div>
@@ -705,7 +705,7 @@
                                 <use xlink:href="/images/icons/sprite.svg#fb"></use>
                               </svg></a></div>
                 <div class="footer__buttons">
-                  <button class="button footer__button" type="button">Заказать звонок</button>
+                  <button class="button footer__button jsCallback" type="button">Заказать звонок</button>
                   <button class="button button_t footer__button" type="button">Оставить отзыв</button>
                 </div>
               </div>
@@ -717,7 +717,7 @@
           </div>
         </div>
         <div class="footer__mobile"><a class="footer__mobile-phone" href="tel:+7(499)110-38-35">+7 (499) 110-38-35</a>
-          <button class="button button_y footer__mobile-button" type="button">Позвонить</button>
+          <button class="button button_y footer__mobile-button jsCallback" type="button">Позвонить</button>
         </div>
       </footer>
     </div>
@@ -989,6 +989,67 @@
       </div>
     </div>
   </div>
+  <div class="popup">
+    <div class="popup__wrapper"></div>
+  </div>
+  <template id="callback">
+    <div class="callback">
+      <form class="callback__form form">
+        <button class="form__close jsCloseForm" type="button"><img class="form__close-svg" src="images/icons/close.svg"></button>
+        <div class="form__title">Обратный звонок</div>
+        <div class="form__sub">Укажите ваше имя и контактный номер и наши специалисты позвонят Вам</div>
+        <div class="form__fields">
+          <div class="form__field">
+            <input class="input" type="text" name="name" placeholder="Ваше имя">
+          </div>
+          <div class="form__field">
+            <input class="input" type="tel" name="tel" placeholder="Телефон">
+          </div>
+        </div>
+        <div class="form__fz">Заполняя данную форму Вы соглашаетесь с&nbsp;<a class="form__fz-link" href="/">Политикой обработки персональных данных</a></div>
+        <div class="form__buttons">
+          <button class="form__button button" type="submit">
+            <div class="button__title">Отправить</div>
+          </button>
+        </div>
+      </form>
+    </div>
+  </template>
+  <template id="callbuy">
+    <div class="callbuy">
+      <form class="callbuy__form form">
+        <button class="form__close jsCloseForm" type="button"><img class="form__close-svg" src="images/icons/close.svg"></button>
+        <div class="form__title">Купить в 1 клик</div>
+        <div class="form__fields">
+          <div class="form__field">
+            <input class="input" type="text" name="name" placeholder="Ваше имя">
+          </div>
+          <div class="form__field">
+            <input class="input" type="tel" name="tel" placeholder="Телефон">
+          </div>
+        </div>
+        <div class="form__fz">Заполняя данную форму Вы соглашаетесь с&nbsp;<a class="form__fz-link" href="/">Политикой обработки персональных данных</a></div>
+        <div class="form__fz">В стоимость заказа может быть<br>включена&nbsp;<span class="form__fz-link">цена доставки</span></div>
+        <div class="form__buttons">
+          <button class="form__button button" type="submit">
+            <div class="button__title">Отправить</div>
+          </button>
+        </div>
+      </form>
+    </div>
+  </template>
+  <template id="success">
+    <div class="success">
+      <form class="success__form form">
+        <button class="form__close jsCloseForm" type="button"><img class="form__close-svg" src="images/icons/close.svg"></button>
+        <div class="form__title">Спасибо</div>
+        <div class="form__sub">Ваша заявка принята в работу. Ожидайте звонка.</div>
+        <button class="form__button button success__button jsCloseForm" type="submit">
+          <div class="button__title">Вернуться к сайту</div>
+        </button>
+      </form>
+    </div>
+  </template>
   <script src="js/vendor.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <script src="js/main.min.js"></script>

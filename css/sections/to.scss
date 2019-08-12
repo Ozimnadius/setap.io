@@ -507,8 +507,12 @@
   }
 
   &__sws{
-    display: flex;
-    align-items: flex-end;
+    display: none;
+    @include sm-block{
+      display: flex;
+      align-items: flex-end;
+    };
+
   }
 
   &__sw{

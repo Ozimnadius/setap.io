@@ -82,7 +82,7 @@ html(lang="ru")
 
                                 //- call
                                 .header__call
-                                    button(type='button').button Заказать звонок
+                                    button(type='button').button.jsCallback Заказать звонок
 
                                 //- mlogo
                                 .header__mlogo
@@ -261,7 +261,7 @@ html(lang="ru")
                                     a(href='/' target='_blank').social.social_fb
                                         +icon('fb', 'social__svg')
                                 .footer__buttons
-                                    button(type='button').button.footer__button Заказать звонок
+                                    button(type='button').button.footer__button.jsCallback Заказать звонок
                                     button(type='button').button.button_t.footer__button Оставить отзыв
 
                     //- bottom
@@ -276,7 +276,7 @@ html(lang="ru")
 
                 .footer__mobile
                             a(href='tel:+7(499)110-38-35').footer__mobile-phone +7 (499) 110-38-35
-                            button(type='button').button.button_y.footer__mobile-button Позвонить
+                            button(type='button').button.button_y.footer__mobile-button.jsCallback Позвонить
     .debug
         div
             div
@@ -394,6 +394,69 @@ html(lang="ru")
                                                                 a(href=k.link class=j.dopClass).mmenu__item-link.subitem2
                                                                     .mmenu__item-title= k.title
 
+
+
+    //- popup
+    .popup
+        .popup__wrapper
+
+    //- callback
+    template#callback
+        .callback
+            form.callback__form.form
+                button(type='button').form__close.jsCloseForm
+                    img(src='images/icons/close.svg').form__close-svg
+                .form__title Обратный звонок
+                .form__sub Укажите ваше имя и контактный номер и наши специалисты позвонят Вам
+                .form__fields
+                    .form__field
+                        input(type='text' name='name' placeholder='Ваше имя').input
+                    .form__field
+                        input(type='tel' name='tel' placeholder='Телефон').input
+                .form__fz
+                    |Заполняя данную форму Вы соглашаетесь с&nbsp;
+                    a(href='/').form__fz-link Политикой обработки персональных данных
+                .form__buttons
+                    button(type='submit').form__button.button
+                        .button__title Отправить
+
+
+    //- callbuy
+    template#callbuy
+        .callbuy
+            form.callbuy__form.form
+                button(type='button').form__close.jsCloseForm
+                    img(src='images/icons/close.svg').form__close-svg
+                .form__title Купить в 1 клик
+                .form__fields
+                    .form__field
+                        input(type='text' name='name' placeholder='Ваше имя').input
+                    .form__field
+                        input(type='tel' name='tel' placeholder='Телефон').input
+                .form__fz
+                    | Заполняя данную форму Вы соглашаетесь с&nbsp;
+                    a(href='/').form__fz-link Политикой обработки персональных данных
+                .form__fz
+                    | В стоимость заказа может быть
+                    br
+                    | включена&nbsp;
+                    span.form__fz-link цена доставки
+
+                .form__buttons
+                    button(type='submit').form__button.button
+                        .button__title Отправить
+
+
+    //- success
+    template#success
+        .success
+            form.success__form.form
+                button(type='button').form__close.jsCloseForm
+                    img(src='images/icons/close.svg').form__close-svg
+                .form__title Спасибо
+                .form__sub Ваша заявка принята в работу. Ожидайте звонка.
+                button(type='submit').form__button.button.success__button.jsCloseForm
+                    .button__title Вернуться к сайту
 
     script(src='js/vendor.min.js')
     script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')

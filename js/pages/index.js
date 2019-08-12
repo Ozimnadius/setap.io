@@ -57,8 +57,6 @@ $(function () {
     });
 
 
-
-
     let quiz = new Swiper('.quiz__container', {
         effect: 'cube',
         speed: 1500,

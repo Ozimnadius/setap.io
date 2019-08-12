@@ -992,6 +992,7 @@
 
   &__buttons {
     margin-top: 40px;
+    padding: 0 75px;
     @include lg-block{
       margin-top: 0;
       padding: 80px 30px 20px 30px;
@@ -999,6 +1000,7 @@
     @include sm-block{
       padding: 20px;
     };
+
   }
 
   &__btn {
@@ -1008,6 +1010,18 @@
     @include sm-block{
       margin-bottom: 10px;
     };
+
+    &:hover {
+      .quiz__btn {
+        &-wrap {
+          border-color: #9681BA;
+        }
+        &-fake {
+          border-color: #9681BA;
+          background: #9681BA;
+        }
+      }
+    }
 
     &-wrap {
       border: 2px solid #E0E0E0;
