@@ -15,6 +15,7 @@ $(function () {
             valMin = inputFrom.val(),
             valMax = inputTo.val();
 
+
         var slider = range.slider({
             range: true,
             min: min,
@@ -27,8 +28,9 @@ $(function () {
         });
 
         inputFrom.on('change', function (e) {
-            var valMin = $(this).val(),
-                valMax = inputTo.val();
+            var valMin = getNumber($(this).val()),
+                valMax = getNumber(inputTo.val());
+
             slider.slider({
                 range: true,
                 min: min,
@@ -41,8 +43,8 @@ $(function () {
             });
         });
         inputTo.on('change', function (e) {
-            var valMax = $(this).val(),
-                valMin = inputFrom.val();
+            var valMax = getNumber($(this).val()),
+                valMin = getNumber(inputFrom.val());
             slider.slider({
                 range: true,
                 min: min,
@@ -54,6 +56,11 @@ $(function () {
                 }
             });
         });
+
+    });
+
+    $('.range__input').on('change', function (e) {
+       console.log('tyt');
     });
 
     $('.cmenu__item').on('click', function (e) {
@@ -73,6 +80,7 @@ $(function () {
     });
 
     $('.item__count .count__input').on('change', function (e) {
+        e.preventDefault();
         let $this = $(this),
             val = $this.val(),
             item = $this.closest('.item'),

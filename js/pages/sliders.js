@@ -17,12 +17,20 @@ $(function () {
         slidesPerView: 4,
         spaceBetween: 20,
         slidesPerGroup: 4,
+        grabCursor: true,
         pagination: {
             el: '.psame__pag',
-            clickable: true
+            clickable: true,
+            type: 'bullets'
         },
         breakpoints: {
-            // when window width is <= 767.99px
+
+            // when window width is <= 575.99px
+            575.99: {
+                slidesPerView: 'auto',
+                slidesPerGroup: 1,
+                spaceBetween: 10,
+            }, // when window width is <= 767.99px
             767.99: {
                 slidesPerView: 'auto',
                 slidesPerGroup: 1,

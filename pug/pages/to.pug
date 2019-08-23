@@ -14,14 +14,19 @@ block content
                     a.bread__item.bread__item_active Техническое обслуживание
 
         //- banner
-        section(style='background-image:url(/images/content/tech/bg.jpg)').to__banner
+        section.to__banner
             .container
                 div.to__banner-wrapper
                     .row.to__banner-row
                         .to__banner-content
                             .to__banner-title Центр технического обслуживания для Вашего предприятия
-                            img(src='images/content/tech/img-t.jpg').to__banner-img
+                            .to__pic
+                                img(src='images/content/tech/img-t.jpg').to__banner-pic
                             button(type='button').button.to__banner-button.jsCallback Получить консультацию
+                        .to__banner-img
+                            .to__img
+                                img(src='images/content/tech/to.jpg').to__img-img
+                            button(type='button').button.to__banner-button.to__banner-button_t.jsCallback Получить консультацию
 
         //- advs
         section.to__advs

@@ -162,7 +162,7 @@ $(function () {
     );
 
     $('.count__up').on('click', function (e) {
-
+        e.preventDefault();
         let $this = $(this),
             count = $this.closest('.count'),
             inputObj = count.find('.count__input'),
@@ -172,13 +172,14 @@ $(function () {
         inputObj.trigger('change');
     });
     $('.count__down').on('click', function (e) {
+        e.preventDefault();
         let $this = $(this),
             count = $this.closest('.count'),
             inputObj = count.find('.count__input'),
             val = inputObj.val();
 
         val--;
-        if (val >= 0) {
+        if (val >= 1) {
             inputObj.val(val);
             inputObj.trigger('change');
         }
@@ -198,6 +199,7 @@ $(function () {
 
     $('.icats__more').on('click', function (e) {
         $('.icats__hidden').slideDown();
+        $(this).hide();
     });
 
 

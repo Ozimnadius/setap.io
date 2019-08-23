@@ -35,7 +35,7 @@ block content
                             each i in [1,2,3]
                                 .swiper-slide.mslide
                                     b Принцип успешной деятельности современного супермаркета&nbsp;
-                                    |– это единая, слаженная работа всех торговых процессов, начиная с закупки товаров, заканчивая маркетингом и ведением отчетности. Упорядочить и объединить все элементы в единую сеть поможет автоматизированная система.
+                                    | – это единая, слаженная работа всех торговых процессов, начиная с закупки товаров, заканчивая маркетингом и ведением отчетности. Упорядочить и объединить все элементы в единую сеть поможет автоматизированная система.
 
                 .mslider2
                     .swiper-container.mslider2__container
@@ -132,25 +132,25 @@ block content
                         br
                         | Для быстрой приемки товара используются терминалы сбора данных со встроенным сканером штрих-кода. Также с их помощью проводится инвентаризация. Если часть товара не промаркирована, то на складе необходимо установить принтер этикеток или весы с печатью
             .market__contentm
-                    .market__contentm-block
-                        .market__contentm-position
-                            .container
-                                p
-                                    b На кассе
-                                    br
-                                    | Рекомендуем использовать специализированную POS-систему с кассовой программой. POS-системы защищены от попадания пыли и влаги, могут работать 24/7 и оснащены всеми необходимыми портами для подключения фискального регистратора, дисплея покупателя, программируемой клавиатуры, весов и другого оборудования. Для выдачи чека покупателю необходимо использовать фискальный регистратор, подключенный к интернету с передачей данных в налоговую. Если вы продаете алкоголь, то касса должна отправлять данные о проданных бутылках в ЕГАИС. Для этого необходимо приобрести 2D сканер и настроить обмен кассовой программы с УТМ.
-                                p
-                                    b В торговом зале
-                                    br
-                                    | Электронные весы с печатью этикеток в зале ускорят пробитие весового товара на кассе. Взвешивать товар на таких весах может как продавец, так и сам покупатель благодаря специальным дисплеям самообслуживания. Если зал большой, а консультантов немного, то советуем установить прайс-чекеры, чтобы покупатель сам мог уточнить цену товара. В зале могут использоваться терминалы сбора данных для проведения инвентаризации или актуализации ценников и проверки сроков годности.
-                                p
-                                    b На складе
-                                    br
-                                    | Для быстрой приемки товара используются терминалы сбора данных со встроенным сканером штрих-кода. Также с их помощью проводится инвентаризация. Если часть товара не промаркирована, то на складе необходимо установить принтер этикеток или весы с печатью
+                .market__contentm-block
+                    .market__contentm-position
                         .container
-                            button(type='button').market__more
-                                .market__more-button Развернуть
-                                .market__more-button Свернуть
+                            p
+                                b На кассе
+                                br
+                                | Рекомендуем использовать специализированную POS-систему с кассовой программой. POS-системы защищены от попадания пыли и влаги, могут работать 24/7 и оснащены всеми необходимыми портами для подключения фискального регистратора, дисплея покупателя, программируемой клавиатуры, весов и другого оборудования. Для выдачи чека покупателю необходимо использовать фискальный регистратор, подключенный к интернету с передачей данных в налоговую. Если вы продаете алкоголь, то касса должна отправлять данные о проданных бутылках в ЕГАИС. Для этого необходимо приобрести 2D сканер и настроить обмен кассовой программы с УТМ.
+                            p
+                                b В торговом зале
+                                br
+                                | Электронные весы с печатью этикеток в зале ускорят пробитие весового товара на кассе. Взвешивать товар на таких весах может как продавец, так и сам покупатель благодаря специальным дисплеям самообслуживания. Если зал большой, а консультантов немного, то советуем установить прайс-чекеры, чтобы покупатель сам мог уточнить цену товара. В зале могут использоваться терминалы сбора данных для проведения инвентаризации или актуализации ценников и проверки сроков годности.
+                            p
+                                b На складе
+                                br
+                                | Для быстрой приемки товара используются терминалы сбора данных со встроенным сканером штрих-кода. Также с их помощью проводится инвентаризация. Если часть товара не промаркирована, то на складе необходимо установить принтер этикеток или весы с печатью
+                    .container
+                        button(type='button').market__more
+                            .market__more-button Развернуть
+                            .market__more-button Свернуть
         //- tabs
         section.market__kits
             .container
@@ -169,48 +169,65 @@ block content
                                 .mplaces
                                     //- list
                                     .mplaces__list
-                                        each j in mTab
-                                            .mplace
-                                                //- title
-                                                .mplace__title= j.title
-                                                //- place
-                                                if j.place
-                                                    .mplace__place
-                                                        .mplace__place-item
-                                                            .mplace__place-title= j.place.title
-                                                            .mplace__place-right
-                                                                .mplace__place-count
-                                                                    .count
-                                                                        button(type='button').count__down.count__button
-                                                                            +icon('minus','count__svg')
-                                                                        input(type='number' name='count' value=1 data-price=j.place.price).count__input.mplace__place-input
-                                                                        button(type='button').count__up.count__button
-                                                                            +icon('plus','count__svg')
-                                                                .mplace__place-price.price
-                                                                    span.price__val= j.place.price
-                                                                    span.price__cur &nbsp;руб.
-                                                        .mplace__place-sub
-                                                            each k in j.place.list
-                                                                .mplace__place-subitem
-                                                                    .mplace__place-subimg
-                                                                        img(src=k.src).mplace__place-subpic
-                                                                    .mplace__place-subtitle= k.title
-                                                                    .mplace__place-subprice.price.price_g
-                                                                        span.price__val= k.price
-                                                                        span.price__cur &nbsp;руб.
-                                                //- items
-                                                .mplace__list
-                                                    each k in j.items
-                                                        .mplace__item
-                                                            .mplace__item-img
-                                                                img(src=k.src)
-                                                            .mplace__item-title= k.title
-                                                            if k.price
-                                                                .mplace__item-price.price
-                                                                    span.price__val= k.price
-                                                                    span.price__cur &nbsp;руб.
+                                        each j,jx in mTab.places
+                                            div(data-price=j.price).mplace
+                                                .mplace__top
+                                                    .mplace__top-left
+                                                        div(class=j.name?'':'mplace__title_mbn').mplace__title= j.title
+                                                        .mplace__name= j.name
+                                                    if j.name
+                                                        .mplace__top-right
+                                                            .mplace__count
+                                                                .count
+                                                                    button(type='button').count__down.count__button.mplace__button
+                                                                        +icon('minus','count__svg')
+                                                                    input(type='number' name='place' + (jx + 1) value=1 readonly=true).count__input.mplace__input
+                                                                    button(type='button').count__up.count__button.mplace__button
+                                                                        +icon('plus','count__svg')
+                                                            .mplace__price
+                                                                span.mplace__price-val= j.price
+                                                                span.mplace__price-cur &nbsp;руб.
+                                                .mplace__bottom
+                                                    .mplace__list
+                                                        each item in j.items
+                                                            a(href='product.html').mplace__item
+                                                                .mplace__item-left
+                                                                    .mplace__item-img
+                                                                        img(src=item.src).mplace__item-pic
+                                                                    .mplace__item-title= item.title
+                                                                        span.mplace__item-q &nbsp;(?)
+                                                                .mplace__item-right
+                                                                    .mplace__item-price
+                                                                        span.mplace__item-val= item.price
+                                                                        span.mplace__item-cur &nbsp;руб.
+
+                                        div(data-price=mTab.services.price).mserv.mplace
+                                            .mserv__top.mplace__top
+                                                label.mserv__check
+                                                    input(type='checkbox' name='serv' value='Услуги' checked=true).mserv__check-input
+                                                    .mserv__fake
+                                                        +icon('check', 'mserv__fake-svg')
+                                                    .mserv__fake-title Услуги
+                                            .mserv__bottom
+                                                .mserv__list
+                                                    each s,sx in mTab.services.list
+                                                        div(class=s.checked?'checked':'').mplace__item.mserv__item
+                                                            .mplace__item-left
+                                                                .mplace__item-check
+                                                                    label.mserv__label
+                                                                        input(type='checkbox' name='serv'+sx value=s.title checked=s.checked).check.mserv__item-input
+                                                                        .check__fake
+                                                                            +icon('check', 'check__fake-svg')
+                                                                a(href='usluga.html').mserv__item-title= s.title
+                                                                    span.mplace__item-q &nbsp;(?)
+                                                            .mplace__item-right
+                                                                .mplace__item-price
+                                                                    span.mplace__item-val= s.price
+                                                                    span.mplace__item-cur &nbsp;руб.
+
+
                                     //- bottom
-                                    .mplaces__bottom
+                                    div(data-price='218 260').mplaces__bottom
                                         //- left
                                         .mplaces__bottom-left
                                             .mplaces__title
@@ -225,12 +242,20 @@ block content
                                                 .mplaces__down-title
                                                     .mplaces__down-name Скачать заказ
                                                     .mplaces__down-type pdf-файл
+                                            //- count
+                                            .mplaces__count
+                                                .count
+                                                    button(type='button').count__down.count__button.mplaces__count-btn
+                                                        +icon('minus','count__svg')
+                                                    input(type='number' name='places' value=1 readonly=true).count__input.mplaces__input
+                                                    button(type='button').count__up.count__button.mplaces__count-btn
+                                                        +icon('plus','count__svg')
                                             //- price
                                             .mplaces__price
                                                 .mplaces__price-title Общая стоимость
                                                 .mplaces__price-val.price.price_w
-                                                    span.price__val 125 500
-                                                    span.price__cur &nbsp;руб.
+                                                    span.price__val 218 260
+                                                    span.price__cur &nbsp;₽
                                             //- button
                                             button(type='button').mplaces__button.button.button_y.jsCallback Заказать решение
 

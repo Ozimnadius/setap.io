@@ -233,6 +233,12 @@
   ;
   }
 
+  &__buy {
+    @include lg-block{
+      border: none;
+    }
+  }
+
   &__desc {
     padding-top: 60px;
     font-size: 13px;
@@ -333,6 +339,47 @@
     }
   }
 
+
+  .item {
+    @include xs-block{
+      width: 180px;
+    }
+
+    &__sticks{
+      @include xs-block{
+        display: none;
+      }
+    }
+
+    &__title{
+      @include xs-block{
+        font-size: 11px;
+        text-align: center;
+        height: 40px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    &__block {
+      @include xs-block{
+          justify-content: center;
+      }
+    }
+
+    &__count{
+      @include xs-block{
+        display: none;
+      }
+    }
+
+    &__buy,&__one{
+      @include xs-block{
+        display: none;
+      }
+    }
+
+  }
 }
 
 .sticks {
@@ -811,6 +858,7 @@
 
   &__container {
     padding-bottom: 120px;
+    pointer-events: none;
     @include sm-block{
       padding-bottom: 50px;
     };
@@ -819,8 +867,10 @@
   &__item {
     box-sizing: border-box;
     height: auto;
+    pointer-events: initial;
     @include sm-block{
       width: 260px;
+      display: block;
     };
   }
 
@@ -828,7 +878,7 @@
     //display: flex;
     //justify-content: center;
     position: absolute;
-    //z-index: 200;
+    //z-index: 20;
     bottom: 50px;
     left: 50%;
     transform: translateX(-50%);

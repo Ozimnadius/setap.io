@@ -1,0 +1,347 @@
+extends ../main
+
+block variables
+    - var title = 'Оформление заказа'
+
+block content
+    main.order
+        //- bread
+        section.bread
+            .container
+                .bread__list
+                    a(href='/').bread__item Главная
+                    .bread__sep /
+                    a(href='cart.html').bread__item Корзина
+                    .bread__sep /
+                    a.bread__item.bread__item_active Оформление заказа
+        //- main
+        section.order__main
+            .container
+                .order__title.title.title_tal Оформление заказа
+                form.row.order__form
+                    //- left
+                    .order__left
+                        //- steps
+                        .order__steps.steps
+                            //- Адрес
+                            .step.ready
+                                //- top
+                                .step__top
+                                    .step__count 1
+                                    .step__title Адрес
+
+                                //- bottom
+                                .step__bottom
+                                    .step__fields
+                                        .step__field.step__field_2
+                                            .step__label
+                                                | Местоположение&nbsp;
+                                                span.step__label_req *
+                                            .step__input
+                                                input(type='text' name='addr' placeholder='Введите название...').step__addr.input
+                                                button(type='button').step__clear
+                                                    +icon('close', 'step__clear-svg')
+                                            .step__desc
+                                                | Поле обязательно для заполнения
+                                                br
+                                                | Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"
+                                    .step__buttons
+                                        button(type='button').button.step__next Далее
+
+
+
+                            //- Доставка
+                            .step.active
+                                //- top
+                                .step__top
+                                    .step__count 2
+                                    .step__title Доставка
+
+                                //- bottom
+                                .step__bottom
+                                    .row
+                                        //- left
+                                        .step__left
+                                            .step__radios
+                                                label.sradio
+                                                    input(type='radio' name='delivery' value='Доставка в пределах МКАД' checked=true data-id='delivery').sradio__input
+                                                    .sradio__fake
+                                                        .sradio__button
+                                                            //- img
+                                                            .sradio__img
+                                                                img(src='images/icons/Icon_uslugi_03.svg').sradio__img-img
+                                                            //- check
+                                                            .sradio__check
+                                                                +icon('check','sradio__check-svg')
+                                                            //- price
+                                                            .sradio__price от 450 руб.
+                                                        .sradio__title Доставка в пределах МКАД
+                                                label.sradio
+                                                    input(type='radio' name='delivery' value='Самовывоз' data-id='pickup').sradio__input
+                                                    .sradio__fake
+                                                        .sradio__button
+                                                            //- img
+                                                            .sradio__img
+                                                                img(src='images/icons/Icon_uslugi_02.svg').sradio__img-img
+                                                            //- check
+                                                            .sradio__check
+                                                                +icon('check','sradio__check-svg')
+                                                            //- price
+                                                            .sradio__price 0 руб.
+                                                        .sradio__title Самовывоз
+
+
+
+
+                                        //- right
+                                        .step__right
+                                            .step__content
+                                                .sdelivery
+                                                    .sdelivery__title Доставка в пределах МКАД
+                                                    .sdelivery__text Малогабаритный товар массой до 3 кг
+                                                    .sdelivery__price Стоимость: от 450 руб.
+                                                    .sdelivery__period Срок доставки: 1-2 дн.
+                                                    a(href='delivery.html').sdelivery__link Подробнее о доставке и оплате
+
+                                    .step__buttons
+                                        button(type='button').button.button_t.step__prev Назад
+                                        button(type='button').button.step__next Далее
+
+
+
+
+                            //- Способ оплаты
+                            .step
+                                //- top
+                                .step__top
+                                    .step__count 3
+                                    .step__title Способ оплаты
+
+                                //- bottom
+                                .step__bottom
+                                    .row
+                                        //- left
+                                        .step__left
+                                            .step__radios
+                                                label.sradio
+                                                    input(type='radio' name='payment' value='Оплата по счету' data-id='bill').sradio__input
+                                                    .sradio__fake
+                                                        .sradio__button
+                                                            //- img
+                                                            .sradio__img
+                                                                img(src='images/icons/icon_pay_04.svg').sradio__img-img
+                                                            //- check
+                                                            .sradio__check
+                                                                +icon('check','sradio__check-svg')
+                                                        .sradio__title Оплата по счету
+                                                label.sradio
+                                                    input(type='radio' name='payment' value='Банковская карта' checked=true data-id='card').sradio__input
+                                                    .sradio__fake
+                                                        .sradio__button
+                                                            //- img
+                                                            .sradio__img
+                                                                img(src='images/icons/icon_pay_05.svg').sradio__img-img
+                                                            //- check
+                                                            .sradio__check
+                                                                +icon('check','sradio__check-svg')
+                                                        .sradio__title Банковская карта
+
+
+
+
+                                                label.sradio
+                                                    input(type='radio' name='payment' value='Наличный расчет' data-id='cash').sradio__input
+                                                    .sradio__fake
+                                                        .sradio__button
+                                                            //- img
+                                                            .sradio__img
+                                                                img(src='images/icons/icon_pay_03.svg').sradio__img-img
+                                                            //- check
+                                                            .sradio__check
+                                                                +icon('check','sradio__check-svg')
+                                                        .sradio__title Наличный расчет
+
+
+
+
+                                        //- right
+                                        .step__right
+                                            .step__content
+                                                .sdelivery
+                                                    .sdelivery__title Банковская карта
+                                                    .sdelivery__text Картами Visa, MasterCard, Мир
+                                                    a(href='delivery.html').sdelivery__link Подробнее о доставке и оплате
+
+                                    .step__buttons
+                                        button(type='button').button.button_t.step__prev Назад
+                                        button(type='button').button.step__next Далее
+                            //- Контактная информация
+                            .step
+                                //- top
+                                .step__top
+                                    .step__count 4
+                                    .step__title Контактная информация
+
+                                //- bottom
+                                .step__bottom
+                                    .step__fields
+                                        .step__field
+                                            .step__label
+                                                | Имя &nbsp;
+                                                span.step__label_req *
+                                            .step__input.step__input_n
+                                                input(type='text' name='name' placeholder='').input
+
+                                        .step__field
+                                            .step__label
+                                                | Сотовый телефон&nbsp;
+                                                span.step__label_req *
+                                            .step__input.step__input_n
+                                                input(type='tel' name='tel' placeholder='').input
+
+                                        .step__field
+                                            .step__label
+                                                | Адрес эл. почты&nbsp;
+                                                span.step__label_req *
+                                            .step__input.step__input_n
+                                                input(type='email' name='email' placeholder='').input
+
+                                        .step__field.step__field_2
+                                            .step__label Комментарий к заказу
+                                            .step__input.step__input_n
+                                                textarea(name='comment').input.input_area.step__textarea
+
+                                    .step__buttons
+                                        button(type='button').button.button_t.step__prev Назад
+                                        button(type='submit').button.step__submit Далее
+
+                        //- info
+                        .order__info
+                            .order__info-title
+                                +iconPath('/images/content/main/ready', 'cart','order__info-svg')
+                                .order__info-name Ваш заказ
+                            .order__info-list
+                                .cart__list
+                                    each row in cartList
+                                        .cart__row
+                                            .cart__row-head
+                                                .cart__row-title.cart__th.cart__w-1.cart__w-1_2= row.title
+                                                .cart__th.cart__w-2.cart__th.cart__w-2_2 Количество
+                                                .cart__th.cart__w-3.cart__w-3_2 Цена
+                                            .cart__items
+                                                each i in row.list
+                                                    div(data-type=row.type).cart__item
+                                                        .cart__w-1.cart__w-1_2.cart__item-left
+                                                            .cart__img
+                                                                img(src=i.src).cart__img-img
+                                                            a(href='product.html').cart__link= i.title
+                                                        .cart__w-2.cart__w-2_2
+                                                            .cart__pieces 1 шт.
+                                                        .cart__w-3.cart__w-3_2
+                                                            .cart__price
+                                                                +price(i.price)
+
+
+
+
+
+                        //- total
+                        .order__total
+                            .ototal
+                                .ototal__item
+                                    +iconPath('/images/content/main/ready', 'cart','ototal__item-svg')
+                                    .ototal__item-desc
+                                        .ototal__item-title Заказ на:
+                                        .ototal__item-price 1 655 ₽
+                                .ototal__item
+                                    +icon('delivery', 'ototal__item-svg ototal__item-svg_stroke')
+                                    .ototal__item-desc
+                                        .ototal__item-title Доставка:
+                                        .ototal__item-price 1 655 ₽
+
+
+                                .ototal__total
+                                    .ototal__total-title Итого к оплате:
+                                    .ototal__total-price 4 965 ₽
+                                button(type='submit').ototal__button.button.button_y Сделать заказ
+
+                    //- right
+                    .order__right
+                        .odetail
+                            .odetail__title Ваш заказ
+                            .odetail__bottom
+                                .odetail__list
+                                    each i in ['Товаровы:','Услуги:','Доставка:']
+                                        .odetail__item
+                                            .odetail__item-title= i
+                                            .odetail__item-price 1 655 руб.
+                                .odetail__total
+                                    .odetail__total-title Итого:
+                                    .odetail__total-price 4 965 руб.
+                                a(href='cart.html').odetail__link.button.button_t Изменить
+
+        template#delivery
+            .sdelivery
+                .sdelivery__title Доставка в пределах МКАД
+                .sdelivery__text Малогабаритный товар массой до 3 кг
+                .sdelivery__price Стоимость: от 450 руб.
+                .sdelivery__period Срок доставки: 1-2 дн.
+                a(href='delivery.html').sdelivery__link Подробнее о доставке и оплате
+        template#pickup
+            .sdelivery
+                .sdelivery__title Самовывоз
+                .sdelivery__price Стоимость: 0 руб.
+                a(href='delivery.html').sdelivery__link Подробнее о доставке и оплате
+        template#bill
+            .sdelivery
+                .sdelivery__title Оплата по счету
+                .sdelivery__text Lorem ipsum dolor sit amet.
+                a(href='delivery.html').sdelivery__link Подробнее о доставке и оплате
+        template#card
+            .sdelivery
+                .sdelivery__title Банковская карта
+                .sdelivery__text Картами Visa, MasterCard, Мир
+                a(href='delivery.html').sdelivery__link Подробнее о доставке и оплате
+        template#cash
+            .sdelivery
+                .sdelivery__title Наличный расчет
+                .sdelivery__text Lorem ipsum dolor sit amet.
+                a(href='delivery.html').sdelivery__link Подробнее о доставке и оплате
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

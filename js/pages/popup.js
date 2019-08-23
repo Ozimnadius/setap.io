@@ -6,6 +6,7 @@ $(function () {
 
 
     $('.jsCallback').on('click', function (e) {
+        e.preventDefault();
         let $this = $(this),
             template = $(document.querySelector('#callback').content),
             html = template.find('.callback').clone();
@@ -32,6 +33,7 @@ $(function () {
     });
 
     $('.jsOneClick').on('click', function (e) {
+        e.preventDefault();
         let $this = $(this),
             template = $(document.querySelector('#callbuy').content),
             html = template.find('.callbuy').clone();

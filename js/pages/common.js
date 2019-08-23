@@ -5,11 +5,12 @@ function Switches(prop) {
     this.tabs = document.querySelectorAll(prop.tab);
     this.tabSelector = prop.tab;
     this.tabsContainer = document.querySelector(prop.tabsContainer);
+    this.activeTab = prop.activeTab || 0;
 
     let that = this;
 
     this.init = function () {
-        let $this = that.swsList[0],
+        let $this = that.swsList[that.activeTab],
             id = $this.dataset.id,
             maxH = 0,
             tab = document.querySelector(that.tabSelector + '[data-id="' + id + '"]');

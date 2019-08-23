@@ -9,14 +9,14 @@
 
   &__banner {
     margin-bottom: 50px;
-    @include sm-block{
+    @include sm-block {
       margin-bottom: 40px;
     }
   }
 
   &__about {
     margin-bottom: 90px;
-    @include sm-block{
+    @include sm-block {
       margin-bottom: 60px;
     }
   }
@@ -31,7 +31,7 @@
     @include lg-block {
       margin-bottom: 40px;
     }
-    @include sm-block{
+    @include sm-block {
       margin-bottom: 30px;
     }
 
@@ -48,7 +48,7 @@
       @include lg-block {
         display: none;
       }
-      @include sm-block{
+      @include sm-block {
         display: block;
         height: 245px;
       }
@@ -62,7 +62,7 @@
         @include lg-block {
           padding: 30px;
         }
-        @include sm-block{
+        @include sm-block {
           padding: 20px;
           padding-bottom: 30px;
         }
@@ -73,13 +73,13 @@
       }
 
       &__title {
-        @include sm-block{
+        @include sm-block {
           text-align: left;
         }
       }
 
       textarea {
-        @include sm-block{
+        @include sm-block {
           height: 223px;
         }
       }
@@ -91,6 +91,10 @@
     @include lg-block {
       margin-bottom: 50px;
     }
+  }
+
+  .feed__area{
+    height: 100%;
   }
 
 }
@@ -181,22 +185,22 @@
 
 .aabout {
 
-  &__tablet{
-    @include sm-block{
+  &__tablet {
+    @include sm-block {
       display: none;
     }
   }
 
   &__title {
     margin-bottom: 40px;
-    @include sm-block{
+    @include sm-block {
       margin-bottom: 10px;
       font-size: 16px;
     }
   }
 
   &__wrap {
-    @include sm-block{
+    @include sm-block {
       height: 163px;
     }
   }
@@ -209,7 +213,7 @@
   &__desc {
     line-height: lh(14, 25);
     margin-bottom: 45px;
-    @include sm-block{
+    @include sm-block {
       font-size: 13px;
       overflow: hidden;
       margin-bottom: 0;
@@ -219,6 +223,7 @@
   &__pic {
     width: 100%;
     display: block;
+
     @include lg-block {
       display: none;
     }
@@ -228,14 +233,14 @@
       @include lg-block {
         display: block;
       }
-      @include sm-block{
+      @include sm-block {
         display: none;
       }
     }
 
-    &_m{
+    &_m {
       display: none;
-      @include sm-block{
+      @include sm-block {
         display: block;
       }
     }
@@ -254,7 +259,7 @@
     @include lg-block {
       margin-bottom: 30px;
     }
-    @include sm-block{
+    @include sm-block {
       padding: 0 20px;
     }
   }
@@ -271,7 +276,7 @@
   &__container {
     padding-left: 20px;
     margin-bottom: 35px;
-    @include sm-block{
+    @include sm-block {
       padding-left: 10px;
     }
   }
@@ -356,7 +361,7 @@
     padding-top: 0;
     padding-bottom: 40px;
   }
-  @include sm-block{
+  @include sm-block {
     background: #EAEAEA;
   }
 
@@ -373,7 +378,7 @@
     @include lg-block {
       margin-bottom: 30px;
     }
-    @include sm-block{
+    @include sm-block {
       margin-bottom: 20px;
     }
   }
@@ -384,13 +389,14 @@
       display: flex;
       justify-content: center;
     }
-    @include sm-block{
+    @include sm-block {
       display: none;
     }
-    &_m{
+
+    &_m {
       display: none;
-      @include sm-block{
-        display: flex;
+      @include sm-block {
+        display: block;
         margin: 20px 0;
       }
     }
@@ -409,12 +415,13 @@
       background: none;
       padding-bottom: 0;
     }
-    @include sm-block{
+    @include sm-block {
       display: none;
     }
-    &_m{
+
+    &_m {
       display: none;
-      @include sm-block{
+      @include sm-block {
         display: block;
       }
     }
@@ -447,6 +454,10 @@
   &__item {
     display: flex;
     align-items: center;
+    @include sm-block{
+        @include col;
+      @include size(24);
+    }
 
     &-img {
       min-width: 80px;
@@ -454,37 +465,42 @@
       align-items: center;
       justify-content: center;
       margin-right: 20px;
-      @include sm-block{
+      position: relative;
+      @include sm-block {
         min-width: 62px;
         width: 62px;
         margin-right: 14px;
-        position: relative;
       }
     }
 
     &-num {
-      display: none;
-      @include sm-block{
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        border: 1px solid $lilac;
-        background: $bg;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: $lilac_2;
-        font-size: 14px;
-        font-weight: 700;
-        position: absolute;
+
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 1px solid $lilac;
+      background: $bg;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $lilac_2;
+      font-size: 14px;
+      font-weight: 700;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+
+      @include sm-block {
+
         top: 0;
         left: 0;
       }
+    ;
     }
 
     &-text {
       font-size: 15px;
-      @include sm-block{
+      @include sm-block {
         font-size: 12px;
       }
     }
@@ -514,12 +530,12 @@
     }
 
 
-    &_t{
+    &_t {
       display: none;
-      @include lg-block{
+      @include lg-block {
         display: block;
       }
-      @include sm-block{
+      @include sm-block {
         display: none;
       }
     }
@@ -527,7 +543,7 @@
 
   &__slider {
     display: none;
-    @include sm-block{
+    @include sm-block {
       display: block;
     }
     margin-bottom: 60px;
@@ -540,7 +556,7 @@
   margin-bottom: 20px;
   position: relative;
   @include size-lg(8);
-  @include sm-block{
+  @include sm-block {
     margin: 0;
     width: 260px;
     height: auto;
@@ -623,7 +639,7 @@
     @include lg-block {
       margin-bottom: 10px;
     }
-    @include sm-block{
+    @include sm-block {
       margin-bottom: 15px;
     }
   }
@@ -631,7 +647,7 @@
   &__text {
     font-size: 11px;
     margin-bottom: 10px;
-    @include sm-block{
+    @include sm-block {
       display: none;
     }
   }
@@ -641,7 +657,7 @@
     font-size: 20px;
     margin-top: auto;
     margin-bottom: 20px;
-    @include sm-block{
+    @include sm-block {
       margin-bottom: 0;
     }
   }
@@ -667,15 +683,15 @@
       border: none;
       padding: 0;
     }
-    @include sm-block{
-        justify-content: space-between;
+    @include sm-block {
+      justify-content: space-between;
     }
   }
 
   &__button {
     min-height: 40px;
     width: 100%;
-    @include sm-block{
+    @include sm-block {
       width: 107px;
       height: 27px;
       min-height: 27px;

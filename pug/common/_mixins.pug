@@ -25,6 +25,9 @@ mixin feed(dopClass,img)
                                 .feed__col
                                     input(type='tel' name='tel' placeholder='+7 (495) 123 45 67').input.feed__input
                                 .feed__col
+                                    .feed__fz.feed__fz_m
+                                        | Заполняя данную форму Вы соглашаетесь с&nbsp;
+                                        a(href='/').feed__fz_link Политикой обработки персональных данных
                                     button(type='submit').button.button_y.feed__submit Получить консультацию
                         .feed__fz
                             | Заполняя данную форму Вы соглашаетесь с&nbsp;

@@ -12,4 +12,5 @@
 //@prepros-append pages/auto.js
 //@prepros-append pages/cart.js
 //@prepros-append pages/popup.js
+//@prepros-append pages/order.js
 

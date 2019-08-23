@@ -95,14 +95,14 @@ block content
                                             .filter__range
                                                 .range
                                                     .range__inputs
-                                                        input(type='number' name='priceFrom' value=0).range__input.range__input_from
+                                                        input(type='number' name='priceFrom' value='0').range__input.range__input_from
                                                         .range__seporator
-                                                        input(type='number' name='priceTo' value=27000).range__input.range__input_to
+                                                        input(type='number' name='priceTo' value='27000').range__input.range__input_to
                                                     .range__line
                                                         .range__range
                                                         .range__nums
                                                             .range__from.range__num 0
-                                                            .range__to.range__num 27000
+                                                            .range__to.range__num 27 000
                                 .cat__buttons
                                     button(type='submit').button.cat__submit Применить
                                     button(type='reset').button.button_g.cat__reset Сбросить
@@ -281,7 +281,7 @@ block content
                                                             //button(type='button').button.item__buy В корзину
                                                             //button(type='button').button.button_op.item__one Купить в 1 клик
                                                 //- absolute
-                                                .item__position
+                                                a(href='product.html').item__position
                                                     .item__wrap
                                                         //- top
                                                         .item__top
@@ -300,7 +300,7 @@ block content
                                                         //- center
                                                         .item__center
                                                             //- title
-                                                            a(href='product.html').item__title= i.title
+                                                            .item__title= i.title
                                                             //- price-block
                                                             .item__block
                                                                 //- price
@@ -322,7 +322,7 @@ block content
                                                     .item__dop
                                                         button(type='button').button.item__buy В корзину
                                                         button(type='button').item__buy.item__buy_m
-                                                            +icon('supermarket','item__buy-svg')
+                                                            +iconPath('/images/content/main/ready', 'cart','item__buy-svg')
                                                         button(type='button').button.button_op.item__one.jsOneClick Купить в 1 клик
                                     .cat__hidden
                                         .row
@@ -348,7 +348,7 @@ block content
                                                             //- center
                                                             .item__center
                                                                 //- title
-                                                                a(href='product.html').item__title= i.title
+                                                                .item__title= i.title
                                                                 //- price-block
                                                                 .item__block
                                                                     //- price
@@ -368,7 +368,7 @@ block content
                                                                 //button(type='button').button.item__buy В корзину
                                                                 //button(type='button').button.button_op.item__one Купить в 1 клик
                                                     //- absolute
-                                                    .item__position
+                                                    a(href='product.html').item__position
                                                         .item__wrap
                                                             //- top
                                                             .item__top
@@ -387,7 +387,7 @@ block content
                                                             //- center
                                                             .item__center
                                                                 //- title
-                                                                a(href='product.html').item__title= i.title
+                                                                .item__title= i.title
                                                                 //- price-block
                                                                 .item__block
                                                                     //- price
@@ -409,7 +409,7 @@ block content
                                                         .item__dop
                                                             button(type='button').button.item__buy В корзину
                                                             button(type='button').item__buy.item__buy_m
-                                                                +icon('supermarket','item__buy-svg')
+                                                                +iconPath('/images/content/main/ready', 'cart','item__buy-svg')
                                                             button(type='button').button.button_op.item__one.jsOneClick Купить в 1 клик
 
                                     .cat__hidden
@@ -456,7 +456,7 @@ block content
                                                                 //button(type='button').button.item__buy В корзину
                                                                 //button(type='button').button.button_op.item__one Купить в 1 клик
                                                     //- absolute
-                                                    .item__position
+                                                    a(href='product.html').item__position
                                                         .item__wrap
                                                             //- top
                                                             .item__top
@@ -475,7 +475,7 @@ block content
                                                             //- center
                                                             .item__center
                                                                 //- title
-                                                                a(href='product.html').item__title= i.title
+                                                                .item__title= i.title
                                                                 //- price-block
                                                                 .item__block
                                                                     //- price
@@ -497,7 +497,7 @@ block content
                                                         .item__dop
                                                             button(type='button').button.item__buy В корзину
                                                             button(type='button').item__buy.item__buy_m
-                                                                +icon('supermarket','item__buy-svg')
+                                                                +iconPath('/images/content/main/ready', 'cart','item__buy-svg')
                                                             button(type='button').button.button_op.item__one.jsOneClick Купить в 1 клик
 
 

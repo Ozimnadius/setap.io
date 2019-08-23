@@ -20,6 +20,24 @@
     display: flex;
     align-items: center;
   }
+
+  .input {
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #bdbdbd;
+    background-color: $bg;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+
+    &::placeholder{
+      color: #bdbdbd;
+    }
+
+    &_area {
+      height: 100%;
+    }
+  }
 }
 
 .callback,.callbuy,.success{
@@ -120,23 +138,7 @@
   }
 }
 
-.input {
-  height: 40px;
-  border-radius: 4px;
-  border: 1px solid #bdbdbd;
-  background-color: $bg;
-  outline: none;
-  width: 100%;
-  font-size: 14px;
 
-  &::placeholder{
-    color: #bdbdbd;
-  }
-
-  &_area {
-    height: 100%;
-  }
-}
 
 label.error{
   color: $fuchsia;

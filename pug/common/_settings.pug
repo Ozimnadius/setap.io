@@ -1,6 +1,10 @@
 -
     var headerMenu = [
     {
+    title: 'Партнеры',
+    href: '/'
+    },
+    {
     title: 'Доставка и оплата',
     href: 'delivery.html'
     },
@@ -94,68 +98,68 @@
             title: 'Услуги',
             href: 'services.html',
             dopClass: 'nav__item_subnav',
-            subnav: {
-                title: 'Торговое оборудование',
-                list: {
-                title: 'Программное обеспечение',
-                items: [
-                'Front-office (кассовое) ',
-                'Back-office (товароучетное) ',
-                'Облачные решения'
-                ]
-                },
-                rows: [
-                [
-                {
-                title: 'Онлайн-кассы (54 ФЗ)',
-                items: ['Автономные кассы', 'Фискальные регистраторы']
-                },
-                {
-                title: 'POS-системы',
-                },
-                {
-                title: 'POS-переферия',
-                items: ['POS-терминалы', 'POS-компьютеры', 'POS-мониторы', 'Дисплеи покупателя', 'Чековые принтеры ', 'Денежные ящики', 'Программируемые клавиатуры', 'Ридеры магнитных карт']
-                },
-                {
-                title: 'Весовое оборудование',
-                items: ['Весы с подключением к компьютеру ', 'Весы с печатью этикеток', 'Весы торговые', 'Весы порционные', 'Весы напольные']
-                },
-                ],
-                [
-                {
-                title: 'Штрих-код оборудование ',
-                items: ['Сканеры штрих-кода', 'Принтеры этикеток', 'Терминалы сбора данных (ТСД)']
-                },
-                {
-                title: 'Банковское оборудование ',
-                items: ['Терминалы для эквайринга', 'Детекторы валют', 'Счетчики банкнот', 'Счетно-сортировальные машины', 'Темпо-кассы']
-                },
-                {
-                title: 'Упаковочное оборудование'
-                },
-                {
-                title: 'Информационные киоски'
-                },
-                {
-                title: 'Системы оповещения',
-                items: ['Кнопки вызова', 'Приемники вызовов ', 'Табло вызовов', 'Усилители сигнала']
-                },
-                ],
-                [
-                {
-                title: 'Расходные материалы',
-                items: ['Чековая лента', 'Этикет лента']
-                },
-                {
-                title: 'Фискальные накопители'
-                },
-                {
-                title: 'Аксессуары'
-                }
-                ]
-                ]
-            }
+            // subnav: {
+            //     title: 'Торговое оборудование',
+            //     list: {
+            //     title: 'Программное обеспечение',
+            //     items: [
+            //     'Front-office (кассовое) ',
+            //     'Back-office (товароучетное) ',
+            //     'Облачные решения'
+            //     ]
+            //     },
+            //     rows: [
+            //     [
+            //     {
+            //     title: 'Онлайн-кассы (54 ФЗ)',
+            //     items: ['Автономные кассы', 'Фискальные регистраторы']
+            //     },
+            //     {
+            //     title: 'POS-системы',
+            //     },
+            //     {
+            //     title: 'POS-переферия',
+            //     items: ['POS-терминалы', 'POS-компьютеры', 'POS-мониторы', 'Дисплеи покупателя', 'Чековые принтеры ', 'Денежные ящики', 'Программируемые клавиатуры', 'Ридеры магнитных карт']
+            //     },
+            //     {
+            //     title: 'Весовое оборудование',
+            //     items: ['Весы с подключением к компьютеру ', 'Весы с печатью этикеток', 'Весы торговые', 'Весы порционные', 'Весы напольные']
+            //     },
+            //     ],
+            //     [
+            //     {
+            //     title: 'Штрих-код оборудование ',
+            //     items: ['Сканеры штрих-кода', 'Принтеры этикеток', 'Терминалы сбора данных (ТСД)']
+            //     },
+            //     {
+            //     title: 'Банковское оборудование ',
+            //     items: ['Терминалы для эквайринга', 'Детекторы валют', 'Счетчики банкнот', 'Счетно-сортировальные машины', 'Темпо-кассы']
+            //     },
+            //     {
+            //     title: 'Упаковочное оборудование'
+            //     },
+            //     {
+            //     title: 'Информационные киоски'
+            //     },
+            //     {
+            //     title: 'Системы оповещения',
+            //     items: ['Кнопки вызова', 'Приемники вызовов ', 'Табло вызовов', 'Усилители сигнала']
+            //     },
+            //     ],
+            //     [
+            //     {
+            //     title: 'Расходные материалы',
+            //     items: ['Чековая лента', 'Этикет лента']
+            //     },
+            //     {
+            //     title: 'Фискальные накопители'
+            //     },
+            //     {
+            //     title: 'Аксессуары'
+            //     }
+            //     ]
+            //     ]
+            // }
         },
         {
             title: 'обслуживание',
@@ -173,12 +177,15 @@
             title: 'МАРКИРОВКА',
             href: '/'
         },
-
+        {
+            title: 'ЭЦП',
+            href: '/'
+        },
 
     ];
 -
     var icats = [
-        'Автономные онлайн-кассы',
+        'Смарт-терминалы',
         'Фискальные регистраторы',
         'POS-системы',
         'POS-терминалы',
@@ -191,7 +198,7 @@
         'Весовое оборудование ',
         'Сканеры штрих-кода ',
         'Принтеры этикеток',
-        'Терминалы сбора данных (ТСД) ',
+        'Терминалы сбора данных',
         'Терминалы для эквайринга',
         'Детекторы валют',
         'Счетчики банкнот',
@@ -633,7 +640,7 @@
             text: 'Наши эксперты быстро и полно ответят на вопросы о работе оборудования в любое время суток.'
         },
         {
-            title: 'Дставляем технику в сервис и обртно',
+            title: 'Дставляем технику в сервис и обратно',
             text: 'Специалисты отвезут оборудование в пункт ремонта и вернут в исправном состоянии'
         }
     ];
@@ -1192,31 +1199,37 @@
         {
             left: {
                 text:'Предварительное исследование и <br> консультирование',
-                src: 'images/icons/Icon_uslugi_01.svg'
+                src: 'images/icons/Icon_uslugi_01.svg',
+                count: 1
             },
             right: {
                 text:'Проведение <br> пусконаладочных работ',
-                src: 'images/icons/Icon_uslugi_04.svg'
+                src: 'images/icons/Icon_uslugi_04.svg',
+                count: 4
             }
         },
         {
             left: {
                 text:'Подбор всего комплекса <br> необходимого торгового <br> оборудования',
-                src: 'images/icons/Icon_uslugi_02.svg'
+                src: 'images/icons/Icon_uslugi_02.svg',
+                count: 2
             },
             right: {
                 text:'Обучение персонала <br> и техническая поддержка',
-                src: 'images/icons/Icon_uslugi_05.svg'
+                src: 'images/icons/Icon_uslugi_05.svg',
+                count: 5
             }
         },
         {
             left:{
                 text:'Доставка и монтаж <br> оборудования',
-                src: 'images/icons/Icon_uslugi_03.svg'
+                src: 'images/icons/Icon_uslugi_03.svg',
+                count: 3
             },
             right:{
                 text:'Гарантийное <br> и послегарантийное сервисное <br> обслуживание',
-                src: 'images/icons/Icon_uslugi_06.svg'
+                src: 'images/icons/Icon_uslugi_06.svg',
+                count: 6
             }
         }
     ];
@@ -1225,15 +1238,18 @@
         [
             {
                 text:'Предварительное исследование и <br> консультирование',
-                src: 'images/icons/Icon_uslugi_01.svg'
+                src: 'images/icons/Icon_uslugi_01.svg',
+                count: 1
             },
             {
                 text:'Подбор всего комплекса <br> необходимого торгового <br> оборудования',
-                src: 'images/icons/Icon_uslugi_02.svg'
+                src: 'images/icons/Icon_uslugi_02.svg',
+                count: 2
             },
             {
                 text:'Доставка и монтаж <br> оборудования',
-                src: 'images/icons/Icon_uslugi_03.svg'
+                src: 'images/icons/Icon_uslugi_03.svg',
+                count: 3
             },
 
 
@@ -1241,15 +1257,18 @@
         [
             {
                 text:'Проведение <br> пусконаладочных работ',
-                src: 'images/icons/Icon_uslugi_04.svg'
+                src: 'images/icons/Icon_uslugi_04.svg',
+                count: 4
             },
             {
                 text:'Обучение персонала <br> и техническая поддержка',
-                src: 'images/icons/Icon_uslugi_05.svg'
+                src: 'images/icons/Icon_uslugi_05.svg',
+                count: 5
             },
             {
                 text:'Гарантийное <br> и послегарантийное сервисное <br> обслуживание',
-                src: 'images/icons/Icon_uslugi_06.svg'
+                src: 'images/icons/Icon_uslugi_06.svg',
+                count: 6
             }
         ]
     ];
@@ -1480,13 +1499,13 @@
         }
     ];
 -
-    var mTab = [
-        {
-            title: 'Кассовая зона',
-            place: {
-                title: 'Рабочее место кассира',
+    var mTab = {
+        places: [
+            {
+                title: 'Кассовая зона',
+                name: 'Рабочее место кассира',
                 price: '62 730',
-                list: [
+                items: [
                     {
                         src: 'images/content/services/supermarket/till/1.png',
                         title: 'POS-система "ШТРИХ-LightPOS WinCE 6.0" R2',
@@ -1502,83 +1521,231 @@
                         title: 'Чековый принтер "Sewoo LK-T12"',
                         price: '13 130'
                     },
+                    {
+                        src: 'images/content/services/supermarket/till/4.png',
+                        title: 'Программное обеспечение',
+                        price: '1 400'
+                    }
+                ]
 
+            },
+            {
+                title: 'Торговый зал',
+                price: '84 800',
+                items: [
+                    {
+                        src: 'images/content/services/supermarket/hall/1.png',
+                        title: '"Электронная отчетность" со встроенной лицензией КриптоПро CSP (комплект)',
+                        price: '42 400'
+                    },
+                     {
+                        src: 'images/content/services/supermarket/hall/2.png',
+                        title: 'Информационный киоск "ШТРИХ-INFO" v3.0',
+                        price: '42 400'
+                    }
                 ]
             },
-            items: [
-                {
-                    src: 'images/content/services/supermarket/till/4.png',
-                    title: 'Программное обеспечение'
-                }
-            ]
-        },
-        {
-            title: 'Торговый зал',
-            items: [
-                {
-                    src: 'images/content/services/supermarket/hall/1.png',
-                    title: '"Электронная отчетность" со встроенной лицензией КриптоПро CSP (комплект)',
-                    price: '42 400'
-                },
-                 {
-                    src: 'images/content/services/supermarket/hall/2.png',
-                    title: 'Информационный киоск "ШТРИХ-INFO" v3.0',
-                    price: '42 400'
-                }
-            ]
-        },
-        {
-            title: 'Склад',
-            place: {
-            title: 'Рабочее место товароведа',
-            price: '62 730',
-            list: [
-                {
-                    src: 'images/content/services/supermarket/warehouse/1.png',
-                    title: 'POS-система "ШТРИХ-LightPOS WinCE 6.0" R2',
-                    price: '42 400'
-                },
-                {
-                    src: 'images/content/services/supermarket/warehouse/2.png',
-                    title: 'Фиксальный накопитель ККТ "РР - 03Ф"',
-                    price: '7 200'
-                },
-                {
-                    src: 'images/content/services/supermarket/warehouse/3.png',
-                    title: 'Чековый принтер "Sewoo LK-T12"',
-                    price: '13 130'
-                },
-             ]
-        },
-            items: [
-                {
-                    src: 'images/content/services/supermarket/warehouse/4.png',
-                    title: 'Ручной image сканер штрих-кода Honeywell/Metrologic 1900 Xenon USB, без подставки',
-                    price: '15 800'
-                },
-                {
-                    src: 'images/content/services/supermarket/warehouse/5.png',
-                    title: 'Системный блок DEPO Neos 260 Бухгалтер 2015/02'
-                }
-            ]
-        },
-        {
-            title: 'Услуги',
-            items: [
-                {
-                    src: 'images/content/services/supermarket/services/1.jpg',
-                    title: 'Ручной image сканер штрих-кода Honeywell/Metrologic 1900 Xenon USB, без подставки',
-                    price: '15 800'
-                },
-                {
-                    src: 'images/content/services/supermarket/services/2.jpg',
-                    title: 'Системный блок DEPO Neos 260 Бухгалтер 2015/02',
-                    price: '1 400'
-                }
-            ]
-        },
+            {
+                title: 'Склад',
+                name: 'Рабочее место товароведа',
+                price: '62 730',
+                items: [
+                    {
+                        src: 'images/content/services/supermarket/warehouse/1.png',
+                        title: 'POS-система "ШТРИХ-LightPOS WinCE 6.0" R2',
+                        price: '42 400'
+                    },
+                    {
+                        src: 'images/content/services/supermarket/warehouse/2.png',
+                        title: 'Фиксальный накопитель ККТ "РР - 03Ф"',
+                        price: '7 200'
+                    },
+                    {
+                        src: 'images/content/services/supermarket/warehouse/3.png',
+                        title: 'Чековый принтер "Sewoo LK-T12"',
+                        price: '13 130'
+                    },
+                    {
+                        src: 'images/content/services/supermarket/warehouse/4.png',
+                        title: 'Ручной image сканер штрих-кода Honeywell/Metrologic 1900 Xenon USB, без подставки',
+                        price: '15 800'
+                    },
+                    {
+                        src: 'images/content/services/supermarket/warehouse/5.png',
+                        title: 'Системный блок DEPO Neos 260 Бухгалтер 2015/02',
+                        price: '1 400'
+                    }
+                 ]
+            },
+        ],
+        services:{
+            price: '8 000',
+            list:[
+            {
+               title: 'Ручной image сканер штрих-кода Honeywell/Metrologic 1900 Xenon USB, без подставки',
+                price: '5 500',
+                checked: true
+            },
+            {
+               title: 'Системный блок DEPO Neos 260 Бухгалтер 2015/02',
+                price: '2 500',
+                checked: true
+            },
+            {
+               title: 'Регистрация ККТ в ИФНС',
+                price: '3 500',
+                checked: false
+            },
+            {
+               title: 'Изготовление ЭЦП/КЭП для подключения к ОФД',
+                price: '3 500',
+                checked: false
+            },
+            {
+               title: 'Подключение к ОФД на 12 месяцев',
+                price: '2 000',
+                checked: false
+            },
+            {
+               title: 'Подключение фискального регистратора',
+                price: '5 500',
+                checked: false
+            },
+            {
+               title: 'Подключение сканера штрихкода',
+                price: '5 500',
+                checked: false
+            },
+            {
+               title: 'Техническое обслуживание',
+                price: '2 500',
+                checked: false
+            }
+        ]}
+    };
+-
+    var mTab2 = {
+        places: [
+            {
+                title: 'Основное оборудование',
+                price: '62 730',
+                items: [
+                    {
+                        src: 'images/content/services/supermarket/till/1.png',
+                        title: 'POS-система "ШТРИХ-LightPOS WinCE 6.0" R2',
+                        price: '42 400'
+                    },
+                    {
+                        src: 'images/content/services/supermarket/till/2.png',
+                        title: 'Фиксальный накопитель ККТ "РР - 03Ф"',
+                        price: '7 200'
+                    },
+                    {
+                        src: 'images/content/services/supermarket/till/3.png',
+                        title: 'Чековый принтер "Sewoo LK-T12"',
+                        price: '13 130'
+                    },
+                    {
+                        src: 'images/content/services/supermarket/till/4.png',
+                        title: 'Программное обеспечение',
+                        price: '1 400'
+                    }
+                ]
 
-    ];
+            },
+            {
+                title: 'Дополнительное оборудование',
+                price: '84 800',
+                items: [
+                    {
+                        src: 'images/content/services/supermarket/hall/1.png',
+                        title: '"Электронная отчетность" со встроенной лицензией КриптоПро CSP (комплект)',
+                        price: '42 400'
+                    },
+                     {
+                        src: 'images/content/services/supermarket/hall/2.png',
+                        title: 'Информационный киоск "ШТРИХ-INFO" v3.0',
+                        price: '42 400'
+                    }
+                ]
+            },
+            {
+                title: 'Программное обеспечение',
+                price: '62 730',
+                items: [
+                    {
+                        src: 'images/content/services/supermarket/warehouse/1.png',
+                        title: 'POS-система "ШТРИХ-LightPOS WinCE 6.0" R2',
+                        price: '42 400'
+                    },
+                    {
+                        src: 'images/content/services/supermarket/warehouse/2.png',
+                        title: 'Фиксальный накопитель ККТ "РР - 03Ф"',
+                        price: '7 200'
+                    },
+                    {
+                        src: 'images/content/services/supermarket/warehouse/3.png',
+                        title: 'Чековый принтер "Sewoo LK-T12"',
+                        price: '13 130'
+                    },
+                    {
+                        src: 'images/content/services/supermarket/warehouse/4.png',
+                        title: 'Ручной image сканер штрих-кода Honeywell/Metrologic 1900 Xenon USB, без подставки',
+                        price: '15 800'
+                    },
+                    {
+                        src: 'images/content/services/supermarket/warehouse/5.png',
+                        title: 'Системный блок DEPO Neos 260 Бухгалтер 2015/02',
+                        price: '1 400'
+                    }
+                 ]
+            },
+        ],
+        services:{
+            price: '8 000',
+            list:[
+            {
+               title: 'Ручной image сканер штрих-кода Honeywell/Metrologic 1900 Xenon USB, без подставки',
+                price: '5 500',
+                checked: true
+            },
+            {
+               title: 'Системный блок DEPO Neos 260 Бухгалтер 2015/02',
+                price: '2 500',
+                checked: true
+            },
+            {
+               title: 'Регистрация ККТ в ИФНС',
+                price: '3 500',
+                checked: false
+            },
+            {
+               title: 'Изготовление ЭЦП/КЭП для подключения к ОФД',
+                price: '3 500',
+                checked: false
+            },
+            {
+               title: 'Подключение к ОФД на 12 месяцев',
+                price: '2 000',
+                checked: false
+            },
+            {
+               title: 'Подключение фискального регистратора',
+                price: '5 500',
+                checked: false
+            },
+            {
+               title: 'Подключение сканера штрихкода',
+                price: '5 500',
+                checked: false
+            },
+            {
+               title: 'Техническое обслуживание',
+                price: '2 500',
+                checked: false
+            }
+        ]}
+    };
 -
     var catalog = [
         {

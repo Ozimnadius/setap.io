@@ -25,7 +25,7 @@ block content
                 //- list
                 .search__list
                     each i,x in search.products
-                        .sitem
+                        a(href='product.html').sitem
                             .row.sitem__row
                                 //- left
                                 .sitem__left
@@ -42,7 +42,7 @@ block content
                                             img(src='images/content/catalog/' + (x + 1) + '.png').sitem__pic
                                     .sitem__left-right
                                         //- title
-                                        a(href='product.html').sitem__title= i.title
+                                        .sitem__title= i.title
                                         //- price
                                         .sitem__price.sitem__price_m
                                             +price(i.price)

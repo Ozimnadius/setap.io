@@ -66,7 +66,7 @@ block content
                                         span.ctotal__price-val 17 500
                                         span.ctotal__price-cur &nbsp;руб.
                                     .ctotal__count Товаров: 2&nbsp;&nbsp;&nbsp;Услуг: 2
-                                    button(type='button').ctotal__button.button.ctotal__buy Оформить заказ
+                                    a(href='order.html').ctotal__button.button.ctotal__buy Оформить заказ
                                     button(type='button').ctotal__button.button.button_op.ctotal__one.jsOneClick Купить в один клик
 
         //- same
@@ -96,10 +96,11 @@ block content
                                                     .item__img
                                                         img(src='images/content/catalog/' + (x + 1) + '.png').item__pic
 
+
                                                 //- center
                                                 .item__center
                                                     //- title
-                                                    a(href='product.html').item__title= i.title
+                                                    .item__title= i.title
                                                     //- price-block
                                                     .item__block
                                                         //- price
@@ -119,7 +120,7 @@ block content
                                                     //button(type='button').button.item__buy В корзину
                                                     //button(type='button').button.button_op.item__one Купить в 1 клик
                                         //- absolute
-                                        .item__position
+                                        a(href='product.html').item__position
                                             .item__wrap
                                                 //- top
                                                 .item__top
@@ -138,7 +139,7 @@ block content
                                                 //- center
                                                 .item__center
                                                     //- title
-                                                    a(href='product.html').item__title= i.title
+                                                    .item__title= i.title
                                                     //- price-block
                                                     .item__block
                                                         //- price

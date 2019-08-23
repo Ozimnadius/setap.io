@@ -30,6 +30,10 @@
       @include sm-block{
         order: 1;
       };
+
+      &_2{
+
+      }
     }
     &-2{
       @include width(880,120);
@@ -39,6 +43,10 @@
       @include sm-block{
         order: 3;
       };
+
+      &_2{
+        @include width(880,200);
+      }
     }
     &-3{
       @include width(880,180);
@@ -49,6 +57,10 @@
         order: 2;
         margin-bottom: 12px;
       };
+
+      &_2{
+        @include width(880,200);
+      }
     }
     &-4{
       @include width(880,100);
@@ -135,6 +147,7 @@
   &__img {
     padding-left: 20px;
     min-width: 140px;
+    width: 140px;
     margin-right: 20px;
     @include sm-block{
       width: 100%;
@@ -206,6 +219,47 @@
       };
     }
   }
+
+  .item {
+    @include xs-block{
+      width: 180px;
+    }
+
+    &__sticks{
+      @include xs-block{
+        display: none;
+      }
+    }
+
+    &__title{
+      @include xs-block{
+        font-size: 11px;
+        text-align: center;
+        height: 40px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    &__block {
+      @include xs-block{
+        justify-content: center;
+      }
+    }
+
+    &__count{
+      @include xs-block{
+        display: none;
+      }
+    }
+
+    &__buy,&__one{
+      @include xs-block{
+        display: none;
+      }
+    }
+
+  }
 }
 
 .ctotal{
@@ -236,6 +290,9 @@
       flex-direction: column;
       align-items: center;
     };
+    @include sm-block{
+      padding: 20px 40px;
+    }
   }
 
   &__price {
@@ -260,13 +317,20 @@
     margin-bottom: 25px;
     @include lg-block{
       width: auto;
+      padding: 10px 40px;
     };
+    @include sm-block{
+      width: 100%;
+    }
   }
 
   &__button {
     width: 100%;
     @include lg-block{
       width: 240px;
+    };
+    @include sm-block{
+      width: 100%;
     };
   }
   &__buy {

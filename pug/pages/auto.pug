@@ -42,9 +42,9 @@ block content
                         .aabout__title.title Автоматизация это
                         .aabout__desc Автоматизация предприятия и работа с торговым оборудованием подразумевает взаимодействие с различного рода программами, системами, сервисами и структурами (в том числе государственными), что влечет за собой необходимость оказания вспомогательных услуг для решения тех или иных задач. Регистрация и постановка на учет контрольно-кассовой техники в ИФНС, подключение к оператору фискальных данных (ОФД), работа с ЕГАИС, работа с ФГИС Меркурий, изготовление квалифицированной электронной подписи и получение сертификата в удостоверяющем центре, регулярное обновление и настройка программного обеспечения, замены фискальных накопителей, ремонт и подключение нового оборудования, обучение персонала - все это лишь малая часть того, что Вам предстоит пройти. Доверьте поддержание эффективности работы своего предприятия команде профессионалов и мы с удовольствием пройдем этот путь вместе с Вами
                     .aabout__img
-                        img(src='images/content/automatization/img.png').aabout__pic
-                        img(src='images/content/automatization/img-t.png').aabout__pic.aabout__pic_t
-                        img(src='images/content/automatization/img-m.png').aabout__pic.aabout__pic_m
+                        img(src='images/content/automatization/img.png' srcset='images/content/automatization/img2.png').aabout__pic
+                        img(src='images/content/automatization/img-t.png' srcset='images/content/automatization/img-t2.png').aabout__pic.aabout__pic_t
+                        img(src='images/content/automatization/img-m.png' srcset='images/content/automatization/img-m2.png').aabout__pic.aabout__pic_m
 
         //- advantages
         section.auto__advs
@@ -129,7 +129,7 @@ block content
                                             each col in ireadyLinks
                                                 .iready__col
                                                     each i in col
-                                                        a(href='/').iready__item
+                                                        a(href='market.html').iready__item
                                                             .iready__link= i
                                                             .iready__border
 
@@ -244,18 +244,20 @@ block content
                         img(src='images/content/automatization/how/bg.png').ahow__img-img
                 .container
                     .ahow__rows
-                        each row in ahow
+                        each row,ix in ahow
                             .ahow__row.row
                                 .ahow__left
                                     .ahow__item
                                         - var item = row.left
                                         .ahow__item-img
+                                            .ahow__item-num= item.count
                                             img(src=item.src).ahow__item-pic
                                         .ahow__item-text!= item.text
                                 .ahow__right
                                     .ahow__item
                                         - var item = row.right
                                         .ahow__item-img
+                                            .ahow__item-num= item.count
                                             img(src=item.src).ahow__item-pic
                                         .ahow__item-text!= item.text
 
@@ -265,7 +267,7 @@ block content
                                 each item,ix in row
                                     .ahow__item
                                         .ahow__item-img
-                                            .ahow__item-num= ix+1
+                                            .ahow__item-num= item.count
                                             img(src=item.src).ahow__item-pic
                                         .ahow__item-text!= item.text
                             if x ==0

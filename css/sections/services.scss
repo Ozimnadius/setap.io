@@ -12,6 +12,9 @@
 
   &__title {
     margin-bottom: 30px;
+    @include lg-block{
+      text-align: center;
+    }
   }
 
   &__item {
@@ -27,6 +30,9 @@
       padding: 10px;
     };
     @include size-sm(24);
+    @include sm-block{
+      padding-bottom: 20px;
+    }
 
     &:hover {
       box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
@@ -38,6 +44,9 @@
       @include lg-block{
         margin-bottom: 10px;
       };
+      @include sm-block{
+        margin-bottom: 20px;
+      }
     }
 
     &-title {
@@ -46,6 +55,10 @@
       @include lg-block{
         font-size: 14px;
       };
+      @include sm-block{
+        display: flex;
+        align-items: center;
+      }
     }
 
   }
@@ -69,6 +82,12 @@
   &__content {
     background: $bg;
     padding: 40px 0;
+    p{
+      line-height: lh(14,25);
+      @include sm-block{
+        line-height: lh(13,20);
+      }
+    }
   }
 
   &__feed {

@@ -290,8 +290,8 @@
           };
 
           &_enable {
-            min-width: 76px;
-            width: 76px;
+            //min-width: 76px;
+            //width: 76px;
           }
         }
 
@@ -333,8 +333,12 @@
         }
 
         &__count {
+          opacity: 1;
           &-text {
             display: block;
+          }
+          @include lg-block{
+            margin-bottom: 3px;
           }
           @include sm-block{
             display: none;
@@ -368,6 +372,19 @@
         &__buy {
           order: 1;
           margin-bottom: 0;
+          background: transparent;
+          border: 2px solid $lilac_2;
+          color: $lilac_2;
+          @include sm-block {
+            border: 1px solid $lilac_2;
+          }
+
+          &:hover {
+            background: $lilac_2;
+            color: $bg;
+          }
+
+
           @include sm-block{
             display: none;
           };
@@ -393,6 +410,14 @@
             height: auto;
           };
 
+        }
+
+        &__price{
+          .price{
+            @include sm-block{
+              font-size: 10px;
+            }
+          }
         }
       }
     }
@@ -599,7 +624,7 @@
 
   &__subitem {
     font-size: 13px;
-    color: rgba($text, .3);
+    color: $gray3;
     display: block;
     padding: 12px 20px;
     transition: .3s;
@@ -806,6 +831,9 @@
       display: block;
       height: calc(100% - 104px);
     };
+    @include sm-block{
+      height: calc(100% - 64px);
+    }
 
     &:hover {
       .item__stick {
@@ -830,6 +858,14 @@
           padding-bottom: 12px;
           height: auto;
         };
+        @include sm-block{
+          height: auto;
+          padding-bottom: 30px;
+        }
+      }
+
+      .item__count {
+        opacity: 1;
       }
     }
 
@@ -859,6 +895,11 @@
       padding-bottom: 12px;
       box-shadow: none;
     };
+    @include sm-block{
+      display: flex;
+      align-items: center;
+      padding-bottom: 30px;
+    }
   }
 
   &__hidden {
@@ -962,7 +1003,18 @@
 
 
     &:hover {
-      text-decoration: underline;
+      //text-decoration: underline;
+    }
+  }
+
+  &__price{
+    .price{
+      @include lg-block{
+        font-size: 16px;
+      }
+      @include sm-block{
+        font-size: 20px;
+      }
     }
   }
 
@@ -980,6 +1032,10 @@
   &__buy {
     width: 100%;
     margin-bottom: 10px;
+    @include sm-block{
+      width: 50%;
+      margin-bottom: 0;
+    }
 
     &_m {
       display: none;
@@ -991,21 +1047,48 @@
     &-svg {
       width: 14px;
       height: 14px;
-      fill: $bg;
+      stroke: $bg;
+      fill: transparent;
     }
   }
 
   &__one {
     width: 100%;
+    @include sm-block{
+      width: 50%;
+      margin-bottom: 0;
+    }
   }
 
   &__count {
     display: flex;
     align-items: center;
+    opacity: 0;
+    transition: .3s;
 
     &-text {
       display: none;
       margin-left: 10px;
+    }
+
+    .count{
+      //@include sm-block {
+      //  width: 100px;
+      //  height: 40px;
+      //}
+
+      //&__button {
+      //  @include sm-block {
+      //    width: 30px;
+      //  }
+      //}
+
+      //&__input {
+      //  @include sm-block{
+      //    font-size: 14px;
+      //  }
+      //}
+
     }
   }
 }

@@ -167,7 +167,8 @@
     .basket {
       &__img {
         &-img {
-          fill: #4E2869;
+          stroke: #4E2869;
+          fill: transparent;
         }
       }
 
@@ -231,7 +232,7 @@
   .basket {
     &__img {
       &-img {
-        fill: #4E2869;
+        stroke: #4E2869;
       }
     }
 
@@ -272,22 +273,26 @@
       display: block;
       position: absolute;
       right: 0;
-      top: 0;
-      width: 15px;
-      height: 100%;
+      top: 50%;
+      margin-top: -7px;
+      width: 10px;
+      height: 12px;
       background: $gray5 url("/images/icons/select.svg") center center no-repeat;
       pointer-events: none;
+      background-size: contain;
     }
   }
 
 }
 
 .logo {
+  display: block;
+  max-width: 163px;
   @include lg-block {
     width: 121px;
     display: block;
   }
-;
+
 
   &__img {
     width: 100%;
@@ -349,7 +354,8 @@
     &-img {
       width: 24px;
       height: 24px;
-      fill: $bg
+      stroke: $bg;
+      fill:transparent;
     }
   }
 
@@ -378,7 +384,7 @@
       color: $bg;
       text-transform: uppercase;
       border-bottom: 4px solid transparent;
-      padding: 25px 25px;
+      padding: 25px 20px;
       padding-bottom: 21px;
       transition: .3s;
     }

@@ -17,19 +17,19 @@
     position: relative;
     margin-bottom: 35px;
 
-    &:before,&:after {
-      content: url("/images/content/services/img.png");
-      position: absolute;
-      z-index: 10;
-    }
-    &:before {
-      top: 135px;
-      left: -385px;
-    }
-    &:after {
-      top: 80px;
-      right: -350px;
-    }
+    //&:before,&:after {
+    //  content: url("/images/content/services/img.png");
+    //  position: absolute;
+    //  z-index: 10;
+    //}
+    //&:before {
+    //  top: 135px;
+    //  left: -385px;
+    //}
+    //&:after {
+    //  top: 80px;
+    //  right: -350px;
+    //}
   }
 
   &__row {
