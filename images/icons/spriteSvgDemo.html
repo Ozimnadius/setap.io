@@ -81,6 +81,7 @@ They might well be outsourced to an external stylesheet of course.
 	.svg-up-dims { width: 12px; height: 8px; }
 	.svg-valid-dims { width: 20px; height: 20px; }
 	.svg-vk-dims { width: 20px; height: 16px; }
+	.svg-wapp-dims { width: 17px; height: 17px; }
 </style>
 <!--
 ====================================================================================================
@@ -165,6 +166,7 @@ for further details on how to create this embeddable sprite variant.
 		<symbol viewBox="0 0 12 8" id="up" xmlns="http://www.w3.org/2000/svg"><path opacity=".54" fill-rule="evenodd" clip-rule="evenodd" d="M6 0L0 6l1.4 1.4L6 2.8l4.6 4.6L12 6 6 0z"/></symbol>
 		<symbol viewBox="0 0 20 20" id="valid" xmlns="http://www.w3.org/2000/svg"><path d="M6 10l3 3 7-7"/></symbol>
 		<symbol viewBox="0 0 20 16" id="vk" xmlns="http://www.w3.org/2000/svg"><path d="M17.927.416L1.692 6.678C.583 7.122.59 7.74 1.49 8.015l4.049 1.263 1.549 4.75c.188.52.095.726.641.726.422 0 .609-.192.843-.42l2.025-1.97 4.211 3.112c.775.427 1.335.206 1.528-.72L19.101 1.73C19.384.595 18.668.08 17.927.417zM6.174 8.989l9.127-5.758c.455-.276.873-.128.53.177l-7.815 7.05-.304 3.246L6.174 8.99z"/></symbol>
+		<symbol viewBox="0 0 17 17" id="wapp" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.804 2.359A7.99 7.99 0 0 0 8.114 0C3.681 0 .074 3.608.071 8.042a8.03 8.03 0 0 0 1.074 4.021L.004 16.231l4.264-1.118a8.036 8.036 0 0 0 3.843.979h.003c4.433 0 8.042-3.608 8.043-8.043a7.993 7.993 0 0 0-2.353-5.69zm-5.69 12.374h-.002c-1.2 0-2.376-.322-3.403-.931l-.244-.145-2.53.663.675-2.466-.159-.253A6.669 6.669 0 0 1 1.43 8.043a6.695 6.695 0 0 1 6.688-6.685 6.64 6.64 0 0 1 4.726 1.96 6.645 6.645 0 0 1 1.957 4.73c-.002 3.686-3 6.685-6.686 6.685z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M11.783 9.727c-.2-.1-1.189-.587-1.373-.654-.184-.067-.318-.1-.452.1-.134.202-.52.655-.637.789-.117.134-.234.15-.435.05-.201-.1-.849-.313-1.616-.997a6.018 6.018 0 0 1-1.118-1.393c-.117-.2-.013-.31.088-.41.09-.09.2-.234.301-.352.1-.117.134-.201.201-.335s.034-.252-.016-.352c-.05-.1-.453-1.09-.62-1.492-.163-.392-.329-.34-.452-.345a8.038 8.038 0 0 0-.385-.007.738.738 0 0 0-.536.251c-.184.201-.704.688-.704 1.677 0 .989.72 1.944.82 2.079.101.134 1.418 2.163 3.434 3.034.48.207.854.33 1.146.423.481.153.92.132 1.265.08.387-.058 1.19-.486 1.357-.955.168-.47.168-.872.117-.956-.05-.084-.184-.134-.385-.235z"/></symbol>
 </svg>
 
 <!--
@@ -876,6 +878,17 @@ embedded above. They may be styled via CSS.
 					</div>
 					<h2>vk</h2>
 				</li>
+				<li title="wapp">
+					<div class="icon-box">
+						
+						<!-- wapp -->
+						<svg class="svg-wapp-dims">
+							<use xlink:href="#wapp"></use>
+						</svg>
+						
+					</div>
+					<h2>wapp</h2>
+				</li>
 			</ul>
 
 <!--
@@ -1579,6 +1592,17 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					</div>
 					<h2>vk</h2>
 				</li>
+				<li title="wapp">
+					<div class="icon-box">
+						
+						<!-- wapp -->
+						<svg class="svg-wapp-dims">
+							<use xlink:href="sprite.svg#wapp"></use>
+						</svg>
+						
+					</div>
+					<h2>wapp</h2>
+				</li>
 			</ul>
 
 <!--
@@ -1587,7 +1611,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 		</section>
 		<footer>
-			<p>Generated at Tue, 13 Aug 2019 09:31:19 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+			<p>Generated at Tue, 08 Oct 2019 12:07:41 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
 		</footer>
 	</body>
 </html>

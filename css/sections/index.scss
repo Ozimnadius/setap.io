@@ -69,6 +69,9 @@
     width: 100%;
     bottom: 30px;
     pointer-events: none;
+    @include lg-block{
+      bottom: 22px;
+    }
     @include sm-block{
       bottom: 10px;
     };
@@ -83,6 +86,10 @@
       outline: none;
       margin: 0 5px;
       pointer-events: initial;
+      @include sm-block{
+        width: 10px;
+        height: 10px;
+      }
     }
 
     .swiper-pagination-bullet-active {
@@ -93,39 +100,132 @@
 
 .slide {
   height: 380px;
-  padding: 26px 0;
   box-sizing: border-box;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  @include lg-block{
-    background-position: -260px center;
-  };
+  position: relative;
   @include sm-block{
-    height: 221px;
-    padding: 13px 0;
-  };
+    padding: 15px 0;
+    height: 347px;
+  }
+
+  &__container,&__row{
+    height: 100%;
+  }
+
+  &__row{
+    align-items: center;
+    @include sm-block{
+        align-items: initial;
+    }
+  }
+
+  &__bg{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include lg-block{
+      display: none;
+    }
+
+    &_t{
+      display: none;
+      @include lg-block{
+        display: block;
+      }
+      @include sm-block{
+        display: none;
+      }
+    }
+    &_m{
+      display: none;
+      @include sm-block{
+        display: block;
+      }
+    }
+  }
+
+  &__container {
+    position: relative;
+    z-index: 20;
+  }
 
   &__content {
     @include col;
-    @include size(20);
-    @include shift(2);
-    @include size-lg(22);
-    @include shift-lg(1);
-    @include size-sm(24);
-    @include shift-sm(0);
-
-    display: flex;
-    justify-content: space-between;
+    @include size(19);
+    @include shift(2.5);
+    @include size-lg(24);
+    @include shift-lg(0);
+    @include sm-block{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     color: $bg;
   }
 
   &__title {
-    font-size: 28px;
+    font-family: $font2;
+    font-size: 40px;
+    line-height: lh(40,46);
     font-weight: bold;
+    text-transform: uppercase;
+    //width: 360px;
+    margin-bottom: 15px;
+    @include lg-block{
+      font-size: 25px;
+      line-height: lh(25,35);
+    }
     @include sm-block{
+      font-size: 14px;
+      margin-bottom: 5px;
+      display: none;
+    }
+
+    &_m{
+      display: none;
+      @include sm-block{
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-family: $font2;
+    font-size: 18px;
+    line-height: lh(18,24);
+    margin-bottom: 25px;
+    @include lg-block{
       font-size: 16px;
-    };
+      margin-bottom: 15px;
+    }
+    @include sm-block{
+      font-size: 12px;
+      display: none;
+    }
+
+    &_m{
+      display: none;
+      @include sm-block{
+        display: block;
+        text-align: center;
+        margin-bottom: auto;
+      }
+    }
   }
 
   &__name {
@@ -158,6 +258,9 @@
 
   &__button {
     width: 142px;
+    @include sm-block{
+      margin-bottom: 20px;
+    }
   }
 
   &__img1{

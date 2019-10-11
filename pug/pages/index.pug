@@ -12,19 +12,29 @@ block content
                     .swiper-wrapper
                         each i in [1,2,3]
                             .swiper-slide
-                                div(style='background-image: url(images/content/main/banner/bg.jpg)').slide
-                                    .container
-                                        .row
-                                            .slide__content.content
-                                                .slide__img1
-                                                    img(src='images/content/main/banner/1.png').slide__img1-img
-                                                div(style='padding-top: 20px;')
-                                                    .slide__title СМАРТ-ТЕРМИНАЛ
-                                                    .slide__name ЭВОТОР 7.2
-                                                    .slide__price 19 900 руб.
-                                                    a(href='/').button.slide__button Подробнее
-                                                .slide__img2
-                                                    img(src='images/content/main/banner/2.png').slide__img2-img
+                                .slide
+                                    .slide__bg
+                                        +image('content/main/banner/img.jpg','lorem','slide__img')
+                                        +image('content/main/banner/img-t.jpg','lorem','slide__img slide__img_t')
+                                        +image('content/main/banner/img-m.jpg','lorem','slide__img slide__img_m')
+                                    .container.slide__container
+                                        .row.slide__row
+                                            .slide__content
+                                                //.slide__img1
+                                                //    img(src='images/content/main/banner/1.png').slide__img1-img
+                                                .slide__title
+                                                    |Готовое
+                                                    br
+                                                    |решение для ип
+                                                .slide__title.slide__title_m  Готовое решение для ип
+                                                .slide__subtitle
+                                                    |на ЕНВД или патенте
+                                                    br
+                                                    |+ услугами с наемными сотрудниками
+                                                .slide__subtitle.slide__subtitle_m на ЕНВД или патенте + услугами с наемными сотрудниками
+                                                a(href='/').button.slide__button Подробнее
+                                                //.slide__img2
+                                                //    img(src='images/content/main/banner/2.png').slide__img2-img
 
                 .slider__nav
                     .container
