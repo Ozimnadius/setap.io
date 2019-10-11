@@ -9,6 +9,14 @@ $(function () {
             tabsContainer: '.zones__tabs'
         }).init();
     }
+
+    $('.zones__sw').on('click', function (e) {
+        let btn = $(this),
+            src = btn.data('img'),
+            imgObj = $('.market__zones-img');
+        imgObj.attr('src', src);
+    });
+
     if (document.querySelector('.market__sws')) {
         let subSwitches = new Switches({
             sws: '.market__sws',
@@ -84,7 +92,7 @@ $(function () {
             total += (price * count);
         });
 
-        total= total*count;
+        total = total * count;
         totalObj.text(number_format(total, 0, '.', ' '));
         totalPrice.attr('data-price', number_format(total, 0, '.', ' '));
     }
@@ -95,7 +103,7 @@ $(function () {
             item = $this.closest('.mplaces__bottom'),
             price = getNumber(item.attr('data-price')),
             totalObj = item.find('.mplaces__price-val .price__val');
-        let total = price*val;
+        let total = price * val;
         totalObj.text(number_format(total, 0, '.', ' '));
     });
 
@@ -105,9 +113,9 @@ $(function () {
             checked = $this.prop('checked'),
             inputs = mserv.find('.mserv__item-input');
 
-            inputs.prop('checked',checked);
-            inputs.trigger('change');
-            inputs.trigger('change');
+        inputs.prop('checked', checked);
+        inputs.trigger('change');
+        inputs.trigger('change');
 
     });
 

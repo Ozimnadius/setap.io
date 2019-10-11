@@ -76,14 +76,14 @@ block content
                     .row.market__zones-row
                         //- left
                         .market__zones-left
-                            img(src='images/content/services/supermarket/plan.jpg').market__zones-img
+                            img(src='images/content/services/supermarket/1.jpg' alt='lorem').market__zones-img
                         //- right
                         .market__zones-right
                             .zones
                                 //- switches
                                 .zones__sws
                                     each i,x in zonesSws
-                                        div(class=i.dopClass data-id=x + 1).zones__sw= i.title
+                                        div(class=i.dopClass data-id=x + 1 data-img='images/content/services/supermarket/'+(x+1)+'.jpg').zones__sw= i.title
 
                                 //- tabs
                                 .zones__tabs
